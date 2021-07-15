@@ -11,27 +11,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.2
-  carousel_slider: ^4.0.0
-  easy_dynamic_theme: ^2.2.0
-
-dev_dependencies:
   flutter_test:
     sdk: flutter
+  http: ^0.13.3
 
 flutter:
   uses-material-design: true
-  fonts:
-    - family: Montserrat
-      fonts:
-        - asset: assets/fonts/Montserrat-Regular.ttf
-
-    - family: Electrolize
-      fonts:
-        - asset: assets/fonts/Electrolize-Regular.ttf
-
   assets:
+    - assets/
+    - assets/works/
     - assets/img/
-
-
+    - assets/svg
+  fonts:
+    - family: GoogleSansRegular
+      fonts:
+        - asset: assets/GoogleSansRegular.ttf
