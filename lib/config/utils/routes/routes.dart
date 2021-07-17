@@ -1,8 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/pages/about_pages.dart';
+import 'package:fluro/fluro.dart';
+import 'package:web_responsive_ui/config/utils/routes/routes_handlers.dart';
 
-Map<String, WidgetBuilder> getAplicationRoutes() {
-  return <String, WidgetBuilder>{
-    '/': (BuildContext context) => AboutPages(),
-  };
+class Flurorouter{
+  static final FluroRouter router = new FluroRouter();
+
+  static void configureRoutes(){
+    //Rutas
+    router.define('/:page', handler: homeHandler);
+    // 404
+    router.notFoundHandler = homeHandler;
+  }
 }

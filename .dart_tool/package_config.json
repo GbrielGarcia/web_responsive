@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "animated_splash_screen",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/animated_splash_screen-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.6.1",
       "packageUri": "lib/",
@@ -80,6 +86,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "fluro",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/fluro-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///C:/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -100,6 +112,12 @@
     {
       "name": "flutter_test",
       "rootUri": "file:///C:/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "google_fonts",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -130,6 +148,12 @@
     {
       "name": "octo_image",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/octo_image-1.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "page_transition",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/page_transition-2.0.1-nullsafety.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -296,7 +320,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-07-16T03:38:09.652376Z",
+  "generated": "2021-07-17T20:05:47.938565Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }
