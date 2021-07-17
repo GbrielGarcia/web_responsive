@@ -4,6 +4,7 @@ import 'package:web_responsive_ui/pages/views/LocationView.dart';
 import 'package:web_responsive_ui/pages/views/about_view.dart';
 import 'package:web_responsive_ui/pages/views/contact_view.dart';
 import 'package:web_responsive_ui/pages/views/home_view.dart';
+import 'package:web_responsive_ui/pages/views/skills.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -47,6 +48,7 @@ class HomeBody extends StatelessWidget {
         AboutView(),
         ContactView(),
         LocationView(),
+        SkillsViews(),
       ],
     );
   }

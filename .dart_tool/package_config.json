@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "animate_do",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/animate_do-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "animated_splash_screen",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/animated_splash_screen-1.1.0",
       "packageUri": "lib/",
@@ -320,7 +326,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-07-17T20:05:47.938565Z",
+  "generated": "2021-07-17T21:32:19.093146Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }
