@@ -12,7 +12,7 @@ class HomeView extends StatelessWidget {
         child: FittedBox(
           fit: BoxFit.contain,
           child: Text(
-            'Home',
+            'Home.',
             style: GoogleFonts.montserratAlternates(
               fontSize: 80,
               fontWeight: FontWeight.bold,
