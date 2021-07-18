@@ -1,0 +1,4 @@
+#Sat Jul 17 16:51:22 COT 2021
+base.0=C\:\\Users\\Gabriel Garcia\\StudioProjects\\web_responsive_ui\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

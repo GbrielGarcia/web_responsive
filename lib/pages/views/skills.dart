@@ -7,12 +7,12 @@ class SkillsViews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      color: Colors.blue[600],
       child: Center(
         child: FittedBox(
           fit: BoxFit.contain,
           child: Text(
-            'Contact',
+            'Skills',
             style: GoogleFonts.montserratAlternates(
               fontSize: 80,
               fontWeight: FontWeight.bold,

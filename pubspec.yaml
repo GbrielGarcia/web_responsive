@@ -18,6 +18,8 @@ dependencies:
   avatar_view: ^1.0.1
   fluro: ^2.0.3
   google_fonts: ^2.1.0
+  provider: ^5.0.0
+  universal_html: ^2.0.8
 
 flutter:
   uses-material-design: true
