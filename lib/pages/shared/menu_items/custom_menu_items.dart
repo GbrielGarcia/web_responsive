@@ -10,6 +10,7 @@ class CustomMenuItem extends StatefulWidget {
   const CustomMenuItem(
       {Key? key, required this.text, required this.onPressed, this.delay = 0})
       : super(key: key);
+
   @override
   _CustomMenuItemState createState() => _CustomMenuItemState();
 }
@@ -34,10 +35,8 @@ class _CustomMenuItemState extends State<CustomMenuItem> {
             height: 50,
             color: isHover ? Colors.pinkAccent : Colors.transparent,
             child: Center(
-              child: Text(
-                widget.text,
-                style: GoogleFonts.roboto(fontSize: 20, color: Colors.white),
-              ),
+              child: Text(widget.text,
+                  style: GoogleFonts.roboto(fontSize: 20, color: Colors.white)),
             ),
           ),
         ),

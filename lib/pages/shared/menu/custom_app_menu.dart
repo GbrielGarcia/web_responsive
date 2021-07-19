@@ -52,23 +52,23 @@ class _CustomAppMenuState extends State<CustomAppMenu>
                 if (isOpen) ...[
                   CustomMenuItem(
                       delay: 0,
-                      text: 'Home',
+                      text: 'Inicio',
                       onPressed: () => pageProvider.goTo(0)),
                   CustomMenuItem(
                       delay: 30,
-                      text: 'About',
+                      text: 'Sobre Mi',
                       onPressed: () => pageProvider.goTo(1)),
                   CustomMenuItem(
                       delay: 60,
-                      text: 'Contact',
+                      text: 'Habilidades',
                       onPressed: () => pageProvider.goTo(2)),
                   CustomMenuItem(
                       delay: 90,
-                      text: 'Skills',
+                      text: 'Contactame',
                       onPressed: () => pageProvider.goTo(3)),
                   CustomMenuItem(
                       delay: 120,
-                      text: 'Location',
+                      text: 'Ubicacion',
                       onPressed: () => pageProvider.goTo(4)),
                   SizedBox(
                     height: 8,

@@ -17,11 +17,7 @@ class HomePage extends StatelessWidget {
         child: Stack(
           children: [
             _HomeBody(),
-            Positioned(
-              right: 20,
-              top: 20,
-              child: CustomAppMenu(),
-            )
+            Positioned(right: 20, top: 20, child: CustomAppMenu()),
           ],
         ),
       ),
@@ -40,14 +36,15 @@ class _HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pageProvider = Provider.of<PageProvider>(context, listen: false);
+
     return PageView(
       controller: pageProvider.scrolllController,
       scrollDirection: Axis.vertical,
       children: [
         HomeView(),
         AboutView(),
-        ContactView(),
         SkillsViews(),
+        ContactView(),
         LocationView(),
       ],
     );

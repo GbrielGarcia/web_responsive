@@ -1,0 +1,365 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/animate_do/src/animate_do_fades.dart', 'packages/flutter/src/gestures/events.dart', 'packages/flutter/src/widgets/implicit_animations.dart', 'packages/flutter/src/material/colors.dart', 'packages/google_fonts/src/google_fonts_base.dart'], (function load__packages__web_responsive_ui__pages__shared__menu_items__custom_menu_items_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__animate_do__src__animate_do_fades$46dart, packages__flutter__src__gestures__events$46dart, packages__flutter__src__widgets__implicit_animations$46dart, packages__flutter__src__material__colors$46dart, packages__google_fonts__src__google_fonts_base$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const animate_do_fades = packages__animate_do__src__animate_do_fades$46dart.src__animate_do_fades;
+  const events = packages__flutter__src__gestures__events$46dart.src__gestures__events;
+  const implicit_animations = packages__flutter__src__widgets__implicit_animations$46dart.src__widgets__implicit_animations;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const google_fonts = packages__google_fonts__src__google_fonts_base$46dart.google_fonts;
+  var custom_menu_items = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    PointerEnterEventTovoid: () => (T.PointerEnterEventTovoid = dart.constFn(dart.fnType(dart.void, [events.PointerEnterEvent])))(),
+    PointerExitEventTovoid: () => (T.PointerExitEventTovoid = dart.constFn(dart.fnType(dart.void, [events.PointerExitEvent])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 24,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], widget_inspector._Location);
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 37,
+        [_Location_file]: "file:///C:/Users/Gabriel%20Garcia/StudioProjects/web_responsive_ui/lib/pages/shared/menu_items/custom_menu_items.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6], widget_inspector._Location);
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 36,
+        [_Location_file]: "file:///C:/Users/Gabriel%20Garcia/StudioProjects/web_responsive_ui/lib/pages/shared/menu_items/custom_menu_items.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "duration",
+        [_Location_column]: 13,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 13,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 13,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 13,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11, C[12] || CT.C12, C[13] || CT.C13], widget_inspector._Location);
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[8] || CT.C8,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///C:/Users/Gabriel%20Garcia/StudioProjects/web_responsive_ui/lib/pages/shared/menu_items/custom_menu_items.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 11,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16, C[17] || CT.C17], widget_inspector._Location);
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///C:/Users/Gabriel%20Garcia/StudioProjects/web_responsive_ui/lib/pages/shared/menu_items/custom_menu_items.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onEnter",
+        [_Location_column]: 9,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onExit",
+        [_Location_column]: 9,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22], widget_inspector._Location);
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///C:/Users/Gabriel%20Garcia/StudioProjects/web_responsive_ui/lib/pages/shared/menu_items/custom_menu_items.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "from",
+        [_Location_column]: 7,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "duration",
+        [_Location_column]: 7,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "delay",
+        [_Location_column]: 7,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25, C[26] || CT.C26, C[27] || CT.C27, C[28] || CT.C28], widget_inspector._Location);
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 22,
+        [_Location_file]: "file:///C:/Users/Gabriel%20Garcia/StudioProjects/web_responsive_ui/lib/pages/shared/menu_items/custom_menu_items.dart"
+      });
+    }
+  }, false);
+  var C = Array(29).fill(void 0);
+  var I = ["package:web_responsive_ui/pages/shared/menu_items/custom_menu_items.dart"];
+  var text$ = dart.privateName(custom_menu_items, "CustomMenuItem.text");
+  var onPressed$ = dart.privateName(custom_menu_items, "CustomMenuItem.onPressed");
+  var delay$ = dart.privateName(custom_menu_items, "CustomMenuItem.delay");
+  custom_menu_items.CustomMenuItem = class CustomMenuItem extends framework.StatefulWidget {
+    get text() {
+      return this[text$];
+    }
+    set text(value) {
+      super.text = value;
+    }
+    get onPressed() {
+      return this[onPressed$];
+    }
+    set onPressed(value) {
+      super.onPressed = value;
+    }
+    get delay() {
+      return this[delay$];
+    }
+    set delay(value) {
+      super.delay = value;
+    }
+    createState() {
+      return new custom_menu_items._CustomMenuItemState.new();
+    }
+  };
+  (custom_menu_items.CustomMenuItem.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let text = opts && 'text' in opts ? opts.text : null;
+    let onPressed = opts && 'onPressed' in opts ? opts.onPressed : null;
+    let delay = opts && 'delay' in opts ? opts.delay : 0;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[text$] = text;
+    this[onPressed$] = onPressed;
+    this[delay$] = delay;
+    custom_menu_items.CustomMenuItem.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = custom_menu_items.CustomMenuItem.prototype;
+  dart.addTypeTests(custom_menu_items.CustomMenuItem);
+  dart.addTypeCaches(custom_menu_items.CustomMenuItem);
+  dart.setMethodSignature(custom_menu_items.CustomMenuItem, () => ({
+    __proto__: dart.getMethods(custom_menu_items.CustomMenuItem.__proto__),
+    createState: dart.fnType(custom_menu_items._CustomMenuItemState, [])
+  }));
+  dart.setLibraryUri(custom_menu_items.CustomMenuItem, I[0]);
+  dart.setFieldSignature(custom_menu_items.CustomMenuItem, () => ({
+    __proto__: dart.getFields(custom_menu_items.CustomMenuItem.__proto__),
+    text: dart.finalFieldType(core.String),
+    onPressed: dart.finalFieldType(core.Function),
+    delay: dart.finalFieldType(core.int)
+  }));
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  custom_menu_items._CustomMenuItemState = class _CustomMenuItemState extends framework.State$(custom_menu_items.CustomMenuItem) {
+    build(context) {
+      return new animate_do_fades.FadeInLeft.new({from: 10.0, duration: new core.Duration.new({milliseconds: 150}), delay: new core.Duration.new({milliseconds: this.widget.delay}), child: new basic.MouseRegion.new({onEnter: dart.fn(_ => this.setState(dart.fn(() => this.isHover = true, T.VoidTovoid())), T.PointerEnterEventTovoid()), onExit: dart.fn(_ => this.setState(dart.fn(() => this.isHover = false, T.VoidTovoid())), T.PointerExitEventTovoid()), child: new gesture_detector.GestureDetector.new({onTap: dart.fn(() => dart.dsend(this.widget, 'onPressed', []), T.VoidTovoid()), child: new implicit_animations.AnimatedContainer.new({duration: new core.Duration.new({milliseconds: 300}), width: 150.0, height: 50.0, color: this.isHover ? colors.Colors.pinkAccent : colors.Colors.transparent, child: new basic.Center.new({child: new text.Text.new(this.widget.text, {style: google_fonts.GoogleFonts.roboto({fontSize: 20.0, color: colors.Colors.white}), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7}), $creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), $creationLocationd_0dea112b090073317d4: C[23] || CT.C23});
+    }
+  };
+  (custom_menu_items._CustomMenuItemState.new = function() {
+    this.isHover = false;
+    custom_menu_items._CustomMenuItemState.__proto__.new.call(this);
+    ;
+  }).prototype = custom_menu_items._CustomMenuItemState.prototype;
+  dart.addTypeTests(custom_menu_items._CustomMenuItemState);
+  dart.addTypeCaches(custom_menu_items._CustomMenuItemState);
+  dart.setMethodSignature(custom_menu_items._CustomMenuItemState, () => ({
+    __proto__: dart.getMethods(custom_menu_items._CustomMenuItemState.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(custom_menu_items._CustomMenuItemState, I[0]);
+  dart.setFieldSignature(custom_menu_items._CustomMenuItemState, () => ({
+    __proto__: dart.getFields(custom_menu_items._CustomMenuItemState.__proto__),
+    isHover: dart.fieldType(core.bool)
+  }));
+  dart.trackLibraries("packages/web_responsive_ui/pages/shared/menu_items/custom_menu_items.dart", {
+    "package:web_responsive_ui/pages/shared/menu_items/custom_menu_items.dart": custom_menu_items
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["custom_menu_items.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAKe;;;;;;IACE;;;;;;IACL;;;;;;;AAM4B;IAAsB;;;QAHlD;QAAmB;QAAoB;QAAgB;;IAApC;IAAoB;IAAgB;AAC3D,oEAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;UASK;AACxB,YAAO,4CACC,gBACI,qCAAuB,cAC1B,qCAAuB,AAAO,4BAC9B,oCACI,QAAC,KAAM,cAAS,cAAM,eAAU,8DACjC,QAAC,KAAM,cAAS,cAAM,eAAU,6DACjC,iDACE,cAAsB,WAAhB,uDACN,yDACK,qCAAuB,cAC1B,eACC,aACD,eAAiB,2BAAoB,kCACrC,6BACE,kBACL,AAAO,0BACY,2CAAiB,aAAkB;IAOpE;;;IA5BK,eAAU;;;EA6BjB","file":"../../../../../../../../packages/web_responsive_ui/pages/shared/menu_items/custom_menu_items.dart.lib.js"}');
+  // Exports:
+  return {
+    pages__shared__menu_items__custom_menu_items: custom_menu_items
+  };
+}));
+
+//# sourceMappingURL=custom_menu_items.dart.lib.js.map
