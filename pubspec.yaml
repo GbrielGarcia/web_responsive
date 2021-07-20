@@ -17,7 +17,9 @@ dependencies:
   animated_splash_screen: ^1.1.0
   avatar_view: ^1.0.1
   fluro: ^2.0.3
+  flutter_svg: ^0.22.0
   google_fonts: ^2.1.0
+  lottie: ^1.1.0
   provider: ^5.0.0
   responsive_framework: ^0.1.4
   universal_html: ^2.0.8

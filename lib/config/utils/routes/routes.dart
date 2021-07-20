@@ -1,10 +1,10 @@
 import 'package:fluro/fluro.dart';
 import 'package:web_responsive_ui/config/utils/routes/routes_handlers.dart';
 
-class Flurorouter{
+class Flurorouter {
   static final FluroRouter router = new FluroRouter();
 
-  static void configureRoutes(){
+  static void configureRoutes() {
     //Rutas
     router.define('/:page', handler: homeHandler);
     // 404

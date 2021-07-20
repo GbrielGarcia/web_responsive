@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:web_responsive_ui/config/assets/assets.dart';
 import 'package:web_responsive_ui/config/constant/constants.dart';
 import 'package:web_responsive_ui/config/constant/screen.dart';
@@ -42,10 +43,14 @@ Widget _buildUi(double width) {
             children: [
               Expanded(
                 flex: ScreenHelper.isMobile(context) ? 0 : 2,
-                child: Image.asset(
-                  Assets.avatar,
-                  width: 300.0,
+                child: SvgPicture.asset(
+                  Assets.safe,
+                  width: 300,
                 ),
+                //  Image.asset(
+                //   Assets.avatar,
+                //   width: 300.0,
+                // ),
               ),
               SizedBox(
                 width: 50.0,
