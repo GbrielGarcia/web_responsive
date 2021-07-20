@@ -1,2145 +1,2383 @@
-/** vim: et:ts=4:sw=4:sts=4
- * @license RequireJS 2.3.3 Copyright jQuery Foundation and other contributors.
- * Released under MIT license, https://github.com/requirejs/requirejs/blob/master/LICENSE
- */
-//Not using strict: uneven strict support in browsers, #392, and causes
-//problems with requirejs.exec()/transpiler plugins that may not be strict.
-/*jslint regexp: true, nomen: true, sloppy: true */
-/*global window, navigator, document, importScripts, setTimeout, opera */
-
-var requirejs, require, define;
-(function (global, setTimeout) {
-    var req, s, head, baseElement, dataMain, src,
-        interactiveScript, currentlyAddingScript, mainScript, subPath,
-        version = '2.3.3',
-        commentRegExp = /\/\*[\s\S]*?\*\/|([^:"'=]|^)\/\/.*$/mg,
-        cjsRequireRegExp = /[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g,
-        jsSuffixRegExp = /\.js$/,
-        currDirRegExp = /^\.\//,
-        op = Object.prototype,
-        ostring = op.toString,
-        hasOwn = op.hasOwnProperty,
-        isBrowser = !!(typeof window !== 'undefined' && typeof navigator !== 'undefined' && window.document),
-        isWebWorker = !isBrowser && typeof importScripts !== 'undefined',
-        //PS3 indicates loaded and complete, but need to wait for complete
-        //specifically. Sequence is 'loading', 'loaded', execution,
-        // then 'complete'. The UA check is unfortunate, but not sure how
-        //to feature test w/o causing perf issues.
-        readyRegExp = isBrowser && navigator.platform === 'PLAYSTATION 3' ?
-                      /^complete$/ : /^(complete|loaded)$/,
-        defContextName = '_',
-        //Oh the tragedy, detecting opera. See the usage of isOpera for reason.
-        isOpera = typeof opera !== 'undefined' && opera.toString() === '[object Opera]',
-        contexts = {},
-        cfg = {},
-        globalDefQueue = [],
-        useInteractive = false;
-
-    //Could match something like ')//comment', do not lose the prefix to comment.
-    function commentReplace(match, singlePrefix) {
-        return singlePrefix || '';
+define(['dart_sdk', 'packages/flutter/src/painting/colors.dart'], (function load__packages__flutter__src__material__colors_dart(dart_sdk, packages__flutter__src__painting__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const colors = packages__flutter__src__painting__colors$46dart.src__painting__colors;
+  var colors$ = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(true);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 0
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278190080.0
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 3707764736.0
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 2315255808.0
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 1929379840
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 1627389952
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 1107296256
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 520093696
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294967295.0
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 3019898879.0
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 2583691263.0
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 2332033023.0
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 1660944383
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 1308622847
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 1040187391
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 536870911
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 452984831
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294962158.0
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294954450.0
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293892762.0
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293227379.0
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293874512.0
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294198070.0
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293212469.0
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292030255.0
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291176488.0
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290190364.0
+      });
+    },
+    get C18() {
+      return C[18] = dart.constMap(core.int, ui.Color, [50, C[19] || CT.C19, 100, C[20] || CT.C20, 200, C[21] || CT.C21, 300, C[22] || CT.C22, 400, C[23] || CT.C23, 500, C[24] || CT.C24, 600, C[25] || CT.C25, 700, C[26] || CT.C26, 800, C[27] || CT.C27, 900, C[28] || CT.C28]);
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4294198070.0,
+        [ColorSwatch__swatch]: C[18] || CT.C18
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294937216.0
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294922834.0
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294907716.0
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292149248.0
+      });
+    },
+    get C30() {
+      return C[30] = dart.constMap(core.int, ui.Color, [100, C[31] || CT.C31, 200, C[32] || CT.C32, 400, C[33] || CT.C33, 700, C[34] || CT.C34]);
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4294922834.0,
+        [ColorSwatch__swatch]: C[30] || CT.C30
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294763756.0
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294491088.0
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294217649.0
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293943954.0
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293673082.0
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293467747.0
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292352864.0
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290910299.0
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289533015.0
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4287106639.0
+      });
+    },
+    get C36() {
+      return C[36] = dart.constMap(core.int, ui.Color, [50, C[37] || CT.C37, 100, C[38] || CT.C38, 200, C[39] || CT.C39, 300, C[40] || CT.C40, 400, C[41] || CT.C41, 500, C[42] || CT.C42, 600, C[43] || CT.C43, 700, C[44] || CT.C44, 800, C[45] || CT.C45, 900, C[46] || CT.C46]);
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4293467747.0,
+        [ColorSwatch__swatch]: C[36] || CT.C36
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294934699.0
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294918273.0
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294246487.0
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291105122.0
+      });
+    },
+    get C48() {
+      return C[48] = dart.constMap(core.int, ui.Color, [100, C[49] || CT.C49, 200, C[50] || CT.C50, 400, C[51] || CT.C51, 700, C[52] || CT.C52]);
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4294918273.0,
+        [ColorSwatch__swatch]: C[48] || CT.C48
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294174197.0
+      });
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292984551.0
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291728344.0
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290406600.0
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289415100.0
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288423856.0
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4287505578.0
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286259106.0
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4285143962.0
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283045004.0
+      });
+    },
+    get C54() {
+      return C[54] = dart.constMap(core.int, ui.Color, [50, C[55] || CT.C55, 100, C[56] || CT.C56, 200, C[57] || CT.C57, 300, C[58] || CT.C58, 400, C[59] || CT.C59, 500, C[60] || CT.C60, 600, C[61] || CT.C61, 700, C[62] || CT.C62, 800, C[63] || CT.C63, 900, C[64] || CT.C64]);
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4288423856.0,
+        [ColorSwatch__swatch]: C[54] || CT.C54
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293558524.0
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292886779.0
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292149497.0
+      });
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289331455.0
+      });
+    },
+    get C66() {
+      return C[66] = dart.constMap(core.int, ui.Color, [100, C[67] || CT.C67, 200, C[68] || CT.C68, 400, C[69] || CT.C69, 700, C[70] || CT.C70]);
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4292886779.0,
+        [ColorSwatch__swatch]: C[66] || CT.C66
+      });
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293781494.0
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291937513.0
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289961435.0
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4287985101.0
+      });
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286470082.0
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284955319.0
+      });
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284364209.0
+      });
+    },
+    get C80() {
+      return C[80] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283510184.0
+      });
+    },
+    get C81() {
+      return C[81] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282722208.0
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281408402.0
+      });
+    },
+    get C72() {
+      return C[72] = dart.constMap(core.int, ui.Color, [50, C[73] || CT.C73, 100, C[74] || CT.C74, 200, C[75] || CT.C75, 300, C[76] || CT.C76, 400, C[77] || CT.C77, 500, C[78] || CT.C78, 600, C[79] || CT.C79, 700, C[80] || CT.C80, 800, C[81] || CT.C81, 900, C[82] || CT.C82]);
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4284955319.0,
+        [ColorSwatch__swatch]: C[72] || CT.C72
+      });
+    },
+    get C85() {
+      return C[85] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289956095.0
+      });
+    },
+    get C86() {
+      return C[86] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286336511.0
+      });
+    },
+    get C87() {
+      return C[87] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284817407.0
+      });
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284612842.0
+      });
+    },
+    get C84() {
+      return C[84] = dart.constMap(core.int, ui.Color, [100, C[85] || CT.C85, 200, C[86] || CT.C86, 400, C[87] || CT.C87, 700, C[88] || CT.C88]);
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4286336511.0,
+        [ColorSwatch__swatch]: C[84] || CT.C84
+      });
+    },
+    get C91() {
+      return C[91] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293454582.0
+      });
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291152617.0
+      });
+    },
+    get C93() {
+      return C[93] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288653530.0
+      });
+    },
+    get C94() {
+      return C[94] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286154443.0
+      });
+    },
+    get C95() {
+      return C[95] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284246976.0
+      });
+    },
+    get C96() {
+      return C[96] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282339765.0
+      });
+    },
+    get C97() {
+      return C[97] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281944491.0
+      });
+    },
+    get C98() {
+      return C[98] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281352095.0
+      });
+    },
+    get C99() {
+      return C[99] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280825235.0
+      });
+    },
+    get C100() {
+      return C[100] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4279903102.0
+      });
+    },
+    get C90() {
+      return C[90] = dart.constMap(core.int, ui.Color, [50, C[91] || CT.C91, 100, C[92] || CT.C92, 200, C[93] || CT.C93, 300, C[94] || CT.C94, 400, C[95] || CT.C95, 500, C[96] || CT.C96, 600, C[97] || CT.C97, 700, C[98] || CT.C98, 800, C[99] || CT.C99, 900, C[100] || CT.C100]);
+    },
+    get C89() {
+      return C[89] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4282339765.0,
+        [ColorSwatch__swatch]: C[90] || CT.C90
+      });
+    },
+    get C103() {
+      return C[103] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4287405823.0
+      });
+    },
+    get C104() {
+      return C[104] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283657726.0
+      });
+    },
+    get C105() {
+      return C[105] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282211070.0
+      });
+    },
+    get C106() {
+      return C[106] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281356286.0
+      });
+    },
+    get C102() {
+      return C[102] = dart.constMap(core.int, ui.Color, [100, C[103] || CT.C103, 200, C[104] || CT.C104, 400, C[105] || CT.C105, 700, C[106] || CT.C106]);
+    },
+    get C101() {
+      return C[101] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4283657726.0,
+        [ColorSwatch__swatch]: C[102] || CT.C102
+      });
+    },
+    get C109() {
+      return C[109] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293128957.0
+      });
+    },
+    get C110() {
+      return C[110] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290502395.0
+      });
+    },
+    get C111() {
+      return C[111] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4287679225.0
+      });
+    },
+    get C112() {
+      return C[112] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284790262.0
+      });
+    },
+    get C113() {
+      return C[113] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282557941.0
+      });
+    },
+    get C114() {
+      return C[114] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280391411.0
+      });
+    },
+    get C115() {
+      return C[115] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280191205.0
+      });
+    },
+    get C116() {
+      return C[116] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4279858898.0
+      });
+    },
+    get C117() {
+      return C[117] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4279592384.0
+      });
+    },
+    get C118() {
+      return C[118] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4279060385.0
+      });
+    },
+    get C108() {
+      return C[108] = dart.constMap(core.int, ui.Color, [50, C[109] || CT.C109, 100, C[110] || CT.C110, 200, C[111] || CT.C111, 300, C[112] || CT.C112, 400, C[113] || CT.C113, 500, C[114] || CT.C114, 600, C[115] || CT.C115, 700, C[116] || CT.C116, 800, C[117] || CT.C117, 900, C[118] || CT.C118]);
+    },
+    get C107() {
+      return C[107] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4280391411.0,
+        [ColorSwatch__swatch]: C[108] || CT.C108
+      });
+    },
+    get C121() {
+      return C[121] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286755327.0
+      });
+    },
+    get C122() {
+      return C[122] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282682111.0
+      });
+    },
+    get C123() {
+      return C[123] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280908287.0
+      });
+    },
+    get C124() {
+      return C[124] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280902399.0
+      });
+    },
+    get C120() {
+      return C[120] = dart.constMap(core.int, ui.Color, [100, C[121] || CT.C121, 200, C[122] || CT.C122, 400, C[123] || CT.C123, 700, C[124] || CT.C124]);
+    },
+    get C119() {
+      return C[119] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4282682111.0,
+        [ColorSwatch__swatch]: C[120] || CT.C120
+      });
+    },
+    get C127() {
+      return C[127] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292998654.0
+      });
+    },
+    get C128() {
+      return C[128] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289979900.0
+      });
+    },
+    get C129() {
+      return C[129] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286698746.0
+      });
+    },
+    get C130() {
+      return C[130] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283417591.0
+      });
+    },
+    get C131() {
+      return C[131] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280923894.0
+      });
+    },
+    get C132() {
+      return C[132] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278430196.0
+      });
+    },
+    get C133() {
+      return C[133] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278426597.0
+      });
+    },
+    get C134() {
+      return C[134] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278356177.0
+      });
+    },
+    get C135() {
+      return C[135] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278351805.0
+      });
+    },
+    get C136() {
+      return C[136] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278278043.0
+      });
+    },
+    get C126() {
+      return C[126] = dart.constMap(core.int, ui.Color, [50, C[127] || CT.C127, 100, C[128] || CT.C128, 200, C[129] || CT.C129, 300, C[130] || CT.C130, 400, C[131] || CT.C131, 500, C[132] || CT.C132, 600, C[133] || CT.C133, 700, C[134] || CT.C134, 800, C[135] || CT.C135, 900, C[136] || CT.C136]);
+    },
+    get C125() {
+      return C[125] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4278430196.0,
+        [ColorSwatch__swatch]: C[126] || CT.C126
+      });
+    },
+    get C139() {
+      return C[139] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286634239.0
+      });
+    },
+    get C140() {
+      return C[140] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282434815.0
+      });
+    },
+    get C141() {
+      return C[141] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278235391.0
+      });
+    },
+    get C142() {
+      return C[142] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278227434.0
+      });
+    },
+    get C138() {
+      return C[138] = dart.constMap(core.int, ui.Color, [100, C[139] || CT.C139, 200, C[140] || CT.C140, 400, C[141] || CT.C141, 700, C[142] || CT.C142]);
+    },
+    get C137() {
+      return C[137] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4282434815.0,
+        [ColorSwatch__swatch]: C[138] || CT.C138
+      });
+    },
+    get C145() {
+      return C[145] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292933626.0
+      });
+    },
+    get C146() {
+      return C[146] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289915890.0
+      });
+    },
+    get C147() {
+      return C[147] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286635754.0
+      });
+    },
+    get C148() {
+      return C[148] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283289825.0
+      });
+    },
+    get C149() {
+      return C[149] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280731354.0
+      });
+    },
+    get C150() {
+      return C[150] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278238420.0
+      });
+    },
+    get C151() {
+      return C[151] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278234305.0
+      });
+    },
+    get C152() {
+      return C[152] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278228903.0
+      });
+    },
+    get C153() {
+      return C[153] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278223759.0
+      });
+    },
+    get C154() {
+      return C[154] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278214756.0
+      });
+    },
+    get C144() {
+      return C[144] = dart.constMap(core.int, ui.Color, [50, C[145] || CT.C145, 100, C[146] || CT.C146, 200, C[147] || CT.C147, 300, C[148] || CT.C148, 400, C[149] || CT.C149, 500, C[150] || CT.C150, 600, C[151] || CT.C151, 700, C[152] || CT.C152, 800, C[153] || CT.C153, 900, C[154] || CT.C154]);
+    },
+    get C143() {
+      return C[143] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4278238420.0,
+        [ColorSwatch__swatch]: C[144] || CT.C144
+      });
+    },
+    get C157() {
+      return C[157] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286906367.0
+      });
+    },
+    get C158() {
+      return C[158] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4279828479.0
+      });
+    },
+    get C159() {
+      return C[159] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278248959.0
+      });
+    },
+    get C160() {
+      return C[160] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278237396.0
+      });
+    },
+    get C156() {
+      return C[156] = dart.constMap(core.int, ui.Color, [100, C[157] || CT.C157, 200, C[158] || CT.C158, 400, C[159] || CT.C159, 700, C[160] || CT.C160]);
+    },
+    get C155() {
+      return C[155] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4279828479.0,
+        [ColorSwatch__swatch]: C[156] || CT.C156
+      });
+    },
+    get C163() {
+      return C[163] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292932337.0
+      });
+    },
+    get C164() {
+      return C[164] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289912795.0
+      });
+    },
+    get C165() {
+      return C[165] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286630852.0
+      });
+    },
+    get C166() {
+      return C[166] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283283116.0
+      });
+    },
+    get C167() {
+      return C[167] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280723098.0
+      });
+    },
+    get C168() {
+      return C[168] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278228616.0
+      });
+    },
+    get C169() {
+      return C[169] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278225275.0
+      });
+    },
+    get C170() {
+      return C[170] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278221163.0
+      });
+    },
+    get C171() {
+      return C[171] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278217052.0
+      });
+    },
+    get C172() {
+      return C[172] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278209856.0
+      });
+    },
+    get C162() {
+      return C[162] = dart.constMap(core.int, ui.Color, [50, C[163] || CT.C163, 100, C[164] || CT.C164, 200, C[165] || CT.C165, 300, C[166] || CT.C166, 400, C[167] || CT.C167, 500, C[168] || CT.C168, 600, C[169] || CT.C169, 700, C[170] || CT.C170, 800, C[171] || CT.C171, 900, C[172] || CT.C172]);
+    },
+    get C161() {
+      return C[161] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4278228616.0,
+        [ColorSwatch__swatch]: C[162] || CT.C162
+      });
+    },
+    get C175() {
+      return C[175] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289200107.0
+      });
+    },
+    get C176() {
+      return C[176] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284809178.0
+      });
+    },
+    get C177() {
+      return C[177] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280150454.0
+      });
+    },
+    get C178() {
+      return C[178] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278239141.0
+      });
+    },
+    get C174() {
+      return C[174] = dart.constMap(core.int, ui.Color, [100, C[175] || CT.C175, 200, C[176] || CT.C176, 400, C[177] || CT.C177, 700, C[178] || CT.C178]);
+    },
+    get C173() {
+      return C[173] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4284809178.0,
+        [ColorSwatch__swatch]: C[174] || CT.C174
+      });
+    },
+    get C181() {
+      return C[181] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293457385.0
+      });
+    },
+    get C182() {
+      return C[182] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291356361.0
+      });
+    },
+    get C183() {
+      return C[183] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289058471.0
+      });
+    },
+    get C184() {
+      return C[184] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286695300.0
+      });
+    },
+    get C185() {
+      return C[185] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284922730.0
+      });
+    },
+    get C186() {
+      return C[186] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283215696.0
+      });
+    },
+    get C187() {
+      return C[187] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282622023.0
+      });
+    },
+    get C188() {
+      return C[188] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281896508.0
+      });
+    },
+    get C189() {
+      return C[189] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281236786.0
+      });
+    },
+    get C190() {
+      return C[190] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4279983648.0
+      });
+    },
+    get C180() {
+      return C[180] = dart.constMap(core.int, ui.Color, [50, C[181] || CT.C181, 100, C[182] || CT.C182, 200, C[183] || CT.C183, 300, C[184] || CT.C184, 400, C[185] || CT.C185, 500, C[186] || CT.C186, 600, C[187] || CT.C187, 700, C[188] || CT.C188, 800, C[189] || CT.C189, 900, C[190] || CT.C190]);
+    },
+    get C179() {
+      return C[179] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4283215696.0,
+        [ColorSwatch__swatch]: C[180] || CT.C180
+      });
+    },
+    get C193() {
+      return C[193] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290377418.0
+      });
+    },
+    get C194() {
+      return C[194] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4285132974.0
+      });
+    },
+    get C195() {
+      return C[195] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278249078.0
+      });
+    },
+    get C196() {
+      return C[196] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278241363.0
+      });
+    },
+    get C192() {
+      return C[192] = dart.constMap(core.int, ui.Color, [100, C[193] || CT.C193, 200, C[194] || CT.C194, 400, C[195] || CT.C195, 700, C[196] || CT.C196]);
+    },
+    get C191() {
+      return C[191] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4285132974.0,
+        [ColorSwatch__swatch]: C[192] || CT.C192
+      });
+    },
+    get C199() {
+      return C[199] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294047977.0
+      });
+    },
+    get C200() {
+      return C[200] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292668872.0
+      });
+    },
+    get C201() {
+      return C[201] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291158437.0
+      });
+    },
+    get C202() {
+      return C[202] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289648001.0
+      });
+    },
+    get C203() {
+      return C[203] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288466021.0
+      });
+    },
+    get C204() {
+      return C[204] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4287349578.0
+      });
+    },
+    get C205() {
+      return C[205] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286362434.0
+      });
+    },
+    get C206() {
+      return C[206] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4285046584.0
+      });
+    },
+    get C207() {
+      return C[207] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283796271.0
+      });
+    },
+    get C208() {
+      return C[208] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281559326.0
+      });
+    },
+    get C198() {
+      return C[198] = dart.constMap(core.int, ui.Color, [50, C[199] || CT.C199, 100, C[200] || CT.C200, 200, C[201] || CT.C201, 300, C[202] || CT.C202, 400, C[203] || CT.C203, 500, C[204] || CT.C204, 600, C[205] || CT.C205, 700, C[206] || CT.C206, 800, C[207] || CT.C207, 900, C[208] || CT.C208]);
+    },
+    get C197() {
+      return C[197] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4287349578.0,
+        [ColorSwatch__swatch]: C[198] || CT.C198
+      });
+    },
+    get C211() {
+      return C[211] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291624848.0
+      });
+    },
+    get C212() {
+      return C[212] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289920857.0
+      });
+    },
+    get C213() {
+      return C[213] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4285988611.0
+      });
+    },
+    get C214() {
+      return C[214] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284800279.0
+      });
+    },
+    get C210() {
+      return C[210] = dart.constMap(core.int, ui.Color, [100, C[211] || CT.C211, 200, C[212] || CT.C212, 400, C[213] || CT.C213, 700, C[214] || CT.C214]);
+    },
+    get C209() {
+      return C[209] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4289920857.0,
+        [ColorSwatch__swatch]: C[210] || CT.C210
+      });
+    },
+    get C217() {
+      return C[217] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294573031.0
+      });
+    },
+    get C218() {
+      return C[218] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293981379.0
+      });
+    },
+    get C219() {
+      return C[219] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293324444.0
+      });
+    },
+    get C220() {
+      return C[220] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292667253.0
+      });
+    },
+    get C221() {
+      return C[221] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292141399.0
+      });
+    },
+    get C222() {
+      return C[222] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291681337.0
+      });
+    },
+    get C223() {
+      return C[223] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290824755.0
+      });
+    },
+    get C224() {
+      return C[224] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289705003.0
+      });
+    },
+    get C225() {
+      return C[225] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288584996.0
+      });
+    },
+    get C226() {
+      return C[226] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286740247.0
+      });
+    },
+    get C216() {
+      return C[216] = dart.constMap(core.int, ui.Color, [50, C[217] || CT.C217, 100, C[218] || CT.C218, 200, C[219] || CT.C219, 300, C[220] || CT.C220, 400, C[221] || CT.C221, 500, C[222] || CT.C222, 600, C[223] || CT.C223, 700, C[224] || CT.C224, 800, C[225] || CT.C225, 900, C[226] || CT.C226]);
+    },
+    get C215() {
+      return C[215] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4291681337.0,
+        [ColorSwatch__swatch]: C[216] || CT.C216
+      });
+    },
+    get C229() {
+      return C[229] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294246273.0
+      });
+    },
+    get C230() {
+      return C[230] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293852993.0
+      });
+    },
+    get C231() {
+      return C[231] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291231488.0
+      });
+    },
+    get C232() {
+      return C[232] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289653248.0
+      });
+    },
+    get C228() {
+      return C[228] = dart.constMap(core.int, ui.Color, [100, C[229] || CT.C229, 200, C[230] || CT.C230, 400, C[231] || CT.C231, 700, C[232] || CT.C232]);
+    },
+    get C227() {
+      return C[227] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4293852993.0,
+        [ColorSwatch__swatch]: C[228] || CT.C228
+      });
+    },
+    get C235() {
+      return C[235] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294966759.0
+      });
+    },
+    get C236() {
+      return C[236] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294965700.0
+      });
+    },
+    get C237() {
+      return C[237] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294964637.0
+      });
+    },
+    get C238() {
+      return C[238] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294963574.0
+      });
+    },
+    get C239() {
+      return C[239] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294962776.0
+      });
+    },
+    get C240() {
+      return C[240] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294961979.0
+      });
+    },
+    get C241() {
+      return C[241] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294826037.0
+      });
+    },
+    get C242() {
+      return C[242] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294688813.0
+      });
+    },
+    get C243() {
+      return C[243] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294551589.0
+      });
+    },
+    get C244() {
+      return C[244] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294278935.0
+      });
+    },
+    get C234() {
+      return C[234] = dart.constMap(core.int, ui.Color, [50, C[235] || CT.C235, 100, C[236] || CT.C236, 200, C[237] || CT.C237, 300, C[238] || CT.C238, 400, C[239] || CT.C239, 500, C[240] || CT.C240, 600, C[241] || CT.C241, 700, C[242] || CT.C242, 800, C[243] || CT.C243, 900, C[244] || CT.C244]);
+    },
+    get C233() {
+      return C[233] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4294961979.0,
+        [ColorSwatch__swatch]: C[234] || CT.C234
+      });
+    },
+    get C247() {
+      return C[247] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294967181.0
+      });
+    },
+    get C248() {
+      return C[248] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294967040.0
+      });
+    },
+    get C249() {
+      return C[249] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294961664.0
+      });
+    },
+    get C250() {
+      return C[250] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294956544.0
+      });
+    },
+    get C246() {
+      return C[246] = dart.constMap(core.int, ui.Color, [100, C[247] || CT.C247, 200, C[248] || CT.C248, 400, C[249] || CT.C249, 700, C[250] || CT.C250]);
+    },
+    get C245() {
+      return C[245] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4294967040.0,
+        [ColorSwatch__swatch]: C[246] || CT.C246
+      });
+    },
+    get C253() {
+      return C[253] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294965473.0
+      });
+    },
+    get C254() {
+      return C[254] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294962355.0
+      });
+    },
+    get C255() {
+      return C[255] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294959234.0
+      });
+    },
+    get C256() {
+      return C[256] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294956367.0
+      });
+    },
+    get C257() {
+      return C[257] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294953512.0
+      });
+    },
+    get C258() {
+      return C[258] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294951175.0
+      });
+    },
+    get C259() {
+      return C[259] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294947584.0
+      });
+    },
+    get C260() {
+      return C[260] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294942720.0
+      });
+    },
+    get C261() {
+      return C[261] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294938368.0
+      });
+    },
+    get C262() {
+      return C[262] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294930176.0
+      });
+    },
+    get C252() {
+      return C[252] = dart.constMap(core.int, ui.Color, [50, C[253] || CT.C253, 100, C[254] || CT.C254, 200, C[255] || CT.C255, 300, C[256] || CT.C256, 400, C[257] || CT.C257, 500, C[258] || CT.C258, 600, C[259] || CT.C259, 700, C[260] || CT.C260, 800, C[261] || CT.C261, 900, C[262] || CT.C262]);
+    },
+    get C251() {
+      return C[251] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4294951175.0,
+        [ColorSwatch__swatch]: C[252] || CT.C252
+      });
+    },
+    get C265() {
+      return C[265] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294960511.0
+      });
+    },
+    get C266() {
+      return C[266] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294956864.0
+      });
+    },
+    get C267() {
+      return C[267] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294951936.0
+      });
+    },
+    get C268() {
+      return C[268] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294945536.0
+      });
+    },
+    get C264() {
+      return C[264] = dart.constMap(core.int, ui.Color, [100, C[265] || CT.C265, 200, C[266] || CT.C266, 400, C[267] || CT.C267, 700, C[268] || CT.C268]);
+    },
+    get C263() {
+      return C[263] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4294956864.0,
+        [ColorSwatch__swatch]: C[264] || CT.C264
+      });
+    },
+    get C271() {
+      return C[271] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294964192.0
+      });
+    },
+    get C272() {
+      return C[272] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294959282.0
+      });
+    },
+    get C273() {
+      return C[273] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294954112.0
+      });
+    },
+    get C274() {
+      return C[274] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294948685.0
+      });
+    },
+    get C275() {
+      return C[275] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294944550.0
+      });
+    },
+    get C276() {
+      return C[276] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294940672.0
+      });
+    },
+    get C277() {
+      return C[277] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294675456.0
+      });
+    },
+    get C278() {
+      return C[278] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294278144.0
+      });
+    },
+    get C279() {
+      return C[279] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293880832.0
+      });
+    },
+    get C280() {
+      return C[280] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293284096.0
+      });
+    },
+    get C270() {
+      return C[270] = dart.constMap(core.int, ui.Color, [50, C[271] || CT.C271, 100, C[272] || CT.C272, 200, C[273] || CT.C273, 300, C[274] || CT.C274, 400, C[275] || CT.C275, 500, C[276] || CT.C276, 600, C[277] || CT.C277, 700, C[278] || CT.C278, 800, C[279] || CT.C279, 900, C[280] || CT.C280]);
+    },
+    get C269() {
+      return C[269] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4294940672.0,
+        [ColorSwatch__swatch]: C[270] || CT.C270
+      });
+    },
+    get C283() {
+      return C[283] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294955392.0
+      });
+    },
+    get C284() {
+      return C[284] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294945600.0
+      });
+    },
+    get C285() {
+      return C[285] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294938880.0
+      });
+    },
+    get C286() {
+      return C[286] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294929664.0
+      });
+    },
+    get C282() {
+      return C[282] = dart.constMap(core.int, ui.Color, [100, C[283] || CT.C283, 200, C[284] || CT.C284, 400, C[285] || CT.C285, 700, C[286] || CT.C286]);
+    },
+    get C281() {
+      return C[281] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4294945600.0,
+        [ColorSwatch__swatch]: C[282] || CT.C282
+      });
+    },
+    get C289() {
+      return C[289] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294699495.0
+      });
+    },
+    get C290() {
+      return C[290] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294954172.0
+      });
+    },
+    get C291() {
+      return C[291] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294945681.0
+      });
+    },
+    get C292() {
+      return C[292] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294937189.0
+      });
+    },
+    get C293() {
+      return C[293] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294930499.0
+      });
+    },
+    get C294() {
+      return C[294] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294924066.0
+      });
+    },
+    get C295() {
+      return C[295] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294201630.0
+      });
+    },
+    get C296() {
+      return C[296] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293282329.0
+      });
+    },
+    get C297() {
+      return C[297] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292363029.0
+      });
+    },
+    get C298() {
+      return C[298] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290721292.0
+      });
+    },
+    get C288() {
+      return C[288] = dart.constMap(core.int, ui.Color, [50, C[289] || CT.C289, 100, C[290] || CT.C290, 200, C[291] || CT.C291, 300, C[292] || CT.C292, 400, C[293] || CT.C293, 500, C[294] || CT.C294, 600, C[295] || CT.C295, 700, C[296] || CT.C296, 800, C[297] || CT.C297, 900, C[298] || CT.C298]);
+    },
+    get C287() {
+      return C[287] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4294924066.0,
+        [ColorSwatch__swatch]: C[288] || CT.C288
+      });
+    },
+    get C301() {
+      return C[301] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294942336.0
+      });
+    },
+    get C302() {
+      return C[302] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294929984.0
+      });
+    },
+    get C303() {
+      return C[303] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294917376.0
+      });
+    },
+    get C304() {
+      return C[304] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292684800.0
+      });
+    },
+    get C300() {
+      return C[300] = dart.constMap(core.int, ui.Color, [100, C[301] || CT.C301, 200, C[302] || CT.C302, 400, C[303] || CT.C303, 700, C[304] || CT.C304]);
+    },
+    get C299() {
+      return C[299] = dart.const({
+        __proto__: colors$.MaterialAccentColor.prototype,
+        [Color_value]: 4294929984.0,
+        [ColorSwatch__swatch]: C[300] || CT.C300
+      });
+    },
+    get C307() {
+      return C[307] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293913577.0
+      });
+    },
+    get C308() {
+      return C[308] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292332744.0
+      });
+    },
+    get C309() {
+      return C[309] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290554532.0
+      });
+    },
+    get C310() {
+      return C[310] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288776319.0
+      });
+    },
+    get C311() {
+      return C[311] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4287458915.0
+      });
+    },
+    get C312() {
+      return C[312] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286141768.0
+      });
+    },
+    get C313() {
+      return C[313] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4285353025.0
+      });
+    },
+    get C314() {
+      return C[314] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284301367.0
+      });
+    },
+    get C315() {
+      return C[315] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283315246.0
+      });
+    },
+    get C316() {
+      return C[316] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282263331.0
+      });
+    },
+    get C306() {
+      return C[306] = dart.constMap(core.int, ui.Color, [50, C[307] || CT.C307, 100, C[308] || CT.C308, 200, C[309] || CT.C309, 300, C[310] || CT.C310, 400, C[311] || CT.C311, 500, C[312] || CT.C312, 600, C[313] || CT.C313, 700, C[314] || CT.C314, 800, C[315] || CT.C315, 900, C[316] || CT.C316]);
+    },
+    get C305() {
+      return C[305] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4286141768.0,
+        [ColorSwatch__swatch]: C[306] || CT.C306
+      });
+    },
+    get C319() {
+      return C[319] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294638330.0
+      });
+    },
+    get C320() {
+      return C[320] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294309365.0
+      });
+    },
+    get C321() {
+      return C[321] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293848814.0
+      });
+    },
+    get C322() {
+      return C[322] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292927712.0
+      });
+    },
+    get C323() {
+      return C[323] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292269782.0
+      });
+    },
+    get C324() {
+      return C[324] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290624957.0
+      });
+    },
+    get C325() {
+      return C[325] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4288585374.0
+      });
+    },
+    get C326() {
+      return C[326] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4285887861.0
+      });
+    },
+    get C327() {
+      return C[327] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284572001.0
+      });
+    },
+    get C328() {
+      return C[328] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282532418.0
+      });
+    },
+    get C329() {
+      return C[329] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281348144.0
+      });
+    },
+    get C330() {
+      return C[330] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280361249.0
+      });
+    },
+    get C318() {
+      return C[318] = dart.constMap(core.int, ui.Color, [50, C[319] || CT.C319, 100, C[320] || CT.C320, 200, C[321] || CT.C321, 300, C[322] || CT.C322, 350, C[323] || CT.C323, 400, C[324] || CT.C324, 500, C[325] || CT.C325, 600, C[326] || CT.C326, 700, C[327] || CT.C327, 800, C[328] || CT.C328, 850, C[329] || CT.C329, 900, C[330] || CT.C330]);
+    },
+    get C317() {
+      return C[317] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4288585374.0,
+        [ColorSwatch__swatch]: C[318] || CT.C318
+      });
+    },
+    get C333() {
+      return C[333] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293718001.0
+      });
+    },
+    get C334() {
+      return C[334] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291811548.0
+      });
+    },
+    get C335() {
+      return C[335] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4289773253.0
+      });
+    },
+    get C336() {
+      return C[336] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4287669422.0
+      });
+    },
+    get C337() {
+      return C[337] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4286091420.0
+      });
+    },
+    get C338() {
+      return C[338] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284513675.0
+      });
+    },
+    get C339() {
+      return C[339] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4283723386.0
+      });
+    },
+    get C340() {
+      return C[340] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4282735204.0
+      });
+    },
+    get C341() {
+      return C[341] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4281812815.0
+      });
+    },
+    get C342() {
+      return C[342] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4280693304.0
+      });
+    },
+    get C332() {
+      return C[332] = dart.constMap(core.int, ui.Color, [50, C[333] || CT.C333, 100, C[334] || CT.C334, 200, C[335] || CT.C335, 300, C[336] || CT.C336, 400, C[337] || CT.C337, 500, C[338] || CT.C338, 600, C[339] || CT.C339, 700, C[340] || CT.C340, 800, C[341] || CT.C341, 900, C[342] || CT.C342]);
+    },
+    get C331() {
+      return C[331] = dart.const({
+        __proto__: colors$.MaterialColor.prototype,
+        [Color_value]: 4284513675.0,
+        [ColorSwatch__swatch]: C[332] || CT.C332
+      });
+    },
+    get C343() {
+      return C[343] = dart.constList([C[17] || CT.C17, C[35] || CT.C35, C[53] || CT.C53, C[71] || CT.C71, C[89] || CT.C89, C[107] || CT.C107, C[125] || CT.C125, C[143] || CT.C143, C[161] || CT.C161, C[179] || CT.C179, C[197] || CT.C197, C[215] || CT.C215, C[233] || CT.C233, C[251] || CT.C251, C[269] || CT.C269, C[287] || CT.C287, C[305] || CT.C305, C[331] || CT.C331], colors$.MaterialColor);
+    },
+    get C344() {
+      return C[344] = dart.constList([C[29] || CT.C29, C[47] || CT.C47, C[65] || CT.C65, C[83] || CT.C83, C[101] || CT.C101, C[119] || CT.C119, C[137] || CT.C137, C[155] || CT.C155, C[173] || CT.C173, C[191] || CT.C191, C[209] || CT.C209, C[227] || CT.C227, C[245] || CT.C245, C[263] || CT.C263, C[281] || CT.C281, C[299] || CT.C299], colors$.MaterialAccentColor);
     }
-
-    function isFunction(it) {
-        return ostring.call(it) === '[object Function]';
+  }, false);
+  var C = Array(345).fill(void 0);
+  var I = ["package:flutter/src/material/colors.dart"];
+  colors$.MaterialColor = class MaterialColor extends colors.ColorSwatch$(core.int) {
+    get shade50() {
+      return dart.nullCheck(this._get(50));
     }
-
-    function isArray(it) {
-        return ostring.call(it) === '[object Array]';
+    get shade100() {
+      return dart.nullCheck(this._get(100));
     }
-
-    /**
-     * Helper function for iterating over an array. If the func returns
-     * a true value, it will break out of the loop.
-     */
-    function each(ary, func) {
-        if (ary) {
-            var i;
-            for (i = 0; i < ary.length; i += 1) {
-                if (ary[i] && func(ary[i], i, ary)) {
-                    break;
-                }
-            }
-        }
+    get shade200() {
+      return dart.nullCheck(this._get(200));
     }
-
-    /**
-     * Helper function for iterating over an array backwards. If the func
-     * returns a true value, it will break out of the loop.
-     */
-    function eachReverse(ary, func) {
-        if (ary) {
-            var i;
-            for (i = ary.length - 1; i > -1; i -= 1) {
-                if (ary[i] && func(ary[i], i, ary)) {
-                    break;
-                }
-            }
-        }
+    get shade300() {
+      return dart.nullCheck(this._get(300));
     }
-
-    function hasProp(obj, prop) {
-        return hasOwn.call(obj, prop);
+    get shade400() {
+      return dart.nullCheck(this._get(400));
     }
-
-    function getOwn(obj, prop) {
-        return hasProp(obj, prop) && obj[prop];
+    get shade500() {
+      return dart.nullCheck(this._get(500));
     }
-
-    /**
-     * Cycles over properties in an object and calls a function for each
-     * property value. If the function returns a truthy value, then the
-     * iteration is stopped.
-     */
-    function eachProp(obj, func) {
-        var prop;
-        for (prop in obj) {
-            if (hasProp(obj, prop)) {
-                if (func(obj[prop], prop)) {
-                    break;
-                }
-            }
-        }
+    get shade600() {
+      return dart.nullCheck(this._get(600));
     }
-
-    /**
-     * Simple function to mix in properties from source into target,
-     * but only if target does not already have a property of the same name.
-     */
-    function mixin(target, source, force, deepStringMixin) {
-        if (source) {
-            eachProp(source, function (value, prop) {
-                if (force || !hasProp(target, prop)) {
-                    if (deepStringMixin && typeof value === 'object' && value &&
-                        !isArray(value) && !isFunction(value) &&
-                        !(value instanceof RegExp)) {
-
-                        if (!target[prop]) {
-                            target[prop] = {};
-                        }
-                        mixin(target[prop], value, force, deepStringMixin);
-                    } else {
-                        target[prop] = value;
-                    }
-                }
-            });
-        }
-        return target;
+    get shade700() {
+      return dart.nullCheck(this._get(700));
     }
-
-    //Similar to Function.prototype.bind, but the 'this' object is specified
-    //first, since it is easier to read/figure out what 'this' will be.
-    function bind(obj, fn) {
-        return function () {
-            return fn.apply(obj, arguments);
-        };
+    get shade800() {
+      return dart.nullCheck(this._get(800));
     }
-
-    function scripts() {
-        return document.getElementsByTagName('script');
+    get shade900() {
+      return dart.nullCheck(this._get(900));
     }
-
-    function defaultOnError(err) {
-        throw err;
+  };
+  (colors$.MaterialColor.new = function(primary, swatch) {
+    colors$.MaterialColor.__proto__.new.call(this, primary, swatch);
+    ;
+  }).prototype = colors$.MaterialColor.prototype;
+  dart.addTypeTests(colors$.MaterialColor);
+  dart.addTypeCaches(colors$.MaterialColor);
+  dart.setGetterSignature(colors$.MaterialColor, () => ({
+    __proto__: dart.getGetters(colors$.MaterialColor.__proto__),
+    shade50: ui.Color,
+    shade100: ui.Color,
+    shade200: ui.Color,
+    shade300: ui.Color,
+    shade400: ui.Color,
+    shade500: ui.Color,
+    shade600: ui.Color,
+    shade700: ui.Color,
+    shade800: ui.Color,
+    shade900: ui.Color
+  }));
+  dart.setLibraryUri(colors$.MaterialColor, I[0]);
+  colors$.MaterialAccentColor = class MaterialAccentColor extends colors.ColorSwatch$(core.int) {
+    get shade50() {
+      return dart.nullCheck(this._get(50));
     }
-
-    //Allow getting a global that is expressed in
-    //dot notation, like 'a.b.c'.
-    function getGlobal(value) {
-        if (!value) {
-            return value;
-        }
-        var g = global;
-        each(value.split('.'), function (part) {
-            g = g[part];
-        });
-        return g;
+    get shade100() {
+      return dart.nullCheck(this._get(100));
     }
-
-    /**
-     * Constructs an error with a pointer to an URL with more information.
-     * @param {String} id the error ID that maps to an ID on a web page.
-     * @param {String} message human readable error.
-     * @param {Error} [err] the original error, if there is one.
-     *
-     * @returns {Error}
-     */
-    function makeError(id, msg, err, requireModules) {
-        var e = new Error(msg + '\nhttp://requirejs.org/docs/errors.html#' + id);
-        e.requireType = id;
-        e.requireModules = requireModules;
-        if (err) {
-            e.originalError = err;
-        }
-        return e;
+    get shade200() {
+      return dart.nullCheck(this._get(200));
     }
-
-    if (typeof define !== 'undefined') {
-        //If a define is already in play via another AMD loader,
-        //do not overwrite.
-        return;
+    get shade400() {
+      return dart.nullCheck(this._get(400));
     }
-
-    if (typeof requirejs !== 'undefined') {
-        if (isFunction(requirejs)) {
-            //Do not overwrite an existing requirejs instance.
-            return;
-        }
-        cfg = requirejs;
-        requirejs = undefined;
+    get shade700() {
+      return dart.nullCheck(this._get(700));
     }
-
-    //Allow for a require config object
-    if (typeof require !== 'undefined' && !isFunction(require)) {
-        //assume it is a config object.
-        cfg = require;
-        require = undefined;
+  };
+  (colors$.MaterialAccentColor.new = function(primary, swatch) {
+    colors$.MaterialAccentColor.__proto__.new.call(this, primary, swatch);
+    ;
+  }).prototype = colors$.MaterialAccentColor.prototype;
+  dart.addTypeTests(colors$.MaterialAccentColor);
+  dart.addTypeCaches(colors$.MaterialAccentColor);
+  dart.setGetterSignature(colors$.MaterialAccentColor, () => ({
+    __proto__: dart.getGetters(colors$.MaterialAccentColor.__proto__),
+    shade50: ui.Color,
+    shade100: ui.Color,
+    shade200: ui.Color,
+    shade400: ui.Color,
+    shade700: ui.Color
+  }));
+  dart.setLibraryUri(colors$.MaterialAccentColor, I[0]);
+  var Color_value = dart.privateName(ui, "Color.value");
+  var ColorSwatch__swatch = dart.privateName(colors, "ColorSwatch._swatch");
+  colors$.Colors = class Colors extends core.Object {};
+  (colors$.Colors.__ = function() {
+    ;
+  }).prototype = colors$.Colors.prototype;
+  dart.addTypeTests(colors$.Colors);
+  dart.addTypeCaches(colors$.Colors);
+  dart.setLibraryUri(colors$.Colors, I[0]);
+  dart.defineLazy(colors$.Colors, {
+    /*colors$.Colors.transparent*/get transparent() {
+      return C[0] || CT.C0;
+    },
+    /*colors$.Colors.black*/get black() {
+      return C[1] || CT.C1;
+    },
+    /*colors$.Colors.black87*/get black87() {
+      return C[2] || CT.C2;
+    },
+    /*colors$.Colors.black54*/get black54() {
+      return C[3] || CT.C3;
+    },
+    /*colors$.Colors.black45*/get black45() {
+      return C[4] || CT.C4;
+    },
+    /*colors$.Colors.black38*/get black38() {
+      return C[5] || CT.C5;
+    },
+    /*colors$.Colors.black26*/get black26() {
+      return C[6] || CT.C6;
+    },
+    /*colors$.Colors.black12*/get black12() {
+      return C[7] || CT.C7;
+    },
+    /*colors$.Colors.white*/get white() {
+      return C[8] || CT.C8;
+    },
+    /*colors$.Colors.white70*/get white70() {
+      return C[9] || CT.C9;
+    },
+    /*colors$.Colors.white60*/get white60() {
+      return C[10] || CT.C10;
+    },
+    /*colors$.Colors.white54*/get white54() {
+      return C[11] || CT.C11;
+    },
+    /*colors$.Colors.white38*/get white38() {
+      return C[12] || CT.C12;
+    },
+    /*colors$.Colors.white30*/get white30() {
+      return C[13] || CT.C13;
+    },
+    /*colors$.Colors.white24*/get white24() {
+      return C[14] || CT.C14;
+    },
+    /*colors$.Colors.white12*/get white12() {
+      return C[15] || CT.C15;
+    },
+    /*colors$.Colors.white10*/get white10() {
+      return C[16] || CT.C16;
+    },
+    /*colors$.Colors.red*/get red() {
+      return C[17] || CT.C17;
+    },
+    /*colors$.Colors._redPrimaryValue*/get _redPrimaryValue() {
+      return 4294198070.0;
+    },
+    /*colors$.Colors.redAccent*/get redAccent() {
+      return C[29] || CT.C29;
+    },
+    /*colors$.Colors._redAccentValue*/get _redAccentValue() {
+      return 4294922834.0;
+    },
+    /*colors$.Colors.pink*/get pink() {
+      return C[35] || CT.C35;
+    },
+    /*colors$.Colors._pinkPrimaryValue*/get _pinkPrimaryValue() {
+      return 4293467747.0;
+    },
+    /*colors$.Colors.pinkAccent*/get pinkAccent() {
+      return C[47] || CT.C47;
+    },
+    /*colors$.Colors._pinkAccentPrimaryValue*/get _pinkAccentPrimaryValue() {
+      return 4294918273.0;
+    },
+    /*colors$.Colors.purple*/get purple() {
+      return C[53] || CT.C53;
+    },
+    /*colors$.Colors._purplePrimaryValue*/get _purplePrimaryValue() {
+      return 4288423856.0;
+    },
+    /*colors$.Colors.purpleAccent*/get purpleAccent() {
+      return C[65] || CT.C65;
+    },
+    /*colors$.Colors._purpleAccentPrimaryValue*/get _purpleAccentPrimaryValue() {
+      return 4292886779.0;
+    },
+    /*colors$.Colors.deepPurple*/get deepPurple() {
+      return C[71] || CT.C71;
+    },
+    /*colors$.Colors._deepPurplePrimaryValue*/get _deepPurplePrimaryValue() {
+      return 4284955319.0;
+    },
+    /*colors$.Colors.deepPurpleAccent*/get deepPurpleAccent() {
+      return C[83] || CT.C83;
+    },
+    /*colors$.Colors._deepPurpleAccentPrimaryValue*/get _deepPurpleAccentPrimaryValue() {
+      return 4286336511.0;
+    },
+    /*colors$.Colors.indigo*/get indigo() {
+      return C[89] || CT.C89;
+    },
+    /*colors$.Colors._indigoPrimaryValue*/get _indigoPrimaryValue() {
+      return 4282339765.0;
+    },
+    /*colors$.Colors.indigoAccent*/get indigoAccent() {
+      return C[101] || CT.C101;
+    },
+    /*colors$.Colors._indigoAccentPrimaryValue*/get _indigoAccentPrimaryValue() {
+      return 4283657726.0;
+    },
+    /*colors$.Colors.blue*/get blue() {
+      return C[107] || CT.C107;
+    },
+    /*colors$.Colors._bluePrimaryValue*/get _bluePrimaryValue() {
+      return 4280391411.0;
+    },
+    /*colors$.Colors.blueAccent*/get blueAccent() {
+      return C[119] || CT.C119;
+    },
+    /*colors$.Colors._blueAccentPrimaryValue*/get _blueAccentPrimaryValue() {
+      return 4282682111.0;
+    },
+    /*colors$.Colors.lightBlue*/get lightBlue() {
+      return C[125] || CT.C125;
+    },
+    /*colors$.Colors._lightBluePrimaryValue*/get _lightBluePrimaryValue() {
+      return 4278430196.0;
+    },
+    /*colors$.Colors.lightBlueAccent*/get lightBlueAccent() {
+      return C[137] || CT.C137;
+    },
+    /*colors$.Colors._lightBlueAccentPrimaryValue*/get _lightBlueAccentPrimaryValue() {
+      return 4282434815.0;
+    },
+    /*colors$.Colors.cyan*/get cyan() {
+      return C[143] || CT.C143;
+    },
+    /*colors$.Colors._cyanPrimaryValue*/get _cyanPrimaryValue() {
+      return 4278238420.0;
+    },
+    /*colors$.Colors.cyanAccent*/get cyanAccent() {
+      return C[155] || CT.C155;
+    },
+    /*colors$.Colors._cyanAccentPrimaryValue*/get _cyanAccentPrimaryValue() {
+      return 4279828479.0;
+    },
+    /*colors$.Colors.teal*/get teal() {
+      return C[161] || CT.C161;
+    },
+    /*colors$.Colors._tealPrimaryValue*/get _tealPrimaryValue() {
+      return 4278228616.0;
+    },
+    /*colors$.Colors.tealAccent*/get tealAccent() {
+      return C[173] || CT.C173;
+    },
+    /*colors$.Colors._tealAccentPrimaryValue*/get _tealAccentPrimaryValue() {
+      return 4284809178.0;
+    },
+    /*colors$.Colors.green*/get green() {
+      return C[179] || CT.C179;
+    },
+    /*colors$.Colors._greenPrimaryValue*/get _greenPrimaryValue() {
+      return 4283215696.0;
+    },
+    /*colors$.Colors.greenAccent*/get greenAccent() {
+      return C[191] || CT.C191;
+    },
+    /*colors$.Colors._greenAccentPrimaryValue*/get _greenAccentPrimaryValue() {
+      return 4285132974.0;
+    },
+    /*colors$.Colors.lightGreen*/get lightGreen() {
+      return C[197] || CT.C197;
+    },
+    /*colors$.Colors._lightGreenPrimaryValue*/get _lightGreenPrimaryValue() {
+      return 4287349578.0;
+    },
+    /*colors$.Colors.lightGreenAccent*/get lightGreenAccent() {
+      return C[209] || CT.C209;
+    },
+    /*colors$.Colors._lightGreenAccentPrimaryValue*/get _lightGreenAccentPrimaryValue() {
+      return 4289920857.0;
+    },
+    /*colors$.Colors.lime*/get lime() {
+      return C[215] || CT.C215;
+    },
+    /*colors$.Colors._limePrimaryValue*/get _limePrimaryValue() {
+      return 4291681337.0;
+    },
+    /*colors$.Colors.limeAccent*/get limeAccent() {
+      return C[227] || CT.C227;
+    },
+    /*colors$.Colors._limeAccentPrimaryValue*/get _limeAccentPrimaryValue() {
+      return 4293852993.0;
+    },
+    /*colors$.Colors.yellow*/get yellow() {
+      return C[233] || CT.C233;
+    },
+    /*colors$.Colors._yellowPrimaryValue*/get _yellowPrimaryValue() {
+      return 4294961979.0;
+    },
+    /*colors$.Colors.yellowAccent*/get yellowAccent() {
+      return C[245] || CT.C245;
+    },
+    /*colors$.Colors._yellowAccentPrimaryValue*/get _yellowAccentPrimaryValue() {
+      return 4294967040.0;
+    },
+    /*colors$.Colors.amber*/get amber() {
+      return C[251] || CT.C251;
+    },
+    /*colors$.Colors._amberPrimaryValue*/get _amberPrimaryValue() {
+      return 4294951175.0;
+    },
+    /*colors$.Colors.amberAccent*/get amberAccent() {
+      return C[263] || CT.C263;
+    },
+    /*colors$.Colors._amberAccentPrimaryValue*/get _amberAccentPrimaryValue() {
+      return 4294956864.0;
+    },
+    /*colors$.Colors.orange*/get orange() {
+      return C[269] || CT.C269;
+    },
+    /*colors$.Colors._orangePrimaryValue*/get _orangePrimaryValue() {
+      return 4294940672.0;
+    },
+    /*colors$.Colors.orangeAccent*/get orangeAccent() {
+      return C[281] || CT.C281;
+    },
+    /*colors$.Colors._orangeAccentPrimaryValue*/get _orangeAccentPrimaryValue() {
+      return 4294945600.0;
+    },
+    /*colors$.Colors.deepOrange*/get deepOrange() {
+      return C[287] || CT.C287;
+    },
+    /*colors$.Colors._deepOrangePrimaryValue*/get _deepOrangePrimaryValue() {
+      return 4294924066.0;
+    },
+    /*colors$.Colors.deepOrangeAccent*/get deepOrangeAccent() {
+      return C[299] || CT.C299;
+    },
+    /*colors$.Colors._deepOrangeAccentPrimaryValue*/get _deepOrangeAccentPrimaryValue() {
+      return 4294929984.0;
+    },
+    /*colors$.Colors.brown*/get brown() {
+      return C[305] || CT.C305;
+    },
+    /*colors$.Colors._brownPrimaryValue*/get _brownPrimaryValue() {
+      return 4286141768.0;
+    },
+    /*colors$.Colors.grey*/get grey() {
+      return C[317] || CT.C317;
+    },
+    /*colors$.Colors._greyPrimaryValue*/get _greyPrimaryValue() {
+      return 4288585374.0;
+    },
+    /*colors$.Colors.blueGrey*/get blueGrey() {
+      return C[331] || CT.C331;
+    },
+    /*colors$.Colors._blueGreyPrimaryValue*/get _blueGreyPrimaryValue() {
+      return 4284513675.0;
+    },
+    /*colors$.Colors.primaries*/get primaries() {
+      return C[343] || CT.C343;
+    },
+    /*colors$.Colors.accents*/get accents() {
+      return C[344] || CT.C344;
     }
-
-    function newContext(contextName) {
-        var inCheckLoaded, Module, context, handlers,
-            checkLoadedTimeoutId,
-            config = {
-                //Defaults. Do not set a default for map
-                //config to speed up normalize(), which
-                //will run faster if there is no default.
-                waitSeconds: 7,
-                baseUrl: './',
-                paths: {},
-                bundles: {},
-                pkgs: {},
-                shim: {},
-                config: {}
-            },
-            registry = {},
-            //registry of just enabled modules, to speed
-            //cycle breaking code when lots of modules
-            //are registered, but not activated.
-            enabledRegistry = {},
-            undefEvents = {},
-            defQueue = [],
-            defined = {},
-            urlFetched = {},
-            bundlesMap = {},
-            requireCounter = 1,
-            unnormalizedCounter = 1;
-
-        /**
-         * Trims the . and .. from an array of path segments.
-         * It will keep a leading path segment if a .. will become
-         * the first path segment, to help with module name lookups,
-         * which act like paths, but can be remapped. But the end result,
-         * all paths that use this function should look normalized.
-         * NOTE: this method MODIFIES the input array.
-         * @param {Array} ary the array of path segments.
-         */
-        function trimDots(ary) {
-            var i, part;
-            for (i = 0; i < ary.length; i++) {
-                part = ary[i];
-                if (part === '.') {
-                    ary.splice(i, 1);
-                    i -= 1;
-                } else if (part === '..') {
-                    // If at the start, or previous value is still ..,
-                    // keep them so that when converted to a path it may
-                    // still work when converted to a path, even though
-                    // as an ID it is less than ideal. In larger point
-                    // releases, may be better to just kick out an error.
-                    if (i === 0 || (i === 1 && ary[2] === '..') || ary[i - 1] === '..') {
-                        continue;
-                    } else if (i > 0) {
-                        ary.splice(i - 1, 2);
-                        i -= 2;
-                    }
-                }
-            }
-        }
-
-        /**
-         * Given a relative module name, like ./something, normalize it to
-         * a real name that can be mapped to a path.
-         * @param {String} name the relative name
-         * @param {String} baseName a real name that the name arg is relative
-         * to.
-         * @param {Boolean} applyMap apply the map config to the value. Should
-         * only be done if this normalization is for a dependency ID.
-         * @returns {String} normalized name
-         */
-        function normalize(name, baseName, applyMap) {
-            var pkgMain, mapValue, nameParts, i, j, nameSegment, lastIndex,
-                foundMap, foundI, foundStarMap, starI, normalizedBaseParts,
-                baseParts = (baseName && baseName.split('/')),
-                map = config.map,
-                starMap = map && map['*'];
-
-            //Adjust any relative paths.
-            if (name) {
-                name = name.split('/');
-                lastIndex = name.length - 1;
-
-                // If wanting node ID compatibility, strip .js from end
-                // of IDs. Have to do this here, and not in nameToUrl
-                // because node allows either .js or non .js to map
-                // to same file.
-                if (config.nodeIdCompat && jsSuffixRegExp.test(name[lastIndex])) {
-                    name[lastIndex] = name[lastIndex].replace(jsSuffixRegExp, '');
-                }
-
-                // Starts with a '.' so need the baseName
-                if (name[0].charAt(0) === '.' && baseParts) {
-                    //Convert baseName to array, and lop off the last part,
-                    //so that . matches that 'directory' and not name of the baseName's
-                    //module. For instance, baseName of 'one/two/three', maps to
-                    //'one/two/three.js', but we want the directory, 'one/two' for
-                    //this normalization.
-                    normalizedBaseParts = baseParts.slice(0, baseParts.length - 1);
-                    name = normalizedBaseParts.concat(name);
-                }
-
-                trimDots(name);
-                name = name.join('/');
-            }
-
-            //Apply map config if available.
-            if (applyMap && map && (baseParts || starMap)) {
-                nameParts = name.split('/');
-
-                outerLoop: for (i = nameParts.length; i > 0; i -= 1) {
-                    nameSegment = nameParts.slice(0, i).join('/');
-
-                    if (baseParts) {
-                        //Find the longest baseName segment match in the config.
-                        //So, do joins on the biggest to smallest lengths of baseParts.
-                        for (j = baseParts.length; j > 0; j -= 1) {
-                            mapValue = getOwn(map, baseParts.slice(0, j).join('/'));
-
-                            //baseName segment has config, find if it has one for
-                            //this name.
-                            if (mapValue) {
-                                mapValue = getOwn(mapValue, nameSegment);
-                                if (mapValue) {
-                                    //Match, update name to the new value.
-                                    foundMap = mapValue;
-                                    foundI = i;
-                                    break outerLoop;
-                                }
-                            }
-                        }
-                    }
-
-                    //Check for a star map match, but just hold on to it,
-                    //if there is a shorter segment match later in a matching
-                    //config, then favor over this star map.
-                    if (!foundStarMap && starMap && getOwn(starMap, nameSegment)) {
-                        foundStarMap = getOwn(starMap, nameSegment);
-                        starI = i;
-                    }
-                }
-
-                if (!foundMap && foundStarMap) {
-                    foundMap = foundStarMap;
-                    foundI = starI;
-                }
-
-                if (foundMap) {
-                    nameParts.splice(0, foundI, foundMap);
-                    name = nameParts.join('/');
-                }
-            }
-
-            // If the name points to a package's name, use
-            // the package main instead.
-            pkgMain = getOwn(config.pkgs, name);
-
-            return pkgMain ? pkgMain : name;
-        }
-
-        function removeScript(name) {
-            if (isBrowser) {
-                each(scripts(), function (scriptNode) {
-                    if (scriptNode.getAttribute('data-requiremodule') === name &&
-                            scriptNode.getAttribute('data-requirecontext') === context.contextName) {
-                        scriptNode.parentNode.removeChild(scriptNode);
-                        return true;
-                    }
-                });
-            }
-        }
-
-        function hasPathFallback(id) {
-            var pathConfig = getOwn(config.paths, id);
-            if (pathConfig && isArray(pathConfig) && pathConfig.length > 1) {
-                //Pop off the first array value, since it failed, and
-                //retry
-                pathConfig.shift();
-                context.require.undef(id);
-
-                //Custom require that does not do map translation, since
-                //ID is "absolute", already mapped/resolved.
-                context.makeRequire(null, {
-                    skipMap: true
-                })([id]);
-
-                return true;
-            }
-        }
-
-        //Turns a plugin!resource to [plugin, resource]
-        //with the plugin being undefined if the name
-        //did not have a plugin prefix.
-        function splitPrefix(name) {
-            var prefix,
-                index = name ? name.indexOf('!') : -1;
-            if (index > -1) {
-                prefix = name.substring(0, index);
-                name = name.substring(index + 1, name.length);
-            }
-            return [prefix, name];
-        }
-
-        /**
-         * Creates a module mapping that includes plugin prefix, module
-         * name, and path. If parentModuleMap is provided it will
-         * also normalize the name via require.normalize()
-         *
-         * @param {String} name the module name
-         * @param {String} [parentModuleMap] parent module map
-         * for the module name, used to resolve relative names.
-         * @param {Boolean} isNormalized: is the ID already normalized.
-         * This is true if this call is done for a define() module ID.
-         * @param {Boolean} applyMap: apply the map config to the ID.
-         * Should only be true if this map is for a dependency.
-         *
-         * @returns {Object}
-         */
-        function makeModuleMap(name, parentModuleMap, isNormalized, applyMap) {
-            var url, pluginModule, suffix, nameParts,
-                prefix = null,
-                parentName = parentModuleMap ? parentModuleMap.name : null,
-                originalName = name,
-                isDefine = true,
-                normalizedName = '';
-
-            //If no name, then it means it is a require call, generate an
-            //internal name.
-            if (!name) {
-                isDefine = false;
-                name = '_@r' + (requireCounter += 1);
-            }
-
-            nameParts = splitPrefix(name);
-            prefix = nameParts[0];
-            name = nameParts[1];
-
-            if (prefix) {
-                prefix = normalize(prefix, parentName, applyMap);
-                pluginModule = getOwn(defined, prefix);
-            }
-
-            //Account for relative paths if there is a base name.
-            if (name) {
-                if (prefix) {
-                    if (isNormalized) {
-                        normalizedName = name;
-                    } else if (pluginModule && pluginModule.normalize) {
-                        //Plugin is loaded, use its normalize method.
-                        normalizedName = pluginModule.normalize(name, function (name) {
-                            return normalize(name, parentName, applyMap);
-                        });
-                    } else {
-                        // If nested plugin references, then do not try to
-                        // normalize, as it will not normalize correctly. This
-                        // places a restriction on resourceIds, and the longer
-                        // term solution is not to normalize until plugins are
-                        // loaded and all normalizations to allow for async
-                        // loading of a loader plugin. But for now, fixes the
-                        // common uses. Details in #1131
-                        normalizedName = name.indexOf('!') === -1 ?
-                                         normalize(name, parentName, applyMap) :
-                                         name;
-                    }
-                } else {
-                    //A regular module.
-                    normalizedName = normalize(name, parentName, applyMap);
-
-                    //Normalized name may be a plugin ID due to map config
-                    //application in normalize. The map config values must
-                    //already be normalized, so do not need to redo that part.
-                    nameParts = splitPrefix(normalizedName);
-                    prefix = nameParts[0];
-                    normalizedName = nameParts[1];
-                    isNormalized = true;
-
-                    url = context.nameToUrl(normalizedName);
-                }
-            }
-
-            //If the id is a plugin id that cannot be determined if it needs
-            //normalization, stamp it with a unique ID so two matching relative
-            //ids that may conflict can be separate.
-            suffix = prefix && !pluginModule && !isNormalized ?
-                     '_unnormalized' + (unnormalizedCounter += 1) :
-                     '';
-
-            return {
-                prefix: prefix,
-                name: normalizedName,
-                parentMap: parentModuleMap,
-                unnormalized: !!suffix,
-                url: url,
-                originalName: originalName,
-                isDefine: isDefine,
-                id: (prefix ?
-                        prefix + '!' + normalizedName :
-                        normalizedName) + suffix
-            };
-        }
-
-        function getModule(depMap) {
-            var id = depMap.id,
-                mod = getOwn(registry, id);
-
-            if (!mod) {
-                mod = registry[id] = new context.Module(depMap);
-            }
-
-            return mod;
-        }
-
-        function on(depMap, name, fn) {
-            var id = depMap.id,
-                mod = getOwn(registry, id);
-
-            if (hasProp(defined, id) &&
-                    (!mod || mod.defineEmitComplete)) {
-                if (name === 'defined') {
-                    fn(defined[id]);
-                }
-            } else {
-                mod = getModule(depMap);
-                if (mod.error && name === 'error') {
-                    fn(mod.error);
-                } else {
-                    mod.on(name, fn);
-                }
-            }
-        }
-
-        function onError(err, errback) {
-            var ids = err.requireModules,
-                notified = false;
-
-            if (errback) {
-                errback(err);
-            } else {
-                each(ids, function (id) {
-                    var mod = getOwn(registry, id);
-                    if (mod) {
-                        //Set error on module, so it skips timeout checks.
-                        mod.error = err;
-                        if (mod.events.error) {
-                            notified = true;
-                            mod.emit('error', err);
-                        }
-                    }
-                });
-
-                if (!notified) {
-                    req.onError(err);
-                }
-            }
-        }
-
-        /**
-         * Internal method to transfer globalQueue items to this context's
-         * defQueue.
-         */
-        function takeGlobalQueue() {
-            //Push all the globalDefQueue items into the context's defQueue
-            if (globalDefQueue.length) {
-                each(globalDefQueue, function(queueItem) {
-                    var id = queueItem[0];
-                    if (typeof id === 'string') {
-                        context.defQueueMap[id] = true;
-                    }
-                    defQueue.push(queueItem);
-                });
-                globalDefQueue = [];
-            }
-        }
-
-        handlers = {
-            'require': function (mod) {
-                if (mod.require) {
-                    return mod.require;
-                } else {
-                    return (mod.require = context.makeRequire(mod.map));
-                }
-            },
-            'exports': function (mod) {
-                mod.usingExports = true;
-                if (mod.map.isDefine) {
-                    if (mod.exports) {
-                        return (defined[mod.map.id] = mod.exports);
-                    } else {
-                        return (mod.exports = defined[mod.map.id] = {});
-                    }
-                }
-            },
-            'module': function (mod) {
-                if (mod.module) {
-                    return mod.module;
-                } else {
-                    return (mod.module = {
-                        id: mod.map.id,
-                        uri: mod.map.url,
-                        config: function () {
-                            return getOwn(config.config, mod.map.id) || {};
-                        },
-                        exports: mod.exports || (mod.exports = {})
-                    });
-                }
-            }
-        };
-
-        function cleanRegistry(id) {
-            //Clean up machinery used for waiting modules.
-            delete registry[id];
-            delete enabledRegistry[id];
-        }
-
-        function breakCycle(mod, traced, processed) {
-            var id = mod.map.id;
-
-            if (mod.error) {
-                mod.emit('error', mod.error);
-            } else {
-                traced[id] = true;
-                each(mod.depMaps, function (depMap, i) {
-                    var depId = depMap.id,
-                        dep = getOwn(registry, depId);
-
-                    //Only force things that have not completed
-                    //being defined, so still in the registry,
-                    //and only if it has not been matched up
-                    //in the module already.
-                    if (dep && !mod.depMatched[i] && !processed[depId]) {
-                        if (getOwn(traced, depId)) {
-                            mod.defineDep(i, defined[depId]);
-                            mod.check(); //pass false?
-                        } else {
-                            breakCycle(dep, traced, processed);
-                        }
-                    }
-                });
-                processed[id] = true;
-            }
-        }
-
-        function checkLoaded() {
-            var err, usingPathFallback,
-                waitInterval = config.waitSeconds * 1000,
-                //It is possible to disable the wait interval by using waitSeconds of 0.
-                expired = waitInterval && (context.startTime + waitInterval) < new Date().getTime(),
-                noLoads = [],
-                reqCalls = [],
-                stillLoading = false,
-                needCycleCheck = true;
-
-            //Do not bother if this call was a result of a cycle break.
-            if (inCheckLoaded) {
-                return;
-            }
-
-            inCheckLoaded = true;
-
-            //Figure out the state of all the modules.
-            eachProp(enabledRegistry, function (mod) {
-                var map = mod.map,
-                    modId = map.id;
-
-                //Skip things that are not enabled or in error state.
-                if (!mod.enabled) {
-                    return;
-                }
-
-                if (!map.isDefine) {
-                    reqCalls.push(mod);
-                }
-
-                if (!mod.error) {
-                    //If the module should be executed, and it has not
-                    //been inited and time is up, remember it.
-                    if (!mod.inited && expired) {
-                        if (hasPathFallback(modId)) {
-                            usingPathFallback = true;
-                            stillLoading = true;
-                        } else {
-                            noLoads.push(modId);
-                            removeScript(modId);
-                        }
-                    } else if (!mod.inited && mod.fetched && map.isDefine) {
-                        stillLoading = true;
-                        if (!map.prefix) {
-                            //No reason to keep looking for unfinished
-                            //loading. If the only stillLoading is a
-                            //plugin resource though, keep going,
-                            //because it may be that a plugin resource
-                            //is waiting on a non-plugin cycle.
-                            return (needCycleCheck = false);
-                        }
-                    }
-                }
-            });
-
-            if (expired && noLoads.length) {
-                //If wait time expired, throw error of unloaded modules.
-                err = makeError('timeout', 'Load timeout for modules: ' + noLoads, null, noLoads);
-                err.contextName = context.contextName;
-                return onError(err);
-            }
-
-            //Not expired, check for a cycle.
-            if (needCycleCheck) {
-                each(reqCalls, function (mod) {
-                    breakCycle(mod, {}, {});
-                });
-            }
-
-            //If still waiting on loads, and the waiting load is something
-            //other than a plugin resource, or there are still outstanding
-            //scripts, then just try back later.
-            if ((!expired || usingPathFallback) && stillLoading) {
-                //Something is still waiting to load. Wait for it, but only
-                //if a timeout is not already in effect.
-                if ((isBrowser || isWebWorker) && !checkLoadedTimeoutId) {
-                    checkLoadedTimeoutId = setTimeout(function () {
-                        checkLoadedTimeoutId = 0;
-                        checkLoaded();
-                    }, 50);
-                }
-            }
-
-            inCheckLoaded = false;
-        }
-
-        Module = function (map) {
-            this.events = getOwn(undefEvents, map.id) || {};
-            this.map = map;
-            this.shim = getOwn(config.shim, map.id);
-            this.depExports = [];
-            this.depMaps = [];
-            this.depMatched = [];
-            this.pluginMaps = {};
-            this.depCount = 0;
-
-            /* this.exports this.factory
-               this.depMaps = [],
-               this.enabled, this.fetched
-            */
-        };
-
-        Module.prototype = {
-            init: function (depMaps, factory, errback, options) {
-                options = options || {};
-
-                //Do not do more inits if already done. Can happen if there
-                //are multiple define calls for the same module. That is not
-                //a normal, common case, but it is also not unexpected.
-                if (this.inited) {
-                    return;
-                }
-
-                this.factory = factory;
-
-                if (errback) {
-                    //Register for errors on this module.
-                    this.on('error', errback);
-                } else if (this.events.error) {
-                    //If no errback already, but there are error listeners
-                    //on this module, set up an errback to pass to the deps.
-                    errback = bind(this, function (err) {
-                        this.emit('error', err);
-                    });
-                }
-
-                //Do a copy of the dependency array, so that
-                //source inputs are not modified. For example
-                //"shim" deps are passed in here directly, and
-                //doing a direct modification of the depMaps array
-                //would affect that config.
-                this.depMaps = depMaps && depMaps.slice(0);
-
-                this.errback = errback;
-
-                //Indicate this module has be initialized
-                this.inited = true;
-
-                this.ignore = options.ignore;
-
-                //Could have option to init this module in enabled mode,
-                //or could have been previously marked as enabled. However,
-                //the dependencies are not known until init is called. So
-                //if enabled previously, now trigger dependencies as enabled.
-                if (options.enabled || this.enabled) {
-                    //Enable this module and dependencies.
-                    //Will call this.check()
-                    this.enable();
-                } else {
-                    this.check();
-                }
-            },
-
-            defineDep: function (i, depExports) {
-                //Because of cycles, defined callback for a given
-                //export can be called more than once.
-                if (!this.depMatched[i]) {
-                    this.depMatched[i] = true;
-                    this.depCount -= 1;
-                    this.depExports[i] = depExports;
-                }
-            },
-
-            fetch: function () {
-                if (this.fetched) {
-                    return;
-                }
-                this.fetched = true;
-
-                context.startTime = (new Date()).getTime();
-
-                var map = this.map;
-
-                //If the manager is for a plugin managed resource,
-                //ask the plugin to load it now.
-                if (this.shim) {
-                    context.makeRequire(this.map, {
-                        enableBuildCallback: true
-                    })(this.shim.deps || [], bind(this, function () {
-                        return map.prefix ? this.callPlugin() : this.load();
-                    }));
-                } else {
-                    //Regular dependency.
-                    return map.prefix ? this.callPlugin() : this.load();
-                }
-            },
-
-            load: function () {
-                var url = this.map.url;
-
-                //Regular dependency.
-                if (!urlFetched[url]) {
-                    urlFetched[url] = true;
-                    context.load(this.map.id, url);
-                }
-            },
-
-            /**
-             * Checks if the module is ready to define itself, and if so,
-             * define it.
-             */
-            check: function () {
-                if (!this.enabled || this.enabling) {
-                    return;
-                }
-
-                var err, cjsModule,
-                    id = this.map.id,
-                    depExports = this.depExports,
-                    exports = this.exports,
-                    factory = this.factory;
-
-                if (!this.inited) {
-                    // Only fetch if not already in the defQueue.
-                    if (!hasProp(context.defQueueMap, id)) {
-                        this.fetch();
-                    }
-                } else if (this.error) {
-                    this.emit('error', this.error);
-                } else if (!this.defining) {
-                    //The factory could trigger another require call
-                    //that would result in checking this module to
-                    //define itself again. If already in the process
-                    //of doing that, skip this work.
-                    this.defining = true;
-
-                    if (this.depCount < 1 && !this.defined) {
-                        if (isFunction(factory)) {
-                            //If there is an error listener, favor passing
-                            //to that instead of throwing an error. However,
-                            //only do it for define()'d  modules. require
-                            //errbacks should not be called for failures in
-                            //their callbacks (#699). However if a global
-                            //onError is set, use that.
-                            if ((this.events.error && this.map.isDefine) ||
-                                req.onError !== defaultOnError) {
-                                try {
-                                    exports = context.execCb(id, factory, depExports, exports);
-                                } catch (e) {
-                                    err = e;
-                                }
-                            } else {
-                                exports = context.execCb(id, factory, depExports, exports);
-                            }
-
-                            // Favor return value over exports. If node/cjs in play,
-                            // then will not have a return value anyway. Favor
-                            // module.exports assignment over exports object.
-                            if (this.map.isDefine && exports === undefined) {
-                                cjsModule = this.module;
-                                if (cjsModule) {
-                                    exports = cjsModule.exports;
-                                } else if (this.usingExports) {
-                                    //exports already set the defined value.
-                                    exports = this.exports;
-                                }
-                            }
-
-                            if (err) {
-                                err.requireMap = this.map;
-                                err.requireModules = this.map.isDefine ? [this.map.id] : null;
-                                err.requireType = this.map.isDefine ? 'define' : 'require';
-                                return onError((this.error = err));
-                            }
-
-                        } else {
-                            //Just a literal value
-                            exports = factory;
-                        }
-
-                        this.exports = exports;
-
-                        if (this.map.isDefine && !this.ignore) {
-                            defined[id] = exports;
-
-                            if (req.onResourceLoad) {
-                                var resLoadMaps = [];
-                                each(this.depMaps, function (depMap) {
-                                    resLoadMaps.push(depMap.normalizedMap || depMap);
-                                });
-                                req.onResourceLoad(context, this.map, resLoadMaps);
-                            }
-                        }
-
-                        //Clean up
-                        cleanRegistry(id);
-
-                        this.defined = true;
-                    }
-
-                    //Finished the define stage. Allow calling check again
-                    //to allow define notifications below in the case of a
-                    //cycle.
-                    this.defining = false;
-
-                    if (this.defined && !this.defineEmitted) {
-                        this.defineEmitted = true;
-                        this.emit('defined', this.exports);
-                        this.defineEmitComplete = true;
-                    }
-
-                }
-            },
-
-            callPlugin: function () {
-                var map = this.map,
-                    id = map.id,
-                    //Map already normalized the prefix.
-                    pluginMap = makeModuleMap(map.prefix);
-
-                //Mark this as a dependency for this plugin, so it
-                //can be traced for cycles.
-                this.depMaps.push(pluginMap);
-
-                on(pluginMap, 'defined', bind(this, function (plugin) {
-                    var load, normalizedMap, normalizedMod,
-                        bundleId = getOwn(bundlesMap, this.map.id),
-                        name = this.map.name,
-                        parentName = this.map.parentMap ? this.map.parentMap.name : null,
-                        localRequire = context.makeRequire(map.parentMap, {
-                            enableBuildCallback: true
-                        });
-
-                    //If current map is not normalized, wait for that
-                    //normalized name to load instead of continuing.
-                    if (this.map.unnormalized) {
-                        //Normalize the ID if the plugin allows it.
-                        if (plugin.normalize) {
-                            name = plugin.normalize(name, function (name) {
-                                return normalize(name, parentName, true);
-                            }) || '';
-                        }
-
-                        //prefix and name should already be normalized, no need
-                        //for applying map config again either.
-                        normalizedMap = makeModuleMap(map.prefix + '!' + name,
-                                                      this.map.parentMap,
-                                                      true);
-                        on(normalizedMap,
-                            'defined', bind(this, function (value) {
-                                this.map.normalizedMap = normalizedMap;
-                                this.init([], function () { return value; }, null, {
-                                    enabled: true,
-                                    ignore: true
-                                });
-                            }));
-
-                        normalizedMod = getOwn(registry, normalizedMap.id);
-                        if (normalizedMod) {
-                            //Mark this as a dependency for this plugin, so it
-                            //can be traced for cycles.
-                            this.depMaps.push(normalizedMap);
-
-                            if (this.events.error) {
-                                normalizedMod.on('error', bind(this, function (err) {
-                                    this.emit('error', err);
-                                }));
-                            }
-                            normalizedMod.enable();
-                        }
-
-                        return;
-                    }
-
-                    //If a paths config, then just load that file instead to
-                    //resolve the plugin, as it is built into that paths layer.
-                    if (bundleId) {
-                        this.map.url = context.nameToUrl(bundleId);
-                        this.load();
-                        return;
-                    }
-
-                    load = bind(this, function (value) {
-                        this.init([], function () { return value; }, null, {
-                            enabled: true
-                        });
-                    });
-
-                    load.error = bind(this, function (err) {
-                        this.inited = true;
-                        this.error = err;
-                        err.requireModules = [id];
-
-                        //Remove temp unnormalized modules for this module,
-                        //since they will never be resolved otherwise now.
-                        eachProp(registry, function (mod) {
-                            if (mod.map.id.indexOf(id + '_unnormalized') === 0) {
-                                cleanRegistry(mod.map.id);
-                            }
-                        });
-
-                        onError(err);
-                    });
-
-                    //Allow plugins to load other code without having to know the
-                    //context or how to 'complete' the load.
-                    load.fromText = bind(this, function (text, textAlt) {
-                        /*jslint evil: true */
-                        var moduleName = map.name,
-                            moduleMap = makeModuleMap(moduleName),
-                            hasInteractive = useInteractive;
-
-                        //As of 2.1.0, support just passing the text, to reinforce
-                        //fromText only being called once per resource. Still
-                        //support old style of passing moduleName but discard
-                        //that moduleName in favor of the internal ref.
-                        if (textAlt) {
-                            text = textAlt;
-                        }
-
-                        //Turn off interactive script matching for IE for any define
-                        //calls in the text, then turn it back on at the end.
-                        if (hasInteractive) {
-                            useInteractive = false;
-                        }
-
-                        //Prime the system by creating a module instance for
-                        //it.
-                        getModule(moduleMap);
-
-                        //Transfer any config to this other module.
-                        if (hasProp(config.config, id)) {
-                            config.config[moduleName] = config.config[id];
-                        }
-
-                        try {
-                            req.exec(text);
-                        } catch (e) {
-                            return onError(makeError('fromtexteval',
-                                             'fromText eval for ' + id +
-                                            ' failed: ' + e,
-                                             e,
-                                             [id]));
-                        }
-
-                        if (hasInteractive) {
-                            useInteractive = true;
-                        }
-
-                        //Mark this as a dependency for the plugin
-                        //resource
-                        this.depMaps.push(moduleMap);
-
-                        //Support anonymous modules.
-                        context.completeLoad(moduleName);
-
-                        //Bind the value of that module to the value for this
-                        //resource ID.
-                        localRequire([moduleName], load);
-                    });
-
-                    //Use parentName here since the plugin's name is not reliable,
-                    //could be some weird string with no path that actually wants to
-                    //reference the parentName's path.
-                    plugin.load(map.name, localRequire, load, config);
-                }));
-
-                context.enable(pluginMap, this);
-                this.pluginMaps[pluginMap.id] = pluginMap;
-            },
-
-            enable: function () {
-                enabledRegistry[this.map.id] = this;
-                this.enabled = true;
-
-                //Set flag mentioning that the module is enabling,
-                //so that immediate calls to the defined callbacks
-                //for dependencies do not trigger inadvertent load
-                //with the depCount still being zero.
-                this.enabling = true;
-
-                //Enable each dependency
-                each(this.depMaps, bind(this, function (depMap, i) {
-                    var id, mod, handler;
-
-                    if (typeof depMap === 'string') {
-                        //Dependency needs to be converted to a depMap
-                        //and wired up to this module.
-                        depMap = makeModuleMap(depMap,
-                                               (this.map.isDefine ? this.map : this.map.parentMap),
-                                               false,
-                                               !this.skipMap);
-                        this.depMaps[i] = depMap;
-
-                        handler = getOwn(handlers, depMap.id);
-
-                        if (handler) {
-                            this.depExports[i] = handler(this);
-                            return;
-                        }
-
-                        this.depCount += 1;
-
-                        on(depMap, 'defined', bind(this, function (depExports) {
-                            if (this.undefed) {
-                                return;
-                            }
-                            this.defineDep(i, depExports);
-                            this.check();
-                        }));
-
-                        if (this.errback) {
-                            on(depMap, 'error', bind(this, this.errback));
-                        } else if (this.events.error) {
-                            // No direct errback on this module, but something
-                            // else is listening for errors, so be sure to
-                            // propagate the error correctly.
-                            on(depMap, 'error', bind(this, function(err) {
-                                this.emit('error', err);
-                            }));
-                        }
-                    }
-
-                    id = depMap.id;
-                    mod = registry[id];
-
-                    //Skip special modules like 'require', 'exports', 'module'
-                    //Also, don't call enable if it is already enabled,
-                    //important in circular dependency cases.
-                    if (!hasProp(handlers, id) && mod && !mod.enabled) {
-                        context.enable(depMap, this);
-                    }
-                }));
-
-                //Enable each plugin that is used in
-                //a dependency
-                eachProp(this.pluginMaps, bind(this, function (pluginMap) {
-                    var mod = getOwn(registry, pluginMap.id);
-                    if (mod && !mod.enabled) {
-                        context.enable(pluginMap, this);
-                    }
-                }));
-
-                this.enabling = false;
-
-                this.check();
-            },
-
-            on: function (name, cb) {
-                var cbs = this.events[name];
-                if (!cbs) {
-                    cbs = this.events[name] = [];
-                }
-                cbs.push(cb);
-            },
-
-            emit: function (name, evt) {
-                each(this.events[name], function (cb) {
-                    cb(evt);
-                });
-                if (name === 'error') {
-                    //Now that the error handler was triggered, remove
-                    //the listeners, since this broken Module instance
-                    //can stay around for a while in the registry.
-                    delete this.events[name];
-                }
-            }
-        };
-
-        function callGetModule(args) {
-            //Skip modules already defined.
-            if (!hasProp(defined, args[0])) {
-                getModule(makeModuleMap(args[0], null, true)).init(args[1], args[2]);
-            }
-        }
-
-        function removeListener(node, func, name, ieName) {
-            //Favor detachEvent because of IE9
-            //issue, see attachEvent/addEventListener comment elsewhere
-            //in this file.
-            if (node.detachEvent && !isOpera) {
-                //Probably IE. If not it will throw an error, which will be
-                //useful to know.
-                if (ieName) {
-                    node.detachEvent(ieName, func);
-                }
-            } else {
-                node.removeEventListener(name, func, false);
-            }
-        }
-
-        /**
-         * Given an event from a script node, get the requirejs info from it,
-         * and then removes the event listeners on the node.
-         * @param {Event} evt
-         * @returns {Object}
-         */
-        function getScriptData(evt) {
-            //Using currentTarget instead of target for Firefox 2.0's sake. Not
-            //all old browsers will be supported, but this one was easy enough
-            //to support and still makes sense.
-            var node = evt.currentTarget || evt.srcElement;
-
-            //Remove the listeners once here.
-            removeListener(node, context.onScriptLoad, 'load', 'onreadystatechange');
-            removeListener(node, context.onScriptError, 'error');
-
-            return {
-                node: node,
-                id: node && node.getAttribute('data-requiremodule')
-            };
-        }
-
-        function intakeDefines() {
-            var args;
-
-            //Any defined modules in the global queue, intake them now.
-            takeGlobalQueue();
-
-            //Make sure any remaining defQueue items get properly processed.
-            while (defQueue.length) {
-                args = defQueue.shift();
-                if (args[0] === null) {
-                    return onError(makeError('mismatch', 'Mismatched anonymous define() module: ' +
-                        args[args.length - 1]));
-                } else {
-                    //args are id, deps, factory. Should be normalized by the
-                    //define() function.
-                    callGetModule(args);
-                }
-            }
-            context.defQueueMap = {};
-        }
-
-        context = {
-            config: config,
-            contextName: contextName,
-            registry: registry,
-            defined: defined,
-            urlFetched: urlFetched,
-            defQueue: defQueue,
-            defQueueMap: {},
-            Module: Module,
-            makeModuleMap: makeModuleMap,
-            nextTick: req.nextTick,
-            onError: onError,
-
-            /**
-             * Set a configuration for the context.
-             * @param {Object} cfg config object to integrate.
-             */
-            configure: function (cfg) {
-                //Make sure the baseUrl ends in a slash.
-                if (cfg.baseUrl) {
-                    if (cfg.baseUrl.charAt(cfg.baseUrl.length - 1) !== '/') {
-                        cfg.baseUrl += '/';
-                    }
-                }
-
-                // Convert old style urlArgs string to a function.
-                if (typeof cfg.urlArgs === 'string') {
-                    var urlArgs = cfg.urlArgs;
-                    cfg.urlArgs = function(id, url) {
-                        return (url.indexOf('?') === -1 ? '?' : '&') + urlArgs;
-                    };
-                }
-
-                //Save off the paths since they require special processing,
-                //they are additive.
-                var shim = config.shim,
-                    objs = {
-                        paths: true,
-                        bundles: true,
-                        config: true,
-                        map: true
-                    };
-
-                eachProp(cfg, function (value, prop) {
-                    if (objs[prop]) {
-                        if (!config[prop]) {
-                            config[prop] = {};
-                        }
-                        mixin(config[prop], value, true, true);
-                    } else {
-                        config[prop] = value;
-                    }
-                });
-
-                //Reverse map the bundles
-                if (cfg.bundles) {
-                    eachProp(cfg.bundles, function (value, prop) {
-                        each(value, function (v) {
-                            if (v !== prop) {
-                                bundlesMap[v] = prop;
-                            }
-                        });
-                    });
-                }
-
-                //Merge shim
-                if (cfg.shim) {
-                    eachProp(cfg.shim, function (value, id) {
-                        //Normalize the structure
-                        if (isArray(value)) {
-                            value = {
-                                deps: value
-                            };
-                        }
-                        if ((value.exports || value.init) && !value.exportsFn) {
-                            value.exportsFn = context.makeShimExports(value);
-                        }
-                        shim[id] = value;
-                    });
-                    config.shim = shim;
-                }
-
-                //Adjust packages if necessary.
-                if (cfg.packages) {
-                    each(cfg.packages, function (pkgObj) {
-                        var location, name;
-
-                        pkgObj = typeof pkgObj === 'string' ? {name: pkgObj} : pkgObj;
-
-                        name = pkgObj.name;
-                        location = pkgObj.location;
-                        if (location) {
-                            config.paths[name] = pkgObj.location;
-                        }
-
-                        //Save pointer to main module ID for pkg name.
-                        //Remove leading dot in main, so main paths are normalized,
-                        //and remove any trailing .js, since different package
-                        //envs have different conventions: some use a module name,
-                        //some use a file name.
-                        config.pkgs[name] = pkgObj.name + '/' + (pkgObj.main || 'main')
-                                     .replace(currDirRegExp, '')
-                                     .replace(jsSuffixRegExp, '');
-                    });
-                }
-
-                //If there are any "waiting to execute" modules in the registry,
-                //update the maps for them, since their info, like URLs to load,
-                //may have changed.
-                eachProp(registry, function (mod, id) {
-                    //If module already has init called, since it is too
-                    //late to modify them, and ignore unnormalized ones
-                    //since they are transient.
-                    if (!mod.inited && !mod.map.unnormalized) {
-                        mod.map = makeModuleMap(id, null, true);
-                    }
-                });
-
-                //If a deps array or a config callback is specified, then call
-                //require with those args. This is useful when require is defined as a
-                //config object before require.js is loaded.
-                if (cfg.deps || cfg.callback) {
-                    context.require(cfg.deps || [], cfg.callback);
-                }
-            },
-
-            makeShimExports: function (value) {
-                function fn() {
-                    var ret;
-                    if (value.init) {
-                        ret = value.init.apply(global, arguments);
-                    }
-                    return ret || (value.exports && getGlobal(value.exports));
-                }
-                return fn;
-            },
-
-            makeRequire: function (relMap, options) {
-                options = options || {};
-
-                function localRequire(deps, callback, errback) {
-                    var id, map, requireMod;
-
-                    if (options.enableBuildCallback && callback && isFunction(callback)) {
-                        callback.__requireJsBuild = true;
-                    }
-
-                    if (typeof deps === 'string') {
-                        if (isFunction(callback)) {
-                            //Invalid call
-                            return onError(makeError('requireargs', 'Invalid require call'), errback);
-                        }
-
-                        //If require|exports|module are requested, get the
-                        //value for them from the special handlers. Caveat:
-                        //this only works while module is being defined.
-                        if (relMap && hasProp(handlers, deps)) {
-                            return handlers[deps](registry[relMap.id]);
-                        }
-
-                        //Synchronous access to one module. If require.get is
-                        //available (as in the Node adapter), prefer that.
-                        if (req.get) {
-                            return req.get(context, deps, relMap, localRequire);
-                        }
-
-                        //Normalize module name, if it contains . or ..
-                        map = makeModuleMap(deps, relMap, false, true);
-                        id = map.id;
-
-                        if (!hasProp(defined, id)) {
-                            return onError(makeError('notloaded', 'Module name "' +
-                                        id +
-                                        '" has not been loaded yet for context: ' +
-                                        contextName +
-                                        (relMap ? '' : '. Use require([])')));
-                        }
-                        return defined[id];
-                    }
-
-                    //Grab defines waiting in the global queue.
-                    intakeDefines();
-
-                    //Mark all the dependencies as needing to be loaded.
-                    context.nextTick(function () {
-                        //Some defines could have been added since the
-                        //require call, collect them.
-                        intakeDefines();
-
-                        requireMod = getModule(makeModuleMap(null, relMap));
-
-                        //Store if map config should be applied to this require
-                        //call for dependencies.
-                        requireMod.skipMap = options.skipMap;
-
-                        requireMod.init(deps, callback, errback, {
-                            enabled: true
-                        });
-
-                        checkLoaded();
-                    });
-
-                    return localRequire;
-                }
-
-                mixin(localRequire, {
-                    isBrowser: isBrowser,
-
-                    /**
-                     * Converts a module name + .extension into an URL path.
-                     * *Requires* the use of a module name. It does not support using
-                     * plain URLs like nameToUrl.
-                     */
-                    toUrl: function (moduleNamePlusExt) {
-                        var ext,
-                            index = moduleNamePlusExt.lastIndexOf('.'),
-                            segment = moduleNamePlusExt.split('/')[0],
-                            isRelative = segment === '.' || segment === '..';
-
-                        //Have a file extension alias, and it is not the
-                        //dots from a relative path.
-                        if (index !== -1 && (!isRelative || index > 1)) {
-                            ext = moduleNamePlusExt.substring(index, moduleNamePlusExt.length);
-                            moduleNamePlusExt = moduleNamePlusExt.substring(0, index);
-                        }
-
-                        return context.nameToUrl(normalize(moduleNamePlusExt,
-                                                relMap && relMap.id, true), ext,  true);
-                    },
-
-                    defined: function (id) {
-                        return hasProp(defined, makeModuleMap(id, relMap, false, true).id);
-                    },
-
-                    specified: function (id) {
-                        id = makeModuleMap(id, relMap, false, true).id;
-                        return hasProp(defined, id) || hasProp(registry, id);
-                    }
-                });
-
-                //Only allow undef on top level require calls
-                if (!relMap) {
-                    localRequire.undef = function (id) {
-                        //Bind any waiting define() calls to this context,
-                        //fix for #408
-                        takeGlobalQueue();
-
-                        var map = makeModuleMap(id, relMap, true),
-                            mod = getOwn(registry, id);
-
-                        mod.undefed = true;
-                        removeScript(id);
-
-                        delete defined[id];
-                        delete urlFetched[map.url];
-                        delete undefEvents[id];
-
-                        //Clean queued defines too. Go backwards
-                        //in array so that the splices do not
-                        //mess up the iteration.
-                        eachReverse(defQueue, function(args, i) {
-                            if (args[0] === id) {
-                                defQueue.splice(i, 1);
-                            }
-                        });
-                        delete context.defQueueMap[id];
-
-                        if (mod) {
-                            //Hold on to listeners in case the
-                            //module will be attempted to be reloaded
-                            //using a different config.
-                            if (mod.events.defined) {
-                                undefEvents[id] = mod.events;
-                            }
-
-                            cleanRegistry(id);
-                        }
-                    };
-                }
-
-                return localRequire;
-            },
-
-            /**
-             * Called to enable a module if it is still in the registry
-             * awaiting enablement. A second arg, parent, the parent module,
-             * is passed in for context, when this method is overridden by
-             * the optimizer. Not shown here to keep code compact.
-             */
-            enable: function (depMap) {
-                var mod = getOwn(registry, depMap.id);
-                if (mod) {
-                    getModule(depMap).enable();
-                }
-            },
-
-            /**
-             * Internal method used by environment adapters to complete a load event.
-             * A load event could be a script load or just a load pass from a synchronous
-             * load call.
-             * @param {String} moduleName the name of the module to potentially complete.
-             */
-            completeLoad: function (moduleName) {
-                var found, args, mod,
-                    shim = getOwn(config.shim, moduleName) || {},
-                    shExports = shim.exports;
-
-                takeGlobalQueue();
-
-                while (defQueue.length) {
-                    args = defQueue.shift();
-                    if (args[0] === null) {
-                        args[0] = moduleName;
-                        //If already found an anonymous module and bound it
-                        //to this name, then this is some other anon module
-                        //waiting for its completeLoad to fire.
-                        if (found) {
-                            break;
-                        }
-                        found = true;
-                    } else if (args[0] === moduleName) {
-                        //Found matching define call for this script!
-                        found = true;
-                    }
-
-                    callGetModule(args);
-                }
-                context.defQueueMap = {};
-
-                //Do this after the cycle of callGetModule in case the result
-                //of those calls/init calls changes the registry.
-                mod = getOwn(registry, moduleName);
-
-                if (!found && !hasProp(defined, moduleName) && mod && !mod.inited) {
-                    if (config.enforceDefine && (!shExports || !getGlobal(shExports))) {
-                        if (hasPathFallback(moduleName)) {
-                            return;
-                        } else {
-                            return onError(makeError('nodefine',
-                                             'No define call for ' + moduleName,
-                                             null,
-                                             [moduleName]));
-                        }
-                    } else {
-                        //A script that does not call define(), so just simulate
-                        //the call for it.
-                        callGetModule([moduleName, (shim.deps || []), shim.exportsFn]);
-                    }
-                }
-
-                checkLoaded();
-            },
-
-            /**
-             * Converts a module name to a file path. Supports cases where
-             * moduleName may actually be just an URL.
-             * Note that it **does not** call normalize on the moduleName,
-             * it is assumed to have already been normalized. This is an
-             * internal API, not a public one. Use toUrl for the public API.
-             */
-            nameToUrl: function (moduleName, ext, skipExt) {
-                var paths, syms, i, parentModule, url,
-                    parentPath, bundleId,
-                    pkgMain = getOwn(config.pkgs, moduleName);
-
-                if (pkgMain) {
-                    moduleName = pkgMain;
-                }
-
-                bundleId = getOwn(bundlesMap, moduleName);
-
-                if (bundleId) {
-                    return context.nameToUrl(bundleId, ext, skipExt);
-                }
-
-                //If a colon is in the URL, it indicates a protocol is used and it is just
-                //an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
-                //or ends with .js, then assume the user meant to use an url and not a module id.
-                //The slash is important for protocol-less URLs as well as full paths.
-                if (req.jsExtRegExp.test(moduleName)) {
-                    //Just a plain path, not module name lookup, so just return it.
-                    //Add extension if it is included. This is a bit wonky, only non-.js things pass
-                    //an extension, this method probably needs to be reworked.
-                    url = moduleName + (ext || '');
-                } else {
-                    //A module that needs to be converted to a path.
-                    paths = config.paths;
-
-                    syms = moduleName.split('/');
-                    //For each module name segment, see if there is a path
-                    //registered for it. Start with most specific name
-                    //and work up from it.
-                    for (i = syms.length; i > 0; i -= 1) {
-                        parentModule = syms.slice(0, i).join('/');
-
-                        parentPath = getOwn(paths, parentModule);
-                        if (parentPath) {
-                            //If an array, it means there are a few choices,
-                            //Choose the one that is desired
-                            if (isArray(parentPath)) {
-                                parentPath = parentPath[0];
-                            }
-                            syms.splice(0, i, parentPath);
-                            break;
-                        }
-                    }
-
-                    //Join the path parts together, then figure out if baseUrl is needed.
-                    url = syms.join('/');
-                    url += (ext || (/^data\:|^blob\:|\?/.test(url) || skipExt ? '' : '.js'));
-                    url = (url.charAt(0) === '/' || url.match(/^[\w\+\.\-]+:/) ? '' : config.baseUrl) + url;
-                }
-
-                return config.urlArgs && !/^blob\:/.test(url) ?
-                       url + config.urlArgs(moduleName, url) : url;
-            },
-
-            //Delegates to req.load. Broken out as a separate function to
-            //allow overriding in the optimizer.
-            load: function (id, url) {
-                req.load(context, id, url);
-            },
-
-            /**
-             * Executes a module callback function. Broken out as a separate function
-             * solely to allow the build system to sequence the files in the built
-             * layer in the right sequence.
-             *
-             * @private
-             */
-            execCb: function (name, callback, args, exports) {
-                return callback.apply(exports, args);
-            },
-
-            /**
-             * callback for script loads, used to check status of loading.
-             *
-             * @param {Event} evt the event from the browser for the script
-             * that was loaded.
-             */
-            onScriptLoad: function (evt) {
-                //Using currentTarget instead of target for Firefox 2.0's sake. Not
-                //all old browsers will be supported, but this one was easy enough
-                //to support and still makes sense.
-                if (evt.type === 'load' ||
-                        (readyRegExp.test((evt.currentTarget || evt.srcElement).readyState))) {
-                    //Reset interactive script so a script node is not held onto for
-                    //to long.
-                    interactiveScript = null;
-
-                    //Pull out the name of the module and the context.
-                    var data = getScriptData(evt);
-                    context.completeLoad(data.id);
-                }
-            },
-
-            /**
-             * Callback for script errors.
-             */
-            onScriptError: function (evt) {
-                var data = getScriptData(evt);
-                if (!hasPathFallback(data.id)) {
-                    var parents = [];
-                    eachProp(registry, function(value, key) {
-                        if (key.indexOf('_@r') !== 0) {
-                            each(value.depMaps, function(depMap) {
-                                if (depMap.id === data.id) {
-                                    parents.push(key);
-                                    return true;
-                                }
-                            });
-                        }
-                    });
-                    return onError(makeError('scripterror', 'Script error for "' + data.id +
-                                             (parents.length ?
-                                             '", needed by: ' + parents.join(', ') :
-                                             '"'), evt, [data.id]));
-                }
-            }
-        };
-
-        context.require = context.makeRequire();
-        return context;
-    }
-
-    /**
-     * Main entry point.
-     *
-     * If the only argument to require is a string, then the module that
-     * is represented by that string is fetched for the appropriate context.
-     *
-     * If the first argument is an array, then it will be treated as an array
-     * of dependency string names to fetch. An optional function callback can
-     * be specified to execute when all of those dependencies are available.
-     *
-     * Make a local req variable to help Caja compliance (it assumes things
-     * on a require that are not standardized), and to give a short
-     * name for minification/local scope use.
-     */
-    req = requirejs = function (deps, callback, errback, optional) {
-
-        //Find the right context, use default
-        var context, config,
-            contextName = defContextName;
-
-        // Determine if have config object in the call.
-        if (!isArray(deps) && typeof deps !== 'string') {
-            // deps is a config object
-            config = deps;
-            if (isArray(callback)) {
-                // Adjust args if there are dependencies
-                deps = callback;
-                callback = errback;
-                errback = optional;
-            } else {
-                deps = [];
-            }
-        }
-
-        if (config && config.context) {
-            contextName = config.context;
-        }
-
-        context = getOwn(contexts, contextName);
-        if (!context) {
-            context = contexts[contextName] = req.s.newContext(contextName);
-        }
-
-        if (config) {
-            context.configure(config);
-        }
-
-        return context.require(deps, callback, errback);
-    };
-
-    /**
-     * Support require.config() to make it easier to cooperate with other
-     * AMD loaders on globally agreed names.
-     */
-    req.config = function (config) {
-        return req(config);
-    };
-
-    /**
-     * Execute something after the current tick
-     * of the event loop. Override for other envs
-     * that have a better solution than setTimeout.
-     * @param  {Function} fn function to execute later.
-     */
-    req.nextTick = typeof setTimeout !== 'undefined' ? function (fn) {
-        setTimeout(fn, 4);
-    } : function (fn) { fn(); };
-
-    /**
-     * Export require as a global, but only if it does not already exist.
-     */
-    if (!require) {
-        require = req;
-    }
-
-    req.version = version;
-
-    //Used to filter out dependencies that are already paths.
-    req.jsExtRegExp = /^\/|:|\?|\.js$/;
-    req.isBrowser = isBrowser;
-    s = req.s = {
-        contexts: contexts,
-        newContext: newContext
-    };
-
-    //Create default context.
-    req({});
-
-    //Exports some context-sensitive methods on global require.
-    each([
-        'toUrl',
-        'undef',
-        'defined',
-        'specified'
-    ], function (prop) {
-        //Reference from contexts instead of early binding to default context,
-        //so that during builds, the latest instance of the default context
-        //with its config gets used.
-        req[prop] = function () {
-            var ctx = contexts[defContextName];
-            return ctx.require[prop].apply(ctx, arguments);
-        };
-    });
-
-    if (isBrowser) {
-        head = s.head = document.getElementsByTagName('head')[0];
-        //If BASE tag is in play, using appendChild is a problem for IE6.
-        //When that browser dies, this can be removed. Details in this jQuery bug:
-        //http://dev.jquery.com/ticket/2709
-        baseElement = document.getElementsByTagName('base')[0];
-        if (baseElement) {
-            head = s.head = baseElement.parentNode;
-        }
-    }
-
-    /**
-     * Any errors that require explicitly generates will be passed to this
-     * function. Intercept/override it if you want custom error handling.
-     * @param {Error} err the error object.
-     */
-    req.onError = defaultOnError;
-
-    /**
-     * Creates the node for the load command. Only used in browser envs.
-     */
-    req.createNode = function (config, moduleName, url) {
-        var node = config.xhtml ?
-                document.createElementNS('http://www.w3.org/1999/xhtml', 'html:script') :
-                document.createElement('script');
-        node.type = config.scriptType || 'text/javascript';
-        node.charset = 'utf-8';
-        node.async = true;
-        return node;
-    };
-
-    /**
-     * Does the request to load a module for the browser case.
-     * Make this a separate function to allow other environments
-     * to override it.
-     *
-     * @param {Object} context the require context to find state.
-     * @param {String} moduleName the name of the module.
-     * @param {Object} url the URL to the module.
-     */
-    req.load = function (context, moduleName, url) {
-        var config = (context && context.config) || {},
-            node;
-        if (isBrowser) {
-            //In the browser so use a script tag
-            node = req.createNode(config, moduleName, url);
-
-            node.setAttribute('data-requirecontext', context.contextName);
-            node.setAttribute('data-requiremodule', moduleName);
-
-            //Set up load listener. Test attachEvent first because IE9 has
-            //a subtle issue in its addEventListener and script onload firings
-            //that do not match the behavior of all other browsers with
-            //addEventListener support, which fire the onload event for a
-            //script right after the script execution. See:
-            //https://connect.microsoft.com/IE/feedback/details/648057/script-onload-event-is-not-fired-immediately-after-script-execution
-            //UNFORTUNATELY Opera implements attachEvent but does not follow the script
-            //script execution mode.
-            if (node.attachEvent &&
-                    //Check if node.attachEvent is artificially added by custom script or
-                    //natively supported by browser
-                    //read https://github.com/requirejs/requirejs/issues/187
-                    //if we can NOT find [native code] then it must NOT natively supported.
-                    //in IE8, node.attachEvent does not have toString()
-                    //Note the test for "[native code" with no closing brace, see:
-                    //https://github.com/requirejs/requirejs/issues/273
-                    !(node.attachEvent.toString && node.attachEvent.toString().indexOf('[native code') < 0) &&
-                    !isOpera) {
-                //Probably IE. IE (at least 6-8) do not fire
-                //script onload right after executing the script, so
-                //we cannot tie the anonymous define call to a name.
-                //However, IE reports the script as being in 'interactive'
-                //readyState at the time of the define call.
-                useInteractive = true;
-
-                node.attachEvent('onreadystatechange', context.onScriptLoad);
-                //It would be great to add an error handler here to catch
-                //404s in IE9+. However, onreadystatechange will fire before
-                //the error handler, so that does not help. If addEventListener
-                //is used, then IE will fire error before load, but we cannot
-                //use that pathway given the connect.microsoft.com issue
-                //mentioned above about not doing the 'script execute,
-                //then fire the script load event listener before execute
-                //next script' that other browsers do.
-                //Best hope: IE10 fixes the issues,
-                //and then destroys all installs of IE 6-9.
-                //node.attachEvent('onerror', context.onScriptError);
-            } else {
-                node.addEventListener('load', context.onScriptLoad, false);
-                node.addEventListener('error', context.onScriptError, false);
-            }
-            node.src = url;
-
-            //Calling onNodeCreated after all properties on the node have been
-            //set, but before it is placed in the DOM.
-            if (config.onNodeCreated) {
-                config.onNodeCreated(node, config, moduleName, url);
-            }
-
-            //For some cache cases in IE 6-8, the script executes before the end
-            //of the appendChild execution, so to tie an anonymous define
-            //call to the module name (which is stored on the node), hold on
-            //to a reference to this node, but clear after the DOM insertion.
-            currentlyAddingScript = node;
-            if (baseElement) {
-                head.insertBefore(node, baseElement);
-            } else {
-                head.appendChild(node);
-            }
-            currentlyAddingScript = null;
-
-            return node;
-        } else if (isWebWorker) {
-            try {
-                //In a web worker, use importScripts. This is not a very
-                //efficient use of importScripts, importScripts will block until
-                //its script is downloaded and evaluated. However, if web workers
-                //are in play, the expectation is that a build has been done so
-                //that only one script needs to be loaded anyway. This may need
-                //to be reevaluated if other use cases become common.
-
-                // Post a task to the event loop to work around a bug in WebKit
-                // where the worker gets garbage-collected after calling
-                // importScripts(): https://webkit.org/b/153317
-                setTimeout(function() {}, 0);
-                importScripts(url);
-
-                //Account for anonymous modules
-                context.completeLoad(moduleName);
-            } catch (e) {
-                context.onError(makeError('importscripts',
-                                'importScripts failed for ' +
-                                    moduleName + ' at ' + url,
-                                e,
-                                [moduleName]));
-            }
-        }
-    };
-
-    function getInteractiveScript() {
-        if (interactiveScript && interactiveScript.readyState === 'interactive') {
-            return interactiveScript;
-        }
-
-        eachReverse(scripts(), function (script) {
-            if (script.readyState === 'interactive') {
-                return (interactiveScript = script);
-            }
-        });
-        return interactiveScript;
-    }
-
-    //Look for a data-main script attribute, which could also adjust the baseUrl.
-    if (isBrowser && !cfg.skipDataMain) {
-        //Figure out baseUrl. Get it from the script tag with require.js in it.
-        eachReverse(scripts(), function (script) {
-            //Set the 'head' where we can append children by
-            //using the script's parent.
-            if (!head) {
-                head = script.parentNode;
-            }
-
-            //Look for a data-main attribute to set main script for the page
-            //to load. If it is there, the path to data main becomes the
-            //baseUrl, if it is not already set.
-            dataMain = script.getAttribute('data-main');
-            if (dataMain) {
-                //Preserve dataMain in case it is a path (i.e. contains '?')
-                mainScript = dataMain;
-
-                //Set final baseUrl if there is not already an explicit one,
-                //but only do so if the data-main value is not a loader plugin
-                //module ID.
-                if (!cfg.baseUrl && mainScript.indexOf('!') === -1) {
-                    //Pull off the directory of data-main for use as the
-                    //baseUrl.
-                    src = mainScript.split('/');
-                    mainScript = src.pop();
-                    subPath = src.length ? src.join('/')  + '/' : './';
-
-                    cfg.baseUrl = subPath;
-                }
-
-                //Strip off any trailing .js since mainScript is now
-                //like a module name.
-                mainScript = mainScript.replace(jsSuffixRegExp, '');
-
-                //If mainScript is still a path, fall back to dataMain
-                if (req.jsExtRegExp.test(mainScript)) {
-                    mainScript = dataMain;
-                }
-
-                //Put the data-main script in the files to load.
-                cfg.deps = cfg.deps ? cfg.deps.concat(mainScript) : [mainScript];
-
-                return true;
-            }
-        });
-    }
-
-    /**
-     * The function that handles definitions of modules. Differs from
-     * require() in that a string for the module should be the first argument,
-     * and the function to execute after dependencies are loaded should
-     * return a value to define the module corresponding to the first argument's
-     * name.
-     */
-    define = function (name, deps, callback) {
-        var node, context;
-
-        //Allow for anonymous modules
-        if (typeof name !== 'string') {
-            //Adjust args appropriately
-            callback = deps;
-            deps = name;
-            name = null;
-        }
-
-        //This module may not have dependencies
-        if (!isArray(deps)) {
-            callback = deps;
-            deps = null;
-        }
-
-        //If no name, and callback is a function, then figure out if it a
-        //CommonJS thing with dependencies.
-        if (!deps && isFunction(callback)) {
-            deps = [];
-            //Remove comments from the callback string,
-            //look for require calls, and pull them into the dependencies,
-            //but only if there are function args.
-            if (callback.length) {
-                callback
-                    .toString()
-                    .replace(commentRegExp, commentReplace)
-                    .replace(cjsRequireRegExp, function (match, dep) {
-                        deps.push(dep);
-                    });
-
-                //May be a CommonJS thing even without require calls, but still
-                //could use exports, and module. Avoid doing exports and module
-                //work though if it just needs require.
-                //REQUIRES the function to expect the CommonJS variables in the
-                //order listed below.
-                deps = (callback.length === 1 ? ['require'] : ['require', 'exports', 'module']).concat(deps);
-            }
-        }
-
-        //If in IE 6-8 and hit an anonymous define() call, do the interactive
-        //work.
-        if (useInteractive) {
-            node = currentlyAddingScript || getInteractiveScript();
-            if (node) {
-                if (!name) {
-                    name = node.getAttribute('data-requiremodule');
-                }
-                context = contexts[node.getAttribute('data-requirecontext')];
-            }
-        }
-
-        //Always save off evaluating the def call until the script onload handler.
-        //This allows multiple modules to be in a file without prematurely
-        //tracing dependencies, and allows for anonymous module support,
-        //where the module name is not known until the script onload event
-        //occurs. If no context, use the global queue, and get it processed
-        //in the onscript load callback.
-        if (context) {
-            context.defQueue.push([name, deps, callback]);
-            context.defQueueMap[name] = true;
-        } else {
-            globalDefQueue.push([name, deps, callback]);
-        }
-    };
-
-    define.amd = {
-        jQuery: true
-    };
-
-    /**
-     * Executes the text. Normally just uses eval, but can be modified
-     * to use a better, environment-specific call. Only used for transpiling
-     * loader plugins, not for plain JS modules.
-     * @param {String} text the text to execute/evaluate.
-     */
-    req.exec = function (text) {
-        /*jslint evil: true */
-        return eval(text);
-    };
-
-    //Set up with config info.
-    req(cfg);
-}(this, (typeof setTimeout === 'undefined' ? undefined : setTimeout)));
+  }, false);
+  dart.trackLibraries("packages/flutter/src/material/colors.dart", {
+    "package:flutter/src/material/colors.dart": colors$
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["colors.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAyBuB,YAAQ,gBAAJ,UAAC;IAAI;;AAGR,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;wCA9BR,SAAyB;AAAU,mDAAM,OAAO,EAAE,MAAM;;EAAC;;;;;;;;;;;;;;;;;;;AAmD5D,YAAQ,gBAAJ,UAAC;IAAI;;AAGR,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;AAGV,YAAS,gBAAL,UAAC;IAAK;;8CAfF,SAAyB;AAAU,yDAAM,OAAO,EAAE,MAAM;;EAAC;;;;;;;;;;;;;;;;;EAgI7E;;;;;MAGS,0BAAW;;;MAYX,oBAAK;;;MAeL,sBAAO;;;MAgBP,sBAAO;;;MAUP,sBAAO;;;MAcP,sBAAO;;;MAeP,sBAAO;;;MAYP,sBAAO;;;MAkBP,oBAAK;;;MAeL,sBAAO;;;MAgBP,sBAAO;;;MAYP,sBAAO;;;MAeP,sBAAO;;;MAYP,sBAAO;;;MAYP,sBAAO;;;MAYP,sBAAO;;;MAWP,sBAAO;;;MA6BC,kBAAG;;;MAeb,+BAAgB;;;MA6BA,wBAAS;;;MASzB,8BAAe;;;MA6BL,mBAAI;;;MAed,gCAAiB;;;MA6BD,yBAAU;;;MAS1B,sCAAuB;;;MA6Bb,qBAAM;;;MAehB,kCAAmB;;;MA6BH,2BAAY;;;MAS5B,wCAAyB;;;MA6Bf,yBAAU;;;MAepB,sCAAuB;;;MA6BP,+BAAgB;;;MAShC,4CAA6B;;;MA6BnB,qBAAM;;;MAehB,kCAAmB;;;MA6BH,2BAAY;;;MAS5B,wCAAyB;;;MA+Bf,mBAAI;;;MAed,gCAAiB;;;MA6BD,yBAAU;;;MAS1B,sCAAuB;;;MA6Bb,wBAAS;;;MAenB,qCAAsB;;;MA6BN,8BAAe;;;MAS/B,2CAA4B;;;MA+BlB,mBAAI;;;MAed,gCAAiB;;;MA6BD,yBAAU;;;MAS1B,sCAAuB;;;MA6Bb,mBAAI;;;MAed,gCAAiB;;;MA6BD,yBAAU;;;MAS1B,sCAAuB;;;MAgCb,oBAAK;;;MAef,iCAAkB;;;MAgCF,0BAAW;;;MAS3B,uCAAwB;;;MA6Bd,yBAAU;;;MAepB,sCAAuB;;;MA6BP,+BAAgB;;;MAShC,4CAA6B;;;MA6BnB,mBAAI;;;MAed,gCAAiB;;;MA6BD,yBAAU;;;MAS1B,sCAAuB;;;MA6Bb,qBAAM;;;MAehB,kCAAmB;;;MA6BH,2BAAY;;;MAS5B,wCAAyB;;;MA6Bf,oBAAK;;;MAef,iCAAkB;;;MA6BF,0BAAW;;;MAS3B,uCAAwB;;;MA+Bd,qBAAM;;;MAehB,kCAAmB;;;MA6BH,2BAAY;;;MAS5B,wCAAyB;;;MA+Bf,yBAAU;;;MAepB,sCAAuB;;;MA6BP,+BAAgB;;;MAShC,4CAA6B;;;MA2BnB,oBAAK;;;MAef,iCAAkB;;;MAkCR,mBAAI;;;MAiBd,gCAAiB;;;MA6BP,uBAAQ;;;MAelB,oCAAqB;;;MAGL,wBAAS;;;MAyBH,sBAAO","file":"../../../../../../packages/flutter/src/material/colors.dart.lib.js"}');
+  // Exports:
+  return {
+    src__material__colors: colors$
+  };
+}));
+
+//# sourceMappingURL=colors.dart.lib.js.map
