@@ -5,20 +5,23 @@ class LogoWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 80,
-      width: 200,
-      child: Row(
-        children: <Widget>[
-          Text('<', style: TextStyle(color: Colors.white, fontSize: 20)),
-          Text(
-            'Gbriel Developer',
-            style: TextStyle(
-                color: Colors.white, fontSize: 20, fontFamily: 'Agustina'),
-          ),
-          Text('/', style: TextStyle(color: Colors.white, fontSize: 20)),
-          Text('>', style: TextStyle(color: Colors.white, fontSize: 20)),
-        ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: SizedBox(
+        height: 80,
+        width: 200,
+        child: Row(
+          children: <Widget>[
+            Text('<', style: TextStyle(color: Colors.white, fontSize: 20)),
+            Text(
+              'Gbriel Developer',
+              style: TextStyle(
+                  color: Colors.white, fontSize: 20, fontFamily: 'Agustina'),
+            ),
+            Text('/', style: TextStyle(color: Colors.white, fontSize: 20)),
+            Text('>', style: TextStyle(color: Colors.white, fontSize: 20)),
+          ],
+        ),
       ),
     );
   }
