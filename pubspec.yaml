@@ -36,3 +36,6 @@ flutter:
     - family: GoogleSansRegular
       fonts:
         - asset: assets/GoogleSansRegular.ttf
+    - family: Agustina
+      fonts:
+        - asset: assets/fonts/Agustina.ttf

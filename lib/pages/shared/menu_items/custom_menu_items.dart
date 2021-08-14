@@ -33,7 +33,7 @@ class _CustomMenuItemState extends State<CustomMenuItem> {
             duration: Duration(milliseconds: 300),
             width: 150,
             height: 50,
-            color: isHover ? Colors.pinkAccent : Colors.transparent,
+            color: isHover ? Colors.red : Colors.transparent,
             child: Center(
               child: Text(widget.text,
                   style: GoogleFonts.roboto(fontSize: 20, color: Colors.white)),
