@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: buildBoxDecoration(),
+        // decoration: buildBoxDecoration(),
         child: Stack(
           children: [
             _HomeBody(),
@@ -25,13 +25,6 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-
-  BoxDecoration buildBoxDecoration() => BoxDecoration(
-      gradient: LinearGradient(
-          colors: [Colors.pink, Colors.purpleAccent],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          stops: [0.5, 0.5]));
 }
 
 class _HomeBody extends StatelessWidget {

@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_framework/responsive_wrapper.dart';
+import 'package:web_responsive_ui/config/animation/carousel/carousel.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.black,
-      child: Center(
-        child: FittedBox(
-          fit: BoxFit.contain,
-          child: Text(
-            'Home.',
-            style: GoogleFonts.montserratAlternates(
-              fontSize: 80,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: Center(
+          child: Stack(
+            children: [
+              ResponsiveWrapper(
+                  maxWidth: 1400,
+                  minWidth: 1400,
+                  defaultScale: true,
+                  mediaQueryData: MediaQueryData(size: Size(1200, 640)),
+                  child: RepaintBoundary(child: Carousel())),
+            ],
           ),
         ),
       ),
