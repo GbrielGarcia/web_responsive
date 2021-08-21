@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_responsive_ui/providers/page_provider.dart';
 import 'config/utils/routes/routes.dart';
+import 'package:web_responsive_ui/providers/page_provider.dart';
 
 void main() => runApp(AppState());
 
-class AppState extends StatelessWidget {
+class AppState extends StatefulWidget {
+  @override
+  _AppStateState createState() => _AppStateState();
+}
+
+class _AppStateState extends State<AppState> {
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+  }
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(

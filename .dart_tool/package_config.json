@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "after_layout",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/after_layout-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "animate_do",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/animate_do-2.0.0",
       "packageUri": "lib/",
@@ -422,7 +428,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-08-20T22:13:11.645265Z",
+  "generated": "2021-08-20T23:54:04.399433Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

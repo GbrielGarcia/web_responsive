@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         // decoration: buildBoxDecoration(),
+        color: Colors.black,
         child: Stack(
           children: [
             _HomeBody(),
