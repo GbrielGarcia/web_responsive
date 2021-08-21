@@ -12,14 +12,14 @@ class LogoWidgets extends StatelessWidget {
         width: 200,
         child: Row(
           children: <Widget>[
-            Text('<', style: TextStyle(color: Colors.white, fontSize: 20)),
+            Text('<', style: TextStyle(color: Colors.black, fontSize: 20)),
             Text(
               'Gbriel Developer',
               style: TextStyle(
-                  color: Colors.white, fontSize: 20, fontFamily: 'Agustina'),
+                  color: Colors.black, fontSize: 20, fontFamily: 'Agustina'),
             ),
-            Text('/', style: TextStyle(color: Colors.white, fontSize: 20)),
-            Text('>', style: TextStyle(color: Colors.white, fontSize: 20)),
+            Text('/', style: TextStyle(color: Colors.black, fontSize: 20)),
+            Text('>', style: TextStyle(color: Colors.black, fontSize: 20)),
           ],
         ),
       ),

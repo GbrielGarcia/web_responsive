@@ -9,13 +9,18 @@ import 'package:web_responsive_ui/pages/views/contact_view.dart';
 import 'package:web_responsive_ui/pages/views/home_view.dart';
 import 'package:web_responsive_ui/pages/views/skills.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         // decoration: buildBoxDecoration(),
-        color: Colors.black,
+        color: Colors.white,
         child: Stack(
           children: [
             _HomeBody(),

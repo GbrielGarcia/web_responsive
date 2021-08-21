@@ -15,8 +15,13 @@ class AppState extends StatefulWidget {
 class _AppStateState extends State<AppState> {
   @override
   void initState() {
+    _updateAppbar();
     super.initState();
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+  }
+
+  void _updateAppbar() {
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle.dark.copyWith(statusBarColor: Colors.white));
   }
 
   @override
