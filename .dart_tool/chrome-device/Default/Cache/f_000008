@@ -1,1997 +1,626 @@
-define(['dart_sdk', 'packages/flutter/src/foundation/debug.dart', 'packages/flutter/src/foundation/_platform_web.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/painting/box_fit.dart', 'packages/collection/src/iterable_extensions.dart'], (function load__packages__responsive_framework__utils__responsive_utils_dart(dart_sdk, packages__flutter__src__foundation__debug$46dart, packages__flutter__src__foundation___platform_web$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__painting__box_fit$46dart, packages__collection__src__iterable_extensions$46dart) {
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart'], (function load__packages__nested__nested_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart) {
   'use strict';
   const core = dart_sdk.core;
-  const _js_helper = dart_sdk._js_helper;
-  const _interceptors = dart_sdk._interceptors;
-  const ui = dart_sdk.ui;
-  const _internal = dart_sdk._internal;
-  const math = dart_sdk.math;
+  const collection = dart_sdk.collection;
   const dart = dart_sdk.dart;
   const dartx = dart_sdk.dartx;
-  const diagnostics = packages__flutter__src__foundation__debug$46dart.src__foundation__diagnostics;
-  const assertions = packages__flutter__src__foundation__debug$46dart.src__foundation__assertions;
-  const platform = packages__flutter__src__foundation___platform_web$46dart.src__foundation__platform;
-  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
-  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
   const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
-  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
-  const binding = packages__flutter__src__widgets__widget_span$46dart.src__widgets__binding;
-  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
-  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
-  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
-  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
-  const box_fit = packages__flutter__src__painting__box_fit$46dart.src__painting__box_fit;
-  const iterable_extensions = packages__collection__src__iterable_extensions$46dart.src__iterable_extensions;
-  var responsive_utils = Object.create(dart.library);
-  var responsive_wrapper = Object.create(dart.library);
-  var $_get = dartx._get;
-  var $compareTo = dartx.compareTo;
-  var $length = dartx.length;
-  var $round = dartx.round;
-  var $add = dartx.add;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  var nested = Object.create(dart.library);
   var $isNotEmpty = dartx.isNotEmpty;
-  var $toString = dartx.toString;
-  var $contains = dartx.contains;
   var $reversed = dartx.reversed;
-  var $firstWhere = dartx.firstWhere;
-  var $clear = dartx.clear;
-  var $addAll = dartx.addAll;
-  var $asMap = dartx.asMap;
-  var $_equals = dartx._equals;
-  var $runtimeType = dartx.runtimeType;
-  var $hashCode = dartx.hashCode;
-  var $where = dartx.where;
-  var $toList = dartx.toList;
-  var $insert = dartx.insert;
-  var $sort = dartx.sort;
-  var $first = dartx.first;
-  var $_set = dartx._set;
-  var $last = dartx.last;
-  var $indexOf = dartx.indexOf;
   dart._checkModuleNullSafetyMode(true);
   var T = {
-    LinkedMapOfResponsiveBreakpointBehavior$int: () => (T.LinkedMapOfResponsiveBreakpointBehavior$int = dart.constFn(_js_helper.LinkedMap$(responsive_wrapper.ResponsiveBreakpointBehavior, core.int)))(),
-    JSArrayOfDiagnosticsNode: () => (T.JSArrayOfDiagnosticsNode = dart.constFn(_interceptors.JSArray$(diagnostics.DiagnosticsNode)))(),
-    JSArrayOfResponsiveBreakpoint: () => (T.JSArrayOfResponsiveBreakpoint = dart.constFn(_interceptors.JSArray$(responsive_wrapper.ResponsiveBreakpoint)))(),
-    JSArrayOfResponsiveBreakpointSegment: () => (T.JSArrayOfResponsiveBreakpointSegment = dart.constFn(_interceptors.JSArray$(responsive_wrapper.ResponsiveBreakpointSegment)))(),
-    ResponsiveBreakpointSegmentTobool: () => (T.ResponsiveBreakpointSegmentTobool = dart.constFn(dart.fnType(core.bool, [responsive_wrapper.ResponsiveBreakpointSegment])))(),
-    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
-    DurationTovoid: () => (T.DurationTovoid = dart.constFn(dart.fnType(dart.void, [core.Duration])))(),
-    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
-    VoidToResponsiveBreakpointSegment: () => (T.VoidToResponsiveBreakpointSegment = dart.constFn(dart.fnType(responsive_wrapper.ResponsiveBreakpointSegment, [])))(),
-    ResponsiveBreakpointTobool: () => (T.ResponsiveBreakpointTobool = dart.constFn(dart.fnType(core.bool, [responsive_wrapper.ResponsiveBreakpoint])))(),
-    ResponsiveBreakpointAndResponsiveBreakpointToint: () => (T.ResponsiveBreakpointAndResponsiveBreakpointToint = dart.constFn(dart.fnType(core.int, [responsive_wrapper.ResponsiveBreakpoint, responsive_wrapper.ResponsiveBreakpoint])))()
+    LinkedHashSetOf_NestedHookElement: () => (T.LinkedHashSetOf_NestedHookElement = dart.constFn(collection.LinkedHashSet$(nested._NestedHookElement)))(),
+    _NestedHookElementN: () => (T._NestedHookElementN = dart.constFn(dart.nullable(nested._NestedHookElement)))(),
+    ElementTobool: () => (T.ElementTobool = dart.constFn(dart.fnType(core.bool, [framework.Element])))(),
+    ElementTovoid: () => (T.ElementTovoid = dart.constFn(dart.fnType(dart.void, [framework.Element])))(),
+    SingleChildStateOfSingleChildStatefulWidget: () => (T.SingleChildStateOfSingleChildStatefulWidget = dart.constFn(nested.SingleChildState$(nested.SingleChildStatefulWidget)))(),
+    SingleChildStateMixinOfStatefulWidget: () => (T.SingleChildStateMixinOfStatefulWidget = dart.constFn(nested.SingleChildStateMixin$(framework.StatefulWidget)))()
   };
   const CT = Object.create({
     _: () => (C, CT)
   });
   dart.defineLazy(CT, {
-    get C0() {
-      return C[0] = dart.const({
-        __proto__: responsive_utils.ResponsiveTargetPlatform.prototype,
-        [_name$]: "ResponsiveTargetPlatform.android",
-        index: 0
-      });
-    },
-    get C1() {
-      return C[1] = dart.const({
-        __proto__: responsive_utils.ResponsiveTargetPlatform.prototype,
-        [_name$]: "ResponsiveTargetPlatform.fuchsia",
-        index: 1
-      });
-    },
     get C2() {
       return C[2] = dart.const({
-        __proto__: responsive_utils.ResponsiveTargetPlatform.prototype,
-        [_name$]: "ResponsiveTargetPlatform.iOS",
-        index: 2
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "owner",
+        [_Location_column]: 9,
+        [_Location_line]: 104,
+        [_Location_file]: null
       });
     },
     get C3() {
       return C[3] = dart.const({
-        __proto__: responsive_utils.ResponsiveTargetPlatform.prototype,
-        [_name$]: "ResponsiveTargetPlatform.linux",
-        index: 3
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "wrappedWidget",
+        [_Location_column]: 9,
+        [_Location_line]: 105,
+        [_Location_file]: null
       });
     },
     get C4() {
       return C[4] = dart.const({
-        __proto__: responsive_utils.ResponsiveTargetPlatform.prototype,
-        [_name$]: "ResponsiveTargetPlatform.macOS",
-        index: 4
-      });
-    },
-    get C5() {
-      return C[5] = dart.const({
-        __proto__: responsive_utils.ResponsiveTargetPlatform.prototype,
-        [_name$]: "ResponsiveTargetPlatform.windows",
-        index: 5
-      });
-    },
-    get C6() {
-      return C[6] = dart.const({
-        __proto__: responsive_utils.ResponsiveTargetPlatform.prototype,
-        [_name$]: "ResponsiveTargetPlatform.web",
-        index: 6
-      });
-    },
-    get C7() {
-      return C[7] = dart.constList([C[0] || CT.C0, C[1] || CT.C1, C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4, C[5] || CT.C5, C[6] || CT.C6], responsive_utils.ResponsiveTargetPlatform);
-    },
-    get C8() {
-      return C[8] = dart.const({
-        __proto__: platform.TargetPlatform.prototype,
-        [_name]: "TargetPlatform.android",
-        index: 0
-      });
-    },
-    get C9() {
-      return C[9] = dart.const({
-        __proto__: platform.TargetPlatform.prototype,
-        [_name]: "TargetPlatform.fuchsia",
-        index: 1
-      });
-    },
-    get C10() {
-      return C[10] = dart.const({
-        __proto__: platform.TargetPlatform.prototype,
-        [_name]: "TargetPlatform.iOS",
-        index: 2
-      });
-    },
-    get C11() {
-      return C[11] = dart.const({
-        __proto__: platform.TargetPlatform.prototype,
-        [_name]: "TargetPlatform.linux",
-        index: 3
-      });
-    },
-    get C12() {
-      return C[12] = dart.const({
-        __proto__: platform.TargetPlatform.prototype,
-        [_name]: "TargetPlatform.macOS",
-        index: 4
-      });
-    },
-    get C13() {
-      return C[13] = dart.const({
-        __proto__: platform.TargetPlatform.prototype,
-        [_name]: "TargetPlatform.windows",
-        index: 5
-      });
-    },
-    get C14() {
-      return C[14] = dart.const({
-        __proto__: alignment.Alignment.prototype,
-        [Alignment_y]: -1,
-        [Alignment_x]: 0
-      });
-    },
-    get C17() {
-      return C[17] = dart.const({
         __proto__: widget_inspector._Location.prototype,
         [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
-        [_Location_column]: 7,
-        [_Location_line]: 166,
+        [_Location_name]: "injectedChild",
+        [_Location_column]: 9,
+        [_Location_line]: 106,
         [_Location_file]: null
       });
     },
-    get C18() {
-      return C[18] = dart.const({
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4], widget_inspector._Location);
+    },
+    get C0() {
+      return C[0] = dart.const({
         __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "breakpoints",
-        [_Location_column]: 7,
-        [_Location_line]: 167,
-        [_Location_file]: null
-      });
-    },
-    get C19() {
-      return C[19] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "breakpointsLandscape",
-        [_Location_column]: 7,
-        [_Location_line]: 168,
-        [_Location_file]: null
-      });
-    },
-    get C20() {
-      return C[20] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "landscapePlatforms",
-        [_Location_column]: 7,
-        [_Location_line]: 169,
-        [_Location_file]: null
-      });
-    },
-    get C21() {
-      return C[21] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "minWidth",
-        [_Location_column]: 7,
-        [_Location_line]: 170,
-        [_Location_file]: null
-      });
-    },
-    get C22() {
-      return C[22] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "maxWidth",
-        [_Location_column]: 7,
-        [_Location_line]: 171,
-        [_Location_file]: null
-      });
-    },
-    get C23() {
-      return C[23] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "defaultName",
-        [_Location_column]: 7,
-        [_Location_line]: 172,
-        [_Location_file]: null
-      });
-    },
-    get C24() {
-      return C[24] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "defaultScale",
-        [_Location_column]: 7,
-        [_Location_line]: 173,
-        [_Location_file]: null
-      });
-    },
-    get C25() {
-      return C[25] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "defaultScaleFactor",
-        [_Location_column]: 7,
-        [_Location_line]: 174,
-        [_Location_file]: null
-      });
-    },
-    get C26() {
-      return C[26] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "minWidthLandscape",
-        [_Location_column]: 7,
-        [_Location_line]: 175,
-        [_Location_file]: null
-      });
-    },
-    get C27() {
-      return C[27] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "maxWidthLandscape",
-        [_Location_column]: 7,
-        [_Location_line]: 176,
-        [_Location_file]: null
-      });
-    },
-    get C28() {
-      return C[28] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "defaultNameLandscape",
-        [_Location_column]: 7,
-        [_Location_line]: 177,
-        [_Location_file]: null
-      });
-    },
-    get C29() {
-      return C[29] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "defaultScaleLandscape",
-        [_Location_column]: 7,
-        [_Location_line]: 178,
-        [_Location_file]: null
-      });
-    },
-    get C30() {
-      return C[30] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "defaultScaleFactorLandscape",
-        [_Location_column]: 7,
-        [_Location_line]: 179,
-        [_Location_file]: null
-      });
-    },
-    get C31() {
-      return C[31] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "background",
-        [_Location_column]: 7,
-        [_Location_line]: 180,
-        [_Location_file]: null
-      });
-    },
-    get C32() {
-      return C[32] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "backgroundColor",
-        [_Location_column]: 7,
-        [_Location_line]: 181,
-        [_Location_file]: null
-      });
-    },
-    get C33() {
-      return C[33] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "mediaQueryData",
-        [_Location_column]: 7,
-        [_Location_line]: 182,
-        [_Location_file]: null
-      });
-    },
-    get C34() {
-      return C[34] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "shrinkWrap",
-        [_Location_column]: 7,
-        [_Location_line]: 183,
-        [_Location_file]: null
-      });
-    },
-    get C35() {
-      return C[35] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "alignment",
-        [_Location_column]: 7,
-        [_Location_line]: 184,
-        [_Location_file]: null
-      });
-    },
-    get C36() {
-      return C[36] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "debugLog",
-        [_Location_column]: 7,
-        [_Location_line]: 185,
-        [_Location_file]: null
-      });
-    },
-    get C16() {
-      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18, C[19] || CT.C19, C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22, C[23] || CT.C23, C[24] || CT.C24, C[25] || CT.C25, C[26] || CT.C26, C[27] || CT.C27, C[28] || CT.C28, C[29] || CT.C29, C[30] || CT.C30, C[31] || CT.C31, C[32] || CT.C32, C[33] || CT.C33, C[34] || CT.C34, C[35] || CT.C35, C[36] || CT.C36], widget_inspector._Location);
-    },
-    get C15() {
-      return C[15] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[16] || CT.C16,
-        [_Location_name]: null,
-        [_Location_column]: 12,
-        [_Location_line]: 165,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
-      });
-    },
-    get C38() {
-      return C[38] = dart.constList([], widget_inspector._Location);
-    },
-    get C37() {
-      return C[37] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[38] || CT.C38,
-        [_Location_name]: null,
-        [_Location_column]: 47,
-        [_Location_line]: 641,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
-      });
-    },
-    get C41() {
-      return C[41] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "width",
-        [_Location_column]: 25,
-        [_Location_line]: 650,
-        [_Location_file]: null
-      });
-    },
-    get C42() {
-      return C[42] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "height",
-        [_Location_column]: 25,
-        [_Location_line]: 651,
-        [_Location_file]: null
-      });
-    },
-    get C43() {
-      return C[43] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "alignment",
-        [_Location_column]: 25,
-        [_Location_line]: 656,
-        [_Location_file]: null
-      });
-    },
-    get C44() {
-      return C[44] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
-        [_Location_column]: 25,
-        [_Location_line]: 657,
-        [_Location_file]: null
-      });
-    },
-    get C40() {
-      return C[40] = dart.constList([C[41] || CT.C41, C[42] || CT.C42, C[43] || CT.C43, C[44] || CT.C44], widget_inspector._Location);
-    },
-    get C39() {
-      return C[39] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[40] || CT.C40,
-        [_Location_name]: null,
-        [_Location_column]: 30,
-        [_Location_line]: 649,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
-      });
-    },
-    get C47() {
-      return C[47] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "fit",
-        [_Location_column]: 23,
-        [_Location_line]: 647,
-        [_Location_file]: null
-      });
-    },
-    get C48() {
-      return C[48] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "alignment",
-        [_Location_column]: 23,
-        [_Location_line]: 648,
-        [_Location_file]: null
-      });
-    },
-    get C49() {
-      return C[49] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
-        [_Location_column]: 23,
-        [_Location_line]: 649,
-        [_Location_file]: null
-      });
-    },
-    get C46() {
-      return C[46] = dart.constList([C[47] || CT.C47, C[48] || CT.C48, C[49] || CT.C49], widget_inspector._Location);
-    },
-    get C45() {
-      return C[45] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[46] || CT.C46,
-        [_Location_name]: null,
-        [_Location_column]: 28,
-        [_Location_line]: 646,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
-      });
-    },
-    get C52() {
-      return C[52] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "width",
-        [_Location_column]: 21,
-        [_Location_line]: 645,
-        [_Location_file]: null
-      });
-    },
-    get C53() {
-      return C[53] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
-        [_Location_column]: 21,
-        [_Location_line]: 646,
-        [_Location_file]: null
-      });
-    },
-    get C51() {
-      return C[51] = dart.constList([C[52] || CT.C52, C[53] || CT.C53], widget_inspector._Location);
-    },
-    get C50() {
-      return C[50] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[51] || CT.C51,
-        [_Location_name]: null,
-        [_Location_column]: 26,
-        [_Location_line]: 644,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
-      });
-    },
-    get C56() {
-      return C[56] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "data",
-        [_Location_column]: 19,
-        [_Location_line]: 643,
-        [_Location_file]: null
-      });
-    },
-    get C57() {
-      return C[57] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
-        [_Location_column]: 19,
-        [_Location_line]: 644,
-        [_Location_file]: null
-      });
-    },
-    get C55() {
-      return C[55] = dart.constList([C[56] || CT.C56, C[57] || CT.C57], widget_inspector._Location);
-    },
-    get C54() {
-      return C[54] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[55] || CT.C55,
-        [_Location_name]: null,
-        [_Location_column]: 17,
-        [_Location_line]: 642,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
-      });
-    },
-    get C60() {
-      return C[60] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "alignment",
-        [_Location_column]: 15,
-        [_Location_line]: 639,
-        [_Location_file]: null
-      });
-    },
-    get C61() {
-      return C[61] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "children",
-        [_Location_column]: 15,
-        [_Location_line]: 640,
-        [_Location_file]: null
-      });
-    },
-    get C59() {
-      return C[59] = dart.constList([C[60] || CT.C60, C[61] || CT.C61], widget_inspector._Location);
-    },
-    get C58() {
-      return C[58] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[59] || CT.C59,
-        [_Location_name]: null,
-        [_Location_column]: 20,
-        [_Location_line]: 638,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
-      });
-    },
-    get C64() {
-      return C[64] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "data",
-        [_Location_column]: 13,
-        [_Location_line]: 637,
-        [_Location_file]: null
-      });
-    },
-    get C65() {
-      return C[65] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "child",
-        [_Location_column]: 13,
-        [_Location_line]: 638,
-        [_Location_file]: null
-      });
-    },
-    get C63() {
-      return C[63] = dart.constList([C[64] || CT.C64, C[65] || CT.C65], widget_inspector._Location);
-    },
-    get C62() {
-      return C[62] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[63] || CT.C63,
-        [_Location_name]: null,
-        [_Location_column]: 11,
-        [_Location_line]: 636,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
-      });
-    },
-    get C68() {
-      return C[68] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "color",
-        [_Location_column]: 41,
-        [_Location_line]: 694,
-        [_Location_file]: null
-      });
-    },
-    get C67() {
-      return C[67] = dart.constList([C[68] || CT.C68], widget_inspector._Location);
-    },
-    get C66() {
-      return C[66] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[67] || CT.C67,
+        [_Location_parameterLocations]: C[1] || CT.C1,
         [_Location_name]: null,
         [_Location_column]: 31,
-        [_Location_line]: 694,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
+        [_Location_line]: 103,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0/lib/nested.dart"
       });
-    },
-    get C71() {
-      return C[71] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: null,
-        [_Location_name]: "color",
-        [_Location_column]: 22,
-        [_Location_line]: 695,
-        [_Location_file]: null
-      });
-    },
-    get C70() {
-      return C[70] = dart.constList([C[71] || CT.C71], widget_inspector._Location);
-    },
-    get C69() {
-      return C[69] = dart.const({
-        __proto__: widget_inspector._Location.prototype,
-        [_Location_parameterLocations]: C[70] || CT.C70,
-        [_Location_name]: null,
-        [_Location_column]: 12,
-        [_Location_line]: 695,
-        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
-      });
-    },
-    get C72() {
-      return C[72] = dart.constList([C[2] || CT.C2, C[0] || CT.C0, C[1] || CT.C1], responsive_utils.ResponsiveTargetPlatform);
-    },
-    get C73() {
-      return C[73] = dart.constList([], responsive_wrapper.ResponsiveBreakpoint);
-    },
-    get C74() {
-      return C[74] = dart.constList([], responsive_wrapper.ResponsiveBreakpointSegment);
-    },
-    get C76() {
-      return C[76] = dart.const({
-        __proto__: responsive_wrapper.ResponsiveBreakpointBehavior.prototype,
-        [_name$0]: "ResponsiveBreakpointBehavior.TAG",
-        index: 3
-      });
-    },
-    get C75() {
-      return C[75] = dart.const({
-        __proto__: responsive_wrapper.ResponsiveBreakpoint.prototype,
-        [ResponsiveBreakpoint_scaleFactor]: 1,
-        [ResponsiveBreakpoint_behavior]: C[76] || CT.C76,
-        [ResponsiveBreakpoint_name]: "",
-        [ResponsiveBreakpoint_breakpoint]: 0
-      });
-    },
-    get C77() {
-      return C[77] = dart.const({
-        __proto__: media_query.Orientation.prototype,
-        [_name$1]: "Orientation.portrait",
-        index: 0
-      });
-    },
-    get C78() {
-      return C[78] = dart.const({
-        __proto__: responsive_wrapper.ResponsiveBreakpointBehavior.prototype,
-        [_name$0]: "ResponsiveBreakpointBehavior.RESIZE",
-        index: 0
-      });
-    },
-    get C79() {
-      return C[79] = dart.const({
-        __proto__: responsive_wrapper.ResponsiveBreakpointBehavior.prototype,
-        [_name$0]: "ResponsiveBreakpointBehavior.AUTOSCALE",
-        index: 1
-      });
-    },
-    get C80() {
-      return C[80] = dart.const({
-        __proto__: responsive_wrapper.ResponsiveBreakpointBehavior.prototype,
-        [_name$0]: "ResponsiveBreakpointBehavior.AUTOSCALEDOWN",
-        index: 2
-      });
-    },
-    get C81() {
-      return C[81] = dart.constList([C[78] || CT.C78, C[79] || CT.C79, C[80] || CT.C80, C[76] || CT.C76], responsive_wrapper.ResponsiveBreakpointBehavior);
-    },
-    get C82() {
-      return C[82] = dart.fn(responsive_utils.ResponsiveUtils.breakpointComparator, T.ResponsiveBreakpointAndResponsiveBreakpointToint());
     }
   }, false);
-  var C = Array(83).fill(void 0);
+  var C = Array(5).fill(void 0);
   var I = [
-    "package:responsive_framework/utils/responsive_utils.dart",
-    "package:responsive_framework/responsive_wrapper.dart",
-    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_framework-0.1.4/lib/responsive_wrapper.dart"
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0/lib/nested.dart",
+    "package:nested/nested.dart"
   ];
-  responsive_utils.ResponsiveUtils = class ResponsiveUtils extends core.Object {
-    static breakpointComparator(a, b) {
-      if (a.breakpoint === b.breakpoint) {
-        return dart.nullCheck(responsive_utils.ResponsiveUtils.breakpointCompartorList[$_get](a.behavior))[$compareTo](dart.nullCheck(responsive_utils.ResponsiveUtils.breakpointCompartorList[$_get](b.behavior)));
-      }
-      return a.breakpoint[$compareTo](b.breakpoint);
+  var _children = dart.privateName(nested, "_children");
+  var _child = dart.privateName(nested, "_child");
+  nested.Nested = class Nested extends framework.StatelessWidget {
+    build(context) {
+      dart.throw(new core.StateError.new("implemented internally"));
     }
-    static debugLogBreakpointSegments(responsiveBreakpointSegments) {
-      let stringBuffer = new core.StringBuffer.new();
-      stringBuffer.write("|");
-      for (let i = 0; i < responsiveBreakpointSegments[$length]; i = i + 1) {
-        let segment = responsiveBreakpointSegments[$_get](i);
-        stringBuffer.write(segment.breakpoint[$round]());
-        let attributes = [];
-        let name = segment.responsiveBreakpoint.name;
-        if (name != null) attributes[$add](name);
-        let scaleFactor = segment.responsiveBreakpoint.scaleFactor;
-        if (scaleFactor !== 1) attributes[$add](scaleFactor);
-        if (attributes[$isNotEmpty]) {
-          stringBuffer.write("(");
-          for (let i = 0; i < attributes[$length]; i = i + 1) {
-            stringBuffer.write(attributes[$_get](i));
-            if (i !== attributes[$length] - 1) stringBuffer.write("|");
-          }
-          stringBuffer.write(")");
-        }
-        stringBuffer.write(" ----- ");
-        if (segment.segmentType === responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALEDOWN && segment.breakpoint < segment.responsiveBreakpoint.breakpoint) {
-          stringBuffer.write(diagnostics.describeEnum(segment.segmentType) + " from " + segment.responsiveBreakpoint.breakpoint[$round]()[$toString]());
-        } else {
-          stringBuffer.write(diagnostics.describeEnum(segment.responsiveBreakpoint.behavior));
-        }
-        if (i !== responsiveBreakpointSegments[$length] - 1) stringBuffer.write(" ----- ");
-      }
-      stringBuffer.write(" ----- ∞ |");
-      core.print(stringBuffer.toString());
-      return stringBuffer.toString();
+    createElement() {
+      return new nested._NestedElement.new(this);
     }
   };
-  (responsive_utils.ResponsiveUtils.new = function() {
+  (nested.Nested.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let children = opts && 'children' in opts ? opts.children : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    if (!children[$isNotEmpty]) dart.assertFailed(null, I[0], 71, 16, "children.isNotEmpty");
+    this[_children] = children;
+    this[_child] = child;
+    nested.Nested.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
     ;
-  }).prototype = responsive_utils.ResponsiveUtils.prototype;
-  dart.addTypeTests(responsive_utils.ResponsiveUtils);
-  dart.addTypeCaches(responsive_utils.ResponsiveUtils);
-  dart.setLibraryUri(responsive_utils.ResponsiveUtils, I[0]);
-  dart.defineLazy(responsive_utils.ResponsiveUtils, {
-    /*responsive_utils.ResponsiveUtils.breakpointCompartorList*/get breakpointCompartorList() {
-      return new (T.LinkedMapOfResponsiveBreakpointBehavior$int()).from([responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALEDOWN, 0, responsive_wrapper.ResponsiveBreakpointBehavior.RESIZE, 0, responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALE, 0, responsive_wrapper.ResponsiveBreakpointBehavior.TAG, 1]);
-    },
-    set breakpointCompartorList(_) {}
-  }, false);
-  var _name$ = dart.privateName(responsive_utils, "_name");
-  responsive_utils.ResponsiveTargetPlatform = class ResponsiveTargetPlatform extends core.Object {
-    toString() {
-      return this[_name$];
-    }
-  };
-  (responsive_utils.ResponsiveTargetPlatform.new = function(index, _name) {
-    this.index = index;
-    this[_name$] = _name;
-    ;
-  }).prototype = responsive_utils.ResponsiveTargetPlatform.prototype;
-  dart.addTypeTests(responsive_utils.ResponsiveTargetPlatform);
-  dart.addTypeCaches(responsive_utils.ResponsiveTargetPlatform);
-  dart.setLibraryUri(responsive_utils.ResponsiveTargetPlatform, I[0]);
-  dart.setFieldSignature(responsive_utils.ResponsiveTargetPlatform, () => ({
-    __proto__: dart.getFields(responsive_utils.ResponsiveTargetPlatform.__proto__),
-    index: dart.finalFieldType(core.int),
-    [_name$]: dart.finalFieldType(core.String)
+  }).prototype = nested.Nested.prototype;
+  dart.addTypeTests(nested.Nested);
+  dart.addTypeCaches(nested.Nested);
+  nested.Nested[dart.implements] = () => [nested.SingleChildWidget];
+  dart.setMethodSignature(nested.Nested, () => ({
+    __proto__: dart.getMethods(nested.Nested.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext]),
+    createElement: dart.fnType(nested._NestedElement, [])
   }));
-  dart.defineExtensionMethods(responsive_utils.ResponsiveTargetPlatform, ['toString']);
-  responsive_utils.ResponsiveTargetPlatform.android = C[0] || CT.C0;
-  responsive_utils.ResponsiveTargetPlatform.fuchsia = C[1] || CT.C1;
-  responsive_utils.ResponsiveTargetPlatform.iOS = C[2] || CT.C2;
-  responsive_utils.ResponsiveTargetPlatform.linux = C[3] || CT.C3;
-  responsive_utils.ResponsiveTargetPlatform.macOS = C[4] || CT.C4;
-  responsive_utils.ResponsiveTargetPlatform.windows = C[5] || CT.C5;
-  responsive_utils.ResponsiveTargetPlatform.web = C[6] || CT.C6;
-  responsive_utils.ResponsiveTargetPlatform.values = C[7] || CT.C7;
-  var _name = dart.privateName(platform, "_name");
-  responsive_utils['TargetPlatformExtension|get#responsiveTargetPlatform'] = function TargetPlatformExtension$124get$35responsiveTargetPlatform($this) {
-    switch ($this) {
-      case C[8] || CT.C8:
-      {
-        return responsive_utils.ResponsiveTargetPlatform.android;
-      }
-      case C[9] || CT.C9:
-      {
-        return responsive_utils.ResponsiveTargetPlatform.fuchsia;
-      }
-      case C[10] || CT.C10:
-      {
-        return responsive_utils.ResponsiveTargetPlatform.iOS;
-      }
-      case C[11] || CT.C11:
-      {
-        return responsive_utils.ResponsiveTargetPlatform.linux;
-      }
-      case C[12] || CT.C12:
-      {
-        return responsive_utils.ResponsiveTargetPlatform.macOS;
-      }
-      case C[13] || CT.C13:
-      {
-        return responsive_utils.ResponsiveTargetPlatform.windows;
-      }
-    }
-  };
-  var child$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.child");
-  var breakpoints$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.breakpoints");
-  var breakpointsLandscape$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.breakpointsLandscape");
-  var landscapePlatforms$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.landscapePlatforms");
-  var minWidth$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.minWidth");
-  var maxWidth$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.maxWidth");
-  var defaultName$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.defaultName");
-  var defaultScale$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.defaultScale");
-  var defaultScaleFactor$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.defaultScaleFactor");
-  var minWidthLandscape$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.minWidthLandscape");
-  var maxWidthLandscape$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.maxWidthLandscape");
-  var defaultNameLandscape$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.defaultNameLandscape");
-  var defaultScaleLandscape$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.defaultScaleLandscape");
-  var defaultScaleFactorLandscape$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.defaultScaleFactorLandscape");
-  var background$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.background");
-  var backgroundColor$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.backgroundColor");
-  var mediaQueryData$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.mediaQueryData");
-  var shrinkWrap$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.shrinkWrap");
-  var alignment$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.alignment");
-  var debugLog$ = dart.privateName(responsive_wrapper, "ResponsiveWrapper.debugLog");
-  var Alignment_y = dart.privateName(alignment, "Alignment.y");
-  var Alignment_x = dart.privateName(alignment, "Alignment.x");
+  dart.setLibraryUri(nested.Nested, I[1]);
+  dart.setFieldSignature(nested.Nested, () => ({
+    __proto__: dart.getFields(nested.Nested.__proto__),
+    [_children]: dart.finalFieldType(core.List$(nested.SingleChildWidget)),
+    [_child]: dart.finalFieldType(dart.nullable(framework.Widget))
+  }));
+  var _parent = dart.privateName(nested, "_parent");
   var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
   var _Location_name = dart.privateName(widget_inspector, "_Location.name");
   var _Location_column = dart.privateName(widget_inspector, "_Location.column");
   var _Location_line = dart.privateName(widget_inspector, "_Location.line");
   var _Location_file = dart.privateName(widget_inspector, "_Location.file");
-  responsive_wrapper.ResponsiveWrapper = class ResponsiveWrapper extends framework.StatefulWidget {
-    get child() {
-      return this[child$];
+  var _parent$ = dart.privateName(nested, "SingleChildWidgetElementMixin._parent");
+  nested.SingleChildWidgetElementMixin = class SingleChildWidgetElementMixin extends framework.Element {};
+  nested.SingleChildWidgetElementMixin[dart.mixinOn] = Element => class SingleChildWidgetElementMixin extends Element {
+    get [_parent]() {
+      return this[_parent$];
     }
-    set child(value) {
-      super.child = value;
+    set [_parent](value) {
+      this[_parent$] = value;
     }
-    get breakpoints() {
-      return this[breakpoints$];
+    mount(parent, newSlot) {
+      if (T._NestedHookElementN().is(parent)) {
+        this[_parent] = parent;
+      }
+      super.mount(parent, newSlot);
     }
-    set breakpoints(value) {
-      super.breakpoints = value;
-    }
-    get breakpointsLandscape() {
-      return this[breakpointsLandscape$];
-    }
-    set breakpointsLandscape(value) {
-      super.breakpointsLandscape = value;
-    }
-    get landscapePlatforms() {
-      return this[landscapePlatforms$];
-    }
-    set landscapePlatforms(value) {
-      super.landscapePlatforms = value;
-    }
-    get minWidth() {
-      return this[minWidth$];
-    }
-    set minWidth(value) {
-      super.minWidth = value;
-    }
-    get maxWidth() {
-      return this[maxWidth$];
-    }
-    set maxWidth(value) {
-      super.maxWidth = value;
-    }
-    get defaultName() {
-      return this[defaultName$];
-    }
-    set defaultName(value) {
-      super.defaultName = value;
-    }
-    get defaultScale() {
-      return this[defaultScale$];
-    }
-    set defaultScale(value) {
-      super.defaultScale = value;
-    }
-    get defaultScaleFactor() {
-      return this[defaultScaleFactor$];
-    }
-    set defaultScaleFactor(value) {
-      super.defaultScaleFactor = value;
-    }
-    get minWidthLandscape() {
-      return this[minWidthLandscape$];
-    }
-    set minWidthLandscape(value) {
-      super.minWidthLandscape = value;
-    }
-    get maxWidthLandscape() {
-      return this[maxWidthLandscape$];
-    }
-    set maxWidthLandscape(value) {
-      super.maxWidthLandscape = value;
-    }
-    get defaultNameLandscape() {
-      return this[defaultNameLandscape$];
-    }
-    set defaultNameLandscape(value) {
-      super.defaultNameLandscape = value;
-    }
-    get defaultScaleLandscape() {
-      return this[defaultScaleLandscape$];
-    }
-    set defaultScaleLandscape(value) {
-      super.defaultScaleLandscape = value;
-    }
-    get defaultScaleFactorLandscape() {
-      return this[defaultScaleFactorLandscape$];
-    }
-    set defaultScaleFactorLandscape(value) {
-      super.defaultScaleFactorLandscape = value;
-    }
-    get background() {
-      return this[background$];
-    }
-    set background(value) {
-      super.background = value;
-    }
-    get backgroundColor() {
-      return this[backgroundColor$];
-    }
-    set backgroundColor(value) {
-      super.backgroundColor = value;
-    }
-    get mediaQueryData() {
-      return this[mediaQueryData$];
-    }
-    set mediaQueryData(value) {
-      super.mediaQueryData = value;
-    }
-    get shrinkWrap() {
-      return this[shrinkWrap$];
-    }
-    set shrinkWrap(value) {
-      super.shrinkWrap = value;
-    }
-    get alignment() {
-      return this[alignment$];
-    }
-    set alignment(value) {
-      super.alignment = value;
-    }
-    get debugLog() {
-      return this[debugLog$];
-    }
-    set debugLog(value) {
-      super.debugLog = value;
-    }
-    createState() {
-      return new responsive_wrapper._ResponsiveWrapperState.new();
-    }
-    static builder(child, opts) {
-      let breakpoints = opts && 'breakpoints' in opts ? opts.breakpoints : null;
-      let breakpointsLandscape = opts && 'breakpointsLandscape' in opts ? opts.breakpointsLandscape : null;
-      let landscapePlatforms = opts && 'landscapePlatforms' in opts ? opts.landscapePlatforms : null;
-      let minWidth = opts && 'minWidth' in opts ? opts.minWidth : 450;
-      let maxWidth = opts && 'maxWidth' in opts ? opts.maxWidth : null;
-      let defaultName = opts && 'defaultName' in opts ? opts.defaultName : null;
-      let defaultScale = opts && 'defaultScale' in opts ? opts.defaultScale : false;
-      let defaultScaleFactor = opts && 'defaultScaleFactor' in opts ? opts.defaultScaleFactor : 1;
-      let minWidthLandscape = opts && 'minWidthLandscape' in opts ? opts.minWidthLandscape : null;
-      let maxWidthLandscape = opts && 'maxWidthLandscape' in opts ? opts.maxWidthLandscape : null;
-      let defaultNameLandscape = opts && 'defaultNameLandscape' in opts ? opts.defaultNameLandscape : null;
-      let defaultScaleLandscape = opts && 'defaultScaleLandscape' in opts ? opts.defaultScaleLandscape : null;
-      let defaultScaleFactorLandscape = opts && 'defaultScaleFactorLandscape' in opts ? opts.defaultScaleFactorLandscape : null;
-      let background = opts && 'background' in opts ? opts.background : null;
-      let backgroundColor = opts && 'backgroundColor' in opts ? opts.backgroundColor : null;
-      let mediaQueryData = opts && 'mediaQueryData' in opts ? opts.mediaQueryData : null;
-      let alignment = opts && 'alignment' in opts ? opts.alignment : C[14] || CT.C14;
-      let debugLog = opts && 'debugLog' in opts ? opts.debugLog : false;
-      return new responsive_wrapper.ResponsiveWrapper.new({child: child, breakpoints: breakpoints, breakpointsLandscape: breakpointsLandscape, landscapePlatforms: landscapePlatforms, minWidth: minWidth, maxWidth: maxWidth, defaultName: defaultName, defaultScale: defaultScale, defaultScaleFactor: defaultScaleFactor, minWidthLandscape: minWidthLandscape, maxWidthLandscape: maxWidthLandscape, defaultNameLandscape: defaultNameLandscape, defaultScaleLandscape: defaultScaleLandscape, defaultScaleFactorLandscape: defaultScaleFactorLandscape, background: background, backgroundColor: backgroundColor, mediaQueryData: mediaQueryData, shrinkWrap: false, alignment: alignment, debugLog: debugLog, $creationLocationd_0dea112b090073317d4: C[15] || CT.C15});
-    }
-    static of(context) {
-      let data = context.dependOnInheritedWidgetOfExactType(responsive_wrapper.InheritedResponsiveWrapper);
-      if (data != null) return data.data;
-      dart.throw(new assertions.FlutterError.fromParts(T.JSArrayOfDiagnosticsNode().of([new assertions.ErrorSummary.new("ResponsiveWrapper.of() called with a context that does not contain a ResponsiveWrapper."), new assertions.ErrorDescription.new("No Responsive ancestor could be found starting from the context that was passed " + "to ResponsiveWrapper.of(). Place a ResponsiveWrapper at the root of the app " + "or supply a ResponsiveWrapper.builder."), context.describeElement("The context used was")])));
+    activate() {
+      super.activate();
+      this.visitAncestorElements(dart.fn(parent => {
+        if (nested._NestedHookElement.is(parent)) {
+          this[_parent] = parent;
+        }
+        return false;
+      }, T.ElementTobool()));
     }
   };
-  (responsive_wrapper.ResponsiveWrapper.new = function(opts) {
-    let key = opts && 'key' in opts ? opts.key : null;
-    let child = opts && 'child' in opts ? opts.child : null;
-    let breakpoints = opts && 'breakpoints' in opts ? opts.breakpoints : null;
-    let breakpointsLandscape = opts && 'breakpointsLandscape' in opts ? opts.breakpointsLandscape : null;
-    let landscapePlatforms = opts && 'landscapePlatforms' in opts ? opts.landscapePlatforms : null;
-    let minWidth = opts && 'minWidth' in opts ? opts.minWidth : 450;
-    let maxWidth = opts && 'maxWidth' in opts ? opts.maxWidth : null;
-    let defaultName = opts && 'defaultName' in opts ? opts.defaultName : null;
-    let defaultScale = opts && 'defaultScale' in opts ? opts.defaultScale : false;
-    let defaultScaleFactor = opts && 'defaultScaleFactor' in opts ? opts.defaultScaleFactor : 1;
-    let minWidthLandscape = opts && 'minWidthLandscape' in opts ? opts.minWidthLandscape : null;
-    let maxWidthLandscape = opts && 'maxWidthLandscape' in opts ? opts.maxWidthLandscape : null;
-    let defaultNameLandscape = opts && 'defaultNameLandscape' in opts ? opts.defaultNameLandscape : null;
-    let defaultScaleLandscape = opts && 'defaultScaleLandscape' in opts ? opts.defaultScaleLandscape : null;
-    let defaultScaleFactorLandscape = opts && 'defaultScaleFactorLandscape' in opts ? opts.defaultScaleFactorLandscape : null;
-    let background = opts && 'background' in opts ? opts.background : null;
-    let backgroundColor = opts && 'backgroundColor' in opts ? opts.backgroundColor : null;
-    let mediaQueryData = opts && 'mediaQueryData' in opts ? opts.mediaQueryData : null;
-    let shrinkWrap = opts && 'shrinkWrap' in opts ? opts.shrinkWrap : true;
-    let alignment = opts && 'alignment' in opts ? opts.alignment : C[14] || CT.C14;
-    let debugLog = opts && 'debugLog' in opts ? opts.debugLog : false;
-    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-    this[child$] = child;
-    this[breakpoints$] = breakpoints;
-    this[breakpointsLandscape$] = breakpointsLandscape;
-    this[landscapePlatforms$] = landscapePlatforms;
-    this[minWidth$] = minWidth;
-    this[maxWidth$] = maxWidth;
-    this[defaultName$] = defaultName;
-    this[defaultScale$] = defaultScale;
-    this[defaultScaleFactor$] = defaultScaleFactor;
-    this[minWidthLandscape$] = minWidthLandscape;
-    this[maxWidthLandscape$] = maxWidthLandscape;
-    this[defaultNameLandscape$] = defaultNameLandscape;
-    this[defaultScaleLandscape$] = defaultScaleLandscape;
-    this[defaultScaleFactorLandscape$] = defaultScaleFactorLandscape;
-    this[background$] = background;
-    this[backgroundColor$] = backgroundColor;
-    this[mediaQueryData$] = mediaQueryData;
-    this[shrinkWrap$] = shrinkWrap;
-    this[alignment$] = alignment;
-    this[debugLog$] = debugLog;
-    responsive_wrapper.ResponsiveWrapper.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+  (nested.SingleChildWidgetElementMixin[dart.mixinNew] = function() {
+    this[_parent$] = null;
+  }).prototype = nested.SingleChildWidgetElementMixin.prototype;
+  dart.addTypeTests(nested.SingleChildWidgetElementMixin);
+  dart.addTypeCaches(nested.SingleChildWidgetElementMixin);
+  nested.SingleChildWidgetElementMixin[dart.implements] = () => [framework.Element];
+  dart.setMethodSignature(nested.SingleChildWidgetElementMixin, () => ({
+    __proto__: dart.getMethods(nested.SingleChildWidgetElementMixin.__proto__),
+    mount: dart.fnType(dart.void, [dart.nullable(framework.Element), dart.dynamic])
+  }));
+  dart.setLibraryUri(nested.SingleChildWidgetElementMixin, I[1]);
+  dart.setFieldSignature(nested.SingleChildWidgetElementMixin, () => ({
+    __proto__: dart.getFields(nested.SingleChildWidgetElementMixin.__proto__),
+    [_parent]: dart.fieldType(dart.nullable(nested._NestedHookElement))
+  }));
+  const StatelessElement_SingleChildWidgetElementMixin$36 = class StatelessElement_SingleChildWidgetElementMixin extends framework.StatelessElement {};
+  (StatelessElement_SingleChildWidgetElementMixin$36.new = function(widget) {
+    nested.SingleChildWidgetElementMixin[dart.mixinNew].call(this);
+    StatelessElement_SingleChildWidgetElementMixin$36.__proto__.new.call(this, widget);
+  }).prototype = StatelessElement_SingleChildWidgetElementMixin$36.prototype;
+  dart.applyMixin(StatelessElement_SingleChildWidgetElementMixin$36, nested.SingleChildWidgetElementMixin);
+  nested._NestedElement = class _NestedElement extends StatelessElement_SingleChildWidgetElementMixin$36 {
+    get widget() {
+      return nested.Nested.as(super.widget);
+    }
+    build() {
+      let t0, t0$, t0$0;
+      let nestedHook = null;
+      let nextNode = (t0$ = (t0 = this[_parent], t0 == null ? null : t0.injectedChild), t0$ == null ? this.widget[_child] : t0$);
+      for (let child of this.widget[_children][$reversed]) {
+        nextNode = nestedHook = new nested._NestedHook.new({owner: this, wrappedWidget: child, injectedChild: nextNode, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+      }
+      if (nestedHook != null) {
+        for (let node of this.nodes) {
+          t0$0 = node;
+          (() => {
+            t0$0.wrappedChild = dart.nullCheck(nestedHook).wrappedWidget;
+            t0$0.injectedChild = nestedHook.injectedChild;
+            return t0$0;
+          })();
+          let next = nestedHook.injectedChild;
+          if (nested._NestedHook.is(next)) {
+            nestedHook = next;
+          } else {
+            break;
+          }
+        }
+      }
+      return dart.nullCheck(nextNode);
+    }
+  };
+  (nested._NestedElement.new = function(widget) {
+    this.nodes = T.LinkedHashSetOf_NestedHookElement().new();
+    nested._NestedElement.__proto__.new.call(this, widget);
     ;
-  }).prototype = responsive_wrapper.ResponsiveWrapper.prototype;
-  dart.addTypeTests(responsive_wrapper.ResponsiveWrapper);
-  dart.addTypeCaches(responsive_wrapper.ResponsiveWrapper);
-  dart.setMethodSignature(responsive_wrapper.ResponsiveWrapper, () => ({
-    __proto__: dart.getMethods(responsive_wrapper.ResponsiveWrapper.__proto__),
-    createState: dart.fnType(responsive_wrapper._ResponsiveWrapperState, [])
+  }).prototype = nested._NestedElement.prototype;
+  dart.addTypeTests(nested._NestedElement);
+  dart.addTypeCaches(nested._NestedElement);
+  dart.setGetterSignature(nested._NestedElement, () => ({
+    __proto__: dart.getGetters(nested._NestedElement.__proto__),
+    widget: nested.Nested
   }));
-  dart.setLibraryUri(responsive_wrapper.ResponsiveWrapper, I[1]);
-  dart.setFieldSignature(responsive_wrapper.ResponsiveWrapper, () => ({
-    __proto__: dart.getFields(responsive_wrapper.ResponsiveWrapper.__proto__),
-    child: dart.finalFieldType(dart.nullable(framework.Widget)),
-    breakpoints: dart.finalFieldType(dart.nullable(core.List$(responsive_wrapper.ResponsiveBreakpoint))),
-    breakpointsLandscape: dart.finalFieldType(dart.nullable(core.List$(responsive_wrapper.ResponsiveBreakpoint))),
-    landscapePlatforms: dart.finalFieldType(dart.nullable(core.List$(responsive_utils.ResponsiveTargetPlatform))),
-    minWidth: dart.finalFieldType(core.double),
-    maxWidth: dart.finalFieldType(dart.nullable(core.double)),
-    defaultName: dart.finalFieldType(dart.nullable(core.String)),
-    defaultScale: dart.finalFieldType(core.bool),
-    defaultScaleFactor: dart.finalFieldType(core.double),
-    minWidthLandscape: dart.finalFieldType(dart.nullable(core.double)),
-    maxWidthLandscape: dart.finalFieldType(dart.nullable(core.double)),
-    defaultNameLandscape: dart.finalFieldType(dart.nullable(core.String)),
-    defaultScaleLandscape: dart.finalFieldType(dart.nullable(core.bool)),
-    defaultScaleFactorLandscape: dart.finalFieldType(dart.nullable(core.double)),
-    background: dart.finalFieldType(dart.nullable(framework.Widget)),
-    backgroundColor: dart.finalFieldType(dart.nullable(ui.Color)),
-    mediaQueryData: dart.finalFieldType(dart.nullable(media_query.MediaQueryData)),
-    shrinkWrap: dart.finalFieldType(core.bool),
-    alignment: dart.finalFieldType(alignment.Alignment),
-    debugLog: dart.finalFieldType(core.bool)
+  dart.setLibraryUri(nested._NestedElement, I[1]);
+  dart.setFieldSignature(nested._NestedElement, () => ({
+    __proto__: dart.getFields(nested._NestedElement.__proto__),
+    nodes: dart.finalFieldType(core.Set$(nested._NestedHookElement))
   }));
-  var ___ResponsiveWrapperState_activeBreakpointSegment = dart.privateName(responsive_wrapper, "_#_ResponsiveWrapperState#activeBreakpointSegment");
-  const State_WidgetsBindingObserver$36 = class State_WidgetsBindingObserver extends framework.State$(responsive_wrapper.ResponsiveWrapper) {};
-  (State_WidgetsBindingObserver$36.new = function() {
-    State_WidgetsBindingObserver$36.__proto__.new.call(this);
-  }).prototype = State_WidgetsBindingObserver$36.prototype;
-  dart.applyMixin(State_WidgetsBindingObserver$36, binding.WidgetsBindingObserver);
-  responsive_wrapper._ResponsiveWrapperState = class _ResponsiveWrapperState extends State_WidgetsBindingObserver$36 {
-    getDevicePixelRatio() {
-      let t1, t1$;
-      t1$ = (t1 = this.widget.mediaQueryData, t1 == null ? null : t1.devicePixelRatio);
-      return t1$ == null ? media_query.MediaQuery.of(this.context).devicePixelRatio : t1$;
-    }
-    getWindowWidth() {
-      let t1, t1$;
-      t1$ = (t1 = this.widget.mediaQueryData, t1 == null ? null : t1.size.width);
-      return t1$ == null ? media_query.MediaQuery.of(this.context).size.width : t1$;
-    }
-    getWindowHeight() {
-      let t1, t1$;
-      t1$ = (t1 = this.widget.mediaQueryData, t1 == null ? null : t1.size.height);
-      return t1$ == null ? media_query.MediaQuery.of(this.context).size.height : t1$;
-    }
-    getScreenWidth() {
-      this.activeBreakpointSegment = this.getActiveBreakpointSegment(this.windowWidth);
-      if (this.activeBreakpointSegment.responsiveBreakpoint.breakpoint === 0) return 0.0;
-      if (this.maxWidth != null && this.windowWidth > dart.nullCheck(this.maxWidth)) {
-        if (this.activeBreakpointSegment.breakpoint >= dart.nullCheck(this.maxWidth) && dart.dtest(this.activeBreakpointSegment.responsiveBreakpoint.isAutoScale)) {
-          return dart.nullCheck(this.maxWidth) + (this.windowWidth - this.activeBreakpointSegment.responsiveBreakpoint.breakpoint);
-        } else {
-          return dart.nullCheck(this.maxWidth);
-        }
-      }
-      return this.windowWidth;
-    }
-    getScreenHeight() {
-      if (this.activeBreakpointSegment.responsiveBreakpoint.breakpoint === 0) return 0.0;
-      if (this.maxWidth != null) if (this.windowWidth > dart.nullCheck(this.maxWidth)) {
-        if (this.activeBreakpointSegment.breakpoint > dart.nullCheck(this.maxWidth) && dart.dtest(this.activeBreakpointSegment.responsiveBreakpoint.isAutoScale)) {
-          return this.windowHeight / (this.screenWidth / dart.nullCheck(this.maxWidth));
-        }
-      }
-      return this.windowHeight;
-    }
-    get activeBreakpointSegment() {
-      let t1;
-      t1 = this[___ResponsiveWrapperState_activeBreakpointSegment];
-      return t1 == null ? dart.throw(new _internal.LateError.fieldNI("activeBreakpointSegment")) : t1;
-    }
-    set activeBreakpointSegment(t1) {
-      this[___ResponsiveWrapperState_activeBreakpointSegment] = t1;
-    }
-    getScaledWidth() {
-      if (dart.dtest(this.activeBreakpointSegment.responsiveBreakpoint.isResize)) return this.screenWidth / this.activeBreakpointSegment.responsiveBreakpoint.scaleFactor;
-      if (this.maxWidth != null) if (this.activeBreakpointSegment.breakpoint > dart.nullCheck(this.maxWidth)) return dart.nullCheck(this.maxWidth) / this.activeBreakpointSegment.responsiveBreakpoint.scaleFactor;
-      return this.activeBreakpointSegment.responsiveBreakpoint.breakpoint / this.activeBreakpointSegment.responsiveBreakpoint.scaleFactor;
-    }
-    getScaledHeight() {
-      if (dart.dtest(this.activeBreakpointSegment.responsiveBreakpoint.isResize)) return this.screenHeight / this.activeBreakpointSegment.responsiveBreakpoint.scaleFactor;
-      if (this.maxWidth != null) if (this.activeBreakpointSegment.breakpoint > dart.nullCheck(this.maxWidth)) {
-        return this.screenHeight / this.activeBreakpointSegment.responsiveBreakpoint.scaleFactor;
-      }
-      let widthScale = this.screenWidth / this.activeBreakpointSegment.responsiveBreakpoint.breakpoint;
-      return this.screenHeight / widthScale / this.activeBreakpointSegment.responsiveBreakpoint.scaleFactor;
-    }
-    getScaledViewInsets() {
-      let leftInsetFactor = null;
-      let topInsetFactor = null;
-      let rightInsetFactor = null;
-      let bottomInsetFactor = null;
-      let scaledLeftInset = null;
-      let scaledTopInset = null;
-      let scaledRightInset = null;
-      let scaledBottomInset = null;
-      if (this.widget.mediaQueryData != null) {
-        leftInsetFactor = dart.nullCheck(this.widget.mediaQueryData).viewInsets.left / this.screenWidth;
-        topInsetFactor = dart.nullCheck(this.widget.mediaQueryData).viewInsets.top / this.screenHeight;
-        rightInsetFactor = dart.nullCheck(this.widget.mediaQueryData).viewInsets.right / this.screenWidth;
-        bottomInsetFactor = dart.nullCheck(this.widget.mediaQueryData).viewInsets.bottom / this.screenHeight;
-      } else {
-        leftInsetFactor = media_query.MediaQuery.of(this.context).viewInsets.left / this.screenWidth;
-        topInsetFactor = media_query.MediaQuery.of(this.context).viewInsets.top / this.screenHeight;
-        rightInsetFactor = media_query.MediaQuery.of(this.context).viewInsets.right / this.screenWidth;
-        bottomInsetFactor = media_query.MediaQuery.of(this.context).viewInsets.bottom / this.screenHeight;
-      }
-      scaledLeftInset = leftInsetFactor * this.scaledWidth;
-      scaledTopInset = topInsetFactor * this.scaledHeight;
-      scaledRightInset = rightInsetFactor * this.scaledWidth;
-      scaledBottomInset = bottomInsetFactor * this.scaledHeight;
-      return new edge_insets.EdgeInsets.fromLTRB(scaledLeftInset, scaledTopInset, scaledRightInset, scaledBottomInset);
-    }
-    getScaledViewPadding() {
-      let leftPaddingFactor = null;
-      let topPaddingFactor = null;
-      let rightPaddingFactor = null;
-      let bottomPaddingFactor = null;
-      let scaledLeftPadding = null;
-      let scaledTopPadding = null;
-      let scaledRightPadding = null;
-      let scaledBottomPadding = null;
-      if (this.widget.mediaQueryData != null) {
-        leftPaddingFactor = dart.nullCheck(this.widget.mediaQueryData).viewPadding.left / this.screenWidth;
-        topPaddingFactor = dart.nullCheck(this.widget.mediaQueryData).viewPadding.top / this.screenHeight;
-        rightPaddingFactor = dart.nullCheck(this.widget.mediaQueryData).viewPadding.right / this.screenWidth;
-        bottomPaddingFactor = dart.nullCheck(this.widget.mediaQueryData).viewPadding.bottom / this.screenHeight;
-      } else {
-        leftPaddingFactor = media_query.MediaQuery.of(this.context).viewPadding.left / this.screenWidth;
-        topPaddingFactor = media_query.MediaQuery.of(this.context).viewPadding.top / this.screenHeight;
-        rightPaddingFactor = media_query.MediaQuery.of(this.context).viewPadding.right / this.screenWidth;
-        bottomPaddingFactor = media_query.MediaQuery.of(this.context).viewPadding.bottom / this.screenHeight;
-      }
-      scaledLeftPadding = leftPaddingFactor * this.scaledWidth;
-      scaledTopPadding = topPaddingFactor * this.scaledHeight;
-      scaledRightPadding = rightPaddingFactor * this.scaledWidth;
-      scaledBottomPadding = bottomPaddingFactor * this.scaledHeight;
-      return new edge_insets.EdgeInsets.fromLTRB(scaledLeftPadding, scaledTopPadding, scaledRightPadding, scaledBottomPadding);
-    }
-    getScaledPadding() {
-      let scaledLeftPadding = null;
-      let scaledTopPadding = null;
-      let scaledRightPadding = null;
-      let scaledBottomPadding = null;
-      scaledLeftPadding = math.max(core.double, 0.0, this.getScaledViewPadding().left - this.getScaledViewInsets().left);
-      scaledTopPadding = math.max(core.double, 0.0, this.getScaledViewPadding().top - this.getScaledViewInsets().top);
-      scaledRightPadding = math.max(core.double, 0.0, this.getScaledViewPadding().right - this.getScaledViewInsets().right);
-      scaledBottomPadding = math.max(core.double, 0.0, this.getScaledViewPadding().bottom - this.getScaledViewInsets().bottom);
-      return new edge_insets.EdgeInsets.fromLTRB(scaledLeftPadding, scaledTopPadding, scaledRightPadding, scaledBottomPadding);
-    }
-    get activeScaleFactor() {
-      return this.activeBreakpointSegment.responsiveBreakpoint.scaleFactor;
-    }
-    get fullscreen() {
-      return this.maxWidth == null;
-    }
-    get orientation() {
-      return this.windowWidth > this.windowHeight ? media_query.Orientation.landscape : media_query.Orientation.portrait;
-    }
-    setPlatform() {
-      this.platform = true ? responsive_utils.ResponsiveTargetPlatform.web : responsive_utils['TargetPlatformExtension|get#responsiveTargetPlatform'](theme.Theme.of(this.context).platform);
-    }
-    get isLandscapePlatform() {
-      let t2;
-      return (t2 = this.widget.landscapePlatforms, t2 == null ? responsive_wrapper._ResponsiveWrapperState._landscapePlatforms : t2)[$contains](this.platform);
-    }
-    get isLandscape() {
-      return this.orientation === media_query.Orientation.landscape && this.isLandscapePlatform && this.widget.breakpointsLandscape != null;
-    }
-    get minWidth() {
-      let t2;
-      return this.isLandscape ? (t2 = this.widget.minWidthLandscape, t2 == null ? this.widget.minWidth : t2) : this.widget.minWidth;
-    }
-    get maxWidth() {
-      let t2;
-      return this.isLandscape ? (t2 = this.widget.maxWidthLandscape, t2 == null ? this.widget.maxWidth : t2) : this.widget.maxWidth;
-    }
-    get defaultName() {
-      let t2;
-      return this.isLandscape ? (t2 = this.widget.defaultNameLandscape, t2 == null ? this.widget.defaultName : t2) : this.widget.defaultName;
-    }
-    get defaultScale() {
-      let t2;
-      return this.isLandscape ? (t2 = this.widget.defaultScaleLandscape, t2 == null ? this.widget.defaultScale : t2) : this.widget.defaultScale;
-    }
-    get defaultScaleFactor() {
-      let t2;
-      return this.isLandscape ? (t2 = this.widget.defaultScaleFactorLandscape, t2 == null ? this.widget.defaultScaleFactor : t2) : this.widget.defaultScaleFactor;
-    }
-    setDimensions() {
-      this.devicePixelRatio = this.getDevicePixelRatio();
-      this.windowWidth = this.getWindowWidth();
-      this.windowHeight = this.getWindowHeight();
-      this.screenWidth = this.getScreenWidth();
-      this.screenHeight = this.getScreenHeight();
-      this.scaledWidth = this.getScaledWidth();
-      this.scaledHeight = this.getScaledHeight();
-      this.scaledViewInsets = this.getScaledViewInsets();
-      this.scaledViewPadding = this.getScaledViewPadding();
-      this.scaledPadding = this.getScaledPadding();
-    }
-    getActiveBreakpoints() {
-      let t2, t2$;
-      if (this.isLandscape) {
-        t2 = this.widget.breakpointsLandscape;
-        return t2 == null ? T.JSArrayOfResponsiveBreakpoint().of([]) : t2;
-      }
-      t2$ = this.widget.breakpoints;
-      return t2$ == null ? T.JSArrayOfResponsiveBreakpoint().of([]) : t2$;
-    }
-    calcBreakpointSegments(breakpoints) {
-      let defaultBreakpoint = new responsive_wrapper.ResponsiveBreakpoint.new({breakpoint: this.minWidth, name: this.defaultName, behavior: this.defaultScale ? responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALE : responsive_wrapper.ResponsiveBreakpointBehavior.RESIZE, scaleFactor: this.defaultScaleFactor});
-      return responsive_wrapper.getBreakpointSegments(breakpoints, defaultBreakpoint);
-    }
-    getActiveBreakpointSegment(windowWidth) {
-      let activeBreakpointSegment = this.breakpointSegments[$reversed][$firstWhere](dart.fn(element => windowWidth >= element.breakpoint, T.ResponsiveBreakpointSegmentTobool()));
-      return activeBreakpointSegment;
-    }
-    setBreakpoints() {
-      if (this.windowWidth !== this.getWindowWidth() || this.windowHeight !== this.getWindowHeight() || this.windowWidth === 0) {
-        this.windowWidth = this.getWindowWidth();
-        this.windowHeight = this.getWindowHeight();
-        this.breakpoints[$clear]();
-        this.breakpointSegments[$clear]();
-        this.breakpoints[$addAll](this.getActiveBreakpoints());
-        this.breakpointSegments[$addAll](this.calcBreakpointSegments(this.breakpoints));
-      }
-    }
-    initState() {
-      let t2, t2$;
-      super.initState();
-      if (this.widget.debugLog) {
-        let defaultBreakpoints = (t2 = this.widget.breakpoints, t2 == null ? T.JSArrayOfResponsiveBreakpoint().of([]) : t2);
-        let defaultBreakpointSegments = this.calcBreakpointSegments(defaultBreakpoints);
-        if (this.widget.breakpointsLandscape != null) {
-          core.print("**PORTRAIT**");
-        }
-        responsive_utils.ResponsiveUtils.debugLogBreakpointSegments(defaultBreakpointSegments);
-        if (this.widget.breakpointsLandscape != null) {
-          let landscapeBreakpoints = (t2$ = this.widget.breakpointsLandscape, t2$ == null ? T.JSArrayOfResponsiveBreakpoint().of([]) : t2$);
-          let landscapeBreakpointSegments = this.calcBreakpointSegments(landscapeBreakpoints);
-          core.print("**LANDSCAPE**");
-          responsive_utils.ResponsiveUtils.debugLogBreakpointSegments(landscapeBreakpointSegments);
-        }
-      }
-      dart.nullCheck(binding.WidgetsBinding.instance).addObserver(this);
-      dart.nullCheck(binding.WidgetsBinding.instance).addPostFrameCallback(dart.fn(_ => {
-        this.setBreakpoints();
-        this.setDimensions();
-        this.setState(dart.fn(() => {
-        }, T.VoidTovoid()));
-      }, T.DurationTovoid()));
-    }
-    dispose() {
-      dart.nullCheck(binding.WidgetsBinding.instance).removeObserver(this);
-      super.dispose();
-    }
-    didChangeMetrics() {
-      super.didChangeMetrics();
-      dart.nullCheck(binding.WidgetsBinding.instance).addPostFrameCallback(dart.fn(_ => {
-        if (this.mounted) {
-          this.setBreakpoints();
-          this.setDimensions();
-          this.setState(dart.fn(() => {
-          }, T.VoidTovoid()));
-        }
-      }, T.DurationTovoid()));
-    }
-    didUpdateWidget(oldWidget) {
-      responsive_wrapper.ResponsiveWrapper.as(oldWidget);
-      super.didUpdateWidget(oldWidget);
-      this.setBreakpoints();
-      this.setDimensions();
-      this.setState(dart.fn(() => {
-      }, T.VoidTovoid()));
+  nested._NestedHook = class _NestedHook extends framework.StatelessWidget {
+    createElement() {
+      return new nested._NestedHookElement.new(this);
     }
     build(context) {
-      let t2;
-      this.setPlatform();
-      return this.screenWidth === 0 ? this.buildBackgroundColorWidget(this.widget.backgroundColor) : new responsive_wrapper.InheritedResponsiveWrapper.new({data: responsive_wrapper.ResponsiveWrapperData.fromResponsiveWrapper(this), child: new basic.Stack.new({alignment: this.widget.alignment, children: T.JSArrayOfWidget().of([(t2 = this.widget.background, t2 == null ? new basic.SizedBox.shrink({$creationLocationd_0dea112b090073317d4: C[37] || CT.C37}) : t2), new media_query.MediaQuery.new({data: this.calculateMediaQueryData(), child: new basic.SizedBox.new({width: this.screenWidth, child: new basic.FittedBox.new({fit: box_fit.BoxFit.fitWidth, alignment: alignment.Alignment.topCenter, child: new container.Container.new({width: this.scaledWidth, height: this.widget.shrinkWrap === true && this.widget.mediaQueryData == null ? null : this.scaledHeight, alignment: alignment.Alignment.center, child: this.widget.child, $creationLocationd_0dea112b090073317d4: C[39] || CT.C39}), $creationLocationd_0dea112b090073317d4: C[45] || CT.C45}), $creationLocationd_0dea112b090073317d4: C[50] || CT.C50}), $creationLocationd_0dea112b090073317d4: C[54] || CT.C54})]), $creationLocationd_0dea112b090073317d4: C[58] || CT.C58}), $creationLocationd_0dea112b090073317d4: C[62] || CT.C62});
-    }
-    calculateMediaQueryData() {
-      if (this.widget.mediaQueryData != null) {
-        return dart.nullCheck(this.widget.mediaQueryData).copyWith({size: new ui.Size.new(this.scaledWidth, this.scaledHeight), devicePixelRatio: this.devicePixelRatio * this.activeScaleFactor, viewInsets: this.scaledViewInsets, viewPadding: this.scaledViewPadding, padding: this.scaledPadding});
-      }
-      return media_query.MediaQuery.of(this.context).copyWith({size: new ui.Size.new(this.scaledWidth, this.scaledHeight), devicePixelRatio: this.devicePixelRatio * this.activeScaleFactor, viewInsets: this.scaledViewInsets, viewPadding: this.scaledViewPadding, padding: this.scaledPadding});
-    }
-    buildBackgroundColorWidget(color) {
-      if (color == null) return new container.Container.new({color: new ui.Color.new(4294967295), $creationLocationd_0dea112b090073317d4: C[66] || CT.C66});
-      return new container.Container.new({color: color, $creationLocationd_0dea112b090073317d4: C[69] || CT.C69});
+      return dart.throw(new core.StateError.new("handled internally"));
     }
   };
-  (responsive_wrapper._ResponsiveWrapperState.new = function() {
-    this.devicePixelRatio = 1.0;
-    this.windowWidth = 0.0;
-    this.windowHeight = 0.0;
-    this.breakpoints = T.JSArrayOfResponsiveBreakpoint().of([]);
-    this.breakpointSegments = T.JSArrayOfResponsiveBreakpointSegment().of([]);
-    this.screenWidth = 0.0;
-    this.screenHeight = 0.0;
-    this[___ResponsiveWrapperState_activeBreakpointSegment] = null;
-    this.scaledWidth = 0.0;
-    this.scaledHeight = 0.0;
-    this.scaledViewInsets = null;
-    this.scaledViewPadding = null;
-    this.scaledPadding = null;
-    this.platform = null;
-    responsive_wrapper._ResponsiveWrapperState.__proto__.new.call(this);
+  (nested._NestedHook.new = function(opts) {
+    let injectedChild = opts && 'injectedChild' in opts ? opts.injectedChild : null;
+    let wrappedWidget = opts && 'wrappedWidget' in opts ? opts.wrappedWidget : null;
+    let owner = opts && 'owner' in opts ? opts.owner : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this.injectedChild = injectedChild;
+    this.wrappedWidget = wrappedWidget;
+    this.owner = owner;
+    nested._NestedHook.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
     ;
-  }).prototype = responsive_wrapper._ResponsiveWrapperState.prototype;
-  dart.addTypeTests(responsive_wrapper._ResponsiveWrapperState);
-  dart.addTypeCaches(responsive_wrapper._ResponsiveWrapperState);
-  dart.setMethodSignature(responsive_wrapper._ResponsiveWrapperState, () => ({
-    __proto__: dart.getMethods(responsive_wrapper._ResponsiveWrapperState.__proto__),
-    getDevicePixelRatio: dart.fnType(core.double, []),
-    getWindowWidth: dart.fnType(core.double, []),
-    getWindowHeight: dart.fnType(core.double, []),
-    getScreenWidth: dart.fnType(core.double, []),
-    getScreenHeight: dart.fnType(core.double, []),
-    getScaledWidth: dart.fnType(core.double, []),
-    getScaledHeight: dart.fnType(core.double, []),
-    getScaledViewInsets: dart.fnType(edge_insets.EdgeInsets, []),
-    getScaledViewPadding: dart.fnType(edge_insets.EdgeInsets, []),
-    getScaledPadding: dart.fnType(edge_insets.EdgeInsets, []),
-    setPlatform: dart.fnType(dart.void, []),
-    setDimensions: dart.fnType(dart.void, []),
-    getActiveBreakpoints: dart.fnType(core.List$(responsive_wrapper.ResponsiveBreakpoint), []),
-    calcBreakpointSegments: dart.fnType(core.List$(responsive_wrapper.ResponsiveBreakpointSegment), [core.List$(responsive_wrapper.ResponsiveBreakpoint)]),
-    getActiveBreakpointSegment: dart.fnType(responsive_wrapper.ResponsiveBreakpointSegment, [core.double]),
-    setBreakpoints: dart.fnType(dart.void, []),
-    build: dart.fnType(framework.Widget, [framework.BuildContext]),
-    calculateMediaQueryData: dart.fnType(media_query.MediaQueryData, []),
-    buildBackgroundColorWidget: dart.fnType(framework.Widget, [dart.nullable(ui.Color)])
+  }).prototype = nested._NestedHook.prototype;
+  dart.addTypeTests(nested._NestedHook);
+  dart.addTypeCaches(nested._NestedHook);
+  dart.setMethodSignature(nested._NestedHook, () => ({
+    __proto__: dart.getMethods(nested._NestedHook.__proto__),
+    createElement: dart.fnType(nested._NestedHookElement, []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
   }));
-  dart.setGetterSignature(responsive_wrapper._ResponsiveWrapperState, () => ({
-    __proto__: dart.getGetters(responsive_wrapper._ResponsiveWrapperState.__proto__),
-    activeBreakpointSegment: responsive_wrapper.ResponsiveBreakpointSegment,
-    activeScaleFactor: core.double,
-    fullscreen: dart.dynamic,
-    orientation: media_query.Orientation,
-    isLandscapePlatform: core.bool,
-    isLandscape: core.bool,
-    minWidth: core.double,
-    maxWidth: dart.nullable(core.double),
-    defaultName: dart.nullable(core.String),
-    defaultScale: core.bool,
-    defaultScaleFactor: core.double
+  dart.setLibraryUri(nested._NestedHook, I[1]);
+  dart.setFieldSignature(nested._NestedHook, () => ({
+    __proto__: dart.getFields(nested._NestedHook.__proto__),
+    wrappedWidget: dart.finalFieldType(nested.SingleChildWidget),
+    injectedChild: dart.finalFieldType(dart.nullable(framework.Widget)),
+    owner: dart.finalFieldType(nested._NestedElement)
   }));
-  dart.setSetterSignature(responsive_wrapper._ResponsiveWrapperState, () => ({
-    __proto__: dart.getSetters(responsive_wrapper._ResponsiveWrapperState.__proto__),
-    activeBreakpointSegment: responsive_wrapper.ResponsiveBreakpointSegment
-  }));
-  dart.setLibraryUri(responsive_wrapper._ResponsiveWrapperState, I[1]);
-  dart.setFieldSignature(responsive_wrapper._ResponsiveWrapperState, () => ({
-    __proto__: dart.getFields(responsive_wrapper._ResponsiveWrapperState.__proto__),
-    devicePixelRatio: dart.fieldType(core.double),
-    windowWidth: dart.fieldType(core.double),
-    windowHeight: dart.fieldType(core.double),
-    breakpoints: dart.fieldType(core.List$(responsive_wrapper.ResponsiveBreakpoint)),
-    breakpointSegments: dart.fieldType(core.List$(responsive_wrapper.ResponsiveBreakpointSegment)),
-    screenWidth: dart.fieldType(core.double),
-    screenHeight: dart.fieldType(core.double),
-    [___ResponsiveWrapperState_activeBreakpointSegment]: dart.fieldType(dart.nullable(responsive_wrapper.ResponsiveBreakpointSegment)),
-    scaledWidth: dart.fieldType(core.double),
-    scaledHeight: dart.fieldType(core.double),
-    scaledViewInsets: dart.fieldType(dart.nullable(edge_insets.EdgeInsets)),
-    scaledViewPadding: dart.fieldType(dart.nullable(edge_insets.EdgeInsets)),
-    scaledPadding: dart.fieldType(dart.nullable(edge_insets.EdgeInsets)),
-    platform: dart.fieldType(dart.nullable(responsive_utils.ResponsiveTargetPlatform))
-  }));
-  dart.defineLazy(responsive_wrapper._ResponsiveWrapperState, {
-    /*responsive_wrapper._ResponsiveWrapperState._landscapePlatforms*/get _landscapePlatforms() {
-      return C[72] || CT.C72;
+  var _injectedChild = dart.privateName(nested, "_injectedChild");
+  var _wrappedChild = dart.privateName(nested, "_wrappedChild");
+  nested._NestedHookElement = class _NestedHookElement extends framework.StatelessElement {
+    get widget() {
+      return nested._NestedHook.as(super.widget);
     }
-  }, false);
-  var screenWidth$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.screenWidth");
-  var screenHeight$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.screenHeight");
-  var scaledWidth$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.scaledWidth");
-  var scaledHeight$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.scaledHeight");
-  var breakpoints$0 = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.breakpoints");
-  var breakpointSegments$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.breakpointSegments");
-  var activeBreakpoint$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.activeBreakpoint");
-  var isMobile$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.isMobile");
-  var isPhone$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.isPhone");
-  var isTablet$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.isTablet");
-  var isDesktop$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.isDesktop");
-  var orientation$ = dart.privateName(responsive_wrapper, "ResponsiveWrapperData.orientation");
-  var ResponsiveBreakpoint_scaleFactor = dart.privateName(responsive_wrapper, "ResponsiveBreakpoint.scaleFactor");
-  var _name$0 = dart.privateName(responsive_wrapper, "_name");
-  var ResponsiveBreakpoint_behavior = dart.privateName(responsive_wrapper, "ResponsiveBreakpoint.behavior");
-  var ResponsiveBreakpoint_name = dart.privateName(responsive_wrapper, "ResponsiveBreakpoint.name");
-  var ResponsiveBreakpoint_breakpoint = dart.privateName(responsive_wrapper, "ResponsiveBreakpoint.breakpoint");
-  var _name$1 = dart.privateName(media_query, "_name");
-  responsive_wrapper.ResponsiveWrapperData = class ResponsiveWrapperData extends core.Object {
-    get screenWidth() {
-      return this[screenWidth$];
+    get injectedChild() {
+      return this[_injectedChild];
     }
-    set screenWidth(value) {
-      super.screenWidth = value;
-    }
-    get screenHeight() {
-      return this[screenHeight$];
-    }
-    set screenHeight(value) {
-      super.screenHeight = value;
-    }
-    get scaledWidth() {
-      return this[scaledWidth$];
-    }
-    set scaledWidth(value) {
-      super.scaledWidth = value;
-    }
-    get scaledHeight() {
-      return this[scaledHeight$];
-    }
-    set scaledHeight(value) {
-      super.scaledHeight = value;
-    }
-    get breakpoints() {
-      return this[breakpoints$0];
-    }
-    set breakpoints(value) {
-      super.breakpoints = value;
-    }
-    get breakpointSegments() {
-      return this[breakpointSegments$];
-    }
-    set breakpointSegments(value) {
-      super.breakpointSegments = value;
-    }
-    get activeBreakpoint() {
-      return this[activeBreakpoint$];
-    }
-    set activeBreakpoint(value) {
-      super.activeBreakpoint = value;
-    }
-    get isMobile() {
-      return this[isMobile$];
-    }
-    set isMobile(value) {
-      super.isMobile = value;
-    }
-    get isPhone() {
-      return this[isPhone$];
-    }
-    set isPhone(value) {
-      super.isPhone = value;
-    }
-    get isTablet() {
-      return this[isTablet$];
-    }
-    set isTablet(value) {
-      super.isTablet = value;
-    }
-    get isDesktop() {
-      return this[isDesktop$];
-    }
-    set isDesktop(value) {
-      super.isDesktop = value;
-    }
-    get orientation() {
-      return this[orientation$];
-    }
-    set orientation(value) {
-      super.orientation = value;
-    }
-    static fromResponsiveWrapper(state) {
-      return new responsive_wrapper.ResponsiveWrapperData.new({screenWidth: state.screenWidth, screenHeight: state.screenHeight, scaledWidth: state.scaledWidth, scaledHeight: state.scaledHeight, breakpoints: state.breakpoints, breakpointSegments: state.breakpointSegments, activeBreakpoint: state.activeBreakpointSegment.responsiveBreakpoint, isMobile: state.activeBreakpointSegment.responsiveBreakpoint.name === "MOBILE", isPhone: state.activeBreakpointSegment.responsiveBreakpoint.name === "PHONE", isTablet: state.activeBreakpointSegment.responsiveBreakpoint.name === "TABLET", isDesktop: state.activeBreakpointSegment.responsiveBreakpoint.name === "DESKTOP", orientation: state.orientation});
-    }
-    toString() {
-      return "ResponsiveWrapperData(" + "screenWidth: " + this.screenWidth[$toString]() + ", screenHeight: " + this.screenHeight[$toString]() + ", scaledWidth: " + this.scaledWidth[$toString]() + ", scaledHeight: " + this.scaledHeight[$toString]() + ", breakpoints: " + this.breakpoints[$asMap]()[$toString]() + ", breakpointSegments: " + this.breakpointSegments[$toString]() + ", activeBreakpoint: " + this.activeBreakpoint.toString() + ", isMobile: " + this.isMobile[$toString]() + ", isPhone: " + this.isPhone[$toString]() + ", isTablet: " + this.isTablet[$toString]() + ", isDesktop: " + this.isDesktop[$toString]() + ")";
-    }
-    equals(name) {
-      return this.activeBreakpoint.name == name;
-    }
-    isLargerThan(name) {
-      if (this.breakpoints[$length] === 0) return false;
-      if (this.activeBreakpoint.name == name) return false;
-      if (this.breakpoints[$length] === 1 && this.screenWidth >= this.breakpoints[$_get](0).breakpoint) {
-        return true;
+    set injectedChild(value) {
+      let previous = this[_injectedChild];
+      if (nested._NestedHook.is(value) && nested._NestedHook.is(previous) && framework.Widget.canUpdate(value.wrappedWidget, previous.wrappedWidget)) {
+        return;
       }
-      for (let i = this.breakpoints[$length] - 2; i >= 0; i = i - 1) {
-        if (this.breakpoints[$_get](i).name == name && this.breakpoints[$_get](i + 1).name != name && this.screenWidth >= this.breakpoints[$_get](i + 1).breakpoint) return true;
+      if (!dart.equals(previous, value)) {
+        this[_injectedChild] = value;
+        this.visitChildren(dart.fn(e => e.markNeedsBuild(), T.ElementTovoid()));
       }
-      return false;
     }
-    isSmallerThan(name) {
-      return this.screenWidth < this.breakpointSegments[$firstWhere](dart.fn(element => element.responsiveBreakpoint.name == name, T.ResponsiveBreakpointSegmentTobool()), {orElse: dart.fn(() => new responsive_wrapper.ResponsiveBreakpointSegment.new({breakpoint: 0.0, segmentType: responsive_wrapper.ResponsiveBreakpointBehavior.TAG, responsiveBreakpoint: new responsive_wrapper.ResponsiveBreakpoint.tag(0.0, {name: ""})}), T.VoidToResponsiveBreakpointSegment())}).breakpoint;
+    get wrappedChild() {
+      return this[_wrappedChild];
     }
-    firstBreakpointNamed(name) {
-      return this.breakpointSegments[$firstWhere](dart.fn(element => element.responsiveBreakpoint.name === name, T.ResponsiveBreakpointSegmentTobool()), {orElse: null}).responsiveBreakpoint;
+    set wrappedChild(value) {
+      if (!dart.equals(this[_wrappedChild], value)) {
+        this[_wrappedChild] = value;
+        this.markNeedsBuild();
+      }
+    }
+    mount(parent, newSlot) {
+      this.widget.owner.nodes.add(this);
+      this[_wrappedChild] = this.widget.wrappedWidget;
+      this[_injectedChild] = this.widget.injectedChild;
+      super.mount(parent, newSlot);
+    }
+    unmount() {
+      this.widget.owner.nodes.remove(this);
+      super.unmount();
+    }
+    build() {
+      return dart.nullCheck(this.wrappedChild);
     }
   };
-  (responsive_wrapper.ResponsiveWrapperData.new = function(opts) {
-    let screenWidth = opts && 'screenWidth' in opts ? opts.screenWidth : 0;
-    let screenHeight = opts && 'screenHeight' in opts ? opts.screenHeight : 0;
-    let scaledWidth = opts && 'scaledWidth' in opts ? opts.scaledWidth : 0;
-    let scaledHeight = opts && 'scaledHeight' in opts ? opts.scaledHeight : 0;
-    let breakpoints = opts && 'breakpoints' in opts ? opts.breakpoints : C[73] || CT.C73;
-    let breakpointSegments = opts && 'breakpointSegments' in opts ? opts.breakpointSegments : C[74] || CT.C74;
-    let activeBreakpoint = opts && 'activeBreakpoint' in opts ? opts.activeBreakpoint : C[75] || CT.C75;
-    let isMobile = opts && 'isMobile' in opts ? opts.isMobile : false;
-    let isPhone = opts && 'isPhone' in opts ? opts.isPhone : false;
-    let isTablet = opts && 'isTablet' in opts ? opts.isTablet : false;
-    let isDesktop = opts && 'isDesktop' in opts ? opts.isDesktop : false;
-    let orientation = opts && 'orientation' in opts ? opts.orientation : C[77] || CT.C77;
-    this[screenWidth$] = screenWidth;
-    this[screenHeight$] = screenHeight;
-    this[scaledWidth$] = scaledWidth;
-    this[scaledHeight$] = scaledHeight;
-    this[breakpoints$0] = breakpoints;
-    this[breakpointSegments$] = breakpointSegments;
-    this[activeBreakpoint$] = activeBreakpoint;
-    this[isMobile$] = isMobile;
-    this[isPhone$] = isPhone;
-    this[isTablet$] = isTablet;
-    this[isDesktop$] = isDesktop;
-    this[orientation$] = orientation;
+  (nested._NestedHookElement.new = function(widget) {
+    this[_injectedChild] = null;
+    this[_wrappedChild] = null;
+    nested._NestedHookElement.__proto__.new.call(this, widget);
     ;
-  }).prototype = responsive_wrapper.ResponsiveWrapperData.prototype;
-  dart.addTypeTests(responsive_wrapper.ResponsiveWrapperData);
-  dart.addTypeCaches(responsive_wrapper.ResponsiveWrapperData);
-  dart.setMethodSignature(responsive_wrapper.ResponsiveWrapperData, () => ({
-    __proto__: dart.getMethods(responsive_wrapper.ResponsiveWrapperData.__proto__),
-    equals: dart.fnType(core.bool, [dart.nullable(core.String)]),
-    isLargerThan: dart.fnType(core.bool, [dart.nullable(core.String)]),
-    isSmallerThan: dart.fnType(core.bool, [dart.nullable(core.String)]),
-    firstBreakpointNamed: dart.fnType(dart.nullable(responsive_wrapper.ResponsiveBreakpoint), [core.String])
+  }).prototype = nested._NestedHookElement.prototype;
+  dart.addTypeTests(nested._NestedHookElement);
+  dart.addTypeCaches(nested._NestedHookElement);
+  dart.setMethodSignature(nested._NestedHookElement, () => ({
+    __proto__: dart.getMethods(nested._NestedHookElement.__proto__),
+    mount: dart.fnType(dart.void, [dart.nullable(framework.Element), dart.dynamic])
   }));
-  dart.setLibraryUri(responsive_wrapper.ResponsiveWrapperData, I[1]);
-  dart.setFieldSignature(responsive_wrapper.ResponsiveWrapperData, () => ({
-    __proto__: dart.getFields(responsive_wrapper.ResponsiveWrapperData.__proto__),
-    screenWidth: dart.finalFieldType(core.double),
-    screenHeight: dart.finalFieldType(core.double),
-    scaledWidth: dart.finalFieldType(core.double),
-    scaledHeight: dart.finalFieldType(core.double),
-    breakpoints: dart.finalFieldType(core.List$(responsive_wrapper.ResponsiveBreakpoint)),
-    breakpointSegments: dart.finalFieldType(core.List$(responsive_wrapper.ResponsiveBreakpointSegment)),
-    activeBreakpoint: dart.finalFieldType(responsive_wrapper.ResponsiveBreakpoint),
-    isMobile: dart.finalFieldType(core.bool),
-    isPhone: dart.finalFieldType(core.bool),
-    isTablet: dart.finalFieldType(core.bool),
-    isDesktop: dart.finalFieldType(core.bool),
-    orientation: dart.finalFieldType(media_query.Orientation)
+  dart.setGetterSignature(nested._NestedHookElement, () => ({
+    __proto__: dart.getGetters(nested._NestedHookElement.__proto__),
+    widget: nested._NestedHook,
+    injectedChild: dart.nullable(framework.Widget),
+    wrappedChild: dart.nullable(nested.SingleChildWidget)
   }));
-  dart.defineExtensionMethods(responsive_wrapper.ResponsiveWrapperData, ['toString']);
-  var data$ = dart.privateName(responsive_wrapper, "InheritedResponsiveWrapper.data");
-  responsive_wrapper.InheritedResponsiveWrapper = class InheritedResponsiveWrapper extends framework.InheritedWidget {
-    get data() {
-      return this[data$];
+  dart.setSetterSignature(nested._NestedHookElement, () => ({
+    __proto__: dart.getSetters(nested._NestedHookElement.__proto__),
+    injectedChild: dart.nullable(framework.Widget),
+    wrappedChild: dart.nullable(nested.SingleChildWidget)
+  }));
+  dart.setLibraryUri(nested._NestedHookElement, I[1]);
+  dart.setFieldSignature(nested._NestedHookElement, () => ({
+    __proto__: dart.getFields(nested._NestedHookElement.__proto__),
+    [_injectedChild]: dart.fieldType(dart.nullable(framework.Widget)),
+    [_wrappedChild]: dart.fieldType(dart.nullable(nested.SingleChildWidget))
+  }));
+  nested.SingleChildWidget = class SingleChildWidget extends core.Object {};
+  (nested.SingleChildWidget.new = function() {
+    ;
+  }).prototype = nested.SingleChildWidget.prototype;
+  dart.addTypeTests(nested.SingleChildWidget);
+  dart.addTypeCaches(nested.SingleChildWidget);
+  nested.SingleChildWidget[dart.implements] = () => [framework.Widget];
+  dart.setLibraryUri(nested.SingleChildWidget, I[1]);
+  var _child$ = dart.privateName(nested, "SingleChildStatelessWidget._child");
+  nested.SingleChildStatelessWidget = class SingleChildStatelessWidget extends framework.StatelessWidget {
+    get [_child]() {
+      return this[_child$];
     }
-    set data(value) {
-      super.data = value;
+    set [_child](value) {
+      super[_child] = value;
     }
-    updateShouldNotify(oldWidget) {
-      responsive_wrapper.InheritedResponsiveWrapper.as(oldWidget);
-      return !this.data[$_equals](oldWidget.data);
+    build(context) {
+      return this.buildWithChild(context, this[_child]);
+    }
+    createElement() {
+      return new nested.SingleChildStatelessElement.new(this);
     }
   };
-  (responsive_wrapper.InheritedResponsiveWrapper.new = function(opts) {
+  (nested.SingleChildStatelessWidget.new = function(opts) {
     let key = opts && 'key' in opts ? opts.key : null;
-    let data = opts && 'data' in opts ? opts.data : null;
     let child = opts && 'child' in opts ? opts.child : null;
     let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-    this[data$] = data;
-    responsive_wrapper.InheritedResponsiveWrapper.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    this[_child$] = child;
+    nested.SingleChildStatelessWidget.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
     ;
-  }).prototype = responsive_wrapper.InheritedResponsiveWrapper.prototype;
-  dart.addTypeTests(responsive_wrapper.InheritedResponsiveWrapper);
-  dart.addTypeCaches(responsive_wrapper.InheritedResponsiveWrapper);
-  dart.setMethodSignature(responsive_wrapper.InheritedResponsiveWrapper, () => ({
-    __proto__: dart.getMethods(responsive_wrapper.InheritedResponsiveWrapper.__proto__),
-    updateShouldNotify: dart.fnType(core.bool, [dart.nullable(core.Object)])
+  }).prototype = nested.SingleChildStatelessWidget.prototype;
+  dart.addTypeTests(nested.SingleChildStatelessWidget);
+  dart.addTypeCaches(nested.SingleChildStatelessWidget);
+  nested.SingleChildStatelessWidget[dart.implements] = () => [nested.SingleChildWidget];
+  dart.setMethodSignature(nested.SingleChildStatelessWidget, () => ({
+    __proto__: dart.getMethods(nested.SingleChildStatelessWidget.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext]),
+    createElement: dart.fnType(nested.SingleChildStatelessElement, [])
   }));
-  dart.setLibraryUri(responsive_wrapper.InheritedResponsiveWrapper, I[1]);
-  dart.setFieldSignature(responsive_wrapper.InheritedResponsiveWrapper, () => ({
-    __proto__: dart.getFields(responsive_wrapper.InheritedResponsiveWrapper.__proto__),
-    data: dart.finalFieldType(responsive_wrapper.ResponsiveWrapperData)
+  dart.setLibraryUri(nested.SingleChildStatelessWidget, I[1]);
+  dart.setFieldSignature(nested.SingleChildStatelessWidget, () => ({
+    __proto__: dart.getFields(nested.SingleChildStatelessWidget.__proto__),
+    [_child]: dart.finalFieldType(dart.nullable(framework.Widget))
   }));
-  responsive_wrapper.ResponsiveBreakpointBehavior = class ResponsiveBreakpointBehavior extends core.Object {
-    toString() {
-      return this[_name$0];
-    }
-  };
-  (responsive_wrapper.ResponsiveBreakpointBehavior.new = function(index, _name) {
-    this.index = index;
-    this[_name$0] = _name;
-    ;
-  }).prototype = responsive_wrapper.ResponsiveBreakpointBehavior.prototype;
-  dart.addTypeTests(responsive_wrapper.ResponsiveBreakpointBehavior);
-  dart.addTypeCaches(responsive_wrapper.ResponsiveBreakpointBehavior);
-  dart.setLibraryUri(responsive_wrapper.ResponsiveBreakpointBehavior, I[1]);
-  dart.setFieldSignature(responsive_wrapper.ResponsiveBreakpointBehavior, () => ({
-    __proto__: dart.getFields(responsive_wrapper.ResponsiveBreakpointBehavior.__proto__),
-    index: dart.finalFieldType(core.int),
-    [_name$0]: dart.finalFieldType(core.String)
-  }));
-  dart.defineExtensionMethods(responsive_wrapper.ResponsiveBreakpointBehavior, ['toString']);
-  responsive_wrapper.ResponsiveBreakpointBehavior.RESIZE = C[78] || CT.C78;
-  responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALE = C[79] || CT.C79;
-  responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALEDOWN = C[80] || CT.C80;
-  responsive_wrapper.ResponsiveBreakpointBehavior.TAG = C[76] || CT.C76;
-  responsive_wrapper.ResponsiveBreakpointBehavior.values = C[81] || CT.C81;
-  const breakpoint$ = ResponsiveBreakpoint_breakpoint;
-  const name$ = ResponsiveBreakpoint_name;
-  const behavior$ = ResponsiveBreakpoint_behavior;
-  const scaleFactor$ = ResponsiveBreakpoint_scaleFactor;
-  responsive_wrapper.ResponsiveBreakpoint = class ResponsiveBreakpoint extends core.Object {
-    get breakpoint() {
-      return this[breakpoint$];
-    }
-    set breakpoint(value) {
-      super.breakpoint = value;
-    }
-    get name() {
-      return this[name$];
-    }
-    set name(value) {
-      super.name = value;
-    }
-    get behavior() {
-      return this[behavior$];
-    }
-    set behavior(value) {
-      super.behavior = value;
-    }
-    get scaleFactor() {
-      return this[scaleFactor$];
-    }
-    set scaleFactor(value) {
-      super.scaleFactor = value;
-    }
-    get isResize() {
-      return this.behavior === responsive_wrapper.ResponsiveBreakpointBehavior.RESIZE;
-    }
-    get isAutoScale() {
-      return this.behavior === responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALE;
-    }
-    get isAutoScaleDown() {
-      return this.behavior === responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALEDOWN;
-    }
-    get isTag() {
-      return this.behavior === responsive_wrapper.ResponsiveBreakpointBehavior.TAG;
-    }
-    copyWith(opts) {
-      let t2, t2$, t2$0, t2$1;
-      let breakpoint = opts && 'breakpoint' in opts ? opts.breakpoint : null;
-      let name = opts && 'name' in opts ? opts.name : null;
-      let behavior = opts && 'behavior' in opts ? opts.behavior : null;
-      let scaleFactor = opts && 'scaleFactor' in opts ? opts.scaleFactor : null;
-      return new responsive_wrapper.ResponsiveBreakpoint.new({breakpoint: (t2 = breakpoint, t2 == null ? this.breakpoint : t2), name: (t2$ = name, t2$ == null ? this.name : t2$), behavior: (t2$0 = behavior, t2$0 == null ? this.behavior : t2$0), scaleFactor: (t2$1 = scaleFactor, t2$1 == null ? this.scaleFactor : t2$1)});
-    }
-    merge(responsiveBreakpoint) {
-      let t2, t2$;
-      if (dart.dtest(responsiveBreakpoint.isTag) && !dart.dtest(this.isTag)) return this.copyWith({name: (t2 = responsiveBreakpoint.name, t2 == null ? this.name : t2)});
-      return responsiveBreakpoint.copyWith({name: (t2$ = responsiveBreakpoint.name, t2$ == null ? this.name : t2$)});
-    }
-    toString() {
-      return "ResponsiveBreakpoint(" + "breakpoint: " + this.breakpoint[$toString]() + ", name: " + dart.toString(this.name) + ", behavior: " + this.behavior.toString() + ", scaleFactor: " + this.scaleFactor[$toString]() + ")";
-    }
-    _equals(other) {
-      if (other == null) return false;
-      return this === other || responsive_wrapper.ResponsiveBreakpoint.is(other) && this[$runtimeType]._equals(other[$runtimeType]) && this.breakpoint === other.breakpoint && this.name == other.name && this.behavior === other.behavior && this.scaleFactor === other.scaleFactor;
-    }
-    get hashCode() {
-      return this.breakpoint[$hashCode] * dart.hashCode(this.name) * this.behavior[$hashCode] * this.scaleFactor[$hashCode];
-    }
-  };
-  (responsive_wrapper.ResponsiveBreakpoint.new = function(opts) {
-    let breakpoint = opts && 'breakpoint' in opts ? opts.breakpoint : null;
-    let name = opts && 'name' in opts ? opts.name : null;
-    let behavior = opts && 'behavior' in opts ? opts.behavior : C[78] || CT.C78;
-    let scaleFactor = opts && 'scaleFactor' in opts ? opts.scaleFactor : 1;
-    this[breakpoint$] = breakpoint;
-    this[name$] = name;
-    this[behavior$] = behavior;
-    this[scaleFactor$] = scaleFactor;
-    ;
-  }).prototype = responsive_wrapper.ResponsiveBreakpoint.prototype;
-  (responsive_wrapper.ResponsiveBreakpoint.resize = function(breakpoint, opts) {
-    let name = opts && 'name' in opts ? opts.name : null;
-    let scaleFactor = opts && 'scaleFactor' in opts ? opts.scaleFactor : 1;
-    this[breakpoint$] = breakpoint;
-    this[name$] = name;
-    this[scaleFactor$] = scaleFactor;
-    this[behavior$] = responsive_wrapper.ResponsiveBreakpointBehavior.RESIZE;
-    if (!(breakpoint >= 0)) dart.assertFailed("Breakpoints cannot be negative. To control behavior from 0, set `default` parameters in `ResponsiveWrapper`.", I[2], 908, 16, "breakpoint >= 0");
-    ;
-  }).prototype = responsive_wrapper.ResponsiveBreakpoint.prototype;
-  (responsive_wrapper.ResponsiveBreakpoint.autoScale = function(breakpoint, opts) {
-    let name = opts && 'name' in opts ? opts.name : null;
-    let scaleFactor = opts && 'scaleFactor' in opts ? opts.scaleFactor : 1;
-    this[breakpoint$] = breakpoint;
-    this[name$] = name;
-    this[scaleFactor$] = scaleFactor;
-    this[behavior$] = responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALE;
-    if (!(breakpoint >= 0)) dart.assertFailed("Breakpoints cannot be negative. To control behavior from 0, set `default` parameters in `ResponsiveWrapper`.", I[2], 914, 16, "breakpoint >= 0");
-    ;
-  }).prototype = responsive_wrapper.ResponsiveBreakpoint.prototype;
-  (responsive_wrapper.ResponsiveBreakpoint.autoScaleDown = function(breakpoint, opts) {
-    let name = opts && 'name' in opts ? opts.name : null;
-    let scaleFactor = opts && 'scaleFactor' in opts ? opts.scaleFactor : 1;
-    this[breakpoint$] = breakpoint;
-    this[name$] = name;
-    this[scaleFactor$] = scaleFactor;
-    this[behavior$] = responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALEDOWN;
-    if (!(breakpoint >= 0)) dart.assertFailed("Breakpoints cannot be negative. To control behavior from 0, set `default` parameters in `ResponsiveWrapper`.", I[2], 920, 16, "breakpoint >= 0");
-    ;
-  }).prototype = responsive_wrapper.ResponsiveBreakpoint.prototype;
-  (responsive_wrapper.ResponsiveBreakpoint.tag = function(breakpoint, opts) {
-    let name = opts && 'name' in opts ? opts.name : null;
-    this[breakpoint$] = breakpoint;
-    this[name$] = name;
-    this[behavior$] = responsive_wrapper.ResponsiveBreakpointBehavior.TAG;
-    this[scaleFactor$] = 1.0;
-    if (!(breakpoint >= 0)) dart.assertFailed("Breakpoints cannot be negative. To control behavior from 0, set `default` parameters in `ResponsiveWrapper`.", I[2], 926, 16, "breakpoint >= 0");
-    ;
-  }).prototype = responsive_wrapper.ResponsiveBreakpoint.prototype;
-  dart.addTypeTests(responsive_wrapper.ResponsiveBreakpoint);
-  dart.addTypeCaches(responsive_wrapper.ResponsiveBreakpoint);
-  dart.setMethodSignature(responsive_wrapper.ResponsiveBreakpoint, () => ({
-    __proto__: dart.getMethods(responsive_wrapper.ResponsiveBreakpoint.__proto__),
-    copyWith: dart.fnType(responsive_wrapper.ResponsiveBreakpoint, [], {behavior: dart.nullable(responsive_wrapper.ResponsiveBreakpointBehavior), breakpoint: dart.nullable(core.double), name: dart.nullable(core.String), scaleFactor: dart.nullable(core.double)}, {}),
-    merge: dart.fnType(responsive_wrapper.ResponsiveBreakpoint, [responsive_wrapper.ResponsiveBreakpoint])
-  }));
-  dart.setGetterSignature(responsive_wrapper.ResponsiveBreakpoint, () => ({
-    __proto__: dart.getGetters(responsive_wrapper.ResponsiveBreakpoint.__proto__),
-    isResize: dart.dynamic,
-    isAutoScale: dart.dynamic,
-    isAutoScaleDown: dart.dynamic,
-    isTag: dart.dynamic
-  }));
-  dart.setLibraryUri(responsive_wrapper.ResponsiveBreakpoint, I[1]);
-  dart.setFieldSignature(responsive_wrapper.ResponsiveBreakpoint, () => ({
-    __proto__: dart.getFields(responsive_wrapper.ResponsiveBreakpoint.__proto__),
-    breakpoint: dart.finalFieldType(core.double),
-    name: dart.finalFieldType(dart.nullable(core.String)),
-    behavior: dart.finalFieldType(responsive_wrapper.ResponsiveBreakpointBehavior),
-    scaleFactor: dart.finalFieldType(core.double)
-  }));
-  dart.defineExtensionMethods(responsive_wrapper.ResponsiveBreakpoint, ['toString', '_equals']);
-  dart.defineExtensionAccessors(responsive_wrapper.ResponsiveBreakpoint, ['hashCode']);
-  var breakpoint$0 = dart.privateName(responsive_wrapper, "ResponsiveBreakpointSegment.breakpoint");
-  var segmentType$ = dart.privateName(responsive_wrapper, "ResponsiveBreakpointSegment.segmentType");
-  var responsiveBreakpoint$ = dart.privateName(responsive_wrapper, "ResponsiveBreakpointSegment.responsiveBreakpoint");
-  responsive_wrapper.ResponsiveBreakpointSegment = class ResponsiveBreakpointSegment extends core.Object {
-    get breakpoint() {
-      return this[breakpoint$0];
-    }
-    set breakpoint(value) {
-      super.breakpoint = value;
-    }
-    get segmentType() {
-      return this[segmentType$];
-    }
-    set segmentType(value) {
-      super.segmentType = value;
-    }
-    get responsiveBreakpoint() {
-      return this[responsiveBreakpoint$];
-    }
-    set responsiveBreakpoint(value) {
-      super.responsiveBreakpoint = value;
-    }
-    get isResize() {
-      return this.segmentType === responsive_wrapper.ResponsiveBreakpointBehavior.RESIZE;
-    }
-    get isAutoScale() {
-      return this.segmentType === responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALE;
-    }
-    get isAutoScaleDown() {
-      return this.segmentType === responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALEDOWN;
-    }
-    get isTag() {
-      return this.segmentType === responsive_wrapper.ResponsiveBreakpointBehavior.TAG;
-    }
-    copyWith(opts) {
-      let t2, t2$, t2$0;
-      let breakpoint = opts && 'breakpoint' in opts ? opts.breakpoint : null;
-      let segmentType = opts && 'segmentType' in opts ? opts.segmentType : null;
-      let responsiveBreakpoint = opts && 'responsiveBreakpoint' in opts ? opts.responsiveBreakpoint : null;
-      return new responsive_wrapper.ResponsiveBreakpointSegment.new({breakpoint: (t2 = breakpoint, t2 == null ? this.breakpoint : t2), segmentType: (t2$ = segmentType, t2$ == null ? this.segmentType : t2$), responsiveBreakpoint: (t2$0 = responsiveBreakpoint, t2$0 == null ? this.responsiveBreakpoint : t2$0)});
-    }
-    merge(responsiveBreakpointSegment) {
-      if (dart.dtest(responsiveBreakpointSegment.isTag) && !dart.dtest(this.isTag)) return this.copyWith({responsiveBreakpoint: this.responsiveBreakpoint.merge(responsiveBreakpointSegment.responsiveBreakpoint)});
-      return responsiveBreakpointSegment.copyWith({responsiveBreakpoint: this.responsiveBreakpoint.merge(responsiveBreakpointSegment.responsiveBreakpoint)});
-    }
-    toString() {
-      return "ResponsiveBreakpointSegment(" + "breakpoint: " + this.breakpoint[$toString]() + ", segmentType: " + this.segmentType.toString() + ", responsiveBreakpoint: " + this.responsiveBreakpoint.toString() + ")";
-    }
-    _equals(other) {
-      if (other == null) return false;
-      return this === other || responsive_wrapper.ResponsiveBreakpointSegment.is(other) && this[$runtimeType]._equals(other[$runtimeType]) && this.breakpoint === other.breakpoint && this.segmentType === other.segmentType && this.responsiveBreakpoint._equals(other.responsiveBreakpoint);
-    }
-    get hashCode() {
-      return this.breakpoint[$hashCode] * this.segmentType[$hashCode] * this.responsiveBreakpoint.hashCode;
-    }
-  };
-  (responsive_wrapper.ResponsiveBreakpointSegment.new = function(opts) {
-    let breakpoint = opts && 'breakpoint' in opts ? opts.breakpoint : null;
-    let segmentType = opts && 'segmentType' in opts ? opts.segmentType : null;
-    let responsiveBreakpoint = opts && 'responsiveBreakpoint' in opts ? opts.responsiveBreakpoint : null;
-    this[breakpoint$0] = breakpoint;
-    this[segmentType$] = segmentType;
-    this[responsiveBreakpoint$] = responsiveBreakpoint;
-    ;
-  }).prototype = responsive_wrapper.ResponsiveBreakpointSegment.prototype;
-  dart.addTypeTests(responsive_wrapper.ResponsiveBreakpointSegment);
-  dart.addTypeCaches(responsive_wrapper.ResponsiveBreakpointSegment);
-  dart.setMethodSignature(responsive_wrapper.ResponsiveBreakpointSegment, () => ({
-    __proto__: dart.getMethods(responsive_wrapper.ResponsiveBreakpointSegment.__proto__),
-    copyWith: dart.fnType(responsive_wrapper.ResponsiveBreakpointSegment, [], {breakpoint: dart.nullable(core.double), responsiveBreakpoint: dart.nullable(responsive_wrapper.ResponsiveBreakpoint), segmentType: dart.nullable(responsive_wrapper.ResponsiveBreakpointBehavior)}, {}),
-    merge: dart.fnType(responsive_wrapper.ResponsiveBreakpointSegment, [responsive_wrapper.ResponsiveBreakpointSegment])
-  }));
-  dart.setGetterSignature(responsive_wrapper.ResponsiveBreakpointSegment, () => ({
-    __proto__: dart.getGetters(responsive_wrapper.ResponsiveBreakpointSegment.__proto__),
-    isResize: dart.dynamic,
-    isAutoScale: dart.dynamic,
-    isAutoScaleDown: dart.dynamic,
-    isTag: dart.dynamic
-  }));
-  dart.setLibraryUri(responsive_wrapper.ResponsiveBreakpointSegment, I[1]);
-  dart.setFieldSignature(responsive_wrapper.ResponsiveBreakpointSegment, () => ({
-    __proto__: dart.getFields(responsive_wrapper.ResponsiveBreakpointSegment.__proto__),
-    breakpoint: dart.finalFieldType(core.double),
-    segmentType: dart.finalFieldType(responsive_wrapper.ResponsiveBreakpointBehavior),
-    responsiveBreakpoint: dart.finalFieldType(responsive_wrapper.ResponsiveBreakpoint)
-  }));
-  dart.defineExtensionMethods(responsive_wrapper.ResponsiveBreakpointSegment, ['toString', '_equals']);
-  dart.defineExtensionAccessors(responsive_wrapper.ResponsiveBreakpointSegment, ['hashCode']);
-  responsive_wrapper.getBreakpointSegments = function getBreakpointSegments(breakpoints, defaultBreakpoint) {
-    let breakpointsHolder = breakpoints;
-    let breakpointSegments = T.JSArrayOfResponsiveBreakpointSegment().of([]);
-    if (breakpointsHolder[$length] === 0) {
-      breakpointSegments[$add](new responsive_wrapper.ResponsiveBreakpointSegment.new({breakpoint: 0.0, segmentType: defaultBreakpoint.behavior, responsiveBreakpoint: defaultBreakpoint}));
-      return breakpointSegments;
-    }
-    let breakpointTags = breakpointsHolder[$where](dart.fn(element => core.bool.as(element.isTag), T.ResponsiveBreakpointTobool()))[$toList]();
-    breakpointsHolder = breakpointsHolder[$where](dart.fn(element => !dart.dtest(element.isTag), T.ResponsiveBreakpointTobool()))[$toList]();
-    let minWidth = defaultBreakpoint.breakpoint;
-    let minWidthOverride = iterable_extensions['IterableExtension|firstWhereOrNull'](responsive_wrapper.ResponsiveBreakpoint, breakpointsHolder, dart.fn(element => element.breakpoint === minWidth, T.ResponsiveBreakpointTobool()));
-    if (minWidthOverride != null) {
-      breakpointsHolder[$insert](0, new responsive_wrapper.ResponsiveBreakpoint.new({breakpoint: minWidth, name: defaultBreakpoint.name, behavior: defaultBreakpoint.behavior, scaleFactor: defaultBreakpoint.scaleFactor}).merge(minWidthOverride));
-    } else {
-      breakpointsHolder[$insert](0, new responsive_wrapper.ResponsiveBreakpoint.new({breakpoint: minWidth, name: defaultBreakpoint.name, behavior: defaultBreakpoint.behavior, scaleFactor: defaultBreakpoint.scaleFactor}));
-    }
-    breakpointsHolder[$sort](C[82] || CT.C82);
-    breakpointTags[$sort](C[82] || CT.C82);
-    let initialBreakpoint = breakpointsHolder[$first];
-    let breakpointHolder = new responsive_wrapper.ResponsiveBreakpoint.new({breakpoint: initialBreakpoint.breakpoint, name: defaultBreakpoint.name, behavior: defaultBreakpoint.behavior, scaleFactor: defaultBreakpoint.scaleFactor});
-    breakpointSegments[$insert](0, new responsive_wrapper.ResponsiveBreakpointSegment.new({breakpoint: 0.0, segmentType: defaultBreakpoint.behavior, responsiveBreakpoint: breakpointHolder.copyWith({behavior: dart.dtest(initialBreakpoint.isAutoScaleDown) ? responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALE : defaultBreakpoint.behavior})}));
-    let breakpointCounter = 0;
-    for (let i = 0; i < breakpointsHolder[$length]; i = i + 1) {
-      let breakpoint = breakpointsHolder[$_get](i);
-      let breakpointSegmentHolder = null;
-      switch (breakpoint.behavior) {
-        case C[78] || CT.C78:
-        case C[79] || CT.C79:
-        {
-          breakpointSegmentHolder = new responsive_wrapper.ResponsiveBreakpointSegment.new({breakpoint: breakpoint.breakpoint, segmentType: breakpoint.behavior, responsiveBreakpoint: breakpoint});
-          break;
-        }
-        case C[80] || CT.C80:
-        {
-          let overrideBreakpointIndex = breakpointCounter;
-          let overrideBreakpointSegment = breakpointSegments[$_get](overrideBreakpointIndex);
-          overrideBreakpointSegment = overrideBreakpointSegment.copyWith({responsiveBreakpoint: overrideBreakpointSegment.responsiveBreakpoint.copyWith({breakpoint: breakpoint.breakpoint, behavior: responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALE})});
-          breakpointSegments[$_set](overrideBreakpointIndex, overrideBreakpointSegment);
-          breakpointSegmentHolder = new responsive_wrapper.ResponsiveBreakpointSegment.new({breakpoint: breakpoint.breakpoint, segmentType: breakpoint.behavior, responsiveBreakpoint: new responsive_wrapper.ResponsiveBreakpoint.new({breakpoint: breakpoint.breakpoint, name: breakpoint.name, behavior: responsive_wrapper.ResponsiveBreakpointBehavior.AUTOSCALE, scaleFactor: breakpoint.scaleFactor})});
-          break;
-        }
-        case C[76] || CT.C76:
-        {
-          break;
-        }
+  const StatelessElement_SingleChildWidgetElementMixin$36$ = class StatelessElement_SingleChildWidgetElementMixin extends framework.StatelessElement {};
+  (StatelessElement_SingleChildWidgetElementMixin$36$.new = function(widget) {
+    nested.SingleChildWidgetElementMixin[dart.mixinNew].call(this);
+    StatelessElement_SingleChildWidgetElementMixin$36$.__proto__.new.call(this, widget);
+  }).prototype = StatelessElement_SingleChildWidgetElementMixin$36$.prototype;
+  dart.applyMixin(StatelessElement_SingleChildWidgetElementMixin$36$, nested.SingleChildWidgetElementMixin);
+  nested.SingleChildStatelessElement = class SingleChildStatelessElement extends StatelessElement_SingleChildWidgetElementMixin$36$ {
+    build() {
+      if (this[_parent] != null) {
+        return this.widget.buildWithChild(this, dart.nullCheck(this[_parent]).injectedChild);
       }
-      breakpointHolder = breakpoint;
-      if (breakpointSegments[$last].breakpoint === dart.nullCheck(breakpointSegmentHolder).breakpoint) {
-        breakpointSegments[$_set](breakpointSegments[$length] - 1, breakpointSegments[$last].merge(breakpointSegmentHolder));
-        continue;
-      }
-      breakpointSegments[$add](breakpointSegmentHolder);
-      breakpointCounter = breakpointCounter + 1;
+      return super.build();
     }
-    for (let i = 0; i < breakpointTags[$length]; i = i + 1) {
-      let breakpointTag = breakpointTags[$_get](i);
-      let breakpointSegmentHolder = breakpointSegments[$reversed][$firstWhere](dart.fn(element => element.breakpoint <= breakpointTag.breakpoint, T.ResponsiveBreakpointSegmentTobool()));
-      let breakpointHolderIndex = breakpointSegments[$indexOf](breakpointSegmentHolder);
-      if (breakpointSegmentHolder.breakpoint === breakpointTag.breakpoint) {
-        breakpointSegments[$_set](breakpointHolderIndex, new responsive_wrapper.ResponsiveBreakpointSegment.new({breakpoint: breakpointSegmentHolder.breakpoint, segmentType: breakpointSegmentHolder.segmentType, responsiveBreakpoint: breakpointSegmentHolder.responsiveBreakpoint.merge(breakpointTag)}));
-      } else {
-        breakpointSegments[$insert](breakpointHolderIndex + 1, new responsive_wrapper.ResponsiveBreakpointSegment.new({breakpoint: breakpointTag.breakpoint, segmentType: breakpointTag.behavior, responsiveBreakpoint: breakpointSegmentHolder.responsiveBreakpoint.merge(breakpointTag)}));
+    get widget() {
+      return nested.SingleChildStatelessWidget.as(super.widget);
+    }
+  };
+  (nested.SingleChildStatelessElement.new = function(widget) {
+    nested.SingleChildStatelessElement.__proto__.new.call(this, widget);
+    ;
+  }).prototype = nested.SingleChildStatelessElement.prototype;
+  dart.addTypeTests(nested.SingleChildStatelessElement);
+  dart.addTypeCaches(nested.SingleChildStatelessElement);
+  dart.setGetterSignature(nested.SingleChildStatelessElement, () => ({
+    __proto__: dart.getGetters(nested.SingleChildStatelessElement.__proto__),
+    widget: nested.SingleChildStatelessWidget
+  }));
+  dart.setLibraryUri(nested.SingleChildStatelessElement, I[1]);
+  var _child$0 = dart.privateName(nested, "SingleChildStatefulWidget._child");
+  nested.SingleChildStatefulWidget = class SingleChildStatefulWidget extends framework.StatefulWidget {
+    get [_child]() {
+      return this[_child$0];
+    }
+    set [_child](value) {
+      super[_child] = value;
+    }
+    createElement() {
+      return new nested.SingleChildStatefulElement.new(this);
+    }
+  };
+  (nested.SingleChildStatefulWidget.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[_child$0] = child;
+    nested.SingleChildStatefulWidget.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = nested.SingleChildStatefulWidget.prototype;
+  dart.addTypeTests(nested.SingleChildStatefulWidget);
+  dart.addTypeCaches(nested.SingleChildStatefulWidget);
+  nested.SingleChildStatefulWidget[dart.implements] = () => [nested.SingleChildWidget];
+  dart.setMethodSignature(nested.SingleChildStatefulWidget, () => ({
+    __proto__: dart.getMethods(nested.SingleChildStatefulWidget.__proto__),
+    createElement: dart.fnType(nested.SingleChildStatefulElement, [])
+  }));
+  dart.setLibraryUri(nested.SingleChildStatefulWidget, I[1]);
+  dart.setFieldSignature(nested.SingleChildStatefulWidget, () => ({
+    __proto__: dart.getFields(nested.SingleChildStatefulWidget.__proto__),
+    [_child]: dart.finalFieldType(dart.nullable(framework.Widget))
+  }));
+  const _is_SingleChildState_default = Symbol('_is_SingleChildState_default');
+  nested.SingleChildState$ = dart.generic(T => {
+    class SingleChildState extends framework.State$(T) {
+      build(context) {
+        return this.buildWithChild(context, this.widget[_child]);
       }
     }
-    return breakpointSegments;
-  };
-  dart.defineLazy(responsive_wrapper, {
-    /*responsive_wrapper.MOBILE*/get MOBILE() {
-      return "MOBILE";
-    },
-    /*responsive_wrapper.TABLET*/get TABLET() {
-      return "TABLET";
-    },
-    /*responsive_wrapper.PHONE*/get PHONE() {
-      return "PHONE";
-    },
-    /*responsive_wrapper.DESKTOP*/get DESKTOP() {
-      return "DESKTOP";
+    (SingleChildState.new = function() {
+      SingleChildState.__proto__.new.call(this);
+      ;
+    }).prototype = SingleChildState.prototype;
+    dart.addTypeTests(SingleChildState);
+    SingleChildState.prototype[_is_SingleChildState_default] = true;
+    dart.addTypeCaches(SingleChildState);
+    dart.setMethodSignature(SingleChildState, () => ({
+      __proto__: dart.getMethods(SingleChildState.__proto__),
+      build: dart.fnType(framework.Widget, [framework.BuildContext])
+    }));
+    dart.setLibraryUri(SingleChildState, I[1]);
+    return SingleChildState;
+  });
+  nested.SingleChildState = nested.SingleChildState$();
+  dart.addTypeTests(nested.SingleChildState, _is_SingleChildState_default);
+  const StatefulElement_SingleChildWidgetElementMixin$36 = class StatefulElement_SingleChildWidgetElementMixin extends framework.StatefulElement {};
+  (StatefulElement_SingleChildWidgetElementMixin$36.new = function(widget) {
+    nested.SingleChildWidgetElementMixin[dart.mixinNew].call(this);
+    StatefulElement_SingleChildWidgetElementMixin$36.__proto__.new.call(this, widget);
+  }).prototype = StatefulElement_SingleChildWidgetElementMixin$36.prototype;
+  dart.applyMixin(StatefulElement_SingleChildWidgetElementMixin$36, nested.SingleChildWidgetElementMixin);
+  nested.SingleChildStatefulElement = class SingleChildStatefulElement extends StatefulElement_SingleChildWidgetElementMixin$36 {
+    get widget() {
+      return nested.SingleChildStatefulWidget.as(super.widget);
     }
-  }, false);
-  dart.trackLibraries("packages/responsive_framework/utils/responsive_utils.dart", {
-    "package:responsive_framework/utils/responsive_utils.dart": responsive_utils,
-    "package:responsive_framework/responsive_wrapper.dart": responsive_wrapper
+    get state() {
+      return T.SingleChildStateOfSingleChildStatefulWidget().as(super.state);
+    }
+    build() {
+      if (this[_parent] != null) {
+        return this.state.buildWithChild(this, dart.nullCheck(dart.nullCheck(this[_parent]).injectedChild));
+      }
+      return super.build();
+    }
+  };
+  (nested.SingleChildStatefulElement.new = function(widget) {
+    nested.SingleChildStatefulElement.__proto__.new.call(this, widget);
+    ;
+  }).prototype = nested.SingleChildStatefulElement.prototype;
+  dart.addTypeTests(nested.SingleChildStatefulElement);
+  dart.addTypeCaches(nested.SingleChildStatefulElement);
+  dart.setGetterSignature(nested.SingleChildStatefulElement, () => ({
+    __proto__: dart.getGetters(nested.SingleChildStatefulElement.__proto__),
+    widget: nested.SingleChildStatefulWidget,
+    state: nested.SingleChildState$(nested.SingleChildStatefulWidget)
+  }));
+  dart.setLibraryUri(nested.SingleChildStatefulElement, I[1]);
+  var builder$ = dart.privateName(nested, "SingleChildBuilder.builder");
+  nested.SingleChildBuilder = class SingleChildBuilder extends nested.SingleChildStatelessWidget {
+    get builder() {
+      return this[builder$];
+    }
+    set builder(value) {
+      super.builder = value;
+    }
+    buildWithChild(context, child) {
+      let t1, t0;
+      t0 = context;
+      t1 = child;
+      return this.builder(t0, t1);
+    }
+  };
+  (nested.SingleChildBuilder.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let builder = opts && 'builder' in opts ? opts.builder : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[builder$] = builder;
+    nested.SingleChildBuilder.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = nested.SingleChildBuilder.prototype;
+  dart.addTypeTests(nested.SingleChildBuilder);
+  dart.addTypeCaches(nested.SingleChildBuilder);
+  dart.setMethodSignature(nested.SingleChildBuilder, () => ({
+    __proto__: dart.getMethods(nested.SingleChildBuilder.__proto__),
+    buildWithChild: dart.fnType(framework.Widget, [framework.BuildContext, dart.nullable(framework.Widget)])
+  }));
+  dart.setLibraryUri(nested.SingleChildBuilder, I[1]);
+  dart.setFieldSignature(nested.SingleChildBuilder, () => ({
+    __proto__: dart.getFields(nested.SingleChildBuilder.__proto__),
+    builder: dart.finalFieldType(dart.fnType(framework.Widget, [framework.BuildContext, dart.nullable(framework.Widget)]))
+  }));
+  nested.SingleChildStatelessWidgetMixin = class SingleChildStatelessWidgetMixin extends core.Object {};
+  nested.SingleChildStatelessWidgetMixin[dart.mixinOn] = Object => class SingleChildStatelessWidgetMixin extends Object {
+    get [_child]() {
+      return this.child;
+    }
+    createElement() {
+      return new nested.SingleChildStatelessElement.new(this);
+    }
+    build(context) {
+      return this.buildWithChild(context, this.child);
+    }
+  };
+  (nested.SingleChildStatelessWidgetMixin[dart.mixinNew] = function() {
+  }).prototype = nested.SingleChildStatelessWidgetMixin.prototype;
+  dart.addTypeTests(nested.SingleChildStatelessWidgetMixin);
+  dart.addTypeCaches(nested.SingleChildStatelessWidgetMixin);
+  nested.SingleChildStatelessWidgetMixin[dart.implements] = () => [framework.StatelessWidget, nested.SingleChildStatelessWidget, core.Object];
+  dart.setMethodSignature(nested.SingleChildStatelessWidgetMixin, () => ({
+    __proto__: dart.getMethods(nested.SingleChildStatelessWidgetMixin.__proto__),
+    createElement: dart.fnType(nested.SingleChildStatelessElement, []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setGetterSignature(nested.SingleChildStatelessWidgetMixin, () => ({
+    __proto__: dart.getGetters(nested.SingleChildStatelessWidgetMixin.__proto__),
+    [_child]: dart.nullable(framework.Widget)
+  }));
+  dart.setLibraryUri(nested.SingleChildStatelessWidgetMixin, I[1]);
+  nested.SingleChildStatefulWidgetMixin = class SingleChildStatefulWidgetMixin extends framework.StatefulWidget {};
+  nested.SingleChildStatefulWidgetMixin[dart.mixinOn] = StatefulWidget => class SingleChildStatefulWidgetMixin extends StatefulWidget {
+    createElement() {
+      return new nested._SingleChildStatefulMixinElement.new(this);
+    }
+  };
+  dart.addTypeTests(nested.SingleChildStatefulWidgetMixin);
+  dart.addTypeCaches(nested.SingleChildStatefulWidgetMixin);
+  nested.SingleChildStatefulWidgetMixin[dart.implements] = () => [nested.SingleChildWidget, framework.StatefulWidget];
+  dart.setMethodSignature(nested.SingleChildStatefulWidgetMixin, () => ({
+    __proto__: dart.getMethods(nested.SingleChildStatefulWidgetMixin.__proto__),
+    createElement: dart.fnType(nested._SingleChildStatefulMixinElement, [])
+  }));
+  dart.setLibraryUri(nested.SingleChildStatefulWidgetMixin, I[1]);
+  const _is_SingleChildStateMixin_default = Symbol('_is_SingleChildStateMixin_default');
+  nested.SingleChildStateMixin$ = dart.generic(T => {
+    class SingleChildStateMixin extends framework.State$(T) {}
+    SingleChildStateMixin[dart.mixinOn] = State => class SingleChildStateMixin extends State {
+      build(context) {
+        return this.buildWithChild(context, dart.nullCheck(nested.SingleChildStatefulWidgetMixin.as(this.widget).child));
+      }
+    };
+    dart.addTypeTests(SingleChildStateMixin);
+    SingleChildStateMixin.prototype[_is_SingleChildStateMixin_default] = true;
+    dart.addTypeCaches(SingleChildStateMixin);
+    SingleChildStateMixin[dart.implements] = () => [framework.State$(T)];
+    dart.setMethodSignature(SingleChildStateMixin, () => ({
+      __proto__: dart.getMethods(SingleChildStateMixin.__proto__),
+      build: dart.fnType(framework.Widget, [framework.BuildContext])
+    }));
+    dart.setLibraryUri(SingleChildStateMixin, I[1]);
+    return SingleChildStateMixin;
+  });
+  nested.SingleChildStateMixin = nested.SingleChildStateMixin$();
+  dart.addTypeTests(nested.SingleChildStateMixin, _is_SingleChildStateMixin_default);
+  const StatefulElement_SingleChildWidgetElementMixin$36$ = class StatefulElement_SingleChildWidgetElementMixin extends framework.StatefulElement {};
+  (StatefulElement_SingleChildWidgetElementMixin$36$.new = function(widget) {
+    nested.SingleChildWidgetElementMixin[dart.mixinNew].call(this);
+    StatefulElement_SingleChildWidgetElementMixin$36$.__proto__.new.call(this, widget);
+  }).prototype = StatefulElement_SingleChildWidgetElementMixin$36$.prototype;
+  dart.applyMixin(StatefulElement_SingleChildWidgetElementMixin$36$, nested.SingleChildWidgetElementMixin);
+  nested._SingleChildStatefulMixinElement = class _SingleChildStatefulMixinElement extends StatefulElement_SingleChildWidgetElementMixin$36$ {
+    get widget() {
+      return nested.SingleChildStatefulWidgetMixin.as(super.widget);
+    }
+    get state() {
+      return T.SingleChildStateMixinOfStatefulWidget().as(super.state);
+    }
+    build() {
+      if (this[_parent] != null) {
+        return this.state.buildWithChild(this, dart.nullCheck(dart.nullCheck(this[_parent]).injectedChild));
+      }
+      return super.build();
+    }
+  };
+  (nested._SingleChildStatefulMixinElement.new = function(widget) {
+    nested._SingleChildStatefulMixinElement.__proto__.new.call(this, widget);
+    ;
+  }).prototype = nested._SingleChildStatefulMixinElement.prototype;
+  dart.addTypeTests(nested._SingleChildStatefulMixinElement);
+  dart.addTypeCaches(nested._SingleChildStatefulMixinElement);
+  dart.setGetterSignature(nested._SingleChildStatefulMixinElement, () => ({
+    __proto__: dart.getGetters(nested._SingleChildStatefulMixinElement.__proto__),
+    widget: nested.SingleChildStatefulWidgetMixin,
+    state: nested.SingleChildStateMixin$(framework.StatefulWidget)
+  }));
+  dart.setLibraryUri(nested._SingleChildStatefulMixinElement, I[1]);
+  nested.SingleChildInheritedElementMixin = class SingleChildInheritedElementMixin extends core.Object {};
+  nested.SingleChildInheritedElementMixin[dart.mixinOn] = _SingleChildInheritedElementMixin$36InheritedElement$36SingleChildWidgetElementMixin => class SingleChildInheritedElementMixin extends _SingleChildInheritedElementMixin$36InheritedElement$36SingleChildWidgetElementMixin {
+    build() {
+      if (this[_parent] != null) {
+        return dart.nullCheck(dart.nullCheck(this[_parent]).injectedChild);
+      }
+      return super.build();
+    }
+  };
+  dart.addTypeTests(nested.SingleChildInheritedElementMixin);
+  dart.addTypeCaches(nested.SingleChildInheritedElementMixin);
+  nested.SingleChildInheritedElementMixin[dart.implements] = () => [nested.SingleChildWidgetElementMixin, framework.InheritedElement];
+  dart.setMethodSignature(nested.SingleChildInheritedElementMixin, () => ({
+    __proto__: dart.getMethods(nested.SingleChildInheritedElementMixin.__proto__),
+    build: dart.fnType(framework.Widget, [])
+  }));
+  dart.setLibraryUri(nested.SingleChildInheritedElementMixin, I[1]);
+  dart.trackLibraries("packages/nested/nested.dart", {
+    "package:nested/nested.dart": nested
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["responsive_utils.dart","../responsive_wrapper.dart"],"names":[],"mappings":"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","file":"../../../../../../../packages/responsive_framework/utils/responsive_utils.dart.lib.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["nested.dart","../../../../../packages/flutter/lib/src/widgets/framework.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UA+E4B;AACkB,MAA1C,WAAM,wBAAW;IACnB;;AAGkC,2CAAe;IAAK;;;QAjB/C;QAC4B;QACzB;;SACG,AAAS,QAAD;IACL,kBAAE,QAAQ;IACb,eAAE,KAAK;AACd,iDAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;IA6ID;;;;;;UAGA,QAAgB;AAClC,UAAW,2BAAP,MAAM;AACQ,QAAhB,gBAAU,MAAM;;AAEU,MAAtB,YAAM,MAAM,EAAE,OAAO;IAC7B;;AAIkB,MAAV;AAMJ,MALF,2BAAsB,QAAC;AACrB,YAAW,6BAAP,MAAM;AACQ,UAAhB,gBAAU,MAAM;;AAElB,cAAO;;IAEX;;;IAnBoB;;;;;;;;;;;;;;;oEC20Ia;;;;;;;ADr8IZ,YAAa,kBAAP;IAAgB;;;AAM5B;AACT,sBAAkC,wCAAvB,OAAS,mBAAT,cAA0B,AAAO;AAEhD,eAAW,QAAS,AAAO,AAAU;AAKlC,QAJD,WAAW,aAAa,mCACf,qBACQ,KAAK,iBACL,QAAQ;;AAI3B,UAAI,UAAU;AAIZ,iBAAW,OAAQ;AAG2B,iBAF5C,IAAI;UAAJ;AACI,gCAAyB,AAAE,eAAZ,UAAU;AACzB,iCAAgB,AAAW,UAAD;;;AAExB,qBAAO,AAAW,UAAD;AACvB,cAAS,sBAAL,IAAI;AACW,YAAjB,aAAa,IAAI;;AAEjB;;;;AAKN,YAAe,gBAAR,QAAQ;IACjB;;wCAvCsB;IAKhB,aAA4B;AALF,mDAAM,MAAM;;EAAC;;;;;;;;;;;;;;AAsDP,+CAAmB;IAAK;UAGpC;AAAY,wBAAM,wBAAW;IAAqB;;;QAbrE;QACS;QACA;;IAFT;IACS;IACA;AAHhB;;EAIE;;;;;;;;;;;;;;;;;;;AAiBwB,YAAa,uBAAP;IAAqB;;AAGxB;IAAc;sBACjB;AAClB,qBAAW;AACjB,UAAU,sBAAN,KAAK,KACI,sBAAT,QAAQ,KACD,2BAAU,AAAM,KAAD,gBAAgB,AAAS,QAAD;AAGhD;;AAEF,uBAAI,QAAQ,EAAI,KAAK;AACG,QAAtB,uBAAiB,KAAK;AACkB,QAAxC,mBAAc,QAAC,KAAM,AAAE,CAAD;;IAE1B;;AAGuC;IAAa;qBAChB;AAClC,uBAAI,qBAAiB,KAAK;AACH,QAArB,sBAAgB,KAAK;AACL,QAAhB;;IAEJ;UAGoB,QAAgB;AACN,MAA5B,AAAO,AAAM,AAAM,4BAAI;AACa,MAApC,sBAAgB,AAAO;AACc,MAArC,uBAAiB,AAAO;AACI,MAAtB,YAAM,MAAM,EAAE,OAAO;IAC7B;;AAIiC,MAA/B,AAAO,AAAM,AAAM,+BAAO;AACX,MAAT;IACR;;AAIE,YAAmB,gBAAZ;IACT;;4CAhD+B;IAKvB;IAiBW;AAtBsB,uDAAM,MAAM;;EAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;EA6DxD;;;;;;;IAoCgB;;;;;;UAWY;AAAY,iCAAe,OAAO,EAAE;IAAO;;AAInE,YAAO,4CAA4B;IACrC;;;QApBuC;QAAa;;IACvC,gBAAE,KAAK;AACd,qEAAW,GAAG;;EAAC;;;;;;;;;;;;;;;qEC4yIY;;;;;;;AD9wI/B,UAAI;AACF,cAAO,AAAO,4BAAe,MAAa,AAAE,eAAT;;AAErC,YAAa;IACf;;AAII,YAAa,sCAAP;IAAoC;;qDAbS;AACjD,gEAAM,MAAM;;EAAC;;;;;;;;;;IAuBL;;;;;;;AAIZ,YAAO,2CAA2B;IACpC;;;QATsC;QAAa;;IACtC,iBAAE,KAAK;AACd,oEAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;YAwBK;AAAY,mCAAe,OAAO,EAAE,AAAO;MAAO;;;;;IAC9E;;;;;;;;;;;;;;mECwvIiC;;;;;;;AD9uI3B,YAAa,qCAAP;IAAmC;;AAIzC,YAAY,oDAAN;IAAoD;;AAI5D,UAAI;AACF,cAAO,AAAM,2BAAe,MAA4B,eAAf,AAAE,eAAT;;AAEpC,YAAa;IACf;;oDAhBqD;AAAU,+DAAM,MAAM;;EAAC;;;;;;;;;;;IAiCjB;;;;;;mBAGxB,SAAiB;;AAClD,WAAe,OAAO;WAAE,KAAK;YAAtB,AAAO;IAChB;;;QAZ+B;QAAmB;QAAiB;;IAAjB;AAC5C,6DAAW,GAAG,SAAS,KAAK;;EAAC;;;;;;;;;;;;;;;AAmBb;IAAK;;AAIzB,YAAO,4CAA4B;IACrC;UAG0B;AACxB,YAAO,qBAAe,OAAO,EAAE;IACjC;;;;;;;;;;;;;;;;;;;;AASI,6DAAiC;IAAK;;;;;;;;;;;;;;YAOhB;AACxB,cAAO,qBACL,OAAO,EACyC,eAAxC,AAAmC,yCAA1C;MAEL;;;;;;;;;;;;;;;;oECqqI+B;;;;;;;AD3pI3B,YAAa,0CAAP;IAAwC;;AAI9C,YAAY,8CAAN;IAA8C;;AAItD,UAAI;AACF,cAAO,AAAM,2BAAe,MAA4B,eAAf,AAAE,eAAT;;AAEpC,YAAa;IACf;;0DAjBgE;AAC1D,qEAAM,MAAM;;EAAC;;;;;;;;;;;;AAuBjB,UAAI;AACF,cAA6B,gBAAf,AAAE,eAAT;;AAET,YAAa;IACf","file":"../../../../../../packages/nested/nested.dart.lib.js"}');
   // Exports:
   return {
-    utils__responsive_utils: responsive_utils,
-    responsive_wrapper: responsive_wrapper
+    nested: nested
   };
 }));
 
-//# sourceMappingURL=responsive_utils.dart.lib.js.map
+//# sourceMappingURL=nested.dart.lib.js.map

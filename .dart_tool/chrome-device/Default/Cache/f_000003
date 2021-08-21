@@ -19,16 +19,16 @@ define("main_module.bootstrap", ["web_entrypoint.dart", "dart_sdk"], function(ap
          main();
       });
     }
-    window.$dartAppId = "MiNbjFTWDbqdiFxWxgm/fQ==";
+    window.$dartAppId = "q9rJx4y9X4iz51xKW0surg==";
 window.$dartReloadConfiguration = "ReloadConfiguration.none";
 window.$dartModuleStrategy = "require-js";
 window.$loadModuleConfig = require;
 window.$dwdsVersion = "11.0.2";
-window.$dwdsDevHandlerPath = "http://localhost:53660/$dwdsSseHandler";
+window.$dwdsDevHandlerPath = "http://localhost:53812/$dwdsSseHandler";
 window.$dwdsEnableDevtoolsLaunch = true;
 window.$dartEntrypointPath = "main_module.bootstrap.js";
 window.$requireLoader.forceLoadModule("dwds/src/injected/client");
-window.$dartExtensionUri = "http://127.0.0.1:53665/$debug";
+window.$dartExtensionUri = "http://127.0.0.1:53814/$debug";
 
   } else {
     if(window.$dartMainExecuted){
@@ -83,8 +83,6 @@ var baseUrl = (function () {
 let modulePaths = {
  "web_entrypoint.dart": "web_entrypoint.dart.lib",
  "packages/web_responsive_ui/main.dart": "packages/web_responsive_ui/main.dart.lib",
- "packages/web_responsive_ui/config/utils/routes/routes.dart": "packages/web_responsive_ui/config/utils/routes/routes.dart.lib",
- "packages/web_responsive_ui/config/utils/routes/routes_handlers.dart": "packages/web_responsive_ui/config/utils/routes/routes_handlers.dart.lib",
  "packages/web_responsive_ui/providers/page_provider.dart": "packages/web_responsive_ui/providers/page_provider.dart.lib",
  "packages/universal_html/html.dart": "packages/universal_html/html.dart.lib",
  "packages/flutter/material.dart": "packages/flutter/material.dart.lib",
@@ -443,6 +441,8 @@ let modulePaths = {
  "packages/flutter/src/material/app.dart": "packages/flutter/src/material/app.dart.lib",
  "packages/flutter/src/material/animated_icons.dart": "packages/flutter/src/material/animated_icons.dart.lib",
  "packages/flutter/src/material/about.dart": "packages/flutter/src/material/about.dart.lib",
+ "packages/web_responsive_ui/config/utils/routes/routes.dart": "packages/web_responsive_ui/config/utils/routes/routes.dart.lib",
+ "packages/web_responsive_ui/config/utils/routes/routes_handlers.dart": "packages/web_responsive_ui/config/utils/routes/routes_handlers.dart.lib",
  "packages/web_responsive_ui/pages/splash/splash.dart": "packages/web_responsive_ui/pages/splash/splash.dart.lib",
  "packages/web_responsive_ui/pages/home/home.dart": "packages/web_responsive_ui/pages/home/home.dart.lib",
  "packages/web_responsive_ui/pages/views/skills.dart": "packages/web_responsive_ui/pages/views/skills.dart.lib",
@@ -635,8 +635,6 @@ let modulePaths = {
 let moduleNames = {
  "web_entrypoint.dart.lib": "web_entrypoint.dart",
  "packages/web_responsive_ui/main.dart.lib": "packages/web_responsive_ui/main.dart",
- "packages/web_responsive_ui/config/utils/routes/routes.dart.lib": "packages/web_responsive_ui/config/utils/routes/routes.dart",
- "packages/web_responsive_ui/config/utils/routes/routes_handlers.dart.lib": "packages/web_responsive_ui/config/utils/routes/routes_handlers.dart",
  "packages/web_responsive_ui/providers/page_provider.dart.lib": "packages/web_responsive_ui/providers/page_provider.dart",
  "packages/universal_html/html.dart.lib": "packages/universal_html/html.dart",
  "packages/flutter/material.dart.lib": "packages/flutter/material.dart",
@@ -995,6 +993,8 @@ let moduleNames = {
  "packages/flutter/src/material/app.dart.lib": "packages/flutter/src/material/app.dart",
  "packages/flutter/src/material/animated_icons.dart.lib": "packages/flutter/src/material/animated_icons.dart",
  "packages/flutter/src/material/about.dart.lib": "packages/flutter/src/material/about.dart",
+ "packages/web_responsive_ui/config/utils/routes/routes.dart.lib": "packages/web_responsive_ui/config/utils/routes/routes.dart",
+ "packages/web_responsive_ui/config/utils/routes/routes_handlers.dart.lib": "packages/web_responsive_ui/config/utils/routes/routes_handlers.dart",
  "packages/web_responsive_ui/pages/splash/splash.dart.lib": "packages/web_responsive_ui/pages/splash/splash.dart",
  "packages/web_responsive_ui/pages/home/home.dart.lib": "packages/web_responsive_ui/pages/home/home.dart",
  "packages/web_responsive_ui/pages/views/skills.dart.lib": "packages/web_responsive_ui/pages/views/skills.dart",

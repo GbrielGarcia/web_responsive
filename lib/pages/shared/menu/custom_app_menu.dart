@@ -45,7 +45,7 @@ class _CustomAppMenuState extends State<CustomAppMenu>
             width: 150,
             // menu abierto?
             height: isOpen ? 308 : 50,
-            color: Colors.black,
+            color: Colors.black87,
             child: Column(
               children: [
                 _MenuTitle(isOpen: isOpen, controller: controller),

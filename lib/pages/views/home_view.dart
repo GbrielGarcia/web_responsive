@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:web_responsive_ui/config/animation/carousel/carousel.dart';
 
 class HomeView extends StatefulWidget {
@@ -18,12 +17,7 @@ class _HomeViewState extends State<HomeView> {
         child: Center(
           child: Stack(
             children: [
-              ResponsiveWrapper(
-                  maxWidth: 1400,
-                  minWidth: 1400,
-                  defaultScale: true,
-                  mediaQueryData: MediaQueryData(size: Size(1200, 640)),
-                  child: RepaintBoundary(child: Carousel())),
+              Carousel(),
             ],
           ),
         ),
