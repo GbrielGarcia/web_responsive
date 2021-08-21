@@ -19,16 +19,16 @@ define("main_module.bootstrap", ["web_entrypoint.dart", "dart_sdk"], function(ap
          main();
       });
     }
-    window.$dartAppId = "q9rJx4y9X4iz51xKW0surg==";
+    window.$dartAppId = "w7veIL3I38yn8Px8oqYaVA==";
 window.$dartReloadConfiguration = "ReloadConfiguration.none";
 window.$dartModuleStrategy = "require-js";
 window.$loadModuleConfig = require;
 window.$dwdsVersion = "11.0.2";
-window.$dwdsDevHandlerPath = "http://localhost:53812/$dwdsSseHandler";
+window.$dwdsDevHandlerPath = "http://localhost:56439/$dwdsSseHandler";
 window.$dwdsEnableDevtoolsLaunch = true;
 window.$dartEntrypointPath = "main_module.bootstrap.js";
 window.$requireLoader.forceLoadModule("dwds/src/injected/client");
-window.$dartExtensionUri = "http://127.0.0.1:53814/$debug";
+window.$dartExtensionUri = "http://127.0.0.1:56446/$debug";
 
   } else {
     if(window.$dartMainExecuted){
@@ -508,7 +508,7 @@ let modulePaths = {
  "packages/web_responsive_ui/config/animation/animation_slide_up_down_fade.dart": "packages/web_responsive_ui/config/animation/animation_slide_up_down_fade.dart.lib",
  "packages/web_responsive_ui/config/animation/model/model_carousel_item_animation.dart": "packages/web_responsive_ui/config/animation/model/model_carousel_item_animation.dart.lib",
  "packages/web_responsive_ui/config/animation/carousel/carousel_text/carousel_text.dart": "packages/web_responsive_ui/config/animation/carousel/carousel_text/carousel_text.dart.lib",
- "packages/web_responsive_ui/config/utils/components/icons.dart": "packages/web_responsive_ui/config/utils/components/icons.dart.lib",
+ "packages/web_responsive_ui/config/utils/components/typography.dart": "packages/web_responsive_ui/config/utils/components/typography.dart.lib",
  "packages/web_responsive_ui/config/utils/components/spacing.dart": "packages/web_responsive_ui/config/utils/components/spacing.dart.lib",
  "packages/responsive_framework/responsive_value.dart": "packages/responsive_framework/responsive_value.dart.lib",
  "packages/responsive_framework/utils/scroll_behavior.dart": "packages/responsive_framework/utils/scroll_behavior.dart.lib",
@@ -544,6 +544,7 @@ let modulePaths = {
  "packages/provider/src/listenable_provider.dart": "packages/provider/src/listenable_provider.dart.lib",
  "packages/provider/src/async_provider.dart": "packages/provider/src/async_provider.dart.lib",
  "packages/web_responsive_ui/pages/shared/widgets/logo.dart": "packages/web_responsive_ui/pages/shared/widgets/logo.dart.lib",
+ "packages/web_responsive_ui/config/animation/block_wrapper.dart": "packages/web_responsive_ui/config/animation/block_wrapper.dart.lib",
  "packages/web_responsive_ui/config/assets/assets.dart": "packages/web_responsive_ui/config/assets/assets.dart.lib",
  "packages/lottie/src/render_lottie.dart": "packages/lottie/src/render_lottie.dart.lib",
  "packages/lottie/src/value/lottie_frame_info.dart": "packages/lottie/src/value/lottie_frame_info.dart.lib",
@@ -1060,7 +1061,7 @@ let moduleNames = {
  "packages/web_responsive_ui/config/animation/animation_slide_up_down_fade.dart.lib": "packages/web_responsive_ui/config/animation/animation_slide_up_down_fade.dart",
  "packages/web_responsive_ui/config/animation/model/model_carousel_item_animation.dart.lib": "packages/web_responsive_ui/config/animation/model/model_carousel_item_animation.dart",
  "packages/web_responsive_ui/config/animation/carousel/carousel_text/carousel_text.dart.lib": "packages/web_responsive_ui/config/animation/carousel/carousel_text/carousel_text.dart",
- "packages/web_responsive_ui/config/utils/components/icons.dart.lib": "packages/web_responsive_ui/config/utils/components/icons.dart",
+ "packages/web_responsive_ui/config/utils/components/typography.dart.lib": "packages/web_responsive_ui/config/utils/components/typography.dart",
  "packages/web_responsive_ui/config/utils/components/spacing.dart.lib": "packages/web_responsive_ui/config/utils/components/spacing.dart",
  "packages/responsive_framework/responsive_value.dart.lib": "packages/responsive_framework/responsive_value.dart",
  "packages/responsive_framework/utils/scroll_behavior.dart.lib": "packages/responsive_framework/utils/scroll_behavior.dart",
@@ -1096,6 +1097,7 @@ let moduleNames = {
  "packages/provider/src/listenable_provider.dart.lib": "packages/provider/src/listenable_provider.dart",
  "packages/provider/src/async_provider.dart.lib": "packages/provider/src/async_provider.dart",
  "packages/web_responsive_ui/pages/shared/widgets/logo.dart.lib": "packages/web_responsive_ui/pages/shared/widgets/logo.dart",
+ "packages/web_responsive_ui/config/animation/block_wrapper.dart.lib": "packages/web_responsive_ui/config/animation/block_wrapper.dart",
  "packages/web_responsive_ui/config/assets/assets.dart.lib": "packages/web_responsive_ui/config/assets/assets.dart",
  "packages/lottie/src/render_lottie.dart.lib": "packages/lottie/src/render_lottie.dart",
  "packages/lottie/src/value/lottie_frame_info.dart.lib": "packages/lottie/src/value/lottie_frame_info.dart",

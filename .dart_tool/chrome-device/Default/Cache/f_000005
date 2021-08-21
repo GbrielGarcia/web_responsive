@@ -1,460 +1,391 @@
-define(['dart_sdk', 'packages/provider/src/provider.dart', 'packages/flutter/src/foundation/change_notifier.dart', 'packages/flutter/src/widgets/widget_span.dart'], (function load__packages__provider__src__listenable_provider_dart(dart_sdk, packages__provider__src__provider$46dart, packages__flutter__src__foundation__change_notifier$46dart, packages__flutter__src__widgets__widget_span$46dart) {
+define(['dart_sdk', 'packages/flutter/src/services/system_channels.dart'], (function load__packages__flutter__src__services__system_chrome_dart(dart_sdk, packages__flutter__src__services__system_channels$46dart) {
   'use strict';
   const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const ui = dart_sdk.ui;
+  const async = dart_sdk.async;
+  const _interceptors = dart_sdk._interceptors;
   const dart = dart_sdk.dart;
   const dartx = dart_sdk.dartx;
-  const provider = packages__provider__src__provider$46dart.src__provider;
-  const change_notifier = packages__flutter__src__foundation__change_notifier$46dart.src__foundation__change_notifier;
-  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
-  var listenable_provider = Object.create(dart.library);
-  var change_notifier_provider = Object.create(dart.library);
+  const system_channels = packages__flutter__src__services__system_channels$46dart.src__services__system_channels;
+  var system_chrome = Object.create(dart.library);
+  var $toString = dartx.toString;
+  var $runtimeType = dartx.runtimeType;
+  var $add = dartx.add;
   dart._checkModuleNullSafetyMode(true);
-  var T$ = {
-    VoidTovoid: () => (T$.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
-    ListenableN: () => (T$.ListenableN = dart.constFn(dart.nullable(change_notifier.Listenable)))(),
-    InheritedContextAndListenableNToFn: () => (T$.InheritedContextAndListenableNToFn = dart.constFn(dart.fnType(T$.VoidTovoid(), [provider.InheritedContext, T$.ListenableN()])))(),
-    ChangeNotifierN: () => (T$.ChangeNotifierN = dart.constFn(dart.nullable(change_notifier.ChangeNotifier)))(),
-    BuildContextAndChangeNotifierNTovoid: () => (T$.BuildContextAndChangeNotifierNTovoid = dart.constFn(dart.fnType(dart.void, [framework.BuildContext, T$.ChangeNotifierN()])))()
+  var T = {
+    IdentityMapOfString$dynamic: () => (T.IdentityMapOfString$dynamic = dart.constFn(_js_helper.IdentityMap$(core.String, dart.dynamic)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    JSArrayOfString: () => (T.JSArrayOfString = dart.constFn(_interceptors.JSArray$(core.String)))()
   };
   const CT = Object.create({
     _: () => (C, CT)
   });
   dart.defineLazy(CT, {
     get C0() {
-      return C[0] = dart.fn(listenable_provider.ListenableProvider._startListening, T$.InheritedContextAndListenableNToFn());
+      return C[0] = dart.const({
+        __proto__: system_chrome.DeviceOrientation.prototype,
+        [_name$]: "DeviceOrientation.portraitUp",
+        index: 0
+      });
     },
     get C1() {
-      return C[1] = dart.fn(change_notifier_provider.ChangeNotifierProvider._dispose, T$.BuildContextAndChangeNotifierNTovoid());
+      return C[1] = dart.const({
+        __proto__: system_chrome.DeviceOrientation.prototype,
+        [_name$]: "DeviceOrientation.landscapeLeft",
+        index: 1
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: system_chrome.DeviceOrientation.prototype,
+        [_name$]: "DeviceOrientation.portraitDown",
+        index: 2
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: system_chrome.DeviceOrientation.prototype,
+        [_name$]: "DeviceOrientation.landscapeRight",
+        index: 3
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[0] || CT.C0, C[1] || CT.C1, C[2] || CT.C2, C[3] || CT.C3], system_chrome.DeviceOrientation);
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: system_chrome.SystemUiOverlay.prototype,
+        [_name$]: "SystemUiOverlay.top",
+        index: 0
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: system_chrome.SystemUiOverlay.prototype,
+        [_name$]: "SystemUiOverlay.bottom",
+        index: 1
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[5] || CT.C5, C[6] || CT.C6], system_chrome.SystemUiOverlay);
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: ui.Brightness.prototype,
+        [_name]: "Brightness.light",
+        index: 1
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: ui.Brightness.prototype,
+        [_name]: "Brightness.dark",
+        index: 0
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278190080.0
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: system_chrome.SystemUiOverlayStyle.prototype,
+        [statusBarIconBrightness$]: C[9] || CT.C9,
+        [statusBarBrightness$]: C[10] || CT.C10,
+        [statusBarColor$]: null,
+        [systemNavigationBarIconBrightness$]: C[9] || CT.C9,
+        [systemNavigationBarDividerColor$]: null,
+        [systemNavigationBarColor$]: C[11] || CT.C11
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: system_chrome.SystemUiOverlayStyle.prototype,
+        [statusBarIconBrightness$]: C[10] || CT.C10,
+        [statusBarBrightness$]: C[9] || CT.C9,
+        [statusBarColor$]: null,
+        [systemNavigationBarIconBrightness$]: C[9] || CT.C9,
+        [systemNavigationBarDividerColor$]: null,
+        [systemNavigationBarColor$]: C[11] || CT.C11
+      });
     }
   }, false);
-  var C = Array(2).fill(void 0);
+  var C = Array(13).fill(void 0);
   var I = [
-    "package:provider/src/listenable_provider.dart",
-    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0/lib/src/listenable_provider.dart",
-    "package:provider/src/change_notifier_provider.dart"
+    "package:flutter/src/services/system_chrome.dart",
+    "file:///C:/flutter/packages/flutter/lib/src/services/system_chrome.dart"
   ];
-  const _is_ListenableProvider_default = Symbol('_is_ListenableProvider_default');
-  listenable_provider.ListenableProvider$ = dart.generic(T => {
-    class ListenableProvider extends provider.InheritedProvider$(T) {
-      static _startListening(e, value) {
-        let t0;
-        t0 = value;
-        t0 == null ? null : t0.addListener(dart.bind(e, 'markNeedsNotifyDependents'));
-        return dart.fn(() => {
-          let t0;
-          t0 = value;
-          return t0 == null ? null : t0.removeListener(dart.bind(e, 'markNeedsNotifyDependents'));
-        }, T$.VoidTovoid());
-      }
+  var _name$ = dart.privateName(system_chrome, "_name");
+  system_chrome.DeviceOrientation = class DeviceOrientation extends core.Object {
+    toString() {
+      return this[_name$];
     }
-    (ListenableProvider.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ListenableProvider.__proto__.new.call(this, {key: key, startListening: C[0] || CT.C0, create: create, dispose: dispose, lazy: lazy, builder: builder, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ListenableProvider.prototype;
-    (ListenableProvider.value = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let value = opts && 'value' in opts ? opts.value : null;
-      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ListenableProvider.__proto__.value.call(this, {key: key, builder: builder, value: value, updateShouldNotify: updateShouldNotify, startListening: C[0] || CT.C0, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ListenableProvider.prototype;
-    dart.addTypeTests(ListenableProvider);
-    ListenableProvider.prototype[_is_ListenableProvider_default] = true;
-    dart.addTypeCaches(ListenableProvider);
-    dart.setLibraryUri(ListenableProvider, I[0]);
-    return ListenableProvider;
-  });
-  listenable_provider.ListenableProvider = listenable_provider.ListenableProvider$();
-  dart.addTypeTests(listenable_provider.ListenableProvider, _is_ListenableProvider_default);
-  const _is_ListenableProxyProvider0_default = Symbol('_is_ListenableProxyProvider0_default');
-  listenable_provider.ListenableProxyProvider0$ = dart.generic(R => {
-    var RTovoid = () => (RTovoid = dart.constFn(dart.fnType(dart.void, [R])))();
-    class ListenableProxyProvider0 extends provider.InheritedProvider$(R) {}
-    (ListenableProxyProvider0.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
-      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ListenableProxyProvider0.__proto__.new.call(this, {key: key, create: create, update: update, lazy: lazy, builder: builder, dispose: dispose, updateShouldNotify: updateShouldNotify, startListening: C[0] || CT.C0, debugCheckInvalidValueType: false ? null : dart.fn(value => {
-          if (change_notifier.ChangeNotifier.is(value)) {
-            if (!(value.hasListeners !== true)) dart.assertFailed(null, I[1], 94, 28, "value.hasListeners != true");
-          }
-        }, RTovoid()), child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ListenableProxyProvider0.prototype;
-    dart.addTypeTests(ListenableProxyProvider0);
-    ListenableProxyProvider0.prototype[_is_ListenableProxyProvider0_default] = true;
-    dart.addTypeCaches(ListenableProxyProvider0);
-    dart.setLibraryUri(ListenableProxyProvider0, I[0]);
-    return ListenableProxyProvider0;
-  });
-  listenable_provider.ListenableProxyProvider0 = listenable_provider.ListenableProxyProvider0$();
-  dart.addTypeTests(listenable_provider.ListenableProxyProvider0, _is_ListenableProxyProvider0_default);
-  const _is_ListenableProxyProvider_default = Symbol('_is_ListenableProxyProvider_default');
-  listenable_provider.ListenableProxyProvider$ = dart.generic((T, R) => {
-    var RN = () => (RN = dart.constFn(dart.nullable(R)))();
-    var BuildContextAndRNToR = () => (BuildContextAndRNToR = dart.constFn(dart.fnType(R, [framework.BuildContext, RN()])))();
-    class ListenableProxyProvider extends listenable_provider.ListenableProxyProvider0$(R) {}
-    (ListenableProxyProvider.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ListenableProxyProvider.__proto__.new.call(this, {key: key, create: create, lazy: lazy, builder: builder, update: dart.fn((context, previous) => update(context, provider.Provider.of(T, context), previous), BuildContextAndRNToR()), dispose: dispose, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ListenableProxyProvider.prototype;
-    dart.addTypeTests(ListenableProxyProvider);
-    ListenableProxyProvider.prototype[_is_ListenableProxyProvider_default] = true;
-    dart.addTypeCaches(ListenableProxyProvider);
-    dart.setLibraryUri(ListenableProxyProvider, I[0]);
-    return ListenableProxyProvider;
-  });
-  listenable_provider.ListenableProxyProvider = listenable_provider.ListenableProxyProvider$();
-  dart.addTypeTests(listenable_provider.ListenableProxyProvider, _is_ListenableProxyProvider_default);
-  const _is_ListenableProxyProvider2_default = Symbol('_is_ListenableProxyProvider2_default');
-  listenable_provider.ListenableProxyProvider2$ = dart.generic((T, T2, R) => {
-    var RN = () => (RN = dart.constFn(dart.nullable(R)))();
-    var BuildContextAndRNToR = () => (BuildContextAndRNToR = dart.constFn(dart.fnType(R, [framework.BuildContext, RN()])))();
-    class ListenableProxyProvider2 extends listenable_provider.ListenableProxyProvider0$(R) {}
-    (ListenableProxyProvider2.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ListenableProxyProvider2.__proto__.new.call(this, {key: key, create: create, lazy: lazy, builder: builder, update: dart.fn((context, previous) => update(context, provider.Provider.of(T, context), provider.Provider.of(T2, context), previous), BuildContextAndRNToR()), dispose: dispose, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ListenableProxyProvider2.prototype;
-    dart.addTypeTests(ListenableProxyProvider2);
-    ListenableProxyProvider2.prototype[_is_ListenableProxyProvider2_default] = true;
-    dart.addTypeCaches(ListenableProxyProvider2);
-    dart.setLibraryUri(ListenableProxyProvider2, I[0]);
-    return ListenableProxyProvider2;
-  });
-  listenable_provider.ListenableProxyProvider2 = listenable_provider.ListenableProxyProvider2$();
-  dart.addTypeTests(listenable_provider.ListenableProxyProvider2, _is_ListenableProxyProvider2_default);
-  const _is_ListenableProxyProvider3_default = Symbol('_is_ListenableProxyProvider3_default');
-  listenable_provider.ListenableProxyProvider3$ = dart.generic((T, T2, T3, R) => {
-    var RN = () => (RN = dart.constFn(dart.nullable(R)))();
-    var BuildContextAndRNToR = () => (BuildContextAndRNToR = dart.constFn(dart.fnType(R, [framework.BuildContext, RN()])))();
-    class ListenableProxyProvider3 extends listenable_provider.ListenableProxyProvider0$(R) {}
-    (ListenableProxyProvider3.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ListenableProxyProvider3.__proto__.new.call(this, {key: key, create: create, lazy: lazy, builder: builder, update: dart.fn((context, previous) => update(context, provider.Provider.of(T, context), provider.Provider.of(T2, context), provider.Provider.of(T3, context), previous), BuildContextAndRNToR()), dispose: dispose, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ListenableProxyProvider3.prototype;
-    dart.addTypeTests(ListenableProxyProvider3);
-    ListenableProxyProvider3.prototype[_is_ListenableProxyProvider3_default] = true;
-    dart.addTypeCaches(ListenableProxyProvider3);
-    dart.setLibraryUri(ListenableProxyProvider3, I[0]);
-    return ListenableProxyProvider3;
-  });
-  listenable_provider.ListenableProxyProvider3 = listenable_provider.ListenableProxyProvider3$();
-  dart.addTypeTests(listenable_provider.ListenableProxyProvider3, _is_ListenableProxyProvider3_default);
-  const _is_ListenableProxyProvider4_default = Symbol('_is_ListenableProxyProvider4_default');
-  listenable_provider.ListenableProxyProvider4$ = dart.generic((T, T2, T3, T4, R) => {
-    var RN = () => (RN = dart.constFn(dart.nullable(R)))();
-    var BuildContextAndRNToR = () => (BuildContextAndRNToR = dart.constFn(dart.fnType(R, [framework.BuildContext, RN()])))();
-    class ListenableProxyProvider4 extends listenable_provider.ListenableProxyProvider0$(R) {}
-    (ListenableProxyProvider4.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ListenableProxyProvider4.__proto__.new.call(this, {key: key, create: create, lazy: lazy, builder: builder, update: dart.fn((context, previous) => update(context, provider.Provider.of(T, context), provider.Provider.of(T2, context), provider.Provider.of(T3, context), provider.Provider.of(T4, context), previous), BuildContextAndRNToR()), dispose: dispose, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ListenableProxyProvider4.prototype;
-    dart.addTypeTests(ListenableProxyProvider4);
-    ListenableProxyProvider4.prototype[_is_ListenableProxyProvider4_default] = true;
-    dart.addTypeCaches(ListenableProxyProvider4);
-    dart.setLibraryUri(ListenableProxyProvider4, I[0]);
-    return ListenableProxyProvider4;
-  });
-  listenable_provider.ListenableProxyProvider4 = listenable_provider.ListenableProxyProvider4$();
-  dart.addTypeTests(listenable_provider.ListenableProxyProvider4, _is_ListenableProxyProvider4_default);
-  const _is_ListenableProxyProvider5_default = Symbol('_is_ListenableProxyProvider5_default');
-  listenable_provider.ListenableProxyProvider5$ = dart.generic((T, T2, T3, T4, T5, R) => {
-    var RN = () => (RN = dart.constFn(dart.nullable(R)))();
-    var BuildContextAndRNToR = () => (BuildContextAndRNToR = dart.constFn(dart.fnType(R, [framework.BuildContext, RN()])))();
-    class ListenableProxyProvider5 extends listenable_provider.ListenableProxyProvider0$(R) {}
-    (ListenableProxyProvider5.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ListenableProxyProvider5.__proto__.new.call(this, {key: key, create: create, lazy: lazy, builder: builder, update: dart.fn((context, previous) => update(context, provider.Provider.of(T, context), provider.Provider.of(T2, context), provider.Provider.of(T3, context), provider.Provider.of(T4, context), provider.Provider.of(T5, context), previous), BuildContextAndRNToR()), dispose: dispose, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ListenableProxyProvider5.prototype;
-    dart.addTypeTests(ListenableProxyProvider5);
-    ListenableProxyProvider5.prototype[_is_ListenableProxyProvider5_default] = true;
-    dart.addTypeCaches(ListenableProxyProvider5);
-    dart.setLibraryUri(ListenableProxyProvider5, I[0]);
-    return ListenableProxyProvider5;
-  });
-  listenable_provider.ListenableProxyProvider5 = listenable_provider.ListenableProxyProvider5$();
-  dart.addTypeTests(listenable_provider.ListenableProxyProvider5, _is_ListenableProxyProvider5_default);
-  const _is_ListenableProxyProvider6_default = Symbol('_is_ListenableProxyProvider6_default');
-  listenable_provider.ListenableProxyProvider6$ = dart.generic((T, T2, T3, T4, T5, T6, R) => {
-    var RN = () => (RN = dart.constFn(dart.nullable(R)))();
-    var BuildContextAndRNToR = () => (BuildContextAndRNToR = dart.constFn(dart.fnType(R, [framework.BuildContext, RN()])))();
-    class ListenableProxyProvider6 extends listenable_provider.ListenableProxyProvider0$(R) {}
-    (ListenableProxyProvider6.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ListenableProxyProvider6.__proto__.new.call(this, {key: key, create: create, lazy: lazy, builder: builder, update: dart.fn((context, previous) => update(context, provider.Provider.of(T, context), provider.Provider.of(T2, context), provider.Provider.of(T3, context), provider.Provider.of(T4, context), provider.Provider.of(T5, context), provider.Provider.of(T6, context), previous), BuildContextAndRNToR()), dispose: dispose, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ListenableProxyProvider6.prototype;
-    dart.addTypeTests(ListenableProxyProvider6);
-    ListenableProxyProvider6.prototype[_is_ListenableProxyProvider6_default] = true;
-    dart.addTypeCaches(ListenableProxyProvider6);
-    dart.setLibraryUri(ListenableProxyProvider6, I[0]);
-    return ListenableProxyProvider6;
-  });
-  listenable_provider.ListenableProxyProvider6 = listenable_provider.ListenableProxyProvider6$();
-  dart.addTypeTests(listenable_provider.ListenableProxyProvider6, _is_ListenableProxyProvider6_default);
-  const _is_ChangeNotifierProvider_default = Symbol('_is_ChangeNotifierProvider_default');
-  change_notifier_provider.ChangeNotifierProvider$ = dart.generic(T => {
-    class ChangeNotifierProvider extends listenable_provider.ListenableProvider$(T) {
-      static _dispose(context, notifier) {
-        let t0;
-        t0 = notifier;
-        t0 == null ? null : t0.dispose();
-      }
+  };
+  (system_chrome.DeviceOrientation.new = function(index, _name) {
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = system_chrome.DeviceOrientation.prototype;
+  dart.addTypeTests(system_chrome.DeviceOrientation);
+  dart.addTypeCaches(system_chrome.DeviceOrientation);
+  dart.setLibraryUri(system_chrome.DeviceOrientation, I[0]);
+  dart.setFieldSignature(system_chrome.DeviceOrientation, () => ({
+    __proto__: dart.getFields(system_chrome.DeviceOrientation.__proto__),
+    index: dart.finalFieldType(core.int),
+    [_name$]: dart.finalFieldType(core.String)
+  }));
+  dart.defineExtensionMethods(system_chrome.DeviceOrientation, ['toString']);
+  system_chrome.DeviceOrientation.portraitUp = C[0] || CT.C0;
+  system_chrome.DeviceOrientation.landscapeLeft = C[1] || CT.C1;
+  system_chrome.DeviceOrientation.portraitDown = C[2] || CT.C2;
+  system_chrome.DeviceOrientation.landscapeRight = C[3] || CT.C3;
+  system_chrome.DeviceOrientation.values = C[4] || CT.C4;
+  var label$ = dart.privateName(system_chrome, "ApplicationSwitcherDescription.label");
+  var primaryColor$ = dart.privateName(system_chrome, "ApplicationSwitcherDescription.primaryColor");
+  system_chrome.ApplicationSwitcherDescription = class ApplicationSwitcherDescription extends core.Object {
+    get label() {
+      return this[label$];
     }
-    (ChangeNotifierProvider.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ChangeNotifierProvider.__proto__.new.call(this, {key: key, create: create, dispose: C[1] || CT.C1, lazy: lazy, builder: builder, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ChangeNotifierProvider.prototype;
-    (ChangeNotifierProvider.value = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let value = opts && 'value' in opts ? opts.value : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ChangeNotifierProvider.__proto__.value.call(this, {key: key, builder: builder, value: value, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ChangeNotifierProvider.prototype;
-    dart.addTypeTests(ChangeNotifierProvider);
-    ChangeNotifierProvider.prototype[_is_ChangeNotifierProvider_default] = true;
-    dart.addTypeCaches(ChangeNotifierProvider);
-    dart.setLibraryUri(ChangeNotifierProvider, I[2]);
-    return ChangeNotifierProvider;
-  });
-  change_notifier_provider.ChangeNotifierProvider = change_notifier_provider.ChangeNotifierProvider$();
-  dart.addTypeTests(change_notifier_provider.ChangeNotifierProvider, _is_ChangeNotifierProvider_default);
-  const _is_ChangeNotifierProxyProvider_default = Symbol('_is_ChangeNotifierProxyProvider_default');
-  change_notifier_provider.ChangeNotifierProxyProvider$ = dart.generic((T, R) => {
-    class ChangeNotifierProxyProvider extends listenable_provider.ListenableProxyProvider$(T, R) {}
-    (ChangeNotifierProxyProvider.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ChangeNotifierProxyProvider.__proto__.new.call(this, {key: key, create: create, update: update, dispose: C[1] || CT.C1, lazy: lazy, builder: builder, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ChangeNotifierProxyProvider.prototype;
-    dart.addTypeTests(ChangeNotifierProxyProvider);
-    ChangeNotifierProxyProvider.prototype[_is_ChangeNotifierProxyProvider_default] = true;
-    dart.addTypeCaches(ChangeNotifierProxyProvider);
-    dart.setLibraryUri(ChangeNotifierProxyProvider, I[2]);
-    return ChangeNotifierProxyProvider;
-  });
-  change_notifier_provider.ChangeNotifierProxyProvider = change_notifier_provider.ChangeNotifierProxyProvider$();
-  dart.addTypeTests(change_notifier_provider.ChangeNotifierProxyProvider, _is_ChangeNotifierProxyProvider_default);
-  const _is_ChangeNotifierProxyProvider0_default = Symbol('_is_ChangeNotifierProxyProvider0_default');
-  change_notifier_provider.ChangeNotifierProxyProvider0$ = dart.generic(R => {
-    class ChangeNotifierProxyProvider0 extends listenable_provider.ListenableProxyProvider0$(R) {}
-    (ChangeNotifierProxyProvider0.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ChangeNotifierProxyProvider0.__proto__.new.call(this, {key: key, create: create, update: update, dispose: C[1] || CT.C1, lazy: lazy, builder: builder, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ChangeNotifierProxyProvider0.prototype;
-    dart.addTypeTests(ChangeNotifierProxyProvider0);
-    ChangeNotifierProxyProvider0.prototype[_is_ChangeNotifierProxyProvider0_default] = true;
-    dart.addTypeCaches(ChangeNotifierProxyProvider0);
-    dart.setLibraryUri(ChangeNotifierProxyProvider0, I[2]);
-    return ChangeNotifierProxyProvider0;
-  });
-  change_notifier_provider.ChangeNotifierProxyProvider0 = change_notifier_provider.ChangeNotifierProxyProvider0$();
-  dart.addTypeTests(change_notifier_provider.ChangeNotifierProxyProvider0, _is_ChangeNotifierProxyProvider0_default);
-  const _is_ChangeNotifierProxyProvider2_default = Symbol('_is_ChangeNotifierProxyProvider2_default');
-  change_notifier_provider.ChangeNotifierProxyProvider2$ = dart.generic((T, T2, R) => {
-    class ChangeNotifierProxyProvider2 extends listenable_provider.ListenableProxyProvider2$(T, T2, R) {}
-    (ChangeNotifierProxyProvider2.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ChangeNotifierProxyProvider2.__proto__.new.call(this, {key: key, create: create, update: update, dispose: C[1] || CT.C1, lazy: lazy, builder: builder, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ChangeNotifierProxyProvider2.prototype;
-    dart.addTypeTests(ChangeNotifierProxyProvider2);
-    ChangeNotifierProxyProvider2.prototype[_is_ChangeNotifierProxyProvider2_default] = true;
-    dart.addTypeCaches(ChangeNotifierProxyProvider2);
-    dart.setLibraryUri(ChangeNotifierProxyProvider2, I[2]);
-    return ChangeNotifierProxyProvider2;
-  });
-  change_notifier_provider.ChangeNotifierProxyProvider2 = change_notifier_provider.ChangeNotifierProxyProvider2$();
-  dart.addTypeTests(change_notifier_provider.ChangeNotifierProxyProvider2, _is_ChangeNotifierProxyProvider2_default);
-  const _is_ChangeNotifierProxyProvider3_default = Symbol('_is_ChangeNotifierProxyProvider3_default');
-  change_notifier_provider.ChangeNotifierProxyProvider3$ = dart.generic((T, T2, T3, R) => {
-    class ChangeNotifierProxyProvider3 extends listenable_provider.ListenableProxyProvider3$(T, T2, T3, R) {}
-    (ChangeNotifierProxyProvider3.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ChangeNotifierProxyProvider3.__proto__.new.call(this, {key: key, create: create, update: update, dispose: C[1] || CT.C1, lazy: lazy, builder: builder, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ChangeNotifierProxyProvider3.prototype;
-    dart.addTypeTests(ChangeNotifierProxyProvider3);
-    ChangeNotifierProxyProvider3.prototype[_is_ChangeNotifierProxyProvider3_default] = true;
-    dart.addTypeCaches(ChangeNotifierProxyProvider3);
-    dart.setLibraryUri(ChangeNotifierProxyProvider3, I[2]);
-    return ChangeNotifierProxyProvider3;
-  });
-  change_notifier_provider.ChangeNotifierProxyProvider3 = change_notifier_provider.ChangeNotifierProxyProvider3$();
-  dart.addTypeTests(change_notifier_provider.ChangeNotifierProxyProvider3, _is_ChangeNotifierProxyProvider3_default);
-  const _is_ChangeNotifierProxyProvider4_default = Symbol('_is_ChangeNotifierProxyProvider4_default');
-  change_notifier_provider.ChangeNotifierProxyProvider4$ = dart.generic((T, T2, T3, T4, R) => {
-    class ChangeNotifierProxyProvider4 extends listenable_provider.ListenableProxyProvider4$(T, T2, T3, T4, R) {}
-    (ChangeNotifierProxyProvider4.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ChangeNotifierProxyProvider4.__proto__.new.call(this, {key: key, create: create, update: update, dispose: C[1] || CT.C1, lazy: lazy, builder: builder, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ChangeNotifierProxyProvider4.prototype;
-    dart.addTypeTests(ChangeNotifierProxyProvider4);
-    ChangeNotifierProxyProvider4.prototype[_is_ChangeNotifierProxyProvider4_default] = true;
-    dart.addTypeCaches(ChangeNotifierProxyProvider4);
-    dart.setLibraryUri(ChangeNotifierProxyProvider4, I[2]);
-    return ChangeNotifierProxyProvider4;
-  });
-  change_notifier_provider.ChangeNotifierProxyProvider4 = change_notifier_provider.ChangeNotifierProxyProvider4$();
-  dart.addTypeTests(change_notifier_provider.ChangeNotifierProxyProvider4, _is_ChangeNotifierProxyProvider4_default);
-  const _is_ChangeNotifierProxyProvider5_default = Symbol('_is_ChangeNotifierProxyProvider5_default');
-  change_notifier_provider.ChangeNotifierProxyProvider5$ = dart.generic((T, T2, T3, T4, T5, R) => {
-    class ChangeNotifierProxyProvider5 extends listenable_provider.ListenableProxyProvider5$(T, T2, T3, T4, T5, R) {}
-    (ChangeNotifierProxyProvider5.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ChangeNotifierProxyProvider5.__proto__.new.call(this, {key: key, create: create, update: update, dispose: C[1] || CT.C1, lazy: lazy, builder: builder, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ChangeNotifierProxyProvider5.prototype;
-    dart.addTypeTests(ChangeNotifierProxyProvider5);
-    ChangeNotifierProxyProvider5.prototype[_is_ChangeNotifierProxyProvider5_default] = true;
-    dart.addTypeCaches(ChangeNotifierProxyProvider5);
-    dart.setLibraryUri(ChangeNotifierProxyProvider5, I[2]);
-    return ChangeNotifierProxyProvider5;
-  });
-  change_notifier_provider.ChangeNotifierProxyProvider5 = change_notifier_provider.ChangeNotifierProxyProvider5$();
-  dart.addTypeTests(change_notifier_provider.ChangeNotifierProxyProvider5, _is_ChangeNotifierProxyProvider5_default);
-  const _is_ChangeNotifierProxyProvider6_default = Symbol('_is_ChangeNotifierProxyProvider6_default');
-  change_notifier_provider.ChangeNotifierProxyProvider6$ = dart.generic((T, T2, T3, T4, T5, T6, R) => {
-    class ChangeNotifierProxyProvider6 extends listenable_provider.ListenableProxyProvider6$(T, T2, T3, T4, T5, T6, R) {}
-    (ChangeNotifierProxyProvider6.new = function(opts) {
-      let key = opts && 'key' in opts ? opts.key : null;
-      let create = opts && 'create' in opts ? opts.create : null;
-      let update = opts && 'update' in opts ? opts.update : null;
-      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
-      let builder = opts && 'builder' in opts ? opts.builder : null;
-      let child = opts && 'child' in opts ? opts.child : null;
-      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
-      ChangeNotifierProxyProvider6.__proto__.new.call(this, {key: key, create: create, update: update, dispose: C[1] || CT.C1, lazy: lazy, builder: builder, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
-      ;
-    }).prototype = ChangeNotifierProxyProvider6.prototype;
-    dart.addTypeTests(ChangeNotifierProxyProvider6);
-    ChangeNotifierProxyProvider6.prototype[_is_ChangeNotifierProxyProvider6_default] = true;
-    dart.addTypeCaches(ChangeNotifierProxyProvider6);
-    dart.setLibraryUri(ChangeNotifierProxyProvider6, I[2]);
-    return ChangeNotifierProxyProvider6;
-  });
-  change_notifier_provider.ChangeNotifierProxyProvider6 = change_notifier_provider.ChangeNotifierProxyProvider6$();
-  dart.addTypeTests(change_notifier_provider.ChangeNotifierProxyProvider6, _is_ChangeNotifierProxyProvider6_default);
-  dart.trackLibraries("packages/provider/src/listenable_provider.dart", {
-    "package:provider/src/listenable_provider.dart": listenable_provider,
-    "package:provider/src/change_notifier_provider.dart": change_notifier_provider
+    set label(value) {
+      super.label = value;
+    }
+    get primaryColor() {
+      return this[primaryColor$];
+    }
+    set primaryColor(value) {
+      super.primaryColor = value;
+    }
+  };
+  (system_chrome.ApplicationSwitcherDescription.new = function(opts) {
+    let label = opts && 'label' in opts ? opts.label : null;
+    let primaryColor = opts && 'primaryColor' in opts ? opts.primaryColor : null;
+    this[label$] = label;
+    this[primaryColor$] = primaryColor;
+    ;
+  }).prototype = system_chrome.ApplicationSwitcherDescription.prototype;
+  dart.addTypeTests(system_chrome.ApplicationSwitcherDescription);
+  dart.addTypeCaches(system_chrome.ApplicationSwitcherDescription);
+  dart.setLibraryUri(system_chrome.ApplicationSwitcherDescription, I[0]);
+  dart.setFieldSignature(system_chrome.ApplicationSwitcherDescription, () => ({
+    __proto__: dart.getFields(system_chrome.ApplicationSwitcherDescription.__proto__),
+    label: dart.finalFieldType(dart.nullable(core.String)),
+    primaryColor: dart.finalFieldType(dart.nullable(core.int))
+  }));
+  system_chrome.SystemUiOverlay = class SystemUiOverlay extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (system_chrome.SystemUiOverlay.new = function(index, _name) {
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = system_chrome.SystemUiOverlay.prototype;
+  dart.addTypeTests(system_chrome.SystemUiOverlay);
+  dart.addTypeCaches(system_chrome.SystemUiOverlay);
+  dart.setLibraryUri(system_chrome.SystemUiOverlay, I[0]);
+  dart.setFieldSignature(system_chrome.SystemUiOverlay, () => ({
+    __proto__: dart.getFields(system_chrome.SystemUiOverlay.__proto__),
+    index: dart.finalFieldType(core.int),
+    [_name$]: dart.finalFieldType(core.String)
+  }));
+  dart.defineExtensionMethods(system_chrome.SystemUiOverlay, ['toString']);
+  system_chrome.SystemUiOverlay.top = C[5] || CT.C5;
+  system_chrome.SystemUiOverlay.bottom = C[6] || CT.C6;
+  system_chrome.SystemUiOverlay.values = C[7] || CT.C7;
+  var systemNavigationBarColor$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.systemNavigationBarColor");
+  var systemNavigationBarDividerColor$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.systemNavigationBarDividerColor");
+  var systemNavigationBarIconBrightness$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.systemNavigationBarIconBrightness");
+  var statusBarColor$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.statusBarColor");
+  var statusBarBrightness$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.statusBarBrightness");
+  var statusBarIconBrightness$ = dart.privateName(system_chrome, "SystemUiOverlayStyle.statusBarIconBrightness");
+  var _toMap = dart.privateName(system_chrome, "_toMap");
+  var _name = dart.privateName(ui, "_name");
+  var Color_value = dart.privateName(ui, "Color.value");
+  system_chrome.SystemUiOverlayStyle = class SystemUiOverlayStyle extends core.Object {
+    get systemNavigationBarColor() {
+      return this[systemNavigationBarColor$];
+    }
+    set systemNavigationBarColor(value) {
+      super.systemNavigationBarColor = value;
+    }
+    get systemNavigationBarDividerColor() {
+      return this[systemNavigationBarDividerColor$];
+    }
+    set systemNavigationBarDividerColor(value) {
+      super.systemNavigationBarDividerColor = value;
+    }
+    get systemNavigationBarIconBrightness() {
+      return this[systemNavigationBarIconBrightness$];
+    }
+    set systemNavigationBarIconBrightness(value) {
+      super.systemNavigationBarIconBrightness = value;
+    }
+    get statusBarColor() {
+      return this[statusBarColor$];
+    }
+    set statusBarColor(value) {
+      super.statusBarColor = value;
+    }
+    get statusBarBrightness() {
+      return this[statusBarBrightness$];
+    }
+    set statusBarBrightness(value) {
+      super.statusBarBrightness = value;
+    }
+    get statusBarIconBrightness() {
+      return this[statusBarIconBrightness$];
+    }
+    set statusBarIconBrightness(value) {
+      super.statusBarIconBrightness = value;
+    }
+    [_toMap]() {
+      let t0, t0$, t0$0, t0$1, t0$2, t0$3;
+      return new (T.IdentityMapOfString$dynamic()).from(["systemNavigationBarColor", (t0 = this.systemNavigationBarColor, t0 == null ? null : t0.value), "systemNavigationBarDividerColor", (t0$ = this.systemNavigationBarDividerColor, t0$ == null ? null : t0$.value), "statusBarColor", (t0$0 = this.statusBarColor, t0$0 == null ? null : t0$0.value), "statusBarBrightness", (t0$1 = this.statusBarBrightness, t0$1 == null ? null : dart.toString(t0$1)), "statusBarIconBrightness", (t0$2 = this.statusBarIconBrightness, t0$2 == null ? null : dart.toString(t0$2)), "systemNavigationBarIconBrightness", (t0$3 = this.systemNavigationBarIconBrightness, t0$3 == null ? null : dart.toString(t0$3))]);
+    }
+    toString() {
+      return this[_toMap]()[$toString]();
+    }
+    copyWith(opts) {
+      let t0, t0$, t0$0, t0$1, t0$2, t0$3;
+      let systemNavigationBarColor = opts && 'systemNavigationBarColor' in opts ? opts.systemNavigationBarColor : null;
+      let systemNavigationBarDividerColor = opts && 'systemNavigationBarDividerColor' in opts ? opts.systemNavigationBarDividerColor : null;
+      let statusBarColor = opts && 'statusBarColor' in opts ? opts.statusBarColor : null;
+      let statusBarBrightness = opts && 'statusBarBrightness' in opts ? opts.statusBarBrightness : null;
+      let statusBarIconBrightness = opts && 'statusBarIconBrightness' in opts ? opts.statusBarIconBrightness : null;
+      let systemNavigationBarIconBrightness = opts && 'systemNavigationBarIconBrightness' in opts ? opts.systemNavigationBarIconBrightness : null;
+      return new system_chrome.SystemUiOverlayStyle.new({systemNavigationBarColor: (t0 = systemNavigationBarColor, t0 == null ? this.systemNavigationBarColor : t0), systemNavigationBarDividerColor: (t0$ = systemNavigationBarDividerColor, t0$ == null ? this.systemNavigationBarDividerColor : t0$), statusBarColor: (t0$0 = statusBarColor, t0$0 == null ? this.statusBarColor : t0$0), statusBarIconBrightness: (t0$1 = statusBarIconBrightness, t0$1 == null ? this.statusBarIconBrightness : t0$1), statusBarBrightness: (t0$2 = statusBarBrightness, t0$2 == null ? this.statusBarBrightness : t0$2), systemNavigationBarIconBrightness: (t0$3 = systemNavigationBarIconBrightness, t0$3 == null ? this.systemNavigationBarIconBrightness : t0$3)});
+    }
+    get hashCode() {
+      return ui.hashValues(this.systemNavigationBarColor, this.systemNavigationBarDividerColor, this.statusBarColor, this.statusBarBrightness, this.statusBarIconBrightness, this.systemNavigationBarIconBrightness);
+    }
+    _equals(other) {
+      if (other == null) return false;
+      if (!other[$runtimeType]._equals(this[$runtimeType])) return false;
+      return system_chrome.SystemUiOverlayStyle.is(other) && dart.equals(other.systemNavigationBarColor, this.systemNavigationBarColor) && dart.equals(other.systemNavigationBarDividerColor, this.systemNavigationBarDividerColor) && dart.equals(other.statusBarColor, this.statusBarColor) && other.statusBarIconBrightness == this.statusBarIconBrightness && other.statusBarBrightness == this.statusBarBrightness && other.systemNavigationBarIconBrightness == this.systemNavigationBarIconBrightness;
+    }
+  };
+  (system_chrome.SystemUiOverlayStyle.new = function(opts) {
+    let systemNavigationBarColor = opts && 'systemNavigationBarColor' in opts ? opts.systemNavigationBarColor : null;
+    let systemNavigationBarDividerColor = opts && 'systemNavigationBarDividerColor' in opts ? opts.systemNavigationBarDividerColor : null;
+    let systemNavigationBarIconBrightness = opts && 'systemNavigationBarIconBrightness' in opts ? opts.systemNavigationBarIconBrightness : null;
+    let statusBarColor = opts && 'statusBarColor' in opts ? opts.statusBarColor : null;
+    let statusBarBrightness = opts && 'statusBarBrightness' in opts ? opts.statusBarBrightness : null;
+    let statusBarIconBrightness = opts && 'statusBarIconBrightness' in opts ? opts.statusBarIconBrightness : null;
+    this[systemNavigationBarColor$] = systemNavigationBarColor;
+    this[systemNavigationBarDividerColor$] = systemNavigationBarDividerColor;
+    this[systemNavigationBarIconBrightness$] = systemNavigationBarIconBrightness;
+    this[statusBarColor$] = statusBarColor;
+    this[statusBarBrightness$] = statusBarBrightness;
+    this[statusBarIconBrightness$] = statusBarIconBrightness;
+    ;
+  }).prototype = system_chrome.SystemUiOverlayStyle.prototype;
+  dart.addTypeTests(system_chrome.SystemUiOverlayStyle);
+  dart.addTypeCaches(system_chrome.SystemUiOverlayStyle);
+  dart.setMethodSignature(system_chrome.SystemUiOverlayStyle, () => ({
+    __proto__: dart.getMethods(system_chrome.SystemUiOverlayStyle.__proto__),
+    [_toMap]: dart.fnType(core.Map$(core.String, dart.dynamic), []),
+    copyWith: dart.fnType(system_chrome.SystemUiOverlayStyle, [], {statusBarBrightness: dart.nullable(ui.Brightness), statusBarColor: dart.nullable(ui.Color), statusBarIconBrightness: dart.nullable(ui.Brightness), systemNavigationBarColor: dart.nullable(ui.Color), systemNavigationBarDividerColor: dart.nullable(ui.Color), systemNavigationBarIconBrightness: dart.nullable(ui.Brightness)}, {})
+  }));
+  dart.setLibraryUri(system_chrome.SystemUiOverlayStyle, I[0]);
+  dart.setFieldSignature(system_chrome.SystemUiOverlayStyle, () => ({
+    __proto__: dart.getFields(system_chrome.SystemUiOverlayStyle.__proto__),
+    systemNavigationBarColor: dart.finalFieldType(dart.nullable(ui.Color)),
+    systemNavigationBarDividerColor: dart.finalFieldType(dart.nullable(ui.Color)),
+    systemNavigationBarIconBrightness: dart.finalFieldType(dart.nullable(ui.Brightness)),
+    statusBarColor: dart.finalFieldType(dart.nullable(ui.Color)),
+    statusBarBrightness: dart.finalFieldType(dart.nullable(ui.Brightness)),
+    statusBarIconBrightness: dart.finalFieldType(dart.nullable(ui.Brightness))
+  }));
+  dart.defineExtensionMethods(system_chrome.SystemUiOverlayStyle, ['toString', '_equals']);
+  dart.defineExtensionAccessors(system_chrome.SystemUiOverlayStyle, ['hashCode']);
+  dart.defineLazy(system_chrome.SystemUiOverlayStyle, {
+    /*system_chrome.SystemUiOverlayStyle.light*/get light() {
+      return C[8] || CT.C8;
+    },
+    /*system_chrome.SystemUiOverlayStyle.dark*/get dark() {
+      return C[12] || CT.C12;
+    }
+  }, false);
+  system_chrome.SystemChrome = class SystemChrome extends core.Object {
+    static setPreferredOrientations(orientations) {
+      return async.async(dart.void, function* setPreferredOrientations() {
+        yield system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.setPreferredOrientations", system_chrome._stringify(orientations));
+      });
+    }
+    static setApplicationSwitcherDescription(description) {
+      return async.async(dart.void, function* setApplicationSwitcherDescription() {
+        yield system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.setApplicationSwitcherDescription", new (T.IdentityMapOfString$dynamic()).from(["label", description.label, "primaryColor", description.primaryColor]));
+      });
+    }
+    static setEnabledSystemUIOverlays(overlays) {
+      return async.async(dart.void, function* setEnabledSystemUIOverlays() {
+        yield system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.setEnabledSystemUIOverlays", system_chrome._stringify(overlays));
+      });
+    }
+    static restoreSystemUIOverlays() {
+      return async.async(dart.void, function* restoreSystemUIOverlays() {
+        yield system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.restoreSystemUIOverlays", null);
+      });
+    }
+    static setSystemUIOverlayStyle(style) {
+      if (!(style !== null)) dart.assertFailed(null, I[1], 395, 12, "style != null");
+      if (system_chrome.SystemChrome._pendingStyle != null) {
+        system_chrome.SystemChrome._pendingStyle = style;
+        return;
+      }
+      if (style._equals(system_chrome.SystemChrome._latestStyle)) {
+        return;
+      }
+      system_chrome.SystemChrome._pendingStyle = style;
+      async.scheduleMicrotask(dart.fn(() => {
+        if (!(system_chrome.SystemChrome._pendingStyle != null)) dart.assertFailed(null, I[1], 408, 14, "_pendingStyle != null");
+        if (!dart.equals(system_chrome.SystemChrome._pendingStyle, system_chrome.SystemChrome._latestStyle)) {
+          system_channels.SystemChannels.platform.invokeMethod(dart.void, "SystemChrome.setSystemUIOverlayStyle", dart.nullCheck(system_chrome.SystemChrome._pendingStyle)[_toMap]());
+          system_chrome.SystemChrome._latestStyle = system_chrome.SystemChrome._pendingStyle;
+        }
+        system_chrome.SystemChrome._pendingStyle = null;
+      }, T.VoidTovoid()));
+    }
+    static get latestStyle() {
+      return system_chrome.SystemChrome._latestStyle;
+    }
+  };
+  (system_chrome.SystemChrome.__ = function() {
+    ;
+  }).prototype = system_chrome.SystemChrome.prototype;
+  dart.addTypeTests(system_chrome.SystemChrome);
+  dart.addTypeCaches(system_chrome.SystemChrome);
+  dart.setLibraryUri(system_chrome.SystemChrome, I[0]);
+  dart.defineLazy(system_chrome.SystemChrome, {
+    /*system_chrome.SystemChrome._pendingStyle*/get _pendingStyle() {
+      return null;
+    },
+    set _pendingStyle(_) {},
+    /*system_chrome.SystemChrome._latestStyle*/get _latestStyle() {
+      return null;
+    },
+    set _latestStyle(_) {}
+  }, false);
+  system_chrome._stringify = function _stringify(list) {
+    return (() => {
+      let t0 = T.JSArrayOfString().of([]);
+      for (let item of list)
+        t0[$add](dart.toString(item));
+      return t0;
+    })();
+  };
+  dart.trackLibraries("packages/flutter/src/services/system_chrome.dart", {
+    "package:flutter/src/services/system_chrome.dart": system_chrome
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["listenable_provider.dart","change_notifier_provider.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6BA0DqB,GACL;;AAEmC,aAA/C,KAAK;qBAAL,OAAO,eAAc,UAAF,CAAC;AACpB,cAAO;;AAAM,oBAAK;8BAAL,OAAO,kBAAiB,UAAF,CAAC;;MACtC;;;UAtCO;UACc;UACP;UACN;UACa;UACX;;AACL,wDACQ,GAAG,yCAEA,MAAM,WACL,OAAO,QACV,IAAI,WACD,OAAO,SACT,KAAK;;IACb;;UAIA;UACM;UACY;UACJ;UACX;;AACC,0DACE,GAAG,WACC,OAAO,SACT,KAAK,sBACQ,kBAAkB,wCAE/B,KAAK;;IACb;;;;;;;;;;;;;;UAgBA;UACM;UACoC;UACnC;UACW;UACjB;UACa;UACX;;AACL,8DACQ,GAAG,UACA,MAAM,UACN,MAAM,QACR,IAAI,WACD,OAAO,WACP,OAAO,sBACI,kBAAkB,6DAEV,QACtB,OACA,QAAC;AACC,cAAU,kCAAN,KAAK;AAEP,kBAAO,AAAM,AAAa,KAAd,kBAAiB;;8BAGhC,KAAK;;IACb;;;;;;;;;;;;;;;UAqBA;UACM;UACyB;UACxB;UACN;UACa;UACX;;AACL,6DACQ,GAAG,UACA,MAAM,QACR,IAAI,WACD,OAAO,UACR,SAAC,SAAS,aAAa,AAAM,MAAA,CACnC,OAAO,EACE,wBAAG,OAAO,GACnB,QAAQ,qCAED,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;;;UAQA;UACM;UAC8B;UAC7B;UACN;UACa;UACX;;AACL,8DACQ,GAAG,UACA,MAAM,QACR,IAAI,WACD,OAAO,UACR,SAAC,SAAS,aAAa,AAAM,MAAA,CACnC,OAAO,EACE,wBAAG,OAAO,GACV,yBAAG,OAAO,GACnB,QAAQ,qCAED,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;;;UAQA;UACM;UACkC;UACjC;UACN;UACa;UACX;;AACL,8DACQ,GAAG,UACA,MAAM,QACR,IAAI,WACD,OAAO,UACR,SAAC,SAAS,aAAa,AAAM,MAAA,CACnC,OAAO,EACE,wBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACnB,QAAQ,qCAED,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;;;UAQA;UACM;UACsC;UACrC;UACN;UACa;UACX;;AACL,8DACQ,GAAG,UACA,MAAM,QACR,IAAI,WACD,OAAO,UACR,SAAC,SAAS,aAAa,AAAM,MAAA,CACnC,OAAO,EACE,wBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACnB,QAAQ,qCAED,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;;;UAQA;UACM;UAC0C;UACzC;UACN;UACa;UACX;;AACL,8DACQ,GAAG,UACA,MAAM,QACR,IAAI,WACD,OAAO,UACR,SAAC,SAAS,aAAa,AAAM,MAAA,CACnC,OAAO,EACE,wBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACnB,QAAQ,qCAED,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;;;UAQA;UACM;UAC8C;UAC7C;UACN;UACa;UACX;;AACL,8DACQ,GAAG,UACA,MAAM,QACR,IAAI,WACD,OAAO,UACR,SAAC,SAAS,aAAa,AAAM,MAAA,CACnC,OAAO,EACE,wBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACV,yBAAG,OAAO,GACnB,QAAQ,qCAED,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;sBC5J2B,SAAyB;;AACtC,aAAnB,QAAQ;qBAAR,OAAU;MACZ;;;UA7BO;UACc;UACb;UACa;UACX;;AACL,4DACQ,GAAG,UACA,MAAM,gCAER,IAAI,WACD,OAAO,SACT,KAAK;;IACb;;UAIA;UACM;UACQ;UACX;;AACC,8DACE,GAAG,WACC,OAAO,SACT,KAAK,SACL,KAAK;;IACb;;;;;;;;;;;;;UAqFA;UACc;UACiB;UAC9B;UACa;UACX;;AACL,iEACQ,GAAG,UACA,MAAM,UACN,MAAM,gCAER,IAAI,WACD,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;UAQA;UACc;UACyB;UACtC;UACa;UACX;;AACL,kEACQ,GAAG,UACA,MAAM,UACN,MAAM,gCAER,IAAI,WACD,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;UAQA;UACc;UACsB;UACnC;UACa;UACX;;AACL,kEACQ,GAAG,UACA,MAAM,UACN,MAAM,gCAER,IAAI,WACD,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;UAQA;UACc;UAC0B;UACvC;UACa;UACX;;AACL,kEACQ,GAAG,UACA,MAAM,UACN,MAAM,gCAER,IAAI,WACD,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;UAQA;UACc;UAC8B;UAC3C;UACa;UACX;;AACL,kEACQ,GAAG,UACA,MAAM,UACN,MAAM,gCAER,IAAI,WACD,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;UAQA;UACc;UACkC;UAC/C;UACa;UACX;;AACL,kEACQ,GAAG,UACA,MAAM,UACN,MAAM,gCAER,IAAI,WACD,OAAO,SACT,KAAK;;IACb;;;;;;;;;;;;;UASA;UACc;UACsC;UACnD;UACa;UACX;;AACL,kEACQ,GAAG,UACA,MAAM,UACN,MAAM,gCAER,IAAI,WACD,OAAO,SACT,KAAK;;IACb","file":"../../../../../../../packages/provider/src/listenable_provider.dart.lib.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["system_chrome.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAgDA;;yDAlBK;;;;EAkBL;;;;;;;;;;;;;;;;;;IAagB;;;;;;IAMH;;;;;;;;QATiC;QAAY;IAAZ;IAAY;;EAAe;;;;;;;;;;;;IAuBzE;;uDARK;;;;EAQL;;;;;;;;;;;;;;;;;;;;;;;IAoBe;;;;;;IAKA;;;;;;IAOK;;;;;;IAKL;;;;;;IAKK;;;;;;IAKA;;;;;;;;AA0BhB,YAAwB,6CACtB,8EAA4B,OAA0B,WACtD,8FAAmC,OAAiC,YACpE,8DAAkB,OAAgB,aAClC,wEAAuB,OAAqB,sBAC5C,gFAA2B,OAAyB,sBACpD,oGAAqC,OAAmC;IAE5E;;AAGqB,YAAA,AAAS;IAAU;;;UAI/B;UACA;UACA;UACK;UACA;UACA;AAEZ,YAAO,wEAC8C,KAAzB,wBAAwB,EAAxB,aAAiC,uEACM,MAAhC,+BAA+B,EAA/B,cAAwC,8DAC1C,OAAf,cAAc,EAAd,eAAuB,uDACU,OAAxB,uBAAuB,EAAvB,eAAgC,4DAChB,OAApB,mBAAmB,EAAnB,eAA4B,sEACoB,OAAlC,iCAAiC,EAAjC,eAA0C;IAEjF;;AAIE,YAAO,eACL,+BACA,sCACA,qBACA,0BACA,8BACA;IAEJ;;UAGwB;AACtB,WAAI,AAAM,KAAD,uBAAgB,qBACvB,MAAO;AACT,YAAa,AAMT,uCANG,KAAK,KAC0B,YAA/B,AAAM,KAAD,2BAA6B,kCACI,YAAtC,AAAM,KAAD,kCAAoC,yCACpB,YAArB,AAAM,KAAD,iBAAmB,wBACxB,AAAM,AAAwB,KAAzB,4BAA4B,gCACjC,AAAM,AAAoB,KAArB,wBAAwB,4BAC7B,AAAM,AAAkC,KAAnC,sCAAsC;IACpD;;;QAvHO;QACA;QACA;QACA;QACA;QACA;IALA;IACA;IACA;IACA;IACA;IACA;;EACL;;;;;;;;;;;;;;;;;;;;;MAoCgC,wCAAK;;;MAWL,uCAAI;;;;;oCAiG+B;AAAzB;AAIzC,QAHD,MAAqB,AAAS,gEAC5B,yCACA,yBAAW,YAAY;MAE3B;;6CAOqF;AAAhC;AAOlD,QAND,MAAqB,AAAS,gEAC5B,kDACiB,4CACf,SAAS,AAAY,WAAD,QACpB,gBAAgB,AAAY,WAAD;MAGjC;;sCAwBqE;AAAvB;AAI3C,QAHD,MAAqB,AAAS,gEAC5B,2CACA,yBAAW,QAAQ;MAEvB;;;AAW2C;AAIxC,QAHD,MAAqB,AAAS,gEAC5B,wCACA;MAEJ;;mCAwFyD;AACvD,YAAO,AAAM,KAAD;AACZ,UAAI;AAEmB,QAArB,2CAAgB,KAAK;AACrB;;AAEF,UAAI,AAAM,KAAD,SAAI;AAGX;;AAEmB,MAArB,2CAAgB,KAAK;AAWnB,MAVF,wBAAkB;AAChB,cAAO,AAAc;AACrB,yBAAI,0CAAiB;AAIlB,UAHc,AAAS,gEACtB,wCACa,AAAE,eAAf;AAE0B,UAA5B,0CAAe;;AAEG,QAApB,2CAAgB;;IAEpB;;AAMgD;IAAY;;;;EA1M5C;;;;;MAsMa,wCAAa;;;;MAKb,uCAAY;;;;;iDApNL;AAAS,UAAQ;;AACrD,eAAmB,OAAQ,KAAI;AAAO,+BAAL,IAAI;;;EACtC","file":"../../../../../../packages/flutter/src/services/system_chrome.dart.lib.js"}');
   // Exports:
   return {
-    src__listenable_provider: listenable_provider,
-    src__change_notifier_provider: change_notifier_provider
+    src__services__system_chrome: system_chrome
   };
 }));
 
-//# sourceMappingURL=listenable_provider.dart.lib.js.map
+//# sourceMappingURL=system_chrome.dart.lib.js.map

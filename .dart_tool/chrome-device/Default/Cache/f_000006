@@ -1,2383 +1,1804 @@
-define(['dart_sdk', 'packages/flutter/src/painting/colors.dart'], (function load__packages__flutter__src__material__colors_dart(dart_sdk, packages__flutter__src__painting__colors$46dart) {
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/nested/nested.dart', 'packages/flutter/src/foundation/change_notifier.dart', 'packages/flutter/src/foundation/debug.dart', 'packages/provider/src/reassemble_handler.dart', 'packages/flutter/src/scheduler/binding.dart', 'packages/flutter/src/widgets/layout_builder.dart', 'packages/collection/src/equality.dart'], (function load__packages__provider__src__provider_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__nested__nested$46dart, packages__flutter__src__foundation__change_notifier$46dart, packages__flutter__src__foundation__debug$46dart, packages__provider__src__reassemble_handler$46dart, packages__flutter__src__scheduler__binding$46dart, packages__flutter__src__widgets__layout_builder$46dart, packages__collection__src__equality$46dart) {
   'use strict';
   const core = dart_sdk.core;
-  const ui = dart_sdk.ui;
+  const async = dart_sdk.async;
+  const _interceptors = dart_sdk._interceptors;
+  const _internal = dart_sdk._internal;
+  const _js_helper = dart_sdk._js_helper;
+  const developer = dart_sdk.developer;
   const dart = dart_sdk.dart;
   const dartx = dart_sdk.dartx;
-  const colors = packages__flutter__src__painting__colors$46dart.src__painting__colors;
-  var colors$ = Object.create(dart.library);
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const sliver = packages__flutter__src__widgets__widget_span$46dart.src__widgets__sliver;
+  const nested = packages__nested__nested$46dart.nested;
+  const change_notifier = packages__flutter__src__foundation__change_notifier$46dart.src__foundation__change_notifier;
+  const assertions = packages__flutter__src__foundation__debug$46dart.src__foundation__assertions;
+  const diagnostics = packages__flutter__src__foundation__debug$46dart.src__foundation__diagnostics;
+  const reassemble_handler = packages__provider__src__reassemble_handler$46dart.src__reassemble_handler;
+  const binding = packages__flutter__src__scheduler__binding$46dart.src__scheduler__binding;
+  const layout_builder = packages__flutter__src__widgets__layout_builder$46dart.src__widgets__layout_builder;
+  const equality = packages__collection__src__equality$46dart.src__equality;
+  var provider = Object.create(dart.library);
+  var $runtimeType = dartx.runtimeType;
+  var $entries = dartx.entries;
+  var $_set = dartx._set;
+  var $clear = dartx.clear;
+  var $add = dartx.add;
+  var $remove = dartx.remove;
   dart._checkModuleNullSafetyMode(true);
+  var T$ = {
+    BuildContextToWidget: () => (T$.BuildContextToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext])))(),
+    VoidTobool: () => (T$.VoidTobool = dart.constFn(dart.fnType(core.bool, [])))(),
+    ElementTobool: () => (T$.ElementTobool = dart.constFn(dart.fnType(core.bool, [framework.Element])))(),
+    ObjectN: () => (T$.ObjectN = dart.constFn(dart.nullable(core.Object)))(),
+    TTovoid$1: () => (T$.TTovoid$1 = dart.constFn(dart.gFnType(T => [dart.void, [T]], T => [T$.ObjectN()])))(),
+    ElementTovoid: () => (T$.ElementTovoid = dart.constFn(dart.fnType(dart.void, [framework.Element])))(),
+    IdentityMapOfString$ProviderNode: () => (T$.IdentityMapOfString$ProviderNode = dart.constFn(_js_helper.IdentityMap$(core.String, provider.ProviderNode)))(),
+    DurationTovoid: () => (T$.DurationTovoid = dart.constFn(dart.fnType(dart.void, [core.Duration])))(),
+    JSArrayOfDiagnosticsNode: () => (T$.JSArrayOfDiagnosticsNode = dart.constFn(_interceptors.JSArray$(diagnostics.DiagnosticsNode)))(),
+    VoidTovoid: () => (T$.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    JSArrayOfPostEventCall: () => (T$.JSArrayOfPostEventCall = dart.constFn(_interceptors.JSArray$(provider.PostEventCall)))(),
+    DefaultEqualityOfNever: () => (T$.DefaultEqualityOfNever = dart.constFn(equality.DefaultEquality$(dart.Never)))(),
+    FnToR: () => (T$.FnToR = dart.constFn(dart.gFnType((T, R) => {
+      var TToR = () => (TToR = dart.constFn(dart.fnType(R, [T])))();
+      return [R, [TToR()]];
+    }, (T, R) => {
+      var TToR = () => (TToR = dart.constFn(dart.fnType(R, [T])))();
+      return [T$.ObjectN(), T$.ObjectN()];
+    })))(),
+    VoidToT: () => (T$.VoidToT = dart.constFn(dart.gFnType(T => [T, []], T => [T$.ObjectN()])))()
+  };
   const CT = Object.create({
     _: () => (C, CT)
   });
   dart.defineLazy(CT, {
-    get C0() {
-      return C[0] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 0
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 19,
+        [_Location_line]: 126,
+        [_Location_file]: null
       });
     },
     get C1() {
-      return C[1] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278190080.0
-      });
+      return C[1] = dart.constList([C[2] || CT.C2], widget_inspector._Location);
     },
-    get C2() {
-      return C[2] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 3707764736.0
-      });
-    },
-    get C3() {
-      return C[3] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 2315255808.0
-      });
-    },
-    get C4() {
-      return C[4] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 1929379840
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 125,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0/lib/src/provider.dart"
       });
     },
     get C5() {
       return C[5] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 1627389952
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 15,
+        [_Location_line]: 165,
+        [_Location_file]: null
       });
     },
-    get C6() {
-      return C[6] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 1107296256
-      });
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], widget_inspector._Location);
     },
-    get C7() {
-      return C[7] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 520093696
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 164,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0/lib/src/inherited_provider.dart"
       });
     },
     get C8() {
       return C[8] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294967295.0
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "owner",
+        [_Location_column]: 7,
+        [_Location_line]: 160,
+        [_Location_file]: null
       });
     },
     get C9() {
       return C[9] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 3019898879.0
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "debugType",
+        [_Location_column]: 7,
+        [_Location_line]: 162,
+        [_Location_file]: null
       });
     },
     get C10() {
       return C[10] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 2583691263.0
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 163,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10], widget_inspector._Location);
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 159,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0/lib/src/inherited_provider.dart"
       });
     },
     get C11() {
-      return C[11] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 2332033023.0
-      });
+      return C[11] = dart.constList([], core.String);
     },
     get C12() {
       return C[12] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 1660944383
+        __proto__: core.Object.prototype
       });
     },
     get C13() {
-      return C[13] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 1308622847
+      return C[13] = dart.constMap(T$.ObjectN(), T$.ObjectN(), []);
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: T$.DefaultEqualityOfNever().prototype
       });
     },
     get C14() {
       return C[14] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 1040187391
+        __proto__: equality.DeepCollectionEquality.prototype,
+        [DeepCollectionEquality__unordered]: false,
+        [DeepCollectionEquality__base]: C[15] || CT.C15
       });
-    },
-    get C15() {
-      return C[15] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 536870911
-      });
-    },
-    get C16() {
-      return C[16] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 452984831
-      });
-    },
-    get C19() {
-      return C[19] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294962158.0
-      });
-    },
-    get C20() {
-      return C[20] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294954450.0
-      });
-    },
-    get C21() {
-      return C[21] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293892762.0
-      });
-    },
-    get C22() {
-      return C[22] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293227379.0
-      });
-    },
-    get C23() {
-      return C[23] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293874512.0
-      });
-    },
-    get C24() {
-      return C[24] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294198070.0
-      });
-    },
-    get C25() {
-      return C[25] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293212469.0
-      });
-    },
-    get C26() {
-      return C[26] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292030255.0
-      });
-    },
-    get C27() {
-      return C[27] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291176488.0
-      });
-    },
-    get C28() {
-      return C[28] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4290190364.0
-      });
-    },
-    get C18() {
-      return C[18] = dart.constMap(core.int, ui.Color, [50, C[19] || CT.C19, 100, C[20] || CT.C20, 200, C[21] || CT.C21, 300, C[22] || CT.C22, 400, C[23] || CT.C23, 500, C[24] || CT.C24, 600, C[25] || CT.C25, 700, C[26] || CT.C26, 800, C[27] || CT.C27, 900, C[28] || CT.C28]);
-    },
-    get C17() {
-      return C[17] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4294198070.0,
-        [ColorSwatch__swatch]: C[18] || CT.C18
-      });
-    },
-    get C31() {
-      return C[31] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294937216.0
-      });
-    },
-    get C32() {
-      return C[32] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294922834.0
-      });
-    },
-    get C33() {
-      return C[33] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294907716.0
-      });
-    },
-    get C34() {
-      return C[34] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292149248.0
-      });
-    },
-    get C30() {
-      return C[30] = dart.constMap(core.int, ui.Color, [100, C[31] || CT.C31, 200, C[32] || CT.C32, 400, C[33] || CT.C33, 700, C[34] || CT.C34]);
-    },
-    get C29() {
-      return C[29] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4294922834.0,
-        [ColorSwatch__swatch]: C[30] || CT.C30
-      });
-    },
-    get C37() {
-      return C[37] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294763756.0
-      });
-    },
-    get C38() {
-      return C[38] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294491088.0
-      });
-    },
-    get C39() {
-      return C[39] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294217649.0
-      });
-    },
-    get C40() {
-      return C[40] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293943954.0
-      });
-    },
-    get C41() {
-      return C[41] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293673082.0
-      });
-    },
-    get C42() {
-      return C[42] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293467747.0
-      });
-    },
-    get C43() {
-      return C[43] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292352864.0
-      });
-    },
-    get C44() {
-      return C[44] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4290910299.0
-      });
-    },
-    get C45() {
-      return C[45] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289533015.0
-      });
-    },
-    get C46() {
-      return C[46] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4287106639.0
-      });
-    },
-    get C36() {
-      return C[36] = dart.constMap(core.int, ui.Color, [50, C[37] || CT.C37, 100, C[38] || CT.C38, 200, C[39] || CT.C39, 300, C[40] || CT.C40, 400, C[41] || CT.C41, 500, C[42] || CT.C42, 600, C[43] || CT.C43, 700, C[44] || CT.C44, 800, C[45] || CT.C45, 900, C[46] || CT.C46]);
-    },
-    get C35() {
-      return C[35] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4293467747.0,
-        [ColorSwatch__swatch]: C[36] || CT.C36
-      });
-    },
-    get C49() {
-      return C[49] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294934699.0
-      });
-    },
-    get C50() {
-      return C[50] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294918273.0
-      });
-    },
-    get C51() {
-      return C[51] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294246487.0
-      });
-    },
-    get C52() {
-      return C[52] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291105122.0
-      });
-    },
-    get C48() {
-      return C[48] = dart.constMap(core.int, ui.Color, [100, C[49] || CT.C49, 200, C[50] || CT.C50, 400, C[51] || CT.C51, 700, C[52] || CT.C52]);
-    },
-    get C47() {
-      return C[47] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4294918273.0,
-        [ColorSwatch__swatch]: C[48] || CT.C48
-      });
-    },
-    get C55() {
-      return C[55] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294174197.0
-      });
-    },
-    get C56() {
-      return C[56] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292984551.0
-      });
-    },
-    get C57() {
-      return C[57] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291728344.0
-      });
-    },
-    get C58() {
-      return C[58] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4290406600.0
-      });
-    },
-    get C59() {
-      return C[59] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289415100.0
-      });
-    },
-    get C60() {
-      return C[60] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4288423856.0
-      });
-    },
-    get C61() {
-      return C[61] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4287505578.0
-      });
-    },
-    get C62() {
-      return C[62] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286259106.0
-      });
-    },
-    get C63() {
-      return C[63] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4285143962.0
-      });
-    },
-    get C64() {
-      return C[64] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283045004.0
-      });
-    },
-    get C54() {
-      return C[54] = dart.constMap(core.int, ui.Color, [50, C[55] || CT.C55, 100, C[56] || CT.C56, 200, C[57] || CT.C57, 300, C[58] || CT.C58, 400, C[59] || CT.C59, 500, C[60] || CT.C60, 600, C[61] || CT.C61, 700, C[62] || CT.C62, 800, C[63] || CT.C63, 900, C[64] || CT.C64]);
-    },
-    get C53() {
-      return C[53] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4288423856.0,
-        [ColorSwatch__swatch]: C[54] || CT.C54
-      });
-    },
-    get C67() {
-      return C[67] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293558524.0
-      });
-    },
-    get C68() {
-      return C[68] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292886779.0
-      });
-    },
-    get C69() {
-      return C[69] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292149497.0
-      });
-    },
-    get C70() {
-      return C[70] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289331455.0
-      });
-    },
-    get C66() {
-      return C[66] = dart.constMap(core.int, ui.Color, [100, C[67] || CT.C67, 200, C[68] || CT.C68, 400, C[69] || CT.C69, 700, C[70] || CT.C70]);
-    },
-    get C65() {
-      return C[65] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4292886779.0,
-        [ColorSwatch__swatch]: C[66] || CT.C66
-      });
-    },
-    get C73() {
-      return C[73] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293781494.0
-      });
-    },
-    get C74() {
-      return C[74] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291937513.0
-      });
-    },
-    get C75() {
-      return C[75] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289961435.0
-      });
-    },
-    get C76() {
-      return C[76] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4287985101.0
-      });
-    },
-    get C77() {
-      return C[77] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286470082.0
-      });
-    },
-    get C78() {
-      return C[78] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284955319.0
-      });
-    },
-    get C79() {
-      return C[79] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284364209.0
-      });
-    },
-    get C80() {
-      return C[80] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283510184.0
-      });
-    },
-    get C81() {
-      return C[81] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282722208.0
-      });
-    },
-    get C82() {
-      return C[82] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4281408402.0
-      });
-    },
-    get C72() {
-      return C[72] = dart.constMap(core.int, ui.Color, [50, C[73] || CT.C73, 100, C[74] || CT.C74, 200, C[75] || CT.C75, 300, C[76] || CT.C76, 400, C[77] || CT.C77, 500, C[78] || CT.C78, 600, C[79] || CT.C79, 700, C[80] || CT.C80, 800, C[81] || CT.C81, 900, C[82] || CT.C82]);
-    },
-    get C71() {
-      return C[71] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4284955319.0,
-        [ColorSwatch__swatch]: C[72] || CT.C72
-      });
-    },
-    get C85() {
-      return C[85] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289956095.0
-      });
-    },
-    get C86() {
-      return C[86] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286336511.0
-      });
-    },
-    get C87() {
-      return C[87] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284817407.0
-      });
-    },
-    get C88() {
-      return C[88] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284612842.0
-      });
-    },
-    get C84() {
-      return C[84] = dart.constMap(core.int, ui.Color, [100, C[85] || CT.C85, 200, C[86] || CT.C86, 400, C[87] || CT.C87, 700, C[88] || CT.C88]);
-    },
-    get C83() {
-      return C[83] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4286336511.0,
-        [ColorSwatch__swatch]: C[84] || CT.C84
-      });
-    },
-    get C91() {
-      return C[91] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293454582.0
-      });
-    },
-    get C92() {
-      return C[92] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291152617.0
-      });
-    },
-    get C93() {
-      return C[93] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4288653530.0
-      });
-    },
-    get C94() {
-      return C[94] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286154443.0
-      });
-    },
-    get C95() {
-      return C[95] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284246976.0
-      });
-    },
-    get C96() {
-      return C[96] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282339765.0
-      });
-    },
-    get C97() {
-      return C[97] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4281944491.0
-      });
-    },
-    get C98() {
-      return C[98] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4281352095.0
-      });
-    },
-    get C99() {
-      return C[99] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280825235.0
-      });
-    },
-    get C100() {
-      return C[100] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4279903102.0
-      });
-    },
-    get C90() {
-      return C[90] = dart.constMap(core.int, ui.Color, [50, C[91] || CT.C91, 100, C[92] || CT.C92, 200, C[93] || CT.C93, 300, C[94] || CT.C94, 400, C[95] || CT.C95, 500, C[96] || CT.C96, 600, C[97] || CT.C97, 700, C[98] || CT.C98, 800, C[99] || CT.C99, 900, C[100] || CT.C100]);
-    },
-    get C89() {
-      return C[89] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4282339765.0,
-        [ColorSwatch__swatch]: C[90] || CT.C90
-      });
-    },
-    get C103() {
-      return C[103] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4287405823.0
-      });
-    },
-    get C104() {
-      return C[104] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283657726.0
-      });
-    },
-    get C105() {
-      return C[105] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282211070.0
-      });
-    },
-    get C106() {
-      return C[106] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4281356286.0
-      });
-    },
-    get C102() {
-      return C[102] = dart.constMap(core.int, ui.Color, [100, C[103] || CT.C103, 200, C[104] || CT.C104, 400, C[105] || CT.C105, 700, C[106] || CT.C106]);
-    },
-    get C101() {
-      return C[101] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4283657726.0,
-        [ColorSwatch__swatch]: C[102] || CT.C102
-      });
-    },
-    get C109() {
-      return C[109] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293128957.0
-      });
-    },
-    get C110() {
-      return C[110] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4290502395.0
-      });
-    },
-    get C111() {
-      return C[111] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4287679225.0
-      });
-    },
-    get C112() {
-      return C[112] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284790262.0
-      });
-    },
-    get C113() {
-      return C[113] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282557941.0
-      });
-    },
-    get C114() {
-      return C[114] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280391411.0
-      });
-    },
-    get C115() {
-      return C[115] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280191205.0
-      });
-    },
-    get C116() {
-      return C[116] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4279858898.0
-      });
-    },
-    get C117() {
-      return C[117] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4279592384.0
-      });
-    },
-    get C118() {
-      return C[118] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4279060385.0
-      });
-    },
-    get C108() {
-      return C[108] = dart.constMap(core.int, ui.Color, [50, C[109] || CT.C109, 100, C[110] || CT.C110, 200, C[111] || CT.C111, 300, C[112] || CT.C112, 400, C[113] || CT.C113, 500, C[114] || CT.C114, 600, C[115] || CT.C115, 700, C[116] || CT.C116, 800, C[117] || CT.C117, 900, C[118] || CT.C118]);
-    },
-    get C107() {
-      return C[107] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4280391411.0,
-        [ColorSwatch__swatch]: C[108] || CT.C108
-      });
-    },
-    get C121() {
-      return C[121] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286755327.0
-      });
-    },
-    get C122() {
-      return C[122] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282682111.0
-      });
-    },
-    get C123() {
-      return C[123] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280908287.0
-      });
-    },
-    get C124() {
-      return C[124] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280902399.0
-      });
-    },
-    get C120() {
-      return C[120] = dart.constMap(core.int, ui.Color, [100, C[121] || CT.C121, 200, C[122] || CT.C122, 400, C[123] || CT.C123, 700, C[124] || CT.C124]);
-    },
-    get C119() {
-      return C[119] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4282682111.0,
-        [ColorSwatch__swatch]: C[120] || CT.C120
-      });
-    },
-    get C127() {
-      return C[127] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292998654.0
-      });
-    },
-    get C128() {
-      return C[128] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289979900.0
-      });
-    },
-    get C129() {
-      return C[129] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286698746.0
-      });
-    },
-    get C130() {
-      return C[130] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283417591.0
-      });
-    },
-    get C131() {
-      return C[131] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280923894.0
-      });
-    },
-    get C132() {
-      return C[132] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278430196.0
-      });
-    },
-    get C133() {
-      return C[133] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278426597.0
-      });
-    },
-    get C134() {
-      return C[134] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278356177.0
-      });
-    },
-    get C135() {
-      return C[135] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278351805.0
-      });
-    },
-    get C136() {
-      return C[136] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278278043.0
-      });
-    },
-    get C126() {
-      return C[126] = dart.constMap(core.int, ui.Color, [50, C[127] || CT.C127, 100, C[128] || CT.C128, 200, C[129] || CT.C129, 300, C[130] || CT.C130, 400, C[131] || CT.C131, 500, C[132] || CT.C132, 600, C[133] || CT.C133, 700, C[134] || CT.C134, 800, C[135] || CT.C135, 900, C[136] || CT.C136]);
-    },
-    get C125() {
-      return C[125] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4278430196.0,
-        [ColorSwatch__swatch]: C[126] || CT.C126
-      });
-    },
-    get C139() {
-      return C[139] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286634239.0
-      });
-    },
-    get C140() {
-      return C[140] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282434815.0
-      });
-    },
-    get C141() {
-      return C[141] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278235391.0
-      });
-    },
-    get C142() {
-      return C[142] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278227434.0
-      });
-    },
-    get C138() {
-      return C[138] = dart.constMap(core.int, ui.Color, [100, C[139] || CT.C139, 200, C[140] || CT.C140, 400, C[141] || CT.C141, 700, C[142] || CT.C142]);
-    },
-    get C137() {
-      return C[137] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4282434815.0,
-        [ColorSwatch__swatch]: C[138] || CT.C138
-      });
-    },
-    get C145() {
-      return C[145] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292933626.0
-      });
-    },
-    get C146() {
-      return C[146] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289915890.0
-      });
-    },
-    get C147() {
-      return C[147] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286635754.0
-      });
-    },
-    get C148() {
-      return C[148] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283289825.0
-      });
-    },
-    get C149() {
-      return C[149] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280731354.0
-      });
-    },
-    get C150() {
-      return C[150] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278238420.0
-      });
-    },
-    get C151() {
-      return C[151] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278234305.0
-      });
-    },
-    get C152() {
-      return C[152] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278228903.0
-      });
-    },
-    get C153() {
-      return C[153] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278223759.0
-      });
-    },
-    get C154() {
-      return C[154] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278214756.0
-      });
-    },
-    get C144() {
-      return C[144] = dart.constMap(core.int, ui.Color, [50, C[145] || CT.C145, 100, C[146] || CT.C146, 200, C[147] || CT.C147, 300, C[148] || CT.C148, 400, C[149] || CT.C149, 500, C[150] || CT.C150, 600, C[151] || CT.C151, 700, C[152] || CT.C152, 800, C[153] || CT.C153, 900, C[154] || CT.C154]);
-    },
-    get C143() {
-      return C[143] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4278238420.0,
-        [ColorSwatch__swatch]: C[144] || CT.C144
-      });
-    },
-    get C157() {
-      return C[157] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286906367.0
-      });
-    },
-    get C158() {
-      return C[158] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4279828479.0
-      });
-    },
-    get C159() {
-      return C[159] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278248959.0
-      });
-    },
-    get C160() {
-      return C[160] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278237396.0
-      });
-    },
-    get C156() {
-      return C[156] = dart.constMap(core.int, ui.Color, [100, C[157] || CT.C157, 200, C[158] || CT.C158, 400, C[159] || CT.C159, 700, C[160] || CT.C160]);
-    },
-    get C155() {
-      return C[155] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4279828479.0,
-        [ColorSwatch__swatch]: C[156] || CT.C156
-      });
-    },
-    get C163() {
-      return C[163] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292932337.0
-      });
-    },
-    get C164() {
-      return C[164] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289912795.0
-      });
-    },
-    get C165() {
-      return C[165] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286630852.0
-      });
-    },
-    get C166() {
-      return C[166] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283283116.0
-      });
-    },
-    get C167() {
-      return C[167] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280723098.0
-      });
-    },
-    get C168() {
-      return C[168] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278228616.0
-      });
-    },
-    get C169() {
-      return C[169] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278225275.0
-      });
-    },
-    get C170() {
-      return C[170] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278221163.0
-      });
-    },
-    get C171() {
-      return C[171] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278217052.0
-      });
-    },
-    get C172() {
-      return C[172] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278209856.0
-      });
-    },
-    get C162() {
-      return C[162] = dart.constMap(core.int, ui.Color, [50, C[163] || CT.C163, 100, C[164] || CT.C164, 200, C[165] || CT.C165, 300, C[166] || CT.C166, 400, C[167] || CT.C167, 500, C[168] || CT.C168, 600, C[169] || CT.C169, 700, C[170] || CT.C170, 800, C[171] || CT.C171, 900, C[172] || CT.C172]);
-    },
-    get C161() {
-      return C[161] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4278228616.0,
-        [ColorSwatch__swatch]: C[162] || CT.C162
-      });
-    },
-    get C175() {
-      return C[175] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289200107.0
-      });
-    },
-    get C176() {
-      return C[176] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284809178.0
-      });
-    },
-    get C177() {
-      return C[177] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280150454.0
-      });
-    },
-    get C178() {
-      return C[178] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278239141.0
-      });
-    },
-    get C174() {
-      return C[174] = dart.constMap(core.int, ui.Color, [100, C[175] || CT.C175, 200, C[176] || CT.C176, 400, C[177] || CT.C177, 700, C[178] || CT.C178]);
-    },
-    get C173() {
-      return C[173] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4284809178.0,
-        [ColorSwatch__swatch]: C[174] || CT.C174
-      });
-    },
-    get C181() {
-      return C[181] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293457385.0
-      });
-    },
-    get C182() {
-      return C[182] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291356361.0
-      });
-    },
-    get C183() {
-      return C[183] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289058471.0
-      });
-    },
-    get C184() {
-      return C[184] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286695300.0
-      });
-    },
-    get C185() {
-      return C[185] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284922730.0
-      });
-    },
-    get C186() {
-      return C[186] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283215696.0
-      });
-    },
-    get C187() {
-      return C[187] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282622023.0
-      });
-    },
-    get C188() {
-      return C[188] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4281896508.0
-      });
-    },
-    get C189() {
-      return C[189] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4281236786.0
-      });
-    },
-    get C190() {
-      return C[190] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4279983648.0
-      });
-    },
-    get C180() {
-      return C[180] = dart.constMap(core.int, ui.Color, [50, C[181] || CT.C181, 100, C[182] || CT.C182, 200, C[183] || CT.C183, 300, C[184] || CT.C184, 400, C[185] || CT.C185, 500, C[186] || CT.C186, 600, C[187] || CT.C187, 700, C[188] || CT.C188, 800, C[189] || CT.C189, 900, C[190] || CT.C190]);
-    },
-    get C179() {
-      return C[179] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4283215696.0,
-        [ColorSwatch__swatch]: C[180] || CT.C180
-      });
-    },
-    get C193() {
-      return C[193] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4290377418.0
-      });
-    },
-    get C194() {
-      return C[194] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4285132974.0
-      });
-    },
-    get C195() {
-      return C[195] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278249078.0
-      });
-    },
-    get C196() {
-      return C[196] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4278241363.0
-      });
-    },
-    get C192() {
-      return C[192] = dart.constMap(core.int, ui.Color, [100, C[193] || CT.C193, 200, C[194] || CT.C194, 400, C[195] || CT.C195, 700, C[196] || CT.C196]);
-    },
-    get C191() {
-      return C[191] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4285132974.0,
-        [ColorSwatch__swatch]: C[192] || CT.C192
-      });
-    },
-    get C199() {
-      return C[199] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294047977.0
-      });
-    },
-    get C200() {
-      return C[200] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292668872.0
-      });
-    },
-    get C201() {
-      return C[201] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291158437.0
-      });
-    },
-    get C202() {
-      return C[202] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289648001.0
-      });
-    },
-    get C203() {
-      return C[203] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4288466021.0
-      });
-    },
-    get C204() {
-      return C[204] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4287349578.0
-      });
-    },
-    get C205() {
-      return C[205] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286362434.0
-      });
-    },
-    get C206() {
-      return C[206] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4285046584.0
-      });
-    },
-    get C207() {
-      return C[207] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283796271.0
-      });
-    },
-    get C208() {
-      return C[208] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4281559326.0
-      });
-    },
-    get C198() {
-      return C[198] = dart.constMap(core.int, ui.Color, [50, C[199] || CT.C199, 100, C[200] || CT.C200, 200, C[201] || CT.C201, 300, C[202] || CT.C202, 400, C[203] || CT.C203, 500, C[204] || CT.C204, 600, C[205] || CT.C205, 700, C[206] || CT.C206, 800, C[207] || CT.C207, 900, C[208] || CT.C208]);
-    },
-    get C197() {
-      return C[197] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4287349578.0,
-        [ColorSwatch__swatch]: C[198] || CT.C198
-      });
-    },
-    get C211() {
-      return C[211] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291624848.0
-      });
-    },
-    get C212() {
-      return C[212] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289920857.0
-      });
-    },
-    get C213() {
-      return C[213] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4285988611.0
-      });
-    },
-    get C214() {
-      return C[214] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284800279.0
-      });
-    },
-    get C210() {
-      return C[210] = dart.constMap(core.int, ui.Color, [100, C[211] || CT.C211, 200, C[212] || CT.C212, 400, C[213] || CT.C213, 700, C[214] || CT.C214]);
-    },
-    get C209() {
-      return C[209] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4289920857.0,
-        [ColorSwatch__swatch]: C[210] || CT.C210
-      });
-    },
-    get C217() {
-      return C[217] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294573031.0
-      });
-    },
-    get C218() {
-      return C[218] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293981379.0
-      });
-    },
-    get C219() {
-      return C[219] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293324444.0
-      });
-    },
-    get C220() {
-      return C[220] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292667253.0
-      });
-    },
-    get C221() {
-      return C[221] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292141399.0
-      });
-    },
-    get C222() {
-      return C[222] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291681337.0
-      });
-    },
-    get C223() {
-      return C[223] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4290824755.0
-      });
-    },
-    get C224() {
-      return C[224] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289705003.0
-      });
-    },
-    get C225() {
-      return C[225] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4288584996.0
-      });
-    },
-    get C226() {
-      return C[226] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286740247.0
-      });
-    },
-    get C216() {
-      return C[216] = dart.constMap(core.int, ui.Color, [50, C[217] || CT.C217, 100, C[218] || CT.C218, 200, C[219] || CT.C219, 300, C[220] || CT.C220, 400, C[221] || CT.C221, 500, C[222] || CT.C222, 600, C[223] || CT.C223, 700, C[224] || CT.C224, 800, C[225] || CT.C225, 900, C[226] || CT.C226]);
-    },
-    get C215() {
-      return C[215] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4291681337.0,
-        [ColorSwatch__swatch]: C[216] || CT.C216
-      });
-    },
-    get C229() {
-      return C[229] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294246273.0
-      });
-    },
-    get C230() {
-      return C[230] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293852993.0
-      });
-    },
-    get C231() {
-      return C[231] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291231488.0
-      });
-    },
-    get C232() {
-      return C[232] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289653248.0
-      });
-    },
-    get C228() {
-      return C[228] = dart.constMap(core.int, ui.Color, [100, C[229] || CT.C229, 200, C[230] || CT.C230, 400, C[231] || CT.C231, 700, C[232] || CT.C232]);
-    },
-    get C227() {
-      return C[227] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4293852993.0,
-        [ColorSwatch__swatch]: C[228] || CT.C228
-      });
-    },
-    get C235() {
-      return C[235] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294966759.0
-      });
-    },
-    get C236() {
-      return C[236] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294965700.0
-      });
-    },
-    get C237() {
-      return C[237] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294964637.0
-      });
-    },
-    get C238() {
-      return C[238] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294963574.0
-      });
-    },
-    get C239() {
-      return C[239] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294962776.0
-      });
-    },
-    get C240() {
-      return C[240] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294961979.0
-      });
-    },
-    get C241() {
-      return C[241] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294826037.0
-      });
-    },
-    get C242() {
-      return C[242] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294688813.0
-      });
-    },
-    get C243() {
-      return C[243] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294551589.0
-      });
-    },
-    get C244() {
-      return C[244] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294278935.0
-      });
-    },
-    get C234() {
-      return C[234] = dart.constMap(core.int, ui.Color, [50, C[235] || CT.C235, 100, C[236] || CT.C236, 200, C[237] || CT.C237, 300, C[238] || CT.C238, 400, C[239] || CT.C239, 500, C[240] || CT.C240, 600, C[241] || CT.C241, 700, C[242] || CT.C242, 800, C[243] || CT.C243, 900, C[244] || CT.C244]);
-    },
-    get C233() {
-      return C[233] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4294961979.0,
-        [ColorSwatch__swatch]: C[234] || CT.C234
-      });
-    },
-    get C247() {
-      return C[247] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294967181.0
-      });
-    },
-    get C248() {
-      return C[248] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294967040.0
-      });
-    },
-    get C249() {
-      return C[249] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294961664.0
-      });
-    },
-    get C250() {
-      return C[250] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294956544.0
-      });
-    },
-    get C246() {
-      return C[246] = dart.constMap(core.int, ui.Color, [100, C[247] || CT.C247, 200, C[248] || CT.C248, 400, C[249] || CT.C249, 700, C[250] || CT.C250]);
-    },
-    get C245() {
-      return C[245] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4294967040.0,
-        [ColorSwatch__swatch]: C[246] || CT.C246
-      });
-    },
-    get C253() {
-      return C[253] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294965473.0
-      });
-    },
-    get C254() {
-      return C[254] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294962355.0
-      });
-    },
-    get C255() {
-      return C[255] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294959234.0
-      });
-    },
-    get C256() {
-      return C[256] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294956367.0
-      });
-    },
-    get C257() {
-      return C[257] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294953512.0
-      });
-    },
-    get C258() {
-      return C[258] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294951175.0
-      });
-    },
-    get C259() {
-      return C[259] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294947584.0
-      });
-    },
-    get C260() {
-      return C[260] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294942720.0
-      });
-    },
-    get C261() {
-      return C[261] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294938368.0
-      });
-    },
-    get C262() {
-      return C[262] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294930176.0
-      });
-    },
-    get C252() {
-      return C[252] = dart.constMap(core.int, ui.Color, [50, C[253] || CT.C253, 100, C[254] || CT.C254, 200, C[255] || CT.C255, 300, C[256] || CT.C256, 400, C[257] || CT.C257, 500, C[258] || CT.C258, 600, C[259] || CT.C259, 700, C[260] || CT.C260, 800, C[261] || CT.C261, 900, C[262] || CT.C262]);
-    },
-    get C251() {
-      return C[251] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4294951175.0,
-        [ColorSwatch__swatch]: C[252] || CT.C252
-      });
-    },
-    get C265() {
-      return C[265] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294960511.0
-      });
-    },
-    get C266() {
-      return C[266] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294956864.0
-      });
-    },
-    get C267() {
-      return C[267] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294951936.0
-      });
-    },
-    get C268() {
-      return C[268] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294945536.0
-      });
-    },
-    get C264() {
-      return C[264] = dart.constMap(core.int, ui.Color, [100, C[265] || CT.C265, 200, C[266] || CT.C266, 400, C[267] || CT.C267, 700, C[268] || CT.C268]);
-    },
-    get C263() {
-      return C[263] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4294956864.0,
-        [ColorSwatch__swatch]: C[264] || CT.C264
-      });
-    },
-    get C271() {
-      return C[271] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294964192.0
-      });
-    },
-    get C272() {
-      return C[272] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294959282.0
-      });
-    },
-    get C273() {
-      return C[273] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294954112.0
-      });
-    },
-    get C274() {
-      return C[274] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294948685.0
-      });
-    },
-    get C275() {
-      return C[275] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294944550.0
-      });
-    },
-    get C276() {
-      return C[276] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294940672.0
-      });
-    },
-    get C277() {
-      return C[277] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294675456.0
-      });
-    },
-    get C278() {
-      return C[278] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294278144.0
-      });
-    },
-    get C279() {
-      return C[279] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293880832.0
-      });
-    },
-    get C280() {
-      return C[280] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293284096.0
-      });
-    },
-    get C270() {
-      return C[270] = dart.constMap(core.int, ui.Color, [50, C[271] || CT.C271, 100, C[272] || CT.C272, 200, C[273] || CT.C273, 300, C[274] || CT.C274, 400, C[275] || CT.C275, 500, C[276] || CT.C276, 600, C[277] || CT.C277, 700, C[278] || CT.C278, 800, C[279] || CT.C279, 900, C[280] || CT.C280]);
-    },
-    get C269() {
-      return C[269] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4294940672.0,
-        [ColorSwatch__swatch]: C[270] || CT.C270
-      });
-    },
-    get C283() {
-      return C[283] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294955392.0
-      });
-    },
-    get C284() {
-      return C[284] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294945600.0
-      });
-    },
-    get C285() {
-      return C[285] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294938880.0
-      });
-    },
-    get C286() {
-      return C[286] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294929664.0
-      });
-    },
-    get C282() {
-      return C[282] = dart.constMap(core.int, ui.Color, [100, C[283] || CT.C283, 200, C[284] || CT.C284, 400, C[285] || CT.C285, 700, C[286] || CT.C286]);
-    },
-    get C281() {
-      return C[281] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4294945600.0,
-        [ColorSwatch__swatch]: C[282] || CT.C282
-      });
-    },
-    get C289() {
-      return C[289] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294699495.0
-      });
-    },
-    get C290() {
-      return C[290] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294954172.0
-      });
-    },
-    get C291() {
-      return C[291] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294945681.0
-      });
-    },
-    get C292() {
-      return C[292] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294937189.0
-      });
-    },
-    get C293() {
-      return C[293] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294930499.0
-      });
-    },
-    get C294() {
-      return C[294] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294924066.0
-      });
-    },
-    get C295() {
-      return C[295] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294201630.0
-      });
-    },
-    get C296() {
-      return C[296] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293282329.0
-      });
-    },
-    get C297() {
-      return C[297] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292363029.0
-      });
-    },
-    get C298() {
-      return C[298] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4290721292.0
-      });
-    },
-    get C288() {
-      return C[288] = dart.constMap(core.int, ui.Color, [50, C[289] || CT.C289, 100, C[290] || CT.C290, 200, C[291] || CT.C291, 300, C[292] || CT.C292, 400, C[293] || CT.C293, 500, C[294] || CT.C294, 600, C[295] || CT.C295, 700, C[296] || CT.C296, 800, C[297] || CT.C297, 900, C[298] || CT.C298]);
-    },
-    get C287() {
-      return C[287] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4294924066.0,
-        [ColorSwatch__swatch]: C[288] || CT.C288
-      });
-    },
-    get C301() {
-      return C[301] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294942336.0
-      });
-    },
-    get C302() {
-      return C[302] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294929984.0
-      });
-    },
-    get C303() {
-      return C[303] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294917376.0
-      });
-    },
-    get C304() {
-      return C[304] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292684800.0
-      });
-    },
-    get C300() {
-      return C[300] = dart.constMap(core.int, ui.Color, [100, C[301] || CT.C301, 200, C[302] || CT.C302, 400, C[303] || CT.C303, 700, C[304] || CT.C304]);
-    },
-    get C299() {
-      return C[299] = dart.const({
-        __proto__: colors$.MaterialAccentColor.prototype,
-        [Color_value]: 4294929984.0,
-        [ColorSwatch__swatch]: C[300] || CT.C300
-      });
-    },
-    get C307() {
-      return C[307] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293913577.0
-      });
-    },
-    get C308() {
-      return C[308] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292332744.0
-      });
-    },
-    get C309() {
-      return C[309] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4290554532.0
-      });
-    },
-    get C310() {
-      return C[310] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4288776319.0
-      });
-    },
-    get C311() {
-      return C[311] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4287458915.0
-      });
-    },
-    get C312() {
-      return C[312] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286141768.0
-      });
-    },
-    get C313() {
-      return C[313] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4285353025.0
-      });
-    },
-    get C314() {
-      return C[314] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284301367.0
-      });
-    },
-    get C315() {
-      return C[315] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283315246.0
-      });
-    },
-    get C316() {
-      return C[316] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282263331.0
-      });
-    },
-    get C306() {
-      return C[306] = dart.constMap(core.int, ui.Color, [50, C[307] || CT.C307, 100, C[308] || CT.C308, 200, C[309] || CT.C309, 300, C[310] || CT.C310, 400, C[311] || CT.C311, 500, C[312] || CT.C312, 600, C[313] || CT.C313, 700, C[314] || CT.C314, 800, C[315] || CT.C315, 900, C[316] || CT.C316]);
-    },
-    get C305() {
-      return C[305] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4286141768.0,
-        [ColorSwatch__swatch]: C[306] || CT.C306
-      });
-    },
-    get C319() {
-      return C[319] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294638330.0
-      });
-    },
-    get C320() {
-      return C[320] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4294309365.0
-      });
-    },
-    get C321() {
-      return C[321] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293848814.0
-      });
-    },
-    get C322() {
-      return C[322] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292927712.0
-      });
-    },
-    get C323() {
-      return C[323] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4292269782.0
-      });
-    },
-    get C324() {
-      return C[324] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4290624957.0
-      });
-    },
-    get C325() {
-      return C[325] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4288585374.0
-      });
-    },
-    get C326() {
-      return C[326] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4285887861.0
-      });
-    },
-    get C327() {
-      return C[327] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284572001.0
-      });
-    },
-    get C328() {
-      return C[328] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282532418.0
-      });
-    },
-    get C329() {
-      return C[329] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4281348144.0
-      });
-    },
-    get C330() {
-      return C[330] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280361249.0
-      });
-    },
-    get C318() {
-      return C[318] = dart.constMap(core.int, ui.Color, [50, C[319] || CT.C319, 100, C[320] || CT.C320, 200, C[321] || CT.C321, 300, C[322] || CT.C322, 350, C[323] || CT.C323, 400, C[324] || CT.C324, 500, C[325] || CT.C325, 600, C[326] || CT.C326, 700, C[327] || CT.C327, 800, C[328] || CT.C328, 850, C[329] || CT.C329, 900, C[330] || CT.C330]);
-    },
-    get C317() {
-      return C[317] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4288585374.0,
-        [ColorSwatch__swatch]: C[318] || CT.C318
-      });
-    },
-    get C333() {
-      return C[333] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4293718001.0
-      });
-    },
-    get C334() {
-      return C[334] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4291811548.0
-      });
-    },
-    get C335() {
-      return C[335] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4289773253.0
-      });
-    },
-    get C336() {
-      return C[336] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4287669422.0
-      });
-    },
-    get C337() {
-      return C[337] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4286091420.0
-      });
-    },
-    get C338() {
-      return C[338] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4284513675.0
-      });
-    },
-    get C339() {
-      return C[339] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4283723386.0
-      });
-    },
-    get C340() {
-      return C[340] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4282735204.0
-      });
-    },
-    get C341() {
-      return C[341] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4281812815.0
-      });
-    },
-    get C342() {
-      return C[342] = dart.const({
-        __proto__: ui.Color.prototype,
-        [Color_value]: 4280693304.0
-      });
-    },
-    get C332() {
-      return C[332] = dart.constMap(core.int, ui.Color, [50, C[333] || CT.C333, 100, C[334] || CT.C334, 200, C[335] || CT.C335, 300, C[336] || CT.C336, 400, C[337] || CT.C337, 500, C[338] || CT.C338, 600, C[339] || CT.C339, 700, C[340] || CT.C340, 800, C[341] || CT.C341, 900, C[342] || CT.C342]);
-    },
-    get C331() {
-      return C[331] = dart.const({
-        __proto__: colors$.MaterialColor.prototype,
-        [Color_value]: 4284513675.0,
-        [ColorSwatch__swatch]: C[332] || CT.C332
-      });
-    },
-    get C343() {
-      return C[343] = dart.constList([C[17] || CT.C17, C[35] || CT.C35, C[53] || CT.C53, C[71] || CT.C71, C[89] || CT.C89, C[107] || CT.C107, C[125] || CT.C125, C[143] || CT.C143, C[161] || CT.C161, C[179] || CT.C179, C[197] || CT.C197, C[215] || CT.C215, C[233] || CT.C233, C[251] || CT.C251, C[269] || CT.C269, C[287] || CT.C287, C[305] || CT.C305, C[331] || CT.C331], colors$.MaterialColor);
-    },
-    get C344() {
-      return C[344] = dart.constList([C[29] || CT.C29, C[47] || CT.C47, C[65] || CT.C65, C[83] || CT.C83, C[101] || CT.C101, C[119] || CT.C119, C[137] || CT.C137, C[155] || CT.C155, C[173] || CT.C173, C[191] || CT.C191, C[209] || CT.C209, C[227] || CT.C227, C[245] || CT.C245, C[263] || CT.C263, C[281] || CT.C281, C[299] || CT.C299], colors$.MaterialAccentColor);
     }
   }, false);
-  var C = Array(345).fill(void 0);
-  var I = ["package:flutter/src/material/colors.dart"];
-  colors$.MaterialColor = class MaterialColor extends colors.ColorSwatch$(core.int) {
-    get shade50() {
-      return dart.nullCheck(this._get(50));
+  var C = Array(16).fill(void 0);
+  var I = [
+    "package:provider/src/provider.dart",
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0/lib/src/provider.dart",
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0/lib/src/inherited_provider.dart",
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0/lib/src/deferred_inherited_provider.dart",
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0/lib/src/devtool.dart"
+  ];
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  provider.MultiProvider = class MultiProvider extends nested.Nested {};
+  (provider.MultiProvider.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let providers = opts && 'providers' in opts ? opts.providers : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let builder = opts && 'builder' in opts ? opts.builder : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    provider.MultiProvider.__proto__.new.call(this, {key: key, children: providers, child: builder != null ? new basic.Builder.new({builder: dart.fn(context => builder(context, child), T$.BuildContextToWidget()), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}) : child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = provider.MultiProvider.prototype;
+  dart.addTypeTests(provider.MultiProvider);
+  dart.addTypeCaches(provider.MultiProvider);
+  dart.setLibraryUri(provider.MultiProvider, I[0]);
+  var builder$ = dart.privateName(provider, "InheritedProvider.builder");
+  var _lazy = dart.privateName(provider, "_lazy");
+  var _delegate = dart.privateName(provider, "_delegate");
+  const _is_InheritedProvider_default = Symbol('_is_InheritedProvider_default');
+  provider.InheritedProvider$ = dart.generic(T => {
+    var _CreateInheritedProviderOfT = () => (_CreateInheritedProviderOfT = dart.constFn(provider._CreateInheritedProvider$(T)))();
+    var _ValueInheritedProviderOfT = () => (_ValueInheritedProviderOfT = dart.constFn(provider._ValueInheritedProvider$(T)))();
+    var _InheritedProviderElementOfT = () => (_InheritedProviderElementOfT = dart.constFn(provider._InheritedProviderElement$(T)))();
+    var _InheritedProviderScopeOfT = () => (_InheritedProviderScopeOfT = dart.constFn(provider._InheritedProviderScope$(T)))();
+    class InheritedProvider extends nested.SingleChildStatelessWidget {
+      get builder() {
+        return this[builder$];
+      }
+      set builder(value) {
+        super.builder = value;
+      }
+      debugFillProperties(properties) {
+        super.debugFillProperties(properties);
+        this[_delegate].debugFillProperties(properties);
+      }
+      createElement() {
+        return new (_InheritedProviderElementOfT()).new(this);
+      }
+      buildWithChild(context, child) {
+        if (!(this.builder != null || child != null)) dart.assertFailed(dart.str(this[$runtimeType]) + " used outside of MultiProvider must specify a child", I[2], 156, 7, "builder != null || child != null");
+        return new (_InheritedProviderScopeOfT()).new({owner: this, debugType: true ? dart.str(this[$runtimeType]) : "", child: this.builder != null ? new basic.Builder.new({builder: dart.fn(context => dart.nullCheck(this.builder)(context, child), T$.BuildContextToWidget()), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}) : dart.nullCheck(child), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6});
+      }
     }
-    get shade100() {
-      return dart.nullCheck(this._get(100));
+    (InheritedProvider.new = function(opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let create = opts && 'create' in opts ? opts.create : null;
+      let update = opts && 'update' in opts ? opts.update : null;
+      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
+      let debugCheckInvalidValueType = opts && 'debugCheckInvalidValueType' in opts ? opts.debugCheckInvalidValueType : null;
+      let startListening = opts && 'startListening' in opts ? opts.startListening : null;
+      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[builder$] = builder;
+      this[_lazy] = lazy;
+      this[_delegate] = new (_CreateInheritedProviderOfT()).new({create: create, update: update, updateShouldNotify: updateShouldNotify, debugCheckInvalidValueType: debugCheckInvalidValueType, startListening: startListening, dispose: dispose});
+      InheritedProvider.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = InheritedProvider.prototype;
+    (InheritedProvider.value = function(opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let value = opts && 'value' in opts ? opts.value : null;
+      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
+      let startListening = opts && 'startListening' in opts ? opts.startListening : null;
+      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[builder$] = builder;
+      this[_lazy] = lazy;
+      this[_delegate] = new (_ValueInheritedProviderOfT()).new({value: value, updateShouldNotify: updateShouldNotify, startListening: startListening});
+      InheritedProvider.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = InheritedProvider.prototype;
+    (InheritedProvider._constructor = function(opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let delegate = opts && 'delegate' in opts ? opts.delegate : null;
+      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[builder$] = builder;
+      this[_lazy] = lazy;
+      this[_delegate] = delegate;
+      InheritedProvider.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = InheritedProvider.prototype;
+    dart.addTypeTests(InheritedProvider);
+    InheritedProvider.prototype[_is_InheritedProvider_default] = true;
+    dart.addTypeCaches(InheritedProvider);
+    dart.setMethodSignature(InheritedProvider, () => ({
+      __proto__: dart.getMethods(InheritedProvider.__proto__),
+      createElement: dart.fnType(provider._InheritedProviderElement$(T), []),
+      buildWithChild: dart.fnType(framework.Widget, [framework.BuildContext, dart.nullable(framework.Widget)])
+    }));
+    dart.setLibraryUri(InheritedProvider, I[0]);
+    dart.setFieldSignature(InheritedProvider, () => ({
+      __proto__: dart.getFields(InheritedProvider.__proto__),
+      [_delegate]: dart.finalFieldType(provider._Delegate$(T)),
+      [_lazy]: dart.finalFieldType(dart.nullable(core.bool)),
+      builder: dart.finalFieldType(dart.nullable(dart.fnType(framework.Widget, [framework.BuildContext, dart.nullable(framework.Widget)])))
+    }));
+    return InheritedProvider;
+  });
+  provider.InheritedProvider = provider.InheritedProvider$();
+  dart.addTypeTests(provider.InheritedProvider, _is_InheritedProvider_default);
+  const _is_Provider_default = Symbol('_is_Provider_default');
+  provider.Provider$ = dart.generic(T => {
+    var TTovoid = () => (TTovoid = dart.constFn(dart.fnType(dart.void, [T])))();
+    class Provider extends provider.InheritedProvider$(T) {
+      static of(T, context, opts) {
+        let listen = opts && 'listen' in opts ? opts.listen : true;
+        if (!(dart.nullCheck(context.owner).debugBuilding || listen === false || provider.debugIsInInheritedProviderUpdate)) dart.assertFailed("Tried to listen to a value exposed with provider, from outside of the widget tree.\n\nThis is likely caused by an event handler (like a button's onPressed) that called\nProvider.of without passing `listen: false`.\n\nTo fix, write:\nProvider.of<" + dart.str(dart.wrapType(T)) + ">(context, listen: false);\n\nIt is unsupported because may pointlessly rebuild the widget associated to the\nevent handler, when the widget tree doesn't care about the value.\n\nThe context used was: " + dart.str(context) + "\n", I[1], 265, 7, "context.owner!.debugBuilding ||\n          listen == false ||\n          debugIsInInheritedProviderUpdate");
+        let inheritedElement = provider.Provider._inheritedElementOf(T, context);
+        if (listen) {
+          context.dependOnInheritedElement(inheritedElement);
+        }
+        return inheritedElement.value;
+      }
+      static _inheritedElementOf(T, context) {
+        if (!(context !== null)) dart.assertFailed("Tried to call context.read/watch/select or similar on a `context` that is null.\n\nThis can happen if you used the context of a StatefulWidget and that\nStatefulWidget was disposed.\n", I[1], 296, 12, "context != null");
+        if (!(provider._debugIsSelecting === false)) dart.assertFailed("Cannot call context.read/watch/select inside the callback of a context.select", I[1], 303, 7, "_debugIsSelecting == false");
+        if (!!dart.wrapType(T)._equals(dart.wrapType(dart.dynamic))) dart.assertFailed("Tried to call Provider.of<dynamic>. This is likely a mistake and is therefore\nunsupported.\n\nIf you want to expose a variable that can be anything, consider changing\n`dynamic` to `Object` instead.\n", I[1], 307, 7, "T != dynamic");
+        let inheritedElement = null;
+        if (provider._InheritedProviderScope$(T).is(context.widget)) {
+          context.visitAncestorElements(dart.fn(parent => {
+            inheritedElement = dart.nullable(provider._InheritedProviderScopeElement$(T)).as(parent.getElementForInheritedWidgetOfExactType(provider._InheritedProviderScope$(T)));
+            return false;
+          }, T$.ElementTobool()));
+        } else {
+          inheritedElement = dart.nullable(provider._InheritedProviderScopeElement$(T)).as(context.getElementForInheritedWidgetOfExactType(provider._InheritedProviderScope$(T)));
+        }
+        if (inheritedElement == null) {
+          dart.throw(new provider.ProviderNotFoundException.new(dart.wrapType(T), context.widget[$runtimeType]));
+        }
+        return dart.nullCheck(inheritedElement);
+      }
     }
-    get shade200() {
-      return dart.nullCheck(this._get(200));
+    (Provider.new = function(opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let create = opts && 'create' in opts ? opts.create : null;
+      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
+      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      Provider.__proto__.new.call(this, {key: key, lazy: lazy, builder: builder, create: create, dispose: dispose, debugCheckInvalidValueType: false ? null : dart.fn(value => {
+          let t0;
+          t0 = provider.Provider.debugCheckInvalidValueType;
+          return t0 == null ? null : t0(T, value);
+        }, TTovoid()), child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = Provider.prototype;
+    (Provider.value = function(opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let value = opts && 'value' in opts ? opts.value : null;
+      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      if (!dart.fn(() => {
+        let t0;
+        t0 = provider.Provider.debugCheckInvalidValueType;
+        t0 == null ? null : t0(T, value);
+        return true;
+      }, T$.VoidTobool())()) dart.assertFailed(null, I[1], 234, 16, "() {\n          Provider.debugCheckInvalidValueType?.call<T>(value);\n          return true;\n        }()");
+      Provider.__proto__.value.call(this, {key: key, builder: builder, value: value, updateShouldNotify: updateShouldNotify, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = Provider.prototype;
+    dart.addTypeTests(Provider);
+    Provider.prototype[_is_Provider_default] = true;
+    dart.addTypeCaches(Provider);
+    dart.setLibraryUri(Provider, I[0]);
+    return Provider;
+  });
+  provider.Provider = provider.Provider$();
+  dart.defineLazy(provider.Provider, {
+    /*provider.Provider.debugCheckInvalidValueType*/get debugCheckInvalidValueType() {
+      return dart.fn((T, value) => {
+        if (!dart.fn(() => {
+          if (change_notifier.Listenable.is(value) || async.Stream.is(value)) {
+            dart.throw(assertions.FlutterError.new("Tried to use Provider with a subtype of Listenable/Stream (" + dart.str(dart.wrapType(T)) + ").\n\nThis is likely a mistake, as Provider will not automatically update dependents\nwhen " + dart.str(dart.wrapType(T)) + " is updated. Instead, consider changing Provider for more specific\nimplementation that handles the update mechanism, such as:\n\n- ListenableProvider\n- ChangeNotifierProvider\n- ValueListenableProvider\n- StreamProvider\n\nAlternatively, if you are making your own provider, consider using InheritedProvider.\n\nIf you think that this is not an error, you can disable this check by setting\nProvider.debugCheckInvalidValueType to `null` in your main file:\n\n```\nvoid main() {\n  Provider.debugCheckInvalidValueType = null;\n\n  runApp(MyApp());\n}\n```\n"));
+          }
+          return true;
+        }, T$.VoidTobool())()) dart.assertFailed(null, I[1], 374, 12, "() {\n      if (value is Listenable || value is Stream) {\n        throw FlutterError('''\nTried to use Provider with a subtype of Listenable/Stream ($T).\n\nThis is likely a mistake, as Provider will not automatically update dependents\nwhen $T is updated. Instead, consider changing Provider for more specific\nimplementation that handles the update mechanism, such as:\n\n- ListenableProvider\n- ChangeNotifierProvider\n- ValueListenableProvider\n- StreamProvider\n\nAlternatively, if you are making your own provider, consider using InheritedProvider.\n\nIf you think that this is not an error, you can disable this check by setting\nProvider.debugCheckInvalidValueType to `null` in your main file:\n\n```\nvoid main() {\n  Provider.debugCheckInvalidValueType = null;\n\n  runApp(MyApp());\n}\n```\n''');\n      }\n      return true;\n    }()");
+      }, T$.TTovoid$1());
+    },
+    set debugCheckInvalidValueType(_) {}
+  }, false);
+  dart.addTypeTests(provider.Provider, _is_Provider_default);
+  var valueType$ = dart.privateName(provider, "ProviderNotFoundException.valueType");
+  var widgetType$ = dart.privateName(provider, "ProviderNotFoundException.widgetType");
+  provider.ProviderNotFoundException = class ProviderNotFoundException extends core.Object {
+    get valueType() {
+      return this[valueType$];
     }
-    get shade300() {
-      return dart.nullCheck(this._get(300));
+    set valueType(value) {
+      super.valueType = value;
     }
-    get shade400() {
-      return dart.nullCheck(this._get(400));
+    get widgetType() {
+      return this[widgetType$];
     }
-    get shade500() {
-      return dart.nullCheck(this._get(500));
+    set widgetType(value) {
+      super.widgetType = value;
     }
-    get shade600() {
-      return dart.nullCheck(this._get(600));
-    }
-    get shade700() {
-      return dart.nullCheck(this._get(700));
-    }
-    get shade800() {
-      return dart.nullCheck(this._get(800));
-    }
-    get shade900() {
-      return dart.nullCheck(this._get(900));
+    toString() {
+      return "Error: Could not find the correct Provider<" + dart.str(this.valueType) + "> above this " + dart.str(this.widgetType) + " Widget\n\nThis happens because you used a `BuildContext` that does not include the provider\nof your choice. There are a few common scenarios:\n\n- You added a new provider in your `main.dart` and performed a hot-reload.\n  To fix, perform a hot-restart.\n\n- The provider you are trying to read is in a different route.\n\n  Providers are \"scoped\". So if you insert of provider inside a route, then\n  other routes will not be able to access that provider.\n\n- You used a `BuildContext` that is an ancestor of the provider you are trying to read.\n\n  Make sure that " + dart.str(this.widgetType) + " is under your MultiProvider/Provider<" + dart.str(this.valueType) + ">.\n  This usually happens when you are creating a provider and trying to read it immediately.\n\n  For example, instead of:\n\n  ```\n  Widget build(BuildContext context) {\n    return Provider<Example>(\n      create: (_) => Example(),\n      // Will throw a ProviderNotFoundError, because `context` is associated\n      // to the widget that is the parent of `Provider<Example>`\n      child: Text(context.watch<Example>()),\n    ),\n  }\n  ```\n\n  consider using `builder` like so:\n\n  ```\n  Widget build(BuildContext context) {\n    return Provider<Example>(\n      create: (_) => Example(),\n      // we use `builder` to obtain a new `BuildContext` that has access to the provider\n      builder: (context) {\n        // No longer throws\n        return Text(context.watch<Example>()),\n      }\n    ),\n  }\n  ```\n\nIf none of these solutions work, consider asking for help on StackOverflow:\nhttps://stackoverflow.com/questions/tagged/flutter\n";
     }
   };
-  (colors$.MaterialColor.new = function(primary, swatch) {
-    colors$.MaterialColor.__proto__.new.call(this, primary, swatch);
+  (provider.ProviderNotFoundException.new = function(valueType, widgetType) {
+    this[valueType$] = valueType;
+    this[widgetType$] = widgetType;
     ;
-  }).prototype = colors$.MaterialColor.prototype;
-  dart.addTypeTests(colors$.MaterialColor);
-  dart.addTypeCaches(colors$.MaterialColor);
-  dart.setGetterSignature(colors$.MaterialColor, () => ({
-    __proto__: dart.getGetters(colors$.MaterialColor.__proto__),
-    shade50: ui.Color,
-    shade100: ui.Color,
-    shade200: ui.Color,
-    shade300: ui.Color,
-    shade400: ui.Color,
-    shade500: ui.Color,
-    shade600: ui.Color,
-    shade700: ui.Color,
-    shade800: ui.Color,
-    shade900: ui.Color
+  }).prototype = provider.ProviderNotFoundException.prototype;
+  dart.addTypeTests(provider.ProviderNotFoundException);
+  dart.addTypeCaches(provider.ProviderNotFoundException);
+  provider.ProviderNotFoundException[dart.implements] = () => [core.Exception];
+  dart.setLibraryUri(provider.ProviderNotFoundException, I[0]);
+  dart.setFieldSignature(provider.ProviderNotFoundException, () => ({
+    __proto__: dart.getFields(provider.ProviderNotFoundException.__proto__),
+    valueType: dart.finalFieldType(core.Type),
+    widgetType: dart.finalFieldType(core.Type)
   }));
-  dart.setLibraryUri(colors$.MaterialColor, I[0]);
-  colors$.MaterialAccentColor = class MaterialAccentColor extends colors.ColorSwatch$(core.int) {
-    get shade50() {
-      return dart.nullCheck(this._get(50));
+  dart.defineExtensionMethods(provider.ProviderNotFoundException, ['toString']);
+  const _is__InheritedProviderElement_default = Symbol('_is__InheritedProviderElement_default');
+  provider._InheritedProviderElement$ = dart.generic(T => {
+    class _InheritedProviderElement extends nested.SingleChildStatelessElement {
+      debugFillProperties(properties) {
+        super.debugFillProperties(properties);
+        this.visitChildren(dart.fn(e => e.debugFillProperties(properties), T$.ElementTovoid()));
+      }
     }
-    get shade100() {
-      return dart.nullCheck(this._get(100));
+    (_InheritedProviderElement.new = function(widget) {
+      _InheritedProviderElement.__proto__.new.call(this, widget);
+      ;
+    }).prototype = _InheritedProviderElement.prototype;
+    dart.addTypeTests(_InheritedProviderElement);
+    _InheritedProviderElement.prototype[_is__InheritedProviderElement_default] = true;
+    dart.addTypeCaches(_InheritedProviderElement);
+    dart.setLibraryUri(_InheritedProviderElement, I[0]);
+    return _InheritedProviderElement;
+  });
+  provider._InheritedProviderElement = provider._InheritedProviderElement$();
+  dart.addTypeTests(provider._InheritedProviderElement, _is__InheritedProviderElement_default);
+  const _is_InheritedContext_default = Symbol('_is_InheritedContext_default');
+  provider.InheritedContext$ = dart.generic(T => {
+    class InheritedContext extends framework.BuildContext {}
+    (InheritedContext.new = function() {
+      ;
+    }).prototype = InheritedContext.prototype;
+    dart.addTypeTests(InheritedContext);
+    InheritedContext.prototype[_is_InheritedContext_default] = true;
+    dart.addTypeCaches(InheritedContext);
+    dart.setLibraryUri(InheritedContext, I[0]);
+    return InheritedContext;
+  });
+  provider.InheritedContext = provider.InheritedContext$();
+  dart.addTypeTests(provider.InheritedContext, _is_InheritedContext_default);
+  var owner$ = dart.privateName(provider, "_InheritedProviderScope.owner");
+  var debugType$ = dart.privateName(provider, "_InheritedProviderScope.debugType");
+  const _is__InheritedProviderScope_default = Symbol('_is__InheritedProviderScope_default');
+  provider._InheritedProviderScope$ = dart.generic(T => {
+    var _InheritedProviderScopeElementOfT = () => (_InheritedProviderScopeElementOfT = dart.constFn(provider._InheritedProviderScopeElement$(T)))();
+    class _InheritedProviderScope extends framework.InheritedWidget {
+      get owner() {
+        return this[owner$];
+      }
+      set owner(value) {
+        super.owner = value;
+      }
+      get debugType() {
+        return this[debugType$];
+      }
+      set debugType(value) {
+        super.debugType = value;
+      }
+      updateShouldNotify(oldWidget) {
+        framework.InheritedWidget.as(oldWidget);
+        return false;
+      }
+      createElement() {
+        return new (_InheritedProviderScopeElementOfT()).new(this);
+      }
     }
-    get shade200() {
-      return dart.nullCheck(this._get(200));
+    (_InheritedProviderScope.new = function(opts) {
+      let owner = opts && 'owner' in opts ? opts.owner : null;
+      let debugType = opts && 'debugType' in opts ? opts.debugType : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[owner$] = owner;
+      this[debugType$] = debugType;
+      _InheritedProviderScope.__proto__.new.call(this, {child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = _InheritedProviderScope.prototype;
+    dart.addTypeTests(_InheritedProviderScope);
+    _InheritedProviderScope.prototype[_is__InheritedProviderScope_default] = true;
+    dart.addTypeCaches(_InheritedProviderScope);
+    dart.setMethodSignature(_InheritedProviderScope, () => ({
+      __proto__: dart.getMethods(_InheritedProviderScope.__proto__),
+      updateShouldNotify: dart.fnType(core.bool, [dart.nullable(core.Object)]),
+      createElement: dart.fnType(provider._InheritedProviderScopeElement$(T), [])
+    }));
+    dart.setLibraryUri(_InheritedProviderScope, I[0]);
+    dart.setFieldSignature(_InheritedProviderScope, () => ({
+      __proto__: dart.getFields(_InheritedProviderScope.__proto__),
+      owner: dart.finalFieldType(provider.InheritedProvider$(T)),
+      debugType: dart.finalFieldType(core.String)
+    }));
+    return _InheritedProviderScope;
+  });
+  provider._InheritedProviderScope = provider._InheritedProviderScope$();
+  dart.addTypeTests(provider._InheritedProviderScope, _is__InheritedProviderScope_default);
+  const _is__Dependency_default = Symbol('_is__Dependency_default');
+  provider._Dependency$ = dart.generic(T => {
+    var TTobool = () => (TTobool = dart.constFn(dart.fnType(core.bool, [T])))();
+    var JSArrayOfTTobool = () => (JSArrayOfTTobool = dart.constFn(_interceptors.JSArray$(TTobool())))();
+    class _Dependency extends core.Object {}
+    (_Dependency.new = function() {
+      this.shouldClearSelectors = false;
+      this.shouldClearMutationScheduled = false;
+      this.selectors = JSArrayOfTTobool().of([]);
+      ;
+    }).prototype = _Dependency.prototype;
+    dart.addTypeTests(_Dependency);
+    _Dependency.prototype[_is__Dependency_default] = true;
+    dart.addTypeCaches(_Dependency);
+    dart.setLibraryUri(_Dependency, I[0]);
+    dart.setFieldSignature(_Dependency, () => ({
+      __proto__: dart.getFields(_Dependency.__proto__),
+      shouldClearSelectors: dart.fieldType(core.bool),
+      shouldClearMutationScheduled: dart.fieldType(core.bool),
+      selectors: dart.finalFieldType(core.List$(dart.fnType(core.bool, [T])))
+    }));
+    return _Dependency;
+  });
+  provider._Dependency = provider._Dependency$();
+  dart.addTypeTests(provider._Dependency, _is__Dependency_default);
+  var _shouldNotifyDependents = dart.privateName(provider, "_shouldNotifyDependents");
+  var _debugInheritLocked = dart.privateName(provider, "_debugInheritLocked");
+  var _isNotifyDependentsEnabled = dart.privateName(provider, "_isNotifyDependentsEnabled");
+  var _firstBuild = dart.privateName(provider, "_firstBuild");
+  var _updatedShouldNotify = dart.privateName(provider, "_updatedShouldNotify");
+  var _isBuildFromExternalSources = dart.privateName(provider, "_isBuildFromExternalSources");
+  var ___InheritedProviderScopeElement__delegateState = dart.privateName(provider, "_#_InheritedProviderScopeElement#_delegateState");
+  var ___InheritedProviderScopeElement__debugId = dart.privateName(provider, "_#_InheritedProviderScopeElement#_debugId");
+  var _delegateState = dart.privateName(provider, "_delegateState");
+  var _debugId = dart.privateName(provider, "_debugId");
+  var _debugSetInheritedLock = dart.privateName(provider, "_debugSetInheritedLock");
+  const _is__InheritedProviderScopeElement_default = Symbol('_is__InheritedProviderScopeElement_default');
+  provider._InheritedProviderScopeElement$ = dart.generic(T => {
+    var _InheritedProviderScopeOfT = () => (_InheritedProviderScopeOfT = dart.constFn(provider._InheritedProviderScope$(T)))();
+    var _DependencyOfT = () => (_DependencyOfT = dart.constFn(provider._Dependency$(T)))();
+    var TTobool = () => (TTobool = dart.constFn(dart.fnType(core.bool, [T])))();
+    var ListOfTTobool = () => (ListOfTTobool = dart.constFn(core.List$(TTobool())))();
+    class _InheritedProviderScopeElement extends framework.InheritedElement {
+      get [_delegateState]() {
+        let t0;
+        t0 = this[___InheritedProviderScopeElement__delegateState];
+        return t0 == null ? dart.throw(new _internal.LateError.fieldNI("_delegateState")) : t0;
+      }
+      set [_delegateState](t0) {
+        this[___InheritedProviderScopeElement__delegateState] = t0;
+      }
+      get [_debugId]() {
+        let t1;
+        t1 = this[___InheritedProviderScopeElement__debugId];
+        return t1 == null ? dart.throw(new _internal.LateError.fieldNI("_debugId")) : t1;
+      }
+      set [_debugId](t1) {
+        this[___InheritedProviderScopeElement__debugId] = t1;
+      }
+      mount(parent, newSlot) {
+        let t2;
+        if (true) {
+          this[_debugId] = dart.str((t2 = provider._InheritedProviderScopeElement._nextProviderId, provider._InheritedProviderScopeElement._nextProviderId = t2 + 1, t2));
+          provider.ProviderBinding.debugInstance.providerDetails = (() => {
+            let t2 = new (T$.IdentityMapOfString$ProviderNode()).new();
+            for (let t3 of provider.ProviderBinding.debugInstance.providerDetails[$entries])
+              t2[$_set](t3.key, t3.value);
+            t2[$_set](this[_debugId], new provider.ProviderNode.new({id: this[_debugId], childrenNodeIds: C[11] || CT.C11, type: this.widget.debugType, element: this}));
+            return t2;
+          })();
+        }
+        super.mount(parent, newSlot);
+      }
+      get widget() {
+        return _InheritedProviderScopeOfT().as(super.widget);
+      }
+      reassemble() {
+        super.reassemble();
+        let value = this[_delegateState].hasValue ? this[_delegateState].value : null;
+        if (reassemble_handler.ReassembleHandler.is(value)) {
+          value.reassemble();
+        }
+      }
+      updateDependencies(dependent, aspect) {
+        let t4;
+        let dependencies = this.getDependencies(dependent);
+        if (dependencies != null && !_DependencyOfT().is(dependencies)) {
+          return;
+        }
+        if (TTobool().is(aspect)) {
+          let selectorDependency = _DependencyOfT().as((t4 = dependencies, t4 == null ? new (_DependencyOfT()).new() : t4));
+          if (selectorDependency.shouldClearSelectors) {
+            selectorDependency.shouldClearSelectors = false;
+            ListOfTTobool().as(selectorDependency.selectors)[$clear]();
+          }
+          if (selectorDependency.shouldClearMutationScheduled === false) {
+            selectorDependency.shouldClearMutationScheduled = true;
+            dart.nullCheck(binding.SchedulerBinding.instance).addPostFrameCallback(dart.fn(_ => {
+              let t4;
+              t4 = selectorDependency;
+              (() => {
+                t4.shouldClearMutationScheduled = false;
+                t4.shouldClearSelectors = true;
+                return t4;
+              })();
+            }, T$.DurationTovoid()));
+          }
+          ListOfTTobool().as(selectorDependency.selectors)[$add](aspect);
+          this.setDependencies(dependent, selectorDependency);
+        } else {
+          this.setDependencies(dependent, C[12] || CT.C12);
+        }
+      }
+      notifyDependent(oldWidget, dependent) {
+        framework.InheritedWidget.as(oldWidget);
+        let dependencies = this.getDependencies(dependent);
+        if (true) {
+          provider.ProviderBinding.debugInstance.providerDidChange(this[_debugId]);
+        }
+        let shouldNotify = false;
+        if (dependencies != null) {
+          if (_DependencyOfT().is(dependencies)) {
+            if (dependent.dirty) {
+              return;
+            }
+            for (let updateShouldNotify of ListOfTTobool().as(dependencies.selectors)) {
+              try {
+                if (!dart.fn(() => {
+                  provider._debugIsSelecting = true;
+                  return true;
+                }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 425, 20, "() {\n              _debugIsSelecting = true;\n              return true;\n            }()");
+                shouldNotify = updateShouldNotify(this.value);
+              } finally {
+                if (!dart.fn(() => {
+                  provider._debugIsSelecting = false;
+                  return true;
+                }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 431, 20, "() {\n              _debugIsSelecting = false;\n              return true;\n            }()");
+              }
+              if (shouldNotify) {
+                break;
+              }
+            }
+          } else {
+            shouldNotify = true;
+          }
+        }
+        if (shouldNotify) {
+          dependent.didChangeDependencies();
+        }
+      }
+      performRebuild() {
+        let t4;
+        if (this[_firstBuild]) {
+          this[_firstBuild] = false;
+          this[_delegateState] = (t4 = this.widget.owner[_delegate].createState(), (() => {
+            t4.element = this;
+            return t4;
+          })());
+        }
+        super.performRebuild();
+      }
+      update(newWidget) {
+        _InheritedProviderScopeOfT().as(newWidget);
+        if (!dart.fn(() => {
+          if (!this.widget.owner[_delegate][$runtimeType]._equals(newWidget.owner[_delegate][$runtimeType])) {
+            dart.throw(new core.StateError.new("Rebuilt " + dart.str(this.widget) + " using a different constructor.\n      \nThis is likely a mistake and is unsupported.\nIf you're in this situation, consider passing a `key` unique to each individual constructor.\n"));
+          }
+          return true;
+        }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 461, 12, "() {\n      if (widget.owner._delegate.runtimeType !=\n          newWidget.owner._delegate.runtimeType) {\n        throw StateError('''\nRebuilt $widget using a different constructor.\n      \nThis is likely a mistake and is unsupported.\nIf you're in this situation, consider passing a `key` unique to each individual constructor.\n''');\n      }\n      return true;\n    }()");
+        this[_isBuildFromExternalSources] = true;
+        this[_updatedShouldNotify] = this[_delegateState].willUpdateDelegate(newWidget.owner[_delegate]);
+        super.update(newWidget);
+        this[_updatedShouldNotify] = false;
+      }
+      updated(oldWidget) {
+        framework.InheritedWidget.as(oldWidget);
+        super.updated(oldWidget);
+        if (this[_updatedShouldNotify]) {
+          this.notifyClients(oldWidget);
+        }
+      }
+      didChangeDependencies() {
+        this[_isBuildFromExternalSources] = true;
+        super.didChangeDependencies();
+      }
+      build() {
+        if (this.widget.owner[_lazy] === false) {
+          this.value;
+        }
+        this[_delegateState].build({isBuildFromExternalSources: this[_isBuildFromExternalSources]});
+        this[_isBuildFromExternalSources] = false;
+        if (this[_shouldNotifyDependents]) {
+          this[_shouldNotifyDependents] = false;
+          this.notifyClients(this.widget);
+        }
+        return super.build();
+      }
+      unmount() {
+        let t6;
+        this[_delegateState].dispose();
+        if (true) {
+          provider.ProviderBinding.debugInstance.providerDetails = (t6 = (() => {
+            let t4 = new (T$.IdentityMapOfString$ProviderNode()).new();
+            for (let t5 of provider.ProviderBinding.debugInstance.providerDetails[$entries])
+              t4[$_set](t5.key, t5.value);
+            return t4;
+          })(), (() => {
+            t6[$remove](this[_debugId]);
+            return t6;
+          })());
+        }
+        super.unmount();
+      }
+      get hasValue() {
+        return this[_delegateState].hasValue;
+      }
+      markNeedsNotifyDependents() {
+        if (!this[_isNotifyDependentsEnabled]) {
+          return;
+        }
+        this.markNeedsBuild();
+        this[_shouldNotifyDependents] = true;
+      }
+      [_debugSetInheritedLock](value) {
+        if (!dart.fn(() => {
+          this[_debugInheritLocked] = value;
+          return true;
+        }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 536, 12, "() {\n      _debugInheritLocked = value;\n      return true;\n    }()");
+        return true;
+      }
+      get value() {
+        return this[_delegateState].value;
+      }
+      dependOnInheritedElement(ancestor, opts) {
+        let aspect = opts && 'aspect' in opts ? opts.aspect : null;
+        if (!dart.fn(() => {
+          if (this[_debugInheritLocked]) {
+            dart.throw(new assertions.FlutterError.fromParts(T$.JSArrayOfDiagnosticsNode().of([new assertions.ErrorSummary.new("Tried to listen to an InheritedWidget " + "in a life-cycle that will never be called again."), new assertions.ErrorDescription.new("This error typically happens when calling Provider.of with `listen` to `true`,\nin a situation where listening to the provider doesn't make sense, such as:\n- initState of a StatefulWidget\n- the \"create\" callback of a provider\n\nThis is undesired because these life-cycles are called only once in the\nlifetime of a widget. As such, while `listen` is `true`, the widget has\nno mean to handle the update scenario.\n\nTo fix, consider:\n- passing `listen: false` to `Provider.of`\n- use a life-cycle that handles updates (like didChangeDependencies)\n- use a provider that handles updates (like ProxyProvider).\n")])));
+          }
+          return true;
+        }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 551, 12, "() {\n      if (_debugInheritLocked) {\n        throw FlutterError.fromParts(\n          <DiagnosticsNode>[\n            ErrorSummary(\n              'Tried to listen to an InheritedWidget '\n              'in a life-cycle that will never be called again.',\n            ),\n            ErrorDescription('''\nThis error typically happens when calling Provider.of with `listen` to `true`,\nin a situation where listening to the provider doesn't make sense, such as:\n- initState of a StatefulWidget\n- the \"create\" callback of a provider\n\nThis is undesired because these life-cycles are called only once in the\nlifetime of a widget. As such, while `listen` is `true`, the widget has\nno mean to handle the update scenario.\n\nTo fix, consider:\n- passing `listen: false` to `Provider.of`\n- use a life-cycle that handles updates (like didChangeDependencies)\n- use a provider that handles updates (like ProxyProvider).\n'''),\n          ],\n        );\n      }\n      return true;\n    }()");
+        return super.dependOnInheritedElement(ancestor, {aspect: aspect});
+      }
+      debugFillProperties(properties) {
+        super.debugFillProperties(properties);
+        this[_delegateState].debugFillProperties(properties);
+      }
     }
-    get shade400() {
-      return dart.nullCheck(this._get(400));
+    (_InheritedProviderScopeElement.new = function(widget) {
+      this[_shouldNotifyDependents] = false;
+      this[_debugInheritLocked] = false;
+      this[_isNotifyDependentsEnabled] = true;
+      this[_firstBuild] = true;
+      this[_updatedShouldNotify] = false;
+      this[_isBuildFromExternalSources] = false;
+      this[___InheritedProviderScopeElement__delegateState] = null;
+      this[___InheritedProviderScopeElement__debugId] = null;
+      _InheritedProviderScopeElement.__proto__.new.call(this, widget);
+      ;
+    }).prototype = _InheritedProviderScopeElement.prototype;
+    dart.addTypeTests(_InheritedProviderScopeElement);
+    _InheritedProviderScopeElement.prototype[_is__InheritedProviderScopeElement_default] = true;
+    dart.addTypeCaches(_InheritedProviderScopeElement);
+    _InheritedProviderScopeElement[dart.implements] = () => [provider.InheritedContext$(T)];
+    dart.setMethodSignature(_InheritedProviderScopeElement, () => ({
+      __proto__: dart.getMethods(_InheritedProviderScopeElement.__proto__),
+      mount: dart.fnType(dart.void, [dart.nullable(framework.Element), dart.dynamic]),
+      markNeedsNotifyDependents: dart.fnType(dart.void, []),
+      [_debugSetInheritedLock]: dart.fnType(core.bool, [core.bool])
+    }));
+    dart.setGetterSignature(_InheritedProviderScopeElement, () => ({
+      __proto__: dart.getGetters(_InheritedProviderScopeElement.__proto__),
+      [_delegateState]: provider._DelegateState$(T, provider._Delegate$(T)),
+      [_debugId]: core.String,
+      widget: provider._InheritedProviderScope$(T),
+      hasValue: core.bool,
+      value: T
+    }));
+    dart.setSetterSignature(_InheritedProviderScopeElement, () => ({
+      __proto__: dart.getSetters(_InheritedProviderScopeElement.__proto__),
+      [_delegateState]: provider._DelegateState$(T, provider._Delegate$(T)),
+      [_debugId]: core.String
+    }));
+    dart.setLibraryUri(_InheritedProviderScopeElement, I[0]);
+    dart.setFieldSignature(_InheritedProviderScopeElement, () => ({
+      __proto__: dart.getFields(_InheritedProviderScopeElement.__proto__),
+      [_shouldNotifyDependents]: dart.fieldType(core.bool),
+      [_debugInheritLocked]: dart.fieldType(core.bool),
+      [_isNotifyDependentsEnabled]: dart.fieldType(core.bool),
+      [_firstBuild]: dart.fieldType(core.bool),
+      [_updatedShouldNotify]: dart.fieldType(core.bool),
+      [_isBuildFromExternalSources]: dart.fieldType(core.bool),
+      [___InheritedProviderScopeElement__delegateState]: dart.fieldType(dart.nullable(provider._DelegateState$(T, provider._Delegate$(T)))),
+      [___InheritedProviderScopeElement__debugId]: dart.fieldType(dart.nullable(core.String))
+    }));
+    return _InheritedProviderScopeElement;
+  });
+  provider._InheritedProviderScopeElement = provider._InheritedProviderScopeElement$();
+  dart.defineLazy(provider._InheritedProviderScopeElement, {
+    /*provider._InheritedProviderScopeElement._nextProviderId*/get _nextProviderId() {
+      return 0;
+    },
+    set _nextProviderId(_) {}
+  }, false);
+  dart.addTypeTests(provider._InheritedProviderScopeElement, _is__InheritedProviderScopeElement_default);
+  const _is__Delegate_default = Symbol('_is__Delegate_default');
+  provider._Delegate$ = dart.generic(T => {
+    class _Delegate extends core.Object {
+      debugFillProperties(properties) {
+      }
     }
-    get shade700() {
-      return dart.nullCheck(this._get(700));
+    (_Delegate.new = function() {
+      ;
+    }).prototype = _Delegate.prototype;
+    dart.addTypeTests(_Delegate);
+    _Delegate.prototype[_is__Delegate_default] = true;
+    dart.addTypeCaches(_Delegate);
+    dart.setMethodSignature(_Delegate, () => ({
+      __proto__: dart.getMethods(_Delegate.__proto__),
+      debugFillProperties: dart.fnType(dart.void, [diagnostics.DiagnosticPropertiesBuilder])
+    }));
+    dart.setLibraryUri(_Delegate, I[0]);
+    return _Delegate;
+  });
+  provider._Delegate = provider._Delegate$();
+  dart.addTypeTests(provider._Delegate, _is__Delegate_default);
+  var element = dart.privateName(provider, "_DelegateState.element");
+  const _is__DelegateState_default = Symbol('_is__DelegateState_default');
+  provider._DelegateState$ = dart.generic((T, D) => {
+    var _InheritedProviderScopeElementOfT = () => (_InheritedProviderScopeElementOfT = dart.constFn(provider._InheritedProviderScopeElement$(T)))();
+    var _InheritedProviderScopeElementNOfT = () => (_InheritedProviderScopeElementNOfT = dart.constFn(dart.nullable(_InheritedProviderScopeElementOfT())))();
+    class _DelegateState extends core.Object {
+      get element() {
+        return this[element];
+      }
+      set element(value) {
+        this[element] = _InheritedProviderScopeElementNOfT().as(value);
+      }
+      get delegate() {
+        return D.as(dart.nullCheck(this.element).widget.owner[_delegate]);
+      }
+      debugSetInheritedLock(value) {
+        return dart.nullCheck(this.element)[_debugSetInheritedLock](value);
+      }
+      willUpdateDelegate(newDelegate) {
+        D.as(newDelegate);
+        return false;
+      }
+      dispose() {
+      }
+      debugFillProperties(properties) {
+      }
+      build(opts) {
+        let isBuildFromExternalSources = opts && 'isBuildFromExternalSources' in opts ? opts.isBuildFromExternalSources : null;
+      }
+    }
+    (_DelegateState.new = function() {
+      this[element] = null;
+      ;
+    }).prototype = _DelegateState.prototype;
+    dart.addTypeTests(_DelegateState);
+    _DelegateState.prototype[_is__DelegateState_default] = true;
+    dart.addTypeCaches(_DelegateState);
+    dart.setMethodSignature(_DelegateState, () => ({
+      __proto__: dart.getMethods(_DelegateState.__proto__),
+      debugSetInheritedLock: dart.fnType(core.bool, [core.bool]),
+      willUpdateDelegate: dart.fnType(core.bool, [dart.nullable(core.Object)]),
+      dispose: dart.fnType(dart.void, []),
+      debugFillProperties: dart.fnType(dart.void, [diagnostics.DiagnosticPropertiesBuilder]),
+      build: dart.fnType(dart.void, [], {}, {isBuildFromExternalSources: core.bool})
+    }));
+    dart.setGetterSignature(_DelegateState, () => ({
+      __proto__: dart.getGetters(_DelegateState.__proto__),
+      delegate: D
+    }));
+    dart.setLibraryUri(_DelegateState, I[0]);
+    dart.setFieldSignature(_DelegateState, () => ({
+      __proto__: dart.getFields(_DelegateState.__proto__),
+      element: dart.fieldType(dart.nullable(provider._InheritedProviderScopeElement$(T)))
+    }));
+    return _DelegateState;
+  });
+  provider._DelegateState = provider._DelegateState$();
+  dart.addTypeTests(provider._DelegateState, _is__DelegateState_default);
+  var _updateShouldNotify = dart.privateName(provider, "_updateShouldNotify");
+  const _is__CreateInheritedProvider_default = Symbol('_is__CreateInheritedProvider_default');
+  provider._CreateInheritedProvider$ = dart.generic(T => {
+    var _CreateInheritedProviderStateOfT = () => (_CreateInheritedProviderStateOfT = dart.constFn(provider._CreateInheritedProviderState$(T)))();
+    class _CreateInheritedProvider extends provider._Delegate$(T) {
+      createState() {
+        return new (_CreateInheritedProviderStateOfT()).new();
+      }
+    }
+    (_CreateInheritedProvider.new = function(opts) {
+      let create = opts && 'create' in opts ? opts.create : null;
+      let update = opts && 'update' in opts ? opts.update : null;
+      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
+      let debugCheckInvalidValueType = opts && 'debugCheckInvalidValueType' in opts ? opts.debugCheckInvalidValueType : null;
+      let startListening = opts && 'startListening' in opts ? opts.startListening : null;
+      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
+      this.create = create;
+      this.update = update;
+      this.debugCheckInvalidValueType = debugCheckInvalidValueType;
+      this.startListening = startListening;
+      this.dispose = dispose;
+      if (!(create != null || update != null)) dart.assertFailed(null, I[2], 628, 16, "create != null || update != null");
+      this[_updateShouldNotify] = updateShouldNotify;
+      ;
+    }).prototype = _CreateInheritedProvider.prototype;
+    dart.addTypeTests(_CreateInheritedProvider);
+    _CreateInheritedProvider.prototype[_is__CreateInheritedProvider_default] = true;
+    dart.addTypeCaches(_CreateInheritedProvider);
+    dart.setMethodSignature(_CreateInheritedProvider, () => ({
+      __proto__: dart.getMethods(_CreateInheritedProvider.__proto__),
+      createState: dart.fnType(provider._CreateInheritedProviderState$(T), [])
+    }));
+    dart.setLibraryUri(_CreateInheritedProvider, I[0]);
+    dart.setFieldSignature(_CreateInheritedProvider, () => ({
+      __proto__: dart.getFields(_CreateInheritedProvider.__proto__),
+      create: dart.finalFieldType(dart.nullable(dart.fnType(T, [framework.BuildContext]))),
+      update: dart.finalFieldType(dart.nullable(dart.fnType(T, [framework.BuildContext, dart.nullable(T)]))),
+      [_updateShouldNotify]: dart.finalFieldType(dart.nullable(dart.fnType(core.bool, [T, T]))),
+      debugCheckInvalidValueType: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [T]))),
+      startListening: dart.finalFieldType(dart.nullable(dart.fnType(dart.fnType(dart.void, []), [provider.InheritedContext$(T), T]))),
+      dispose: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [framework.BuildContext, T])))
+    }));
+    return _CreateInheritedProvider;
+  });
+  provider._CreateInheritedProvider = provider._CreateInheritedProvider$();
+  dart.addTypeTests(provider._CreateInheritedProvider, _is__CreateInheritedProvider_default);
+  var _removeListener = dart.privateName(provider, "_removeListener");
+  var _didInitValue = dart.privateName(provider, "_didInitValue");
+  var _value = dart.privateName(provider, "_value");
+  var _previousWidget = dart.privateName(provider, "_previousWidget");
+  const _is__CreateInheritedProviderState_default = Symbol('_is__CreateInheritedProviderState_default');
+  provider._CreateInheritedProviderState$ = dart.generic(T => {
+    var TTovoid = () => (TTovoid = dart.constFn(dart.fnType(dart.void, [T])))();
+    var TToNvoid = () => (TToNvoid = dart.constFn(dart.nullable(TTovoid())))();
+    var TN = () => (TN = dart.constFn(dart.nullable(T)))();
+    var BuildContextAndTNToT = () => (BuildContextAndTNToT = dart.constFn(dart.fnType(T, [framework.BuildContext, TN()])))();
+    var BuildContextAndTNToNT = () => (BuildContextAndTNToNT = dart.constFn(dart.nullable(BuildContextAndTNToT())))();
+    var InheritedContextOfT = () => (InheritedContextOfT = dart.constFn(provider.InheritedContext$(T)))();
+    var InheritedContextOfTAndTToFn = () => (InheritedContextOfTAndTToFn = dart.constFn(dart.fnType(T$.VoidTovoid(), [InheritedContextOfT(), T])))();
+    var InheritedContextOfTAndTToNFn = () => (InheritedContextOfTAndTToNFn = dart.constFn(dart.nullable(InheritedContextOfTAndTToFn())))();
+    var BuildContextAndTTovoid = () => (BuildContextAndTTovoid = dart.constFn(dart.fnType(dart.void, [framework.BuildContext, T])))();
+    var BuildContextAndTToNvoid = () => (BuildContextAndTToNvoid = dart.constFn(dart.nullable(BuildContextAndTTovoid())))();
+    var DiagnosticsPropertyOfT = () => (DiagnosticsPropertyOfT = dart.constFn(diagnostics.DiagnosticsProperty$(T)))();
+    var TAndTTobool = () => (TAndTTobool = dart.constFn(dart.fnType(core.bool, [T, T])))();
+    var TAndTToNbool = () => (TAndTToNbool = dart.constFn(dart.nullable(TAndTTobool())))();
+    class _CreateInheritedProviderState extends provider._DelegateState$(T, provider._CreateInheritedProvider$(T)) {
+      get value() {
+        let t6;
+        if (this[_didInitValue] && !T.is(this[_value])) {
+          dart.throw(new core.StateError.new("Tried to read a provider that threw during the creation of its value.\n" + "The exception occurred during the creation of type " + dart.str(dart.wrapType(T)) + "."));
+        }
+        let _debugPreviousIsInInheritedProviderCreate = null;
+        let _debugPreviousIsInInheritedProviderUpdate = null;
+        if (!dart.fn(() => {
+          _debugPreviousIsInInheritedProviderCreate = provider.debugIsInInheritedProviderCreate;
+          _debugPreviousIsInInheritedProviderUpdate = provider.debugIsInInheritedProviderUpdate;
+          return true;
+        }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 669, 12, "() {\n      _debugPreviousIsInInheritedProviderCreate =\n          debugIsInInheritedProviderCreate;\n      _debugPreviousIsInInheritedProviderUpdate =\n          debugIsInInheritedProviderUpdate;\n      return true;\n    }()");
+        if (!this[_didInitValue]) {
+          this[_didInitValue] = true;
+          if (this.delegate.create != null) {
+            if (!this.debugSetInheritedLock(true)) dart.assertFailed(null, I[2], 680, 16, "debugSetInheritedLock(true)");
+            try {
+              if (!dart.fn(() => {
+                provider.debugIsInInheritedProviderCreate = true;
+                provider.debugIsInInheritedProviderUpdate = false;
+                return true;
+              }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 682, 18, "() {\n            debugIsInInheritedProviderCreate = true;\n            debugIsInInheritedProviderUpdate = false;\n            return true;\n          }()");
+              this[_value] = dart.nullCheck(this.delegate.create)(dart.nullCheck(this.element));
+            } finally {
+              if (!dart.fn(() => {
+                provider.debugIsInInheritedProviderCreate = dart.nullCheck(_debugPreviousIsInInheritedProviderCreate);
+                provider.debugIsInInheritedProviderUpdate = dart.nullCheck(_debugPreviousIsInInheritedProviderUpdate);
+                return true;
+              }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 689, 18, "() {\n            debugIsInInheritedProviderCreate =\n                _debugPreviousIsInInheritedProviderCreate!;\n            debugIsInInheritedProviderUpdate =\n                _debugPreviousIsInInheritedProviderUpdate!;\n            return true;\n          }()");
+            }
+            if (!this.debugSetInheritedLock(false)) dart.assertFailed(null, I[2], 697, 16, "debugSetInheritedLock(false)");
+            if (!dart.fn(() => {
+              let t6;
+              t6 = TToNvoid().as(this.delegate.debugCheckInvalidValueType);
+              t6 == null ? null : t6(T.as(this[_value]));
+              return true;
+            }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 699, 16, "() {\n          delegate.debugCheckInvalidValueType?.call(_value as T);\n          return true;\n        }()");
+          }
+          if (BuildContextAndTNToNT().as(this.delegate.update) != null) {
+            try {
+              if (!dart.fn(() => {
+                provider.debugIsInInheritedProviderCreate = false;
+                provider.debugIsInInheritedProviderUpdate = true;
+                return true;
+              }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 706, 18, "() {\n            debugIsInInheritedProviderCreate = false;\n            debugIsInInheritedProviderUpdate = true;\n            return true;\n          }()");
+              this[_value] = dart.nullCheck(BuildContextAndTNToNT().as(this.delegate.update))(dart.nullCheck(this.element), this[_value]);
+            } finally {
+              if (!dart.fn(() => {
+                provider.debugIsInInheritedProviderCreate = dart.nullCheck(_debugPreviousIsInInheritedProviderCreate);
+                provider.debugIsInInheritedProviderUpdate = dart.nullCheck(_debugPreviousIsInInheritedProviderUpdate);
+                return true;
+              }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 713, 18, "() {\n            debugIsInInheritedProviderCreate =\n                _debugPreviousIsInInheritedProviderCreate!;\n            debugIsInInheritedProviderUpdate =\n                _debugPreviousIsInInheritedProviderUpdate!;\n            return true;\n          }()");
+            }
+            if (!dart.fn(() => {
+              let t6;
+              t6 = TToNvoid().as(this.delegate.debugCheckInvalidValueType);
+              t6 == null ? null : t6(T.as(this[_value]));
+              return true;
+            }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 722, 16, "() {\n          delegate.debugCheckInvalidValueType?.call(_value as T);\n          return true;\n        }()");
+          }
+        }
+        dart.nullCheck(this.element)[_isNotifyDependentsEnabled] = false;
+        this[_removeListener] == null ? this[_removeListener] = (t6 = InheritedContextOfTAndTToNFn().as(this.delegate.startListening), t6 == null ? null : t6(dart.nullCheck(this.element), T.as(this[_value]))) : null;
+        dart.nullCheck(this.element)[_isNotifyDependentsEnabled] = true;
+        if (!(InheritedContextOfTAndTToNFn().as(this.delegate.startListening) == null || this[_removeListener] != null)) dart.assertFailed(null, I[2], 732, 12, "delegate.startListening == null || _removeListener != null");
+        return T.as(this[_value]);
+      }
+      dispose() {
+        let t6, t6$;
+        super.dispose();
+        t6 = this[_removeListener];
+        t6 == null ? null : t6();
+        if (this[_didInitValue]) {
+          t6$ = BuildContextAndTToNvoid().as(this.delegate.dispose);
+          t6$ == null ? null : t6$(dart.nullCheck(this.element), T.as(this[_value]));
+        }
+      }
+      debugFillProperties(properties) {
+        let t6;
+        super.debugFillProperties(properties);
+        if (this[_didInitValue]) {
+          t6 = properties;
+          (() => {
+            t6.add(new (DiagnosticsPropertyOfT()).new("value", this.value));
+            t6.add(new diagnostics.FlagProperty.new("", {value: this[_removeListener] != null, defaultValue: false, ifTrue: "listening to value"}));
+            return t6;
+          })();
+        } else {
+          properties.add(new diagnostics.FlagProperty.new("value", {value: true, showName: true, ifTrue: "<not yet loaded>"}));
+        }
+      }
+      build(opts) {
+        let t7, t6;
+        let isBuildFromExternalSources = opts && 'isBuildFromExternalSources' in opts ? opts.isBuildFromExternalSources : null;
+        let shouldNotify = false;
+        if (isBuildFromExternalSources && this[_didInitValue] && BuildContextAndTNToNT().as(this.delegate.update) != null) {
+          let previousValue = this[_value];
+          let _debugPreviousIsInInheritedProviderCreate = null;
+          let _debugPreviousIsInInheritedProviderUpdate = null;
+          if (!dart.fn(() => {
+            _debugPreviousIsInInheritedProviderCreate = provider.debugIsInInheritedProviderCreate;
+            _debugPreviousIsInInheritedProviderUpdate = provider.debugIsInInheritedProviderUpdate;
+            return true;
+          }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 783, 14, "() {\n        _debugPreviousIsInInheritedProviderCreate =\n            debugIsInInheritedProviderCreate;\n        _debugPreviousIsInInheritedProviderUpdate =\n            debugIsInInheritedProviderUpdate;\n        return true;\n      }()");
+          try {
+            if (!dart.fn(() => {
+              provider.debugIsInInheritedProviderCreate = false;
+              provider.debugIsInInheritedProviderUpdate = true;
+              return true;
+            }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 791, 16, "() {\n          debugIsInInheritedProviderCreate = false;\n          debugIsInInheritedProviderUpdate = true;\n          return true;\n        }()");
+            this[_value] = dart.nullCheck(BuildContextAndTNToNT().as(this.delegate.update))(dart.nullCheck(this.element), T.as(this[_value]));
+          } finally {
+            if (!dart.fn(() => {
+              provider.debugIsInInheritedProviderCreate = dart.nullCheck(_debugPreviousIsInInheritedProviderCreate);
+              provider.debugIsInInheritedProviderUpdate = dart.nullCheck(_debugPreviousIsInInheritedProviderUpdate);
+              return true;
+            }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 798, 16, "() {\n          debugIsInInheritedProviderCreate =\n              _debugPreviousIsInInheritedProviderCreate!;\n          debugIsInInheritedProviderUpdate =\n              _debugPreviousIsInInheritedProviderUpdate!;\n          return true;\n        }()");
+          }
+          if (TAndTToNbool().as(this.delegate[_updateShouldNotify]) != null) {
+            shouldNotify = dart.nullCheck(TAndTToNbool().as(this.delegate[_updateShouldNotify]))(T.as(previousValue), T.as(this[_value]));
+          } else {
+            shouldNotify = !dart.equals(this[_value], previousValue);
+          }
+          if (shouldNotify) {
+            if (!dart.fn(() => {
+              let t6;
+              t6 = TToNvoid().as(this.delegate.debugCheckInvalidValueType);
+              t6 == null ? null : t6(T.as(this[_value]));
+              return true;
+            }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 817, 16, "() {\n          delegate.debugCheckInvalidValueType?.call(_value as T);\n          return true;\n        }()");
+            if (this[_removeListener] != null) {
+              dart.nullCheck(this[_removeListener])();
+              this[_removeListener] = null;
+            }
+            t6 = this[_previousWidget];
+            t6 == null ? null : (t7 = BuildContextAndTToNvoid().as(t6.dispose), t7 == null ? null : t7(dart.nullCheck(this.element), T.as(previousValue)));
+          }
+        }
+        if (shouldNotify) {
+          dart.nullCheck(this.element)[_shouldNotifyDependents] = true;
+        }
+        this[_previousWidget] = this.delegate;
+        return super.build({isBuildFromExternalSources: isBuildFromExternalSources});
+      }
+      get hasValue() {
+        return this[_didInitValue];
+      }
+    }
+    (_CreateInheritedProviderState.new = function() {
+      this[_removeListener] = null;
+      this[_didInitValue] = false;
+      this[_value] = null;
+      this[_previousWidget] = null;
+      _CreateInheritedProviderState.__proto__.new.call(this);
+      ;
+    }).prototype = _CreateInheritedProviderState.prototype;
+    dart.addTypeTests(_CreateInheritedProviderState);
+    _CreateInheritedProviderState.prototype[_is__CreateInheritedProviderState_default] = true;
+    dart.addTypeCaches(_CreateInheritedProviderState);
+    dart.setGetterSignature(_CreateInheritedProviderState, () => ({
+      __proto__: dart.getGetters(_CreateInheritedProviderState.__proto__),
+      value: T,
+      hasValue: core.bool
+    }));
+    dart.setLibraryUri(_CreateInheritedProviderState, I[0]);
+    dart.setFieldSignature(_CreateInheritedProviderState, () => ({
+      __proto__: dart.getFields(_CreateInheritedProviderState.__proto__),
+      [_removeListener]: dart.fieldType(dart.nullable(dart.fnType(dart.void, []))),
+      [_didInitValue]: dart.fieldType(core.bool),
+      [_value]: dart.fieldType(dart.nullable(T)),
+      [_previousWidget]: dart.fieldType(dart.nullable(provider._CreateInheritedProvider$(T)))
+    }));
+    return _CreateInheritedProviderState;
+  });
+  provider._CreateInheritedProviderState = provider._CreateInheritedProviderState$();
+  dart.addTypeTests(provider._CreateInheritedProviderState, _is__CreateInheritedProviderState_default);
+  const _is__ValueInheritedProvider_default = Symbol('_is__ValueInheritedProvider_default');
+  provider._ValueInheritedProvider$ = dart.generic(T => {
+    var DiagnosticsPropertyOfT = () => (DiagnosticsPropertyOfT = dart.constFn(diagnostics.DiagnosticsProperty$(T)))();
+    var _ValueInheritedProviderStateOfT = () => (_ValueInheritedProviderStateOfT = dart.constFn(provider._ValueInheritedProviderState$(T)))();
+    class _ValueInheritedProvider extends provider._Delegate$(T) {
+      debugFillProperties(properties) {
+        super.debugFillProperties(properties);
+        properties.add(new (DiagnosticsPropertyOfT()).new("value", this.value));
+      }
+      createState() {
+        return new (_ValueInheritedProviderStateOfT()).new();
+      }
+    }
+    (_ValueInheritedProvider.new = function(opts) {
+      let value = opts && 'value' in opts ? opts.value : null;
+      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
+      let startListening = opts && 'startListening' in opts ? opts.startListening : null;
+      this.value = value;
+      this.startListening = startListening;
+      this[_updateShouldNotify] = updateShouldNotify;
+      ;
+    }).prototype = _ValueInheritedProvider.prototype;
+    dart.addTypeTests(_ValueInheritedProvider);
+    _ValueInheritedProvider.prototype[_is__ValueInheritedProvider_default] = true;
+    dart.addTypeCaches(_ValueInheritedProvider);
+    dart.setMethodSignature(_ValueInheritedProvider, () => ({
+      __proto__: dart.getMethods(_ValueInheritedProvider.__proto__),
+      createState: dart.fnType(provider._ValueInheritedProviderState$(T), [])
+    }));
+    dart.setLibraryUri(_ValueInheritedProvider, I[0]);
+    dart.setFieldSignature(_ValueInheritedProvider, () => ({
+      __proto__: dart.getFields(_ValueInheritedProvider.__proto__),
+      value: dart.finalFieldType(T),
+      [_updateShouldNotify]: dart.finalFieldType(dart.nullable(dart.fnType(core.bool, [T, T]))),
+      startListening: dart.finalFieldType(dart.nullable(dart.fnType(dart.fnType(dart.void, []), [provider.InheritedContext$(T), T])))
+    }));
+    return _ValueInheritedProvider;
+  });
+  provider._ValueInheritedProvider = provider._ValueInheritedProvider$();
+  dart.addTypeTests(provider._ValueInheritedProvider, _is__ValueInheritedProvider_default);
+  const _is__ValueInheritedProviderState_default = Symbol('_is__ValueInheritedProviderState_default');
+  provider._ValueInheritedProviderState$ = dart.generic(T => {
+    var InheritedContextOfT = () => (InheritedContextOfT = dart.constFn(provider.InheritedContext$(T)))();
+    var InheritedContextOfTAndTToFn = () => (InheritedContextOfTAndTToFn = dart.constFn(dart.fnType(T$.VoidTovoid(), [InheritedContextOfT(), T])))();
+    var InheritedContextOfTAndTToNFn = () => (InheritedContextOfTAndTToNFn = dart.constFn(dart.nullable(InheritedContextOfTAndTToFn())))();
+    var _ValueInheritedProviderOfT = () => (_ValueInheritedProviderOfT = dart.constFn(provider._ValueInheritedProvider$(T)))();
+    var TAndTTobool = () => (TAndTTobool = dart.constFn(dart.fnType(core.bool, [T, T])))();
+    var TAndTToNbool = () => (TAndTToNbool = dart.constFn(dart.nullable(TAndTTobool())))();
+    class _ValueInheritedProviderState extends provider._DelegateState$(T, provider._ValueInheritedProvider$(T)) {
+      get value() {
+        let t6;
+        dart.nullCheck(this.element)[_isNotifyDependentsEnabled] = false;
+        this[_removeListener] == null ? this[_removeListener] = (t6 = InheritedContextOfTAndTToNFn().as(this.delegate.startListening), t6 == null ? null : t6(dart.nullCheck(this.element), this.delegate.value)) : null;
+        dart.nullCheck(this.element)[_isNotifyDependentsEnabled] = true;
+        if (!(InheritedContextOfTAndTToNFn().as(this.delegate.startListening) == null || this[_removeListener] != null)) dart.assertFailed(null, I[2], 872, 12, "delegate.startListening == null || _removeListener != null");
+        return this.delegate.value;
+      }
+      willUpdateDelegate(newDelegate) {
+        _ValueInheritedProviderOfT().as(newDelegate);
+        let shouldNotify = null;
+        if (TAndTToNbool().as(this.delegate[_updateShouldNotify]) != null) {
+          shouldNotify = dart.nullCheck(TAndTToNbool().as(this.delegate[_updateShouldNotify]))(this.delegate.value, newDelegate.value);
+        } else {
+          shouldNotify = !dart.equals(newDelegate.value, this.delegate.value);
+        }
+        if (shouldNotify && this[_removeListener] != null) {
+          dart.nullCheck(this[_removeListener])();
+          this[_removeListener] = null;
+        }
+        return shouldNotify;
+      }
+      dispose() {
+        let t6;
+        super.dispose();
+        t6 = this[_removeListener];
+        t6 == null ? null : t6();
+      }
+      debugFillProperties(properties) {
+        super.debugFillProperties(properties);
+        properties.add(new diagnostics.FlagProperty.new("", {value: this[_removeListener] != null, defaultValue: false, ifTrue: "listening to value"}));
+      }
+      get hasValue() {
+        return true;
+      }
+    }
+    (_ValueInheritedProviderState.new = function() {
+      this[_removeListener] = null;
+      _ValueInheritedProviderState.__proto__.new.call(this);
+      ;
+    }).prototype = _ValueInheritedProviderState.prototype;
+    dart.addTypeTests(_ValueInheritedProviderState);
+    _ValueInheritedProviderState.prototype[_is__ValueInheritedProviderState_default] = true;
+    dart.addTypeCaches(_ValueInheritedProviderState);
+    dart.setGetterSignature(_ValueInheritedProviderState, () => ({
+      __proto__: dart.getGetters(_ValueInheritedProviderState.__proto__),
+      value: T,
+      hasValue: core.bool
+    }));
+    dart.setLibraryUri(_ValueInheritedProviderState, I[0]);
+    dart.setFieldSignature(_ValueInheritedProviderState, () => ({
+      __proto__: dart.getFields(_ValueInheritedProviderState.__proto__),
+      [_removeListener]: dart.fieldType(dart.nullable(dart.fnType(dart.void, [])))
+    }));
+    return _ValueInheritedProviderState;
+  });
+  provider._ValueInheritedProviderState = provider._ValueInheritedProviderState$();
+  dart.addTypeTests(provider._ValueInheritedProviderState, _is__ValueInheritedProviderState_default);
+  const _is_DeferredInheritedProvider_default = Symbol('_is_DeferredInheritedProvider_default');
+  provider.DeferredInheritedProvider$ = dart.generic((T, R) => {
+    var _CreateDeferredInheritedProviderOfT$R = () => (_CreateDeferredInheritedProviderOfT$R = dart.constFn(provider._CreateDeferredInheritedProvider$(T, R)))();
+    var _ValueDeferredInheritedProviderOfT$R = () => (_ValueDeferredInheritedProviderOfT$R = dart.constFn(provider._ValueDeferredInheritedProvider$(T, R)))();
+    class DeferredInheritedProvider extends provider.InheritedProvider$(R) {}
+    (DeferredInheritedProvider.new = function(opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let create = opts && 'create' in opts ? opts.create : null;
+      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
+      let startListening = opts && 'startListening' in opts ? opts.startListening : null;
+      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
+      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      DeferredInheritedProvider.__proto__._constructor.call(this, {key: key, child: child, lazy: lazy, builder: builder, delegate: new (_CreateDeferredInheritedProviderOfT$R()).new({create: create, dispose: dispose, updateShouldNotify: updateShouldNotify, startListening: startListening}), $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = DeferredInheritedProvider.prototype;
+    (DeferredInheritedProvider.value = function(opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let value = opts && 'value' in opts ? opts.value : null;
+      let startListening = opts && 'startListening' in opts ? opts.startListening : null;
+      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
+      let lazy = opts && 'lazy' in opts ? opts.lazy : null;
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      DeferredInheritedProvider.__proto__._constructor.call(this, {key: key, lazy: lazy, builder: builder, delegate: new (_ValueDeferredInheritedProviderOfT$R()).new(value, updateShouldNotify, startListening), child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = DeferredInheritedProvider.prototype;
+    dart.addTypeTests(DeferredInheritedProvider);
+    DeferredInheritedProvider.prototype[_is_DeferredInheritedProvider_default] = true;
+    dart.addTypeCaches(DeferredInheritedProvider);
+    dart.setLibraryUri(DeferredInheritedProvider, I[0]);
+    return DeferredInheritedProvider;
+  });
+  provider.DeferredInheritedProvider = provider.DeferredInheritedProvider$();
+  dart.addTypeTests(provider.DeferredInheritedProvider, _is_DeferredInheritedProvider_default);
+  const _is__DeferredDelegate_default = Symbol('_is__DeferredDelegate_default');
+  provider._DeferredDelegate$ = dart.generic((T, R) => {
+    class _DeferredDelegate extends provider._Delegate$(R) {}
+    (_DeferredDelegate.new = function(updateShouldNotify, startListening) {
+      this.updateShouldNotify = updateShouldNotify;
+      this.startListening = startListening;
+      ;
+    }).prototype = _DeferredDelegate.prototype;
+    dart.addTypeTests(_DeferredDelegate);
+    _DeferredDelegate.prototype[_is__DeferredDelegate_default] = true;
+    dart.addTypeCaches(_DeferredDelegate);
+    dart.setLibraryUri(_DeferredDelegate, I[0]);
+    dart.setFieldSignature(_DeferredDelegate, () => ({
+      __proto__: dart.getFields(_DeferredDelegate.__proto__),
+      updateShouldNotify: dart.finalFieldType(dart.nullable(dart.fnType(core.bool, [R, R]))),
+      startListening: dart.finalFieldType(dart.fnType(dart.fnType(dart.void, []), [provider.InheritedContext$(R), dart.fnType(dart.void, [R]), T, dart.nullable(R)]))
+    }));
+    return _DeferredDelegate;
+  });
+  provider._DeferredDelegate = provider._DeferredDelegate$();
+  dart.addTypeTests(provider._DeferredDelegate, _is__DeferredDelegate_default);
+  var _hasValue = dart.privateName(provider, "_hasValue");
+  const _is__DeferredDelegateState_default = Symbol('_is__DeferredDelegateState_default');
+  provider._DeferredDelegateState$ = dart.generic((T, R, W) => {
+    var InheritedContextOfRAndFnAndT__ToFn = () => (InheritedContextOfRAndFnAndT__ToFn = dart.constFn(dart.fnType(T$.VoidTovoid(), [InheritedContextOfR(), RTovoid(), T, RN()])))();
+    var InheritedContextOfR = () => (InheritedContextOfR = dart.constFn(provider.InheritedContext$(R)))();
+    var RTovoid = () => (RTovoid = dart.constFn(dart.fnType(dart.void, [R])))();
+    var RN = () => (RN = dart.constFn(dart.nullable(R)))();
+    var RAndRTobool = () => (RAndRTobool = dart.constFn(dart.fnType(core.bool, [R, R])))();
+    var RAndRToNbool = () => (RAndRToNbool = dart.constFn(dart.nullable(RAndRTobool())))();
+    class _DeferredDelegateState extends provider._DelegateState$(R, W) {
+      get value() {
+        let t10, t9, t8, t7, t6;
+        dart.nullCheck(this.element)[_isNotifyDependentsEnabled] = false;
+        this[_removeListener] == null ? this[_removeListener] = (t6 = this.delegate, t7 = dart.nullCheck(this.element), t8 = dart.bind(this, 'setState'), t9 = this.controller, t10 = this[_value], InheritedContextOfRAndFnAndT__ToFn().as(t6.startListening)(t7, t8, t9, t10)) : null;
+        dart.nullCheck(this.element)[_isNotifyDependentsEnabled] = true;
+        if (!dart.nullCheck(this.element).hasValue) dart.assertFailed("The callback \"startListening\" was called, but it left DeferredInhertitedProviderElement<" + dart.str(dart.wrapType(T)) + ", " + dart.str(dart.wrapType(R)) + ">\nin an unitialized state.\n\nIt is necessary for \"startListening\" to call \"setState\" at least once the very\nfirst time \"value\" is requested.\n\nTo fix, consider:\n\nDeferredInheritedProvider(\n  ...,\n  startListening: (element, setState, controller, value) {\n    if (!element.hasValue) {\n      setState(myInitialValue); // TODO replace myInitialValue with your own\n    }\n    ...\n  }\n)\n    ", I[3], 109, 12, "element!.hasValue");
+        if (!(this[_removeListener] != null)) dart.assertFailed(null, I[3], 128, 12, "_removeListener != null");
+        return R.as(this[_value]);
+      }
+      dispose() {
+        let t6;
+        super.dispose();
+        t6 = this[_removeListener];
+        t6 == null ? null : t6();
+      }
+      get isLoaded() {
+        return this[_removeListener] != null;
+      }
+      get hasValue() {
+        return this[_hasValue];
+      }
+      setState(value) {
+        R.as(value);
+        if (this[_hasValue]) {
+          let shouldNotify = RAndRToNbool().as(this.delegate.updateShouldNotify) != null ? dart.nullCheck(RAndRToNbool().as(this.delegate.updateShouldNotify))(R.as(this[_value]), value) : !dart.equals(this[_value], value);
+          if (shouldNotify) {
+            dart.nullCheck(this.element).markNeedsNotifyDependents();
+          }
+        }
+        this[_hasValue] = true;
+        this[_value] = value;
+      }
+    }
+    (_DeferredDelegateState.new = function() {
+      this[_removeListener] = null;
+      this[_value] = null;
+      this[_hasValue] = false;
+      _DeferredDelegateState.__proto__.new.call(this);
+      ;
+    }).prototype = _DeferredDelegateState.prototype;
+    dart.addTypeTests(_DeferredDelegateState);
+    _DeferredDelegateState.prototype[_is__DeferredDelegateState_default] = true;
+    dart.addTypeCaches(_DeferredDelegateState);
+    dart.setMethodSignature(_DeferredDelegateState, () => ({
+      __proto__: dart.getMethods(_DeferredDelegateState.__proto__),
+      setState: dart.fnType(dart.void, [dart.nullable(core.Object)])
+    }));
+    dart.setGetterSignature(_DeferredDelegateState, () => ({
+      __proto__: dart.getGetters(_DeferredDelegateState.__proto__),
+      value: R,
+      isLoaded: core.bool,
+      hasValue: core.bool
+    }));
+    dart.setLibraryUri(_DeferredDelegateState, I[0]);
+    dart.setFieldSignature(_DeferredDelegateState, () => ({
+      __proto__: dart.getFields(_DeferredDelegateState.__proto__),
+      [_removeListener]: dart.fieldType(dart.nullable(dart.fnType(dart.void, []))),
+      [_value]: dart.fieldType(dart.nullable(R)),
+      [_hasValue]: dart.fieldType(core.bool)
+    }));
+    return _DeferredDelegateState;
+  });
+  provider._DeferredDelegateState = provider._DeferredDelegateState$();
+  dart.addTypeTests(provider._DeferredDelegateState, _is__DeferredDelegateState_default);
+  const _is__CreateDeferredInheritedProvider_default = Symbol('_is__CreateDeferredInheritedProvider_default');
+  provider._CreateDeferredInheritedProvider$ = dart.generic((T, R) => {
+    var _CreateDeferredInheritedProviderElementOfT$R = () => (_CreateDeferredInheritedProviderElementOfT$R = dart.constFn(provider._CreateDeferredInheritedProviderElement$(T, R)))();
+    class _CreateDeferredInheritedProvider extends provider._DeferredDelegate$(T, R) {
+      createState() {
+        return new (_CreateDeferredInheritedProviderElementOfT$R()).new();
+      }
+    }
+    (_CreateDeferredInheritedProvider.new = function(opts) {
+      let create = opts && 'create' in opts ? opts.create : null;
+      let dispose = opts && 'dispose' in opts ? opts.dispose : null;
+      let updateShouldNotify = opts && 'updateShouldNotify' in opts ? opts.updateShouldNotify : null;
+      let startListening = opts && 'startListening' in opts ? opts.startListening : null;
+      this.create = create;
+      this.dispose = dispose;
+      _CreateDeferredInheritedProvider.__proto__.new.call(this, updateShouldNotify, startListening);
+      ;
+    }).prototype = _CreateDeferredInheritedProvider.prototype;
+    dart.addTypeTests(_CreateDeferredInheritedProvider);
+    _CreateDeferredInheritedProvider.prototype[_is__CreateDeferredInheritedProvider_default] = true;
+    dart.addTypeCaches(_CreateDeferredInheritedProvider);
+    dart.setMethodSignature(_CreateDeferredInheritedProvider, () => ({
+      __proto__: dart.getMethods(_CreateDeferredInheritedProvider.__proto__),
+      createState: dart.fnType(provider._CreateDeferredInheritedProviderElement$(T, R), [])
+    }));
+    dart.setLibraryUri(_CreateDeferredInheritedProvider, I[0]);
+    dart.setFieldSignature(_CreateDeferredInheritedProvider, () => ({
+      __proto__: dart.getFields(_CreateDeferredInheritedProvider.__proto__),
+      create: dart.finalFieldType(dart.fnType(T, [framework.BuildContext])),
+      dispose: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [framework.BuildContext, T])))
+    }));
+    return _CreateDeferredInheritedProvider;
+  });
+  provider._CreateDeferredInheritedProvider = provider._CreateDeferredInheritedProvider$();
+  dart.addTypeTests(provider._CreateDeferredInheritedProvider, _is__CreateDeferredInheritedProvider_default);
+  var _didBuild = dart.privateName(provider, "_didBuild");
+  var _controller = dart.privateName(provider, "_controller");
+  const _is__CreateDeferredInheritedProviderElement_default = Symbol('_is__CreateDeferredInheritedProviderElement_default');
+  provider._CreateDeferredInheritedProviderElement$ = dart.generic((T, R) => {
+    var BuildContextAndTTovoid = () => (BuildContextAndTTovoid = dart.constFn(dart.fnType(dart.void, [framework.BuildContext, T])))();
+    var BuildContextAndTToNvoid = () => (BuildContextAndTToNvoid = dart.constFn(dart.nullable(BuildContextAndTTovoid())))();
+    var DiagnosticsPropertyOfT = () => (DiagnosticsPropertyOfT = dart.constFn(diagnostics.DiagnosticsProperty$(T)))();
+    var DiagnosticsPropertyOfR = () => (DiagnosticsPropertyOfR = dart.constFn(diagnostics.DiagnosticsProperty$(R)))();
+    class _CreateDeferredInheritedProviderElement extends provider._DeferredDelegateState$(T, R, provider._CreateDeferredInheritedProvider$(T, R)) {
+      get controller() {
+        let t7, t6;
+        if (!this[_didBuild]) {
+          if (!this.debugSetInheritedLock(true)) dart.assertFailed(null, I[3], 186, 14, "debugSetInheritedLock(true)");
+          let _debugPreviousIsInInheritedProviderCreate = null;
+          let _debugPreviousIsInInheritedProviderUpdate = null;
+          if (!dart.fn(() => {
+            _debugPreviousIsInInheritedProviderCreate = provider.debugIsInInheritedProviderCreate;
+            _debugPreviousIsInInheritedProviderUpdate = provider.debugIsInInheritedProviderUpdate;
+            return true;
+          }, T$.VoidTobool())()) dart.assertFailed(null, I[3], 190, 14, "() {\n        _debugPreviousIsInInheritedProviderCreate =\n            debugIsInInheritedProviderCreate;\n        _debugPreviousIsInInheritedProviderUpdate =\n            debugIsInInheritedProviderUpdate;\n        return true;\n      }()");
+          try {
+            if (!dart.fn(() => {
+              provider.debugIsInInheritedProviderCreate = true;
+              provider.debugIsInInheritedProviderUpdate = false;
+              return true;
+            }, T$.VoidTobool())()) dart.assertFailed(null, I[3], 199, 16, "() {\n          debugIsInInheritedProviderCreate = true;\n          debugIsInInheritedProviderUpdate = false;\n          return true;\n        }()");
+            this[_controller] = (t6 = this.delegate, t7 = dart.nullCheck(this.element), t6.create(t7));
+          } finally {
+            if (!dart.fn(() => {
+              provider.debugIsInInheritedProviderCreate = dart.nullCheck(_debugPreviousIsInInheritedProviderCreate);
+              provider.debugIsInInheritedProviderUpdate = dart.nullCheck(_debugPreviousIsInInheritedProviderUpdate);
+              return true;
+            }, T$.VoidTobool())()) dart.assertFailed(null, I[3], 206, 16, "() {\n          debugIsInInheritedProviderCreate =\n              _debugPreviousIsInInheritedProviderCreate!;\n          debugIsInInheritedProviderUpdate =\n              _debugPreviousIsInInheritedProviderUpdate!;\n          return true;\n        }()");
+          }
+          this[_didBuild] = true;
+        }
+        return T.as(this[_controller]);
+      }
+      dispose() {
+        let t6;
+        super.dispose();
+        if (this[_didBuild]) {
+          t6 = BuildContextAndTToNvoid().as(this.delegate.dispose);
+          t6 == null ? null : t6(dart.nullCheck(this.element), T.as(this[_controller]));
+        }
+      }
+      debugFillProperties(properties) {
+        let t6, t6$;
+        super.debugFillProperties(properties);
+        if (this.isLoaded) {
+          t6 = properties;
+          (() => {
+            t6.add(new (DiagnosticsPropertyOfT()).new("controller", this.controller));
+            t6.add(new (DiagnosticsPropertyOfR()).new("value", this.value));
+            return t6;
+          })();
+        } else {
+          t6$ = properties;
+          (() => {
+            t6$.add(new diagnostics.FlagProperty.new("controller", {value: true, showName: true, ifTrue: "<not yet loaded>"}));
+            t6$.add(new diagnostics.FlagProperty.new("value", {value: true, showName: true, ifTrue: "<not yet loaded>"}));
+            return t6$;
+          })();
+        }
+      }
+    }
+    (_CreateDeferredInheritedProviderElement.new = function() {
+      this[_didBuild] = false;
+      this[_controller] = null;
+      _CreateDeferredInheritedProviderElement.__proto__.new.call(this);
+      ;
+    }).prototype = _CreateDeferredInheritedProviderElement.prototype;
+    dart.addTypeTests(_CreateDeferredInheritedProviderElement);
+    _CreateDeferredInheritedProviderElement.prototype[_is__CreateDeferredInheritedProviderElement_default] = true;
+    dart.addTypeCaches(_CreateDeferredInheritedProviderElement);
+    dart.setGetterSignature(_CreateDeferredInheritedProviderElement, () => ({
+      __proto__: dart.getGetters(_CreateDeferredInheritedProviderElement.__proto__),
+      controller: T
+    }));
+    dart.setLibraryUri(_CreateDeferredInheritedProviderElement, I[0]);
+    dart.setFieldSignature(_CreateDeferredInheritedProviderElement, () => ({
+      __proto__: dart.getFields(_CreateDeferredInheritedProviderElement.__proto__),
+      [_didBuild]: dart.fieldType(core.bool),
+      [_controller]: dart.fieldType(dart.nullable(T))
+    }));
+    return _CreateDeferredInheritedProviderElement;
+  });
+  provider._CreateDeferredInheritedProviderElement = provider._CreateDeferredInheritedProviderElement$();
+  dart.addTypeTests(provider._CreateDeferredInheritedProviderElement, _is__CreateDeferredInheritedProviderElement_default);
+  const _is__ValueDeferredInheritedProvider_default = Symbol('_is__ValueDeferredInheritedProvider_default');
+  provider._ValueDeferredInheritedProvider$ = dart.generic((T, R) => {
+    var _ValueDeferredInheritedProviderStateOfT$R = () => (_ValueDeferredInheritedProviderStateOfT$R = dart.constFn(provider._ValueDeferredInheritedProviderState$(T, R)))();
+    var DiagnosticsPropertyOfT = () => (DiagnosticsPropertyOfT = dart.constFn(diagnostics.DiagnosticsProperty$(T)))();
+    class _ValueDeferredInheritedProvider extends provider._DeferredDelegate$(T, R) {
+      createState() {
+        return new (_ValueDeferredInheritedProviderStateOfT$R()).new();
+      }
+      debugFillProperties(properties) {
+        super.debugFillProperties(properties);
+        properties.add(new (DiagnosticsPropertyOfT()).new("controller", this.value));
+      }
+    }
+    (_ValueDeferredInheritedProvider.new = function(value, updateShouldNotify, startListening) {
+      this.value = value;
+      _ValueDeferredInheritedProvider.__proto__.new.call(this, updateShouldNotify, startListening);
+      ;
+    }).prototype = _ValueDeferredInheritedProvider.prototype;
+    dart.addTypeTests(_ValueDeferredInheritedProvider);
+    _ValueDeferredInheritedProvider.prototype[_is__ValueDeferredInheritedProvider_default] = true;
+    dart.addTypeCaches(_ValueDeferredInheritedProvider);
+    dart.setMethodSignature(_ValueDeferredInheritedProvider, () => ({
+      __proto__: dart.getMethods(_ValueDeferredInheritedProvider.__proto__),
+      createState: dart.fnType(provider._ValueDeferredInheritedProviderState$(T, R), [])
+    }));
+    dart.setLibraryUri(_ValueDeferredInheritedProvider, I[0]);
+    dart.setFieldSignature(_ValueDeferredInheritedProvider, () => ({
+      __proto__: dart.getFields(_ValueDeferredInheritedProvider.__proto__),
+      value: dart.finalFieldType(T)
+    }));
+    return _ValueDeferredInheritedProvider;
+  });
+  provider._ValueDeferredInheritedProvider = provider._ValueDeferredInheritedProvider$();
+  dart.addTypeTests(provider._ValueDeferredInheritedProvider, _is__ValueDeferredInheritedProvider_default);
+  const _is__ValueDeferredInheritedProviderState_default = Symbol('_is__ValueDeferredInheritedProviderState_default');
+  provider._ValueDeferredInheritedProviderState$ = dart.generic((T, R) => {
+    var _ValueDeferredInheritedProviderOfT$R = () => (_ValueDeferredInheritedProviderOfT$R = dart.constFn(provider._ValueDeferredInheritedProvider$(T, R)))();
+    var DiagnosticsPropertyOfR = () => (DiagnosticsPropertyOfR = dart.constFn(diagnostics.DiagnosticsProperty$(R)))();
+    class _ValueDeferredInheritedProviderState extends provider._DeferredDelegateState$(T, R, provider._ValueDeferredInheritedProvider$(T, R)) {
+      willUpdateDelegate(oldDelegate) {
+        _ValueDeferredInheritedProviderOfT$R().as(oldDelegate);
+        if (!dart.equals(this.delegate.value, oldDelegate.value)) {
+          if (this[_removeListener] != null) {
+            dart.nullCheck(this[_removeListener])();
+            this[_removeListener] = null;
+          }
+          return true;
+        }
+        return false;
+      }
+      get controller() {
+        return this.delegate.value;
+      }
+      debugFillProperties(properties) {
+        super.debugFillProperties(properties);
+        if (this[_removeListener] != null) {
+          properties.add(new (DiagnosticsPropertyOfR()).new("value", this.value));
+        } else {
+          properties.add(new diagnostics.FlagProperty.new("value", {value: true, showName: true, ifTrue: "<not yet loaded>"}));
+        }
+      }
+    }
+    (_ValueDeferredInheritedProviderState.new = function() {
+      _ValueDeferredInheritedProviderState.__proto__.new.call(this);
+      ;
+    }).prototype = _ValueDeferredInheritedProviderState.prototype;
+    dart.addTypeTests(_ValueDeferredInheritedProviderState);
+    _ValueDeferredInheritedProviderState.prototype[_is__ValueDeferredInheritedProviderState_default] = true;
+    dart.addTypeCaches(_ValueDeferredInheritedProviderState);
+    dart.setGetterSignature(_ValueDeferredInheritedProviderState, () => ({
+      __proto__: dart.getGetters(_ValueDeferredInheritedProviderState.__proto__),
+      controller: T
+    }));
+    dart.setLibraryUri(_ValueDeferredInheritedProviderState, I[0]);
+    return _ValueDeferredInheritedProviderState;
+  });
+  provider._ValueDeferredInheritedProviderState = provider._ValueDeferredInheritedProviderState$();
+  dart.addTypeTests(provider._ValueDeferredInheritedProviderState, _is__ValueDeferredInheritedProviderState_default);
+  var eventKind$ = dart.privateName(provider, "PostEventCall.eventKind");
+  var event$ = dart.privateName(provider, "PostEventCall.event");
+  provider.PostEventCall = class PostEventCall extends core.Object {
+    get eventKind() {
+      return this[eventKind$];
+    }
+    set eventKind(value) {
+      super.eventKind = value;
+    }
+    get event() {
+      return this[event$];
+    }
+    set event(value) {
+      super.event = value;
     }
   };
-  (colors$.MaterialAccentColor.new = function(primary, swatch) {
-    colors$.MaterialAccentColor.__proto__.new.call(this, primary, swatch);
+  (provider.PostEventCall.__ = function(eventKind, event) {
+    this[eventKind$] = eventKind;
+    this[event$] = event;
     ;
-  }).prototype = colors$.MaterialAccentColor.prototype;
-  dart.addTypeTests(colors$.MaterialAccentColor);
-  dart.addTypeCaches(colors$.MaterialAccentColor);
-  dart.setGetterSignature(colors$.MaterialAccentColor, () => ({
-    __proto__: dart.getGetters(colors$.MaterialAccentColor.__proto__),
-    shade50: ui.Color,
-    shade100: ui.Color,
-    shade200: ui.Color,
-    shade400: ui.Color,
-    shade700: ui.Color
+  }).prototype = provider.PostEventCall.prototype;
+  dart.addTypeTests(provider.PostEventCall);
+  dart.addTypeCaches(provider.PostEventCall);
+  dart.setLibraryUri(provider.PostEventCall, I[0]);
+  dart.setFieldSignature(provider.PostEventCall, () => ({
+    __proto__: dart.getFields(provider.PostEventCall.__proto__),
+    eventKind: dart.finalFieldType(core.String),
+    event: dart.finalFieldType(core.Map$(dart.nullable(core.Object), dart.nullable(core.Object)))
   }));
-  dart.setLibraryUri(colors$.MaterialAccentColor, I[0]);
-  var Color_value = dart.privateName(ui, "Color.value");
-  var ColorSwatch__swatch = dart.privateName(colors, "ColorSwatch._swatch");
-  colors$.Colors = class Colors extends core.Object {};
-  (colors$.Colors.__ = function() {
+  var logs = dart.privateName(provider, "PostEventSpy.logs");
+  var _postEvent = dart.privateName(provider, "_postEvent");
+  provider.PostEventSpy = class PostEventSpy extends core.Object {
+    get logs() {
+      return this[logs];
+    }
+    set logs(value) {
+      super.logs = value;
+    }
+    dispose() {
+      if (!dart.equals(provider._debugPostEventOverride, dart.bind(this, _postEvent))) dart.assertFailed("disposed a spy different from the current spy", I[4], 43, 7, "_debugPostEventOverride == _postEvent");
+      provider._debugPostEventOverride = null;
+    }
+    [_postEvent](eventKind, event) {
+      this.logs[$add](new provider.PostEventCall.__(eventKind, event));
+    }
+  };
+  (provider.PostEventSpy.__ = function() {
+    this[logs] = T$.JSArrayOfPostEventCall().of([]);
     ;
-  }).prototype = colors$.Colors.prototype;
-  dart.addTypeTests(colors$.Colors);
-  dart.addTypeCaches(colors$.Colors);
-  dart.setLibraryUri(colors$.Colors, I[0]);
-  dart.defineLazy(colors$.Colors, {
-    /*colors$.Colors.transparent*/get transparent() {
-      return C[0] || CT.C0;
-    },
-    /*colors$.Colors.black*/get black() {
-      return C[1] || CT.C1;
-    },
-    /*colors$.Colors.black87*/get black87() {
-      return C[2] || CT.C2;
-    },
-    /*colors$.Colors.black54*/get black54() {
-      return C[3] || CT.C3;
-    },
-    /*colors$.Colors.black45*/get black45() {
-      return C[4] || CT.C4;
-    },
-    /*colors$.Colors.black38*/get black38() {
-      return C[5] || CT.C5;
-    },
-    /*colors$.Colors.black26*/get black26() {
-      return C[6] || CT.C6;
-    },
-    /*colors$.Colors.black12*/get black12() {
-      return C[7] || CT.C7;
-    },
-    /*colors$.Colors.white*/get white() {
-      return C[8] || CT.C8;
-    },
-    /*colors$.Colors.white70*/get white70() {
-      return C[9] || CT.C9;
-    },
-    /*colors$.Colors.white60*/get white60() {
-      return C[10] || CT.C10;
-    },
-    /*colors$.Colors.white54*/get white54() {
-      return C[11] || CT.C11;
-    },
-    /*colors$.Colors.white38*/get white38() {
-      return C[12] || CT.C12;
-    },
-    /*colors$.Colors.white30*/get white30() {
-      return C[13] || CT.C13;
-    },
-    /*colors$.Colors.white24*/get white24() {
-      return C[14] || CT.C14;
-    },
-    /*colors$.Colors.white12*/get white12() {
-      return C[15] || CT.C15;
-    },
-    /*colors$.Colors.white10*/get white10() {
-      return C[16] || CT.C16;
-    },
-    /*colors$.Colors.red*/get red() {
-      return C[17] || CT.C17;
-    },
-    /*colors$.Colors._redPrimaryValue*/get _redPrimaryValue() {
-      return 4294198070.0;
-    },
-    /*colors$.Colors.redAccent*/get redAccent() {
-      return C[29] || CT.C29;
-    },
-    /*colors$.Colors._redAccentValue*/get _redAccentValue() {
-      return 4294922834.0;
-    },
-    /*colors$.Colors.pink*/get pink() {
-      return C[35] || CT.C35;
-    },
-    /*colors$.Colors._pinkPrimaryValue*/get _pinkPrimaryValue() {
-      return 4293467747.0;
-    },
-    /*colors$.Colors.pinkAccent*/get pinkAccent() {
-      return C[47] || CT.C47;
-    },
-    /*colors$.Colors._pinkAccentPrimaryValue*/get _pinkAccentPrimaryValue() {
-      return 4294918273.0;
-    },
-    /*colors$.Colors.purple*/get purple() {
-      return C[53] || CT.C53;
-    },
-    /*colors$.Colors._purplePrimaryValue*/get _purplePrimaryValue() {
-      return 4288423856.0;
-    },
-    /*colors$.Colors.purpleAccent*/get purpleAccent() {
-      return C[65] || CT.C65;
-    },
-    /*colors$.Colors._purpleAccentPrimaryValue*/get _purpleAccentPrimaryValue() {
-      return 4292886779.0;
-    },
-    /*colors$.Colors.deepPurple*/get deepPurple() {
-      return C[71] || CT.C71;
-    },
-    /*colors$.Colors._deepPurplePrimaryValue*/get _deepPurplePrimaryValue() {
-      return 4284955319.0;
-    },
-    /*colors$.Colors.deepPurpleAccent*/get deepPurpleAccent() {
-      return C[83] || CT.C83;
-    },
-    /*colors$.Colors._deepPurpleAccentPrimaryValue*/get _deepPurpleAccentPrimaryValue() {
-      return 4286336511.0;
-    },
-    /*colors$.Colors.indigo*/get indigo() {
-      return C[89] || CT.C89;
-    },
-    /*colors$.Colors._indigoPrimaryValue*/get _indigoPrimaryValue() {
-      return 4282339765.0;
-    },
-    /*colors$.Colors.indigoAccent*/get indigoAccent() {
-      return C[101] || CT.C101;
-    },
-    /*colors$.Colors._indigoAccentPrimaryValue*/get _indigoAccentPrimaryValue() {
-      return 4283657726.0;
-    },
-    /*colors$.Colors.blue*/get blue() {
-      return C[107] || CT.C107;
-    },
-    /*colors$.Colors._bluePrimaryValue*/get _bluePrimaryValue() {
-      return 4280391411.0;
-    },
-    /*colors$.Colors.blueAccent*/get blueAccent() {
-      return C[119] || CT.C119;
-    },
-    /*colors$.Colors._blueAccentPrimaryValue*/get _blueAccentPrimaryValue() {
-      return 4282682111.0;
-    },
-    /*colors$.Colors.lightBlue*/get lightBlue() {
-      return C[125] || CT.C125;
-    },
-    /*colors$.Colors._lightBluePrimaryValue*/get _lightBluePrimaryValue() {
-      return 4278430196.0;
-    },
-    /*colors$.Colors.lightBlueAccent*/get lightBlueAccent() {
-      return C[137] || CT.C137;
-    },
-    /*colors$.Colors._lightBlueAccentPrimaryValue*/get _lightBlueAccentPrimaryValue() {
-      return 4282434815.0;
-    },
-    /*colors$.Colors.cyan*/get cyan() {
-      return C[143] || CT.C143;
-    },
-    /*colors$.Colors._cyanPrimaryValue*/get _cyanPrimaryValue() {
-      return 4278238420.0;
-    },
-    /*colors$.Colors.cyanAccent*/get cyanAccent() {
-      return C[155] || CT.C155;
-    },
-    /*colors$.Colors._cyanAccentPrimaryValue*/get _cyanAccentPrimaryValue() {
-      return 4279828479.0;
-    },
-    /*colors$.Colors.teal*/get teal() {
-      return C[161] || CT.C161;
-    },
-    /*colors$.Colors._tealPrimaryValue*/get _tealPrimaryValue() {
-      return 4278228616.0;
-    },
-    /*colors$.Colors.tealAccent*/get tealAccent() {
-      return C[173] || CT.C173;
-    },
-    /*colors$.Colors._tealAccentPrimaryValue*/get _tealAccentPrimaryValue() {
-      return 4284809178.0;
-    },
-    /*colors$.Colors.green*/get green() {
-      return C[179] || CT.C179;
-    },
-    /*colors$.Colors._greenPrimaryValue*/get _greenPrimaryValue() {
-      return 4283215696.0;
-    },
-    /*colors$.Colors.greenAccent*/get greenAccent() {
-      return C[191] || CT.C191;
-    },
-    /*colors$.Colors._greenAccentPrimaryValue*/get _greenAccentPrimaryValue() {
-      return 4285132974.0;
-    },
-    /*colors$.Colors.lightGreen*/get lightGreen() {
-      return C[197] || CT.C197;
-    },
-    /*colors$.Colors._lightGreenPrimaryValue*/get _lightGreenPrimaryValue() {
-      return 4287349578.0;
-    },
-    /*colors$.Colors.lightGreenAccent*/get lightGreenAccent() {
-      return C[209] || CT.C209;
-    },
-    /*colors$.Colors._lightGreenAccentPrimaryValue*/get _lightGreenAccentPrimaryValue() {
-      return 4289920857.0;
-    },
-    /*colors$.Colors.lime*/get lime() {
-      return C[215] || CT.C215;
-    },
-    /*colors$.Colors._limePrimaryValue*/get _limePrimaryValue() {
-      return 4291681337.0;
-    },
-    /*colors$.Colors.limeAccent*/get limeAccent() {
-      return C[227] || CT.C227;
-    },
-    /*colors$.Colors._limeAccentPrimaryValue*/get _limeAccentPrimaryValue() {
-      return 4293852993.0;
-    },
-    /*colors$.Colors.yellow*/get yellow() {
-      return C[233] || CT.C233;
-    },
-    /*colors$.Colors._yellowPrimaryValue*/get _yellowPrimaryValue() {
-      return 4294961979.0;
-    },
-    /*colors$.Colors.yellowAccent*/get yellowAccent() {
-      return C[245] || CT.C245;
-    },
-    /*colors$.Colors._yellowAccentPrimaryValue*/get _yellowAccentPrimaryValue() {
-      return 4294967040.0;
-    },
-    /*colors$.Colors.amber*/get amber() {
-      return C[251] || CT.C251;
-    },
-    /*colors$.Colors._amberPrimaryValue*/get _amberPrimaryValue() {
-      return 4294951175.0;
-    },
-    /*colors$.Colors.amberAccent*/get amberAccent() {
-      return C[263] || CT.C263;
-    },
-    /*colors$.Colors._amberAccentPrimaryValue*/get _amberAccentPrimaryValue() {
-      return 4294956864.0;
-    },
-    /*colors$.Colors.orange*/get orange() {
-      return C[269] || CT.C269;
-    },
-    /*colors$.Colors._orangePrimaryValue*/get _orangePrimaryValue() {
-      return 4294940672.0;
-    },
-    /*colors$.Colors.orangeAccent*/get orangeAccent() {
-      return C[281] || CT.C281;
-    },
-    /*colors$.Colors._orangeAccentPrimaryValue*/get _orangeAccentPrimaryValue() {
-      return 4294945600.0;
-    },
-    /*colors$.Colors.deepOrange*/get deepOrange() {
-      return C[287] || CT.C287;
-    },
-    /*colors$.Colors._deepOrangePrimaryValue*/get _deepOrangePrimaryValue() {
-      return 4294924066.0;
-    },
-    /*colors$.Colors.deepOrangeAccent*/get deepOrangeAccent() {
-      return C[299] || CT.C299;
-    },
-    /*colors$.Colors._deepOrangeAccentPrimaryValue*/get _deepOrangeAccentPrimaryValue() {
-      return 4294929984.0;
-    },
-    /*colors$.Colors.brown*/get brown() {
-      return C[305] || CT.C305;
-    },
-    /*colors$.Colors._brownPrimaryValue*/get _brownPrimaryValue() {
-      return 4286141768.0;
-    },
-    /*colors$.Colors.grey*/get grey() {
-      return C[317] || CT.C317;
-    },
-    /*colors$.Colors._greyPrimaryValue*/get _greyPrimaryValue() {
-      return 4288585374.0;
-    },
-    /*colors$.Colors.blueGrey*/get blueGrey() {
-      return C[331] || CT.C331;
-    },
-    /*colors$.Colors._blueGreyPrimaryValue*/get _blueGreyPrimaryValue() {
-      return 4284513675.0;
-    },
-    /*colors$.Colors.primaries*/get primaries() {
-      return C[343] || CT.C343;
-    },
-    /*colors$.Colors.accents*/get accents() {
-      return C[344] || CT.C344;
+  }).prototype = provider.PostEventSpy.prototype;
+  dart.addTypeTests(provider.PostEventSpy);
+  dart.addTypeCaches(provider.PostEventSpy);
+  dart.setMethodSignature(provider.PostEventSpy, () => ({
+    __proto__: dart.getMethods(provider.PostEventSpy.__proto__),
+    dispose: dart.fnType(dart.void, []),
+    [_postEvent]: dart.fnType(dart.void, [core.String, core.Map$(dart.nullable(core.Object), dart.nullable(core.Object))])
+  }));
+  dart.setLibraryUri(provider.PostEventSpy, I[0]);
+  dart.setFieldSignature(provider.PostEventSpy, () => ({
+    __proto__: dart.getFields(provider.PostEventSpy.__proto__),
+    logs: dart.finalFieldType(core.List$(provider.PostEventCall))
+  }));
+  var id$ = dart.privateName(provider, "ProviderNode.id");
+  var type$ = dart.privateName(provider, "ProviderNode.type");
+  var childrenNodeIds$ = dart.privateName(provider, "ProviderNode.childrenNodeIds");
+  var _element = dart.privateName(provider, "ProviderNode._element");
+  var _element$ = dart.privateName(provider, "_element");
+  provider.ProviderNode = class ProviderNode extends core.Object {
+    get id() {
+      return this[id$];
+    }
+    set id(value) {
+      super.id = value;
+    }
+    get type() {
+      return this[type$];
+    }
+    set type(value) {
+      super.type = value;
+    }
+    get childrenNodeIds() {
+      return this[childrenNodeIds$];
+    }
+    set childrenNodeIds(value) {
+      super.childrenNodeIds = value;
+    }
+    get [_element$]() {
+      return this[_element];
+    }
+    set [_element$](value) {
+      super[_element$] = value;
+    }
+    get value() {
+      return this[_element$][_delegateState].value;
+    }
+  };
+  (provider.ProviderNode.new = function(opts) {
+    let id = opts && 'id' in opts ? opts.id : null;
+    let childrenNodeIds = opts && 'childrenNodeIds' in opts ? opts.childrenNodeIds : null;
+    let type = opts && 'type' in opts ? opts.type : null;
+    let element = opts && 'element' in opts ? opts.element : null;
+    this[id$] = id;
+    this[childrenNodeIds$] = childrenNodeIds;
+    this[type$] = type;
+    this[_element] = element;
+    ;
+  }).prototype = provider.ProviderNode.prototype;
+  dart.addTypeTests(provider.ProviderNode);
+  dart.addTypeCaches(provider.ProviderNode);
+  dart.setGetterSignature(provider.ProviderNode, () => ({
+    __proto__: dart.getGetters(provider.ProviderNode.__proto__),
+    value: dart.nullable(core.Object)
+  }));
+  dart.setLibraryUri(provider.ProviderNode, I[0]);
+  dart.setFieldSignature(provider.ProviderNode, () => ({
+    __proto__: dart.getFields(provider.ProviderNode.__proto__),
+    id: dart.finalFieldType(core.String),
+    type: dart.finalFieldType(core.String),
+    childrenNodeIds: dart.finalFieldType(core.List$(core.String)),
+    [_element$]: dart.finalFieldType(provider._InheritedProviderScopeElement)
+  }));
+  var _providerDetails = dart.privateName(provider, "_providerDetails");
+  provider.ProviderBinding = class ProviderBinding extends core.Object {
+    get providerDetails() {
+      return this[_providerDetails];
+    }
+    set providerDetails(value) {
+      provider.debugPostEvent("provider:provider_list_changed", new _js_helper.LinkedMap.new());
+      this[_providerDetails] = value;
+    }
+    providerDidChange(providerId) {
+      provider.debugPostEvent("provider:provider_changed", new _js_helper.LinkedMap.from(["id", providerId]));
+    }
+  };
+  (provider.ProviderBinding.__ = function() {
+    this[_providerDetails] = new (T$.IdentityMapOfString$ProviderNode()).new();
+    ;
+  }).prototype = provider.ProviderBinding.prototype;
+  dart.addTypeTests(provider.ProviderBinding);
+  dart.addTypeCaches(provider.ProviderBinding);
+  dart.setMethodSignature(provider.ProviderBinding, () => ({
+    __proto__: dart.getMethods(provider.ProviderBinding.__proto__),
+    providerDidChange: dart.fnType(dart.void, [core.String])
+  }));
+  dart.setGetterSignature(provider.ProviderBinding, () => ({
+    __proto__: dart.getGetters(provider.ProviderBinding.__proto__),
+    providerDetails: core.Map$(core.String, provider.ProviderNode)
+  }));
+  dart.setSetterSignature(provider.ProviderBinding, () => ({
+    __proto__: dart.getSetters(provider.ProviderBinding.__proto__),
+    providerDetails: core.Map$(core.String, provider.ProviderNode)
+  }));
+  dart.setLibraryUri(provider.ProviderBinding, I[0]);
+  dart.setFieldSignature(provider.ProviderBinding, () => ({
+    __proto__: dart.getFields(provider.ProviderBinding.__proto__),
+    [_providerDetails]: dart.fieldType(core.Map$(core.String, provider.ProviderNode))
+  }));
+  dart.defineLazy(provider.ProviderBinding, {
+    /*provider.ProviderBinding.debugInstance*/get debugInstance() {
+      return true ? new provider.ProviderBinding.__() : dart.throw(new core.UnsupportedError.new("Cannot use ProviderBinding in release mode"));
     }
   }, false);
-  dart.trackLibraries("packages/flutter/src/material/colors.dart", {
-    "package:flutter/src/material/colors.dart": colors$
+  var DeepCollectionEquality__unordered = dart.privateName(equality, "DeepCollectionEquality._unordered");
+  var DeepCollectionEquality__base = dart.privateName(equality, "DeepCollectionEquality._base");
+  provider.debugPostEvent = function debugPostEvent(eventKind, event = C[13] || CT.C13) {
+    if (provider._debugPostEventOverride != null) {
+      dart.nullCheck(provider._debugPostEventOverride)(eventKind, event);
+    } else {
+      developer.postEvent(eventKind, event);
+    }
+  };
+  provider.spyPostEvent = function spyPostEvent() {
+    if (!(provider._debugPostEventOverride == null)) dart.assertFailed("postEvent is already spied", I[4], 22, 10, "_debugPostEventOverride == null");
+    let spy = new provider.PostEventSpy.__();
+    provider._debugPostEventOverride = dart.bind(spy, _postEvent);
+    return spy;
+  };
+  provider['SelectContext|select'] = function SelectContext$124select(T, R, $this, selector) {
+    if (!!sliver.SliverWithKeepAliveWidget.is($this.widget)) dart.assertFailed("    Tried to use context.select inside a SliverList/SliderGridView.\n\n    This is likely a mistake, as instead of rebuilding only the item that cares\n    about the selected value, this would rebuild the entire list/grid.\n\n    To fix, add a `Builder` or extract the content of `itemBuilder` in a separate widget:\n\n    ```dart\n    ListView.builder(\n      itemBuilder: (context, index) {\n        return Builder(builder: (context) {\n          final todo = context.select((TodoList list) => list[index]);\n          return Text(todo.name);\n        });\n      },\n    );\n    ```\n    ", I[2], 227, 12, "widget is! SliverWithKeepAliveWidget");
+    if (!(layout_builder.LayoutBuilder.is($this.widget) || $this.debugDoingBuild)) dart.assertFailed("Tried to use `context.select` outside of the `build` method of a widget.\n\nAny usage other than inside the `build` method of a widget are not supported.\n", I[2], 246, 12, "widget is LayoutBuilder || debugDoingBuild");
+    let inheritedElement = provider.Provider._inheritedElementOf(T, $this);
+    try {
+      let value = inheritedElement.value;
+      if (!dart.fn(() => {
+        provider._debugIsSelecting = true;
+        return true;
+      }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 254, 14, "() {\n        _debugIsSelecting = true;\n        return true;\n      }()");
+      let selected = selector(value);
+      $this.dependOnInheritedElement(inheritedElement, {aspect: dart.fn(newValue => !(C[14] || CT.C14).equals(selector(newValue), selected), dart.fnType(core.bool, [T]))});
+      return selected;
+    } finally {
+      if (!dart.fn(() => {
+        provider._debugIsSelecting = false;
+        return true;
+      }, T$.VoidTobool())()) dart.assertFailed(null, I[2], 266, 14, "() {\n        _debugIsSelecting = false;\n        return true;\n      }()");
+    }
+  };
+  provider['SelectContext|get#select'] = function SelectContext$124get$35select($this) {
+    return dart.fn((T, R, selector) => provider['SelectContext|select'](T, R, $this, selector), T$.FnToR());
+  };
+  provider['ReadContext|read'] = function ReadContext$124read(T, $this) {
+    return provider.Provider.of(T, $this, {listen: false});
+  };
+  provider['ReadContext|get#read'] = function ReadContext$124get$35read($this) {
+    return dart.fn(T => provider['ReadContext|read'](T, $this), T$.VoidToT());
+  };
+  provider['WatchContext|watch'] = function WatchContext$124watch(T, $this) {
+    return provider.Provider.of(T, $this);
+  };
+  provider['WatchContext|get#watch'] = function WatchContext$124get$35watch($this) {
+    return dart.fn(T => provider['WatchContext|watch'](T, $this), T$.VoidToT());
+  };
+  dart.defineLazy(provider, {
+    /*provider._debugIsSelecting*/get _debugIsSelecting() {
+      return false;
+    },
+    set _debugIsSelecting(_) {},
+    /*provider.debugIsInInheritedProviderUpdate*/get debugIsInInheritedProviderUpdate() {
+      return false;
+    },
+    set debugIsInInheritedProviderUpdate(_) {},
+    /*provider.debugIsInInheritedProviderCreate*/get debugIsInInheritedProviderCreate() {
+      return false;
+    },
+    set debugIsInInheritedProviderCreate(_) {},
+    /*provider._debugPostEventOverride*/get _debugPostEventOverride() {
+      return null;
+    },
+    set _debugPostEventOverride(_) {}
+  }, false);
+  dart.trackLibraries("packages/provider/src/provider.dart", {
+    "package:provider/src/provider.dart": provider
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["colors.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;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","file":"../../../../../../packages/flutter/src/material/colors.dart.lib.js"}');
+    "package:provider/src/provider.dart": ["inherited_provider.dart", "deferred_inherited_provider.dart", "devtool.dart"]
+  }, '{"version":3,"sourceRoot":"","sources":["provider.dart","inherited_provider.dart","deferred_inherited_provider.dart","devtool.dart"],"names":[],"mappings":"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","file":"../../../../../../../packages/provider/src/provider.dart.lib.js"}');
   // Exports:
   return {
-    src__material__colors: colors$
+    src__provider: provider
   };
 }));
 
-//# sourceMappingURL=colors.dart.lib.js.map
+//# sourceMappingURL=provider.dart.lib.js.map
