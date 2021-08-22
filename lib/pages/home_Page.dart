@@ -104,7 +104,7 @@ class Content extends StatelessWidget {
               ],
             ),
             SizedBox(height: 120),
-            Positioned(bottom: 2.0, child: Footer())
+            Footer()
           ],
         ),
       ),
