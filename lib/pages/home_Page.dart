@@ -4,14 +4,17 @@ import 'package:web_responsive_ui/config/constants.dart';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
-import 'package:web_responsive_ui/pages/widgets/logo.dart';
-
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Stack(
-          children: [Content(), Positioned(bottom: 2.0, child: LogoWidgets())]),
+      child: Stack(children: [
+        Content(),
+        // Positioned(
+        //   bottom: 2.0,
+        //   child: LogoWidgets(),
+        // ),
+      ]),
     );
   }
 }
@@ -118,7 +121,10 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
-      child: Text("Hecho con Flutter ❤️"),
+      child: Text(
+        "Hecho con Flutter ❤️",
+        style: TextStyle(fontFamily: 'Agustina'),
+      ),
     );
   }
 }
