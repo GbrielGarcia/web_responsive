@@ -63,9 +63,9 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/http-0.13.3",
+      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/http-0.13.4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "http_parser",
@@ -98,14 +98,8 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "pedantic",
-      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.1",
+      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -159,19 +153,19 @@
     },
     {
       "name": "url_launcher",
-      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.0.9",
+      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.0.12",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "url_launcher_linux",
-      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/url_launcher_linux-2.0.1",
+      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/url_launcher_linux-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "url_launcher_macos",
-      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-2.0.1",
+      "rootUri": "file:///home/gabrielgarcia/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -206,7 +200,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-06T04:08:04.064682Z",
+  "generated": "2021-10-06T04:50:11.676406Z",
   "generator": "pub",
   "generatorVersion": "2.14.3"
 }

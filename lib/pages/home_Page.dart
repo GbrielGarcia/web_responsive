@@ -40,7 +40,7 @@ class Content extends StatelessWidget {
               height: 20,
             ),
             Text(
-              'GabrielGarcia',
+              'Gabriel / Garcia',
               textScaleFactor: 4,
             ),
             SizedBox(
