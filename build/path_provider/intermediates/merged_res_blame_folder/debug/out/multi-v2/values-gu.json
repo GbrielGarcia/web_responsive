@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/gabrielgarcia/Desktop/web_responsive/build/path_provider/intermediates/res/merged/debug/values-gu/values-gu.xml",
+            "outputFile": "/home/gbrielgarcia/Documents/GbrielGitHub/web_responsive/build/path_provider/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml",
             "map": [
                 {
-                    "source": "/home/gabrielgarcia/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/res/values-gu/values-gu.xml",
+                    "source": "/home/gbrielgarcia/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/res/values-gu/values-gu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/home/gabrielgarcia/Desktop/web_responsive/build/path_provider/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml",
+            "outputFile": "/home/gbrielgarcia/Documents/GbrielGitHub/web_responsive/build/path_provider/intermediates/res/merged/debug/values-gu/values-gu.xml",
             "map": [
                 {
-                    "source": "/home/gabrielgarcia/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/res/values-gu/values-gu.xml",
+                    "source": "/home/gbrielgarcia/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/res/values-gu/values-gu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
