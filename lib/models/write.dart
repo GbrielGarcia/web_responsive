@@ -27,4 +27,6 @@ class Write {
   static const String customers = 'Clientes';
   static const String web = 'Web';
   static const String app = 'App';
+  static const String myProjects = 'Mis Proyectos';
+  static const String recommendations = 'Recomendaciones';
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/models/Project.dart';
+import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/responsive.dart';
 import 'package:web_responsive_ui/screens/home/components/project_card.dart';
 
@@ -16,7 +17,7 @@ class MyProjects extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "lorem",
+          Write.myProjects,
           style: Theme.of(context).textTheme.headline6,
         ),
         const SizedBox(

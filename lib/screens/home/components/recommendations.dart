@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/models/Recommendation.dart';
+import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/home/components/recommendation_card.dart';
 
 import '../../../constants.dart';
@@ -17,7 +18,7 @@ class Recommendations extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "lorem",
+            Write.recommendations,
             style: Theme.of(context).textTheme.headline6,
           ),
           const SizedBox(
