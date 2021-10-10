@@ -30,7 +30,7 @@ class HomeBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "lorems",
+                  'Hola, soy Gabriel Garcia',
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headline3!.copyWith(
                             fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class MyBuildAnimatedText extends StatelessWidget {
           if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
-          Text("lorem "),
+          Text("Realizo "),
           Responsive.isMobile(context)
               ? Expanded(child: AnimatedText())
               : AnimatedText(),
@@ -105,9 +105,11 @@ class AnimatedText extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedTextKit(
       animatedTexts: [
-        TyperAnimatedText("lorem", speed: Duration(milliseconds: 60)),
-        TyperAnimatedText("lorem", speed: Duration(milliseconds: 60)),
-        TyperAnimatedText("lorem", speed: Duration(milliseconds: 60))
+        TyperAnimatedText('paginas web', speed: Duration(milliseconds: 60)),
+        TyperAnimatedText('aplicaciones moviles',
+            speed: Duration(milliseconds: 60)),
+        TyperAnimatedText('wordpress ecommerce',
+            speed: Duration(milliseconds: 60))
       ],
     );
   }

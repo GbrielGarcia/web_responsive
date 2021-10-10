@@ -24,7 +24,6 @@ class SideMenu extends StatelessWidget {
             MyInfo(),
             Expanded(
                 child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
               padding: EdgeInsets.all(defaultPadding),
               child: Column(
                 children: [
