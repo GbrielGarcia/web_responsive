@@ -6,23 +6,13 @@ class Recommendation {
 
 final List<Recommendation> recommendations = [
   Recommendation(
-    name: "lorem",
-    source: "lorem",
+    name: "Adrian Villena",
+    source: "Cliente de Streaming Ec",
     text: "lorem",
   ),
   Recommendation(
-    name: "lorem",
-    source: "lorem",
-    text: "lorem",
-  ),
-  Recommendation(
-    name: "lorem",
-    source: "lorem",
-    text: "lorem",
-  ),
-  Recommendation(
-    name: "lorem",
-    source: "lorem",
+    name: "Jose Huertas",
+    source: "Cliente de Super Huertas Tecnology",
     text: "lorem",
   ),
 ];
