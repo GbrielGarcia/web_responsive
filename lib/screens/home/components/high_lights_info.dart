@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/components/animated_counter.dart';
+import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/home/components/heigh_light.dart';
 
 import '../../../constants.dart';
@@ -22,16 +23,16 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighLight(
                         counter: AnimatedCounter(
-                          value: 10,
+                          value: 2,
                           text: "+",
                         ),
-                        label: "lorem"),
+                        label: Write.app),
                     HeighLight(
                         counter: AnimatedCounter(
-                          value: 10,
+                          value: 8,
                           text: "+",
                         ),
-                        label: "lorem"),
+                        label: Write.customers),
                   ],
                 ),
                 const SizedBox(
@@ -42,16 +43,16 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighLight(
                         counter: AnimatedCounter(
+                          value: 3,
+                          text: "+",
+                        ),
+                        label: Write.web),
+                    HeighLight(
+                        counter: AnimatedCounter(
                           value: 20,
                           text: "+",
                         ),
-                        label: "lorem"),
-                    HeighLight(
-                        counter: AnimatedCounter(
-                          value: 30,
-                          text: "+",
-                        ),
-                        label: "lorem"),
+                        label: Write.repositoryGitGub),
                   ],
                 )
               ],
@@ -61,28 +62,28 @@ class HighLightsInfo extends StatelessWidget {
               children: [
                 HeighLight(
                     counter: AnimatedCounter(
-                      value: 7,
+                      value: 2,
                       text: "+",
                     ),
-                    label: "lorem"),
+                    label: Write.app),
                 HeighLight(
                     counter: AnimatedCounter(
                       value: 8,
                       text: "+",
                     ),
-                    label: "lorem"),
+                    label: Write.customers),
                 HeighLight(
                     counter: AnimatedCounter(
-                      value: 9,
+                      value: 3,
                       text: "+",
                     ),
-                    label: "lorem"),
+                    label: Write.web),
                 HeighLight(
                     counter: AnimatedCounter(
-                      value: 7,
+                      value: 20,
                       text: "+",
                     ),
-                    label: "lorem"),
+                    label: Write.repositoryGitGub),
               ],
             ),
     );
