@@ -45,7 +45,7 @@ class SideMenu extends StatelessWidget {
                   SizedBox(height: defaultPadding / 2),
                   TextButton(
                       onPressed: () {
-                        html.window.open("", "CV s");
+                        html.window.open("", "CV ");
                       },
                       child: FittedBox(
                         child: Row(
