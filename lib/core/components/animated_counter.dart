@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../style/constants.dart';
 
 class AnimatedCounter extends StatelessWidget {
   const AnimatedCounter({

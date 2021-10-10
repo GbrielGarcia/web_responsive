@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../style/constants.dart';
 
 class AnimatedCircularProgressIndicator extends StatelessWidget {
-  const AnimatedCircularProgressIndicator({
-    Key? key,
-    required this.percentage,
-    required this.label
-  }) : super(key: key);
+  const AnimatedCircularProgressIndicator(
+      {Key? key, required this.percentage, required this.label})
+      : super(key: key);
 
   final double percentage;
   final String label;
@@ -49,4 +47,3 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
     );
   }
 }
-

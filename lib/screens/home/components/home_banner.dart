@@ -1,10 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/responsive.dart';
+import 'package:web_responsive_ui/core/responsi/responsive.dart';
+import 'package:web_responsive_ui/core/style/constants.dart';
 
-import '../../../constants.dart';
 import '../home_screen.dart';
-import 'dart:html' as html;
+import 'package:universal_html/html.dart' as html;
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({
@@ -19,7 +19,7 @@ class HomeBanner extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "assets/images/bg.jpeg",
+            "assets/images/bg.jpg",
             fit: BoxFit.cover,
           ),
           Container(color: darkColor.withOpacity(0.66)),
@@ -30,7 +30,7 @@ class HomeBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Olá! Sou o Matheus!",
+                  'Hola, soy Gabriel Garcia',
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headline3!.copyWith(
                             fontWeight: FontWeight.bold,
@@ -48,8 +48,8 @@ class HomeBanner extends StatelessWidget {
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
                     onPressed: () {
-                      html.window.open(
-                          "https://github.com/matheus2-andrade", "Github");
+                      html.window
+                          .open("https://github.com/gbrielgarcia", "Github");
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.symmetric(
@@ -57,8 +57,7 @@ class HomeBanner extends StatelessWidget {
                           vertical: defaultPadding),
                       backgroundColor: primaryColor,
                     ),
-                    child:
-                        Text("VEJA MAIS", style: TextStyle(color: darkColor)),
+                    child: Text("VER MAS ", style: TextStyle(color: darkColor)),
                   )
               ],
             ),
@@ -84,7 +83,7 @@ class MyBuildAnimatedText extends StatelessWidget {
           if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
-          Text("Eu construí um "),
+          Text("Realizo "),
           Responsive.isMobile(context)
               ? Expanded(child: AnimatedText())
               : AnimatedText(),
@@ -106,11 +105,11 @@ class AnimatedText extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedTextKit(
       animatedTexts: [
-        TyperAnimatedText("site responsivo mobile e web.",
+        TyperAnimatedText('paginas web', speed: Duration(milliseconds: 60)),
+        TyperAnimatedText('aplicaciones moviles',
             speed: Duration(milliseconds: 60)),
-        TyperAnimatedText("e-Commerce completo.",
-            speed: Duration(milliseconds: 60)),
-        TyperAnimatedText("app de chat.", speed: Duration(milliseconds: 60))
+        TyperAnimatedText('wordpress ecommerce',
+            speed: Duration(milliseconds: 60))
       ],
     );
   }
