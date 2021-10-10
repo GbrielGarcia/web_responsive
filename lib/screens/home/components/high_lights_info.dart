@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/core/components/animated_counter.dart';
-import 'package:web_responsive_ui/core/style/constants.dart';
-import 'package:web_responsive_ui/models/write.dart';
+import 'package:web_responsive_ui/components/animated_counter.dart';
 import 'package:web_responsive_ui/screens/home/components/heigh_light.dart';
 
-import '../../../core/responsi/responsive.dart';
+import '../../../constants.dart';
+import '../../../responsive.dart';
 
 class HighLightsInfo extends StatelessWidget {
   const HighLightsInfo({
@@ -23,16 +22,16 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighLight(
                         counter: AnimatedCounter(
-                          value: 2,
+                          value: 10,
                           text: "+",
                         ),
-                        label: Write.app),
+                        label: "Projetos"),
                     HeighLight(
                         counter: AnimatedCounter(
-                          value: 8,
+                          value: 10,
                           text: "+",
                         ),
-                        label: Write.customers),
+                        label: "Apps"),
                   ],
                 ),
                 const SizedBox(
@@ -43,16 +42,16 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighLight(
                         counter: AnimatedCounter(
-                          value: 3,
-                          text: "+",
-                        ),
-                        label: Write.web),
-                    HeighLight(
-                        counter: AnimatedCounter(
                           value: 20,
                           text: "+",
                         ),
-                        label: Write.repositoryGitGub),
+                        label: "Repositórios no GitHub"),
+                    HeighLight(
+                        counter: AnimatedCounter(
+                          value: 30,
+                          text: "+",
+                        ),
+                        label: "Estrelas"),
                   ],
                 )
               ],
@@ -62,28 +61,28 @@ class HighLightsInfo extends StatelessWidget {
               children: [
                 HeighLight(
                     counter: AnimatedCounter(
-                      value: 2,
+                      value: 10,
                       text: "+",
                     ),
-                    label: Write.app),
+                    label: "Projetos"),
                 HeighLight(
                     counter: AnimatedCounter(
-                      value: 8,
+                      value: 10,
                       text: "+",
                     ),
-                    label: Write.customers),
-                HeighLight(
-                    counter: AnimatedCounter(
-                      value: 3,
-                      text: "+",
-                    ),
-                    label: Write.web),
+                    label: "Apps"),
                 HeighLight(
                     counter: AnimatedCounter(
                       value: 20,
                       text: "+",
                     ),
-                    label: Write.repositoryGitGub),
+                    label: "Repositórios no Github"),
+                HeighLight(
+                    counter: AnimatedCounter(
+                      value: 30,
+                      text: "+",
+                    ),
+                    label: "Estrelas"),
               ],
             ),
     );

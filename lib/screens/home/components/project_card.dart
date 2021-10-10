@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/models/Project.dart';
-import 'package:web_responsive_ui/core/responsi/responsive.dart';
-import 'package:universal_html/html.dart' as html;
+import 'package:web_responsive_ui/responsive.dart';
+import 'dart:html' as html;
+
+import '../../../constants.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
@@ -40,7 +41,7 @@ class ProjectCard extends StatelessWidget {
                     .open(project.link.toString(), project.link.toString());
               },
               child: Text(
-                "Ver mas >>",
+                "Veja mais >>",
                 style: TextStyle(color: primaryColor),
               ))
         ],

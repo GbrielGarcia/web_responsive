@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/core/style/constants.dart';
-import 'package:web_responsive_ui/models/write.dart';
+import 'package:web_responsive_ui/constants.dart';
 import 'package:web_responsive_ui/screens/main/components/skills.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -8,7 +7,7 @@ import 'area_info_text.dart';
 import 'coding.dart';
 import 'knowledges.dart';
 import 'my_info.dart';
-import 'package:universal_html/html.dart' as html;
+import 'dart:html' as html;
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -27,14 +26,14 @@ class SideMenu extends StatelessWidget {
               padding: EdgeInsets.all(defaultPadding),
               child: Column(
                 children: [
-                  AreaInfoText(title: Write.country, text: Write.countryText),
+                  AreaInfoText(title: "País", text: "Brasil"),
                   AreaInfoText(
-                    title: Write.city,
-                    text: Write.cityText,
+                    title: "Cidade",
+                    text: "Recife-PE",
                   ),
                   AreaInfoText(
-                    title: Write.age,
-                    text: Write.ageNumber.toString(),
+                    title: "Idade",
+                    text: "19",
                   ),
                   Skills(),
                   SizedBox(height: defaultPadding),
@@ -44,13 +43,15 @@ class SideMenu extends StatelessWidget {
                   SizedBox(height: defaultPadding / 2),
                   TextButton(
                       onPressed: () {
-                        html.window.open("", "CV ");
+                        html.window.open(
+                            "https://drive.google.com/file/d/1fLENYXQcCOftcEYuBTKNe1ADfDNY8xxW/view?usp=sharing",
+                            "CV");
                       },
                       child: FittedBox(
                         child: Row(
                           children: [
                             Text(
-                              Write.curriculum,
+                              "DOWNLOAD CV",
                               style: TextStyle(
                                 color: Theme.of(context)
                                     .textTheme
@@ -71,24 +72,22 @@ class SideMenu extends StatelessWidget {
                         Spacer(),
                         IconButton(
                             onPressed: () {
-                              html.window.open("", "Instagram");
+                              html.window.open(
+                                  "https://www.linkedin.com/in/matheusandrade47/",
+                                  "Linkedin");
                             },
-                            icon: Image(
-                                image:
-                                    AssetImage('assets/icons/instagram.png'))),
+                            icon:
+                                SvgPicture.asset("assets/icons/linkedin.svg")),
                         IconButton(
                             onPressed: () {
                               html.window.open(
-                                  "https://github.com/gbrielgarcia", "GitHub");
+                                  "https://github.com/matheus2-andrade",
+                                  "GitHub");
                             },
-                            icon: Image(
-                                image: AssetImage('assets/icons/github.png'))),
+                            icon: SvgPicture.asset("assets/icons/github.svg")),
                         IconButton(
-                            onPressed: () {
-                              print('hola');
-                            },
-                            icon: Image(
-                                image: AssetImage('assets/icons/twitter.png'))),
+                            onPressed: () {},
+                            icon: SvgPicture.asset("assets/icons/twitter.svg")),
                         Spacer(),
                       ],
                     ),

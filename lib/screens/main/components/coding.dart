@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/core/style/constants.dart';
-import 'package:web_responsive_ui/models/write.dart';
+
+import '../../../constants.dart';
 
 class Coding extends StatelessWidget {
   const Coding({
@@ -16,39 +16,26 @@ class Coding extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            Write.coding,
+            "Coding",
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        AnimatedLinearProgressIndicator(
-          percentage: 0.8,
-          label: Write.dart,
-        ),
-        AnimatedLinearProgressIndicator(
-          percentage: 0.5,
-          label: Write.css,
-        ),
-        AnimatedLinearProgressIndicator(
-          percentage: 0.9,
-          label: Write.html,
-        ),
-        AnimatedLinearProgressIndicator(
-          percentage: 0.60,
-          label: Write.cPlusPlus,
-        ),
-        AnimatedLinearProgressIndicator(
-          percentage: 0.4,
-          label: Write.go,
-        )
+        AnimatedLinearProgressIndicator(percentage: 0.8, label: "Dart",),
+        AnimatedLinearProgressIndicator(percentage: 0.7, label: "Javascript",),
+        AnimatedLinearProgressIndicator(percentage: 0.9, label: "HTML",),
+        AnimatedLinearProgressIndicator(percentage: 0.75, label: "CSS",),
+        AnimatedLinearProgressIndicator(percentage: 0.5, label: "Amazon AWS",)
       ],
     );
   }
 }
 
 class AnimatedLinearProgressIndicator extends StatelessWidget {
-  const AnimatedLinearProgressIndicator(
-      {Key? key, required this.percentage, required this.label})
-      : super(key: key);
+  const AnimatedLinearProgressIndicator({
+    Key? key,
+    required this.percentage,
+    required this.label
+  }) : super(key: key);
 
   final double percentage;
   final String label;

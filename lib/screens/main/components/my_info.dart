@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/models/write.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({
@@ -9,37 +8,28 @@ class MyInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.23,
-      child: Container(
-        color: Color(0xFF242430),
-        child: Column(
-          children: [
-            Spacer(
-              flex: 2,
-            ),
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage("assets/images/profileimage.jpg"),
-            ),
-            Spacer(),
-            Text(
-              Write.name,
-              style: Theme.of(context).textTheme.subtitle2,
-            ),
-            Text(
-              Write.specialty,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.w200,
-                height: 1.5,
-              ),
-            ),
-            Spacer(
-              flex: 2,
-            )
-          ],
-        ),
-      ),
-    );
+    aspectRatio: 1.23,
+    child: Container(
+       color: Color(0xFF242430),
+       child: Column(
+         children: [
+           Spacer(flex: 2,),
+           CircleAvatar(
+             radius: 50,
+             backgroundImage:
+              AssetImage("assets/images/profileimage.jpg"),
+           ),
+           Spacer(),
+           Text("Matheus Andrade", style: Theme.of(context).textTheme.subtitle2,),
+           Text("BackEnd and \n Flutter Developer", 
+            textAlign: TextAlign.center,
+            style: TextStyle(
+            fontWeight: FontWeight.w200,
+            height: 1.5,
+            ),),
+            Spacer(flex: 2,)
+         ],
+       ),
+     ),);
   }
 }
