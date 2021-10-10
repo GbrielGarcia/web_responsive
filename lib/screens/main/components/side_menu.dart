@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/constants.dart';
+import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/main/components/skills.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -23,17 +24,18 @@ class SideMenu extends StatelessWidget {
             MyInfo(),
             Expanded(
                 child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
               padding: EdgeInsets.all(defaultPadding),
               child: Column(
                 children: [
-                  AreaInfoText(title: "País", text: "Ecuador"),
+                  AreaInfoText(title: Write.country, text: Write.countryText),
                   AreaInfoText(
-                    title: "Ciudad",
-                    text: "Santo Domingo",
+                    title: Write.city,
+                    text: Write.cityText,
                   ),
                   AreaInfoText(
-                    title: "Edad",
-                    text: "22",
+                    title: Write.age,
+                    text: Write.ageNumber.toString(),
                   ),
                   Skills(),
                   SizedBox(height: defaultPadding),
@@ -43,13 +45,13 @@ class SideMenu extends StatelessWidget {
                   SizedBox(height: defaultPadding / 2),
                   TextButton(
                       onPressed: () {
-                        html.window.open("", "CV");
+                        html.window.open("", "CV s");
                       },
                       child: FittedBox(
                         child: Row(
                           children: [
                             Text(
-                              "DOWNLOAD CV",
+                              Write.curriculum,
                               style: TextStyle(
                                 color: Theme.of(context)
                                     .textTheme
@@ -70,19 +72,24 @@ class SideMenu extends StatelessWidget {
                         Spacer(),
                         IconButton(
                             onPressed: () {
-                              html.window.open("", "Linkedin");
+                              html.window.open("", "Instagram");
                             },
-                            icon:
-                                SvgPicture.asset("assets/icons/linkedin.svg")),
+                            icon: Image(
+                                image:
+                                    AssetImage('assets/icons/instagram.png'))),
                         IconButton(
                             onPressed: () {
                               html.window.open(
                                   "https://github.com/gbrielgarcia", "GitHub");
                             },
-                            icon: SvgPicture.asset("assets/icons/github.svg")),
+                            icon: Image(
+                                image: AssetImage('assets/icons/github.png'))),
                         IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/twitter.svg")),
+                            onPressed: () {
+                              print('hola');
+                            },
+                            icon: Image(
+                                image: AssetImage('assets/icons/twitter.png'))),
                         Spacer(),
                       ],
                     ),

@@ -25,6 +25,7 @@ class Recommendations extends StatelessWidget {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
+            physics: BouncingScrollPhysics(),
             child: Row(
               children: List.generate(
                   recommendations.length,

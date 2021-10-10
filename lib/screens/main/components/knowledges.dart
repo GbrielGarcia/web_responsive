@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:web_responsive_ui/models/write.dart';
 
 import '../../../constants.dart';
 
@@ -17,14 +18,14 @@ class Knowledges extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            "lorem",
+            Write.knowledge,
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        KnowledgeText(text: "lorem"),
-        KnowledgeText(text: "lorem"),
-        KnowledgeText(text: "lorem"),
-        KnowledgeText(text: "lorem"),
+        KnowledgeText(text: Write.flutterDart),
+        KnowledgeText(text: Write.HtmlCssJavaScript),
+        KnowledgeText(text: Write.WordPresEcommerce),
+        KnowledgeText(text: Write.linux),
       ],
     );
   }

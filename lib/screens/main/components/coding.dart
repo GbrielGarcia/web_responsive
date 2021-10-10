@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/models/write.dart';
 
 import '../../../constants.dart';
 
@@ -16,29 +17,29 @@ class Coding extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            "Coding",
+            Write.coding,
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
         AnimatedLinearProgressIndicator(
           percentage: 0.8,
-          label: "lorem",
-        ),
-        AnimatedLinearProgressIndicator(
-          percentage: 0.7,
-          label: "lorem",
-        ),
-        AnimatedLinearProgressIndicator(
-          percentage: 0.9,
-          label: "lorem",
-        ),
-        AnimatedLinearProgressIndicator(
-          percentage: 0.75,
-          label: "lorem",
+          label: Write.dart,
         ),
         AnimatedLinearProgressIndicator(
           percentage: 0.5,
-          label: "lorem",
+          label: Write.css,
+        ),
+        AnimatedLinearProgressIndicator(
+          percentage: 0.9,
+          label: Write.html,
+        ),
+        AnimatedLinearProgressIndicator(
+          percentage: 0.60,
+          label: Write.cPlusPlus,
+        ),
+        AnimatedLinearProgressIndicator(
+          percentage: 0.4,
+          label: Write.go,
         )
       ],
     );

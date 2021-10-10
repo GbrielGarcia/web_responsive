@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/components/animated_progress_indicator.dart';
+import 'package:web_responsive_ui/models/write.dart';
 
 import '../../../constants.dart';
 
@@ -17,7 +18,7 @@ class Skills extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            "lorem",
+            Write.skill,
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
@@ -25,15 +26,15 @@ class Skills extends StatelessWidget {
           children: [
             Expanded(
                 child: AnimatedCircularProgressIndicator(
-                    percentage: 0.7, label: "lorem")),
+                    percentage: 0.75, label: Write.flutter)),
             SizedBox(width: defaultPadding / 2),
             Expanded(
                 child: AnimatedCircularProgressIndicator(
-                    percentage: 0.62, label: "lorem")),
+                    percentage: 0.65, label: Write.python)),
             SizedBox(width: defaultPadding / 2),
             Expanded(
                 child: AnimatedCircularProgressIndicator(
-                    percentage: 0.5, label: "lorem"))
+                    percentage: 0.85, label: Write.wordPres))
           ],
         )
       ],

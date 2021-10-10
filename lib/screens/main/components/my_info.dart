@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/models/write.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({
@@ -22,11 +23,11 @@ class MyInfo extends StatelessWidget {
             ),
             Spacer(),
             Text(
-              "lorem",
+              Write.name,
               style: Theme.of(context).textTheme.subtitle2,
             ),
             Text(
-              "lorem",
+              Write.specialty,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.w200,
