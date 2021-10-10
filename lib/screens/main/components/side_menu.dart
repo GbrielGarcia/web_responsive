@@ -71,7 +71,9 @@ class SideMenu extends StatelessWidget {
                         Spacer(),
                         IconButton(
                             onPressed: () {
-                              html.window.open("", "Instagram");
+                              html.window.open(
+                                  "https://www.instagram.com/gabrielx2garcia/",
+                                  "Instagram");
                             },
                             icon: Image(
                                 image:
@@ -85,7 +87,9 @@ class SideMenu extends StatelessWidget {
                                 image: AssetImage('assets/icons/github.png'))),
                         IconButton(
                             onPressed: () {
-                              print('hola');
+                              html.window.open(
+                                  "https://twitter.com/Gabrielx2Garcia",
+                                  "Twitter");
                             },
                             icon: Image(
                                 image: AssetImage('assets/icons/twitter.png'))),
