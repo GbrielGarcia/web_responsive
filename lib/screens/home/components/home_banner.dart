@@ -1,8 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/responsive.dart';
+import 'package:web_responsive_ui/core/responsi/responsive.dart';
+import 'package:web_responsive_ui/core/style/constants.dart';
 
-import '../../../constants.dart';
 import '../home_screen.dart';
 import 'package:universal_html/html.dart' as html;
 

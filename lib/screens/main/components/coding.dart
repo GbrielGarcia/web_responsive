@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/models/write.dart';
-
-import '../../../constants.dart';
 
 class Coding extends StatelessWidget {
   const Coding({

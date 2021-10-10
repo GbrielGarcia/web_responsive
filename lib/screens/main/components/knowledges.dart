@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/models/write.dart';
-
-import '../../../constants.dart';
 
 class Knowledges extends StatelessWidget {
   const Knowledges({

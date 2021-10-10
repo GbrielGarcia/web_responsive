@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/screens/home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'constants.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

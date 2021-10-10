@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/components/animated_progress_indicator.dart';
+import 'package:web_responsive_ui/core/components/animated_progress_indicator.dart';
+import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/models/write.dart';
-
-import '../../../constants.dart';
 
 class Skills extends StatelessWidget {
   const Skills({

@@ -11,9 +11,9 @@ List<Project> projects = [
           'Pagina web realizada ha cliente, realizada con la finalidad de mostrar los multiples servicios que ofrece de streaming.',
       link: 'https://streamingecu.com/'),
   Project(
-      title: 'Noticas Red',
+      title: 'Noticias Red',
       description:
-          'Aplicacion para Ios y Android realizada con flutter, se trata de una aplicacion de noticias del continente Americano. ',
+          'Aplicacion para Ios y Android realizada con flutter, se trata de una aplicacion de noticias del continente Americano. ( proyecto estudiantil.) ',
       link: 'https://github.com/GbrielGarcia/noticias'),
   Project(
       title: 'Movie Info',
