@@ -8,12 +8,8 @@ final List<Recommendation> recommendations = [
   Recommendation(
     name: "Adrian Villena",
     source: "Cliente de Streaming Ec.",
-    text: "",
-  ),
-  Recommendation(
-    name: "Jose Huertas",
-    source: "Cliente de Super Huertas Tecnology.",
-    text: "",
+    text:
+        "Exelente servicio, una experiencia increible al momento de la navegación por su increible diseño moderno y que se adapta al usuario y a cualquier dispositivo estoy totalmente satisfecho y la experiencia y la rapidez de carga es fantastica, reconmedable al 100%",
   ),
   Recommendation(
     name: "Anthony Delgado",

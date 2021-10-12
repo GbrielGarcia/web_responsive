@@ -23,8 +23,8 @@ class Write {
   static const String HtmlCssJavaScript = 'Html, Css y JavaScript';
   static const String WordPresEcommerce = 'WordPress en Comercio';
   static const String linux = 'Linux en Consola';
-  static const String repositoryGitGub = 'Repositorios en GitHub';
-  static const String customers = 'Clientes';
+  static const String repositoryGitGub = 'Repositorios en GitHub  ';
+  static const String customers = 'Clientes  ';
   static const String web = 'Web';
   static const String app = 'App';
   static const String myProjects = 'Mis Proyectos';
