@@ -47,6 +47,11 @@ class ProjectCard extends StatelessWidget {
                 ),
               ),
               Expanded(child: Container()),
+              Image.asset(
+                project!.iconImage!,
+                width: 10,
+                height: 10,
+              )
             ],
           )
         ],
