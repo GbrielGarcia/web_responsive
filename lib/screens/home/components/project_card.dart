@@ -10,7 +10,7 @@ class ProjectCard extends StatelessWidget {
     required this.project,
   }) : super(key: key);
 
-  final Project project;
+  final Project? project;
 
   @override
   Widget build(BuildContext context) {
@@ -21,28 +21,34 @@ class ProjectCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            project.title!,
+            project!.title!,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: Theme.of(context).textTheme.subtitle2,
           ),
           Spacer(),
           Text(
-            project.description!,
+            project!.description!,
             maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(height: 1.5),
           ),
           Spacer(),
-          TextButton(
-              onPressed: () {
-                html.window
-                    .open(project.link.toString(), project.link.toString());
-              },
-              child: Text(
-                "Ver mas >>",
-                style: TextStyle(color: primaryColor),
-              ))
+          Row(
+            children: [
+              TextButton(
+                onPressed: () {
+                  html.window.open(
+                      project!.link!.toString(), project!.link.toString());
+                },
+                child: Text(
+                  "Ver mas >>",
+                  style: TextStyle(color: primaryColor),
+                ),
+              ),
+              Expanded(child: Container()),
+            ],
+          )
         ],
       ),
     );
