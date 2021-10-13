@@ -47,8 +47,31 @@ class ProjectCard extends StatelessWidget {
                 ),
               ),
               Expanded(child: Container()),
+              Text(
+                "Hecho con",
+                style: TextStyle(color: primaryColor),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Container(),
+              ),
               Image.asset(
                 project!.iconImage!,
+                width: 10,
+                height: 10,
+              ),
+              Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
+              Image.asset(
+                project!.iconImage1!,
+                width: 10,
+                height: 10,
+              ),
+              Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
+              Image.asset(
+                project!.iconImage2!,
                 width: 10,
                 height: 10,
               )
