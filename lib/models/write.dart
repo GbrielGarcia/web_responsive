@@ -7,7 +7,7 @@ class Write {
   static const String cityText = 'Santo Domingo';
   static const String age = 'Edad';
   static const int ageNumber = 22;
-  static const String curriculum = 'Descargar CV';
+  static const String curriculum = '^_^';
   static const String skill = 'Habilidades';
   static const String flutter = 'Flutter';
   static const String python = 'Python';
@@ -23,10 +23,10 @@ class Write {
   static const String HtmlCssJavaScript = 'Html, Css y JavaScript';
   static const String WordPresEcommerce = 'WordPress en Comercio';
   static const String linux = 'Linux en Consola';
-  static const String repositoryGitGub = 'Repositorios en GitHub  ';
+  static const String designs = 'Diseños  ';
   static const String customers = 'Clientes  ';
   static const String web = 'Web';
   static const String app = 'App';
-  static const String myProjects = 'Mis Proyectos';
+  static const String myProjects = 'Mis Trabajos';
   static const String recommendations = 'Recomendaciones';
 }

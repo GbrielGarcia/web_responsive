@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:web_responsive_ui/core/style/constants.dart';
+import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
 
 class Knowledges extends StatelessWidget {
@@ -41,7 +41,7 @@ class KnowledgeText extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: defaultPadding / 2),
       child: Row(
         children: [
-          SvgPicture.asset("assets/icons/check.svg"),
+          SvgPicture.asset("assets/svg/check.svg"),
           SizedBox(width: defaultPadding / 2),
           Text(text)
         ],

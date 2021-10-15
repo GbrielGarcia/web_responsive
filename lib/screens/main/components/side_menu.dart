@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/core/style/constants.dart';
+import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/main/components/skills.dart';
 import 'package:flutter_svg/flutter_svg.dart';

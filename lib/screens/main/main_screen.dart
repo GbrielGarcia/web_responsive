@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/core/style/constants.dart';
+import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
 
 import 'components/side_menu.dart';

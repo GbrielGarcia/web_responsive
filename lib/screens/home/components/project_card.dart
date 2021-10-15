@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/models/Project.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
@@ -60,20 +61,20 @@ class ProjectCard extends StatelessWidget {
               ),
               Image.asset(
                 project!.iconImage!,
-                width: 10,
-                height: 10,
+                width: Const.widthIcon,
+                height: Const.heightIcon,
               ),
               Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
               Image.asset(
                 project!.iconImage1!,
-                width: 10,
-                height: 10,
+                width: Const.widthIcon,
+                height: Const.heightIcon,
               ),
               Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
               Image.asset(
                 project!.iconImage2!,
-                width: 10,
-                height: 10,
+                width: Const.widthIcon,
+                height: Const.heightIcon,
               )
             ],
           )

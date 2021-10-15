@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/core/style/constants.dart';
+import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/screens/main/main_screen.dart';
 
 import 'components/high_lights_info.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/components/animated_counter.dart';
-import 'package:web_responsive_ui/core/style/constants.dart';
+import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/home/components/heigh_light.dart';
 
@@ -43,16 +43,16 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighLight(
                         counter: AnimatedCounter(
-                          value: 3,
+                          value: 4,
                           text: "+",
                         ),
                         label: Write.web),
                     HeighLight(
                         counter: AnimatedCounter(
-                          value: 20,
+                          value: 11,
                           text: "+",
                         ),
-                        label: Write.repositoryGitGub),
+                        label: Write.designs),
                   ],
                 )
               ],
@@ -74,16 +74,16 @@ class HighLightsInfo extends StatelessWidget {
                     label: Write.customers),
                 HeighLight(
                     counter: AnimatedCounter(
-                      value: 3,
+                      value: 4,
                       text: "+",
                     ),
                     label: Write.web),
                 HeighLight(
                     counter: AnimatedCounter(
-                      value: 20,
+                      value: 11,
                       text: "+",
                     ),
-                    label: Write.repositoryGitGub),
+                    label: Write.designs),
               ],
             ),
     );
