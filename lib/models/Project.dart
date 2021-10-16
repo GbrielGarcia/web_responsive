@@ -53,4 +53,13 @@ List<Project> projects = [
     iconImage1: 'assets/icons/flutter.png',
     iconImage2: 'assets/icons/vscode.png',
   ),
+  Project(
+    title: 'Inox Hieroo',
+    description:
+        'Aplicacion para Ios y Android realizada con flutter, en esta aplicacion se puede observa la informacion de las peliculas y en el link para verlas.',
+    link: 'https://inoxhierro.com',
+    iconImage: 'assets/icons/html.png',
+    iconImage1: 'assets/icons/jimdo.png',
+    iconImage2: 'assets/icons/javascript.png',
+  ),
 ];

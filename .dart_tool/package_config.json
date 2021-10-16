@@ -147,7 +147,7 @@
     },
     {
       "name": "path_drawing",
-      "rootUri": "file:///home/gbrielgarcia/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_drawing-0.5.1",
+      "rootUri": "file:///home/gbrielgarcia/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_drawing-0.5.1+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -344,7 +344,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-13T00:50:58.443610Z",
+  "generated": "2021-10-16T14:51:59.014825Z",
   "generator": "pub",
   "generatorVersion": "2.13.1"
 }
