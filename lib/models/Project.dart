@@ -54,9 +54,9 @@ List<Project> projects = [
     iconImage2: 'assets/icons/vscode.png',
   ),
   Project(
-    title: 'Inox Hieroo',
+    title: 'Inox Hierro',
     description:
-        'Aplicacion para Ios y Android realizada con flutter, en esta aplicacion se puede observa la informacion de las peliculas y en el link para verlas.',
+        'Pagina web realizada ha cliente, con diseño elegante y con posicion en los buscadores increíble.',
     link: 'https://inoxhierro.com',
     iconImage: 'assets/icons/html.png',
     iconImage1: 'assets/icons/jimdo.png',
