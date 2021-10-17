@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/core/routes/router.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/screens/home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
               bodyText2: TextStyle(color: bodyTextColor),
             ),
       ),
-      home: HomeScreen(),
+      initialRoute: HomeScreen.route,
+      routes: getAplicationRouter(),
     );
   }
 }
