@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/core/assets/assets.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/main/components/skills.dart';
@@ -59,7 +60,7 @@ class SideMenu extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: defaultPadding / 2),
-                            SvgPicture.asset("assets/icons/download.svg")
+                            // SvgPicture.asset(Assets.download)
                           ],
                         ),
                       )),
@@ -75,24 +76,20 @@ class SideMenu extends StatelessWidget {
                                   "https://www.instagram.com/gabrielx2garcia/",
                                   "Instagram");
                             },
-                            icon: Image(
-                                image:
-                                    AssetImage('assets/icons/instagram.png'))),
+                            icon: SvgPicture.asset(Assets.instagram)),
                         IconButton(
                             onPressed: () {
                               html.window.open(
                                   "https://github.com/gbrielgarcia", "GitHub");
                             },
-                            icon: Image(
-                                image: AssetImage('assets/icons/github.png'))),
+                            icon: SvgPicture.asset(Assets.github)),
                         IconButton(
                             onPressed: () {
                               html.window.open(
                                   "https://twitter.com/Gabrielx2Garcia",
                                   "Twitter");
                             },
-                            icon: Image(
-                                image: AssetImage('assets/icons/twitter.png'))),
+                            icon: SvgPicture.asset(Assets.twitter)),
                         Spacer(),
                       ],
                     ),

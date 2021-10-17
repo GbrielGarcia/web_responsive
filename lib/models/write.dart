@@ -1,4 +1,6 @@
 class Write {
+  static const String presents = 'Hola, soy Gabriel Garcia';
+
   static const String name = 'Gabriel Garcia';
   static const String specialty = 'Frontend y Flutter ';
   static const String country = 'Pais';

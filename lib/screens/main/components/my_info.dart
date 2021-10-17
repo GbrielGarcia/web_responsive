@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/core/assets/assets.dart';
 import 'package:web_responsive_ui/models/write.dart';
 
 class MyInfo extends StatelessWidget {
@@ -19,7 +20,7 @@ class MyInfo extends StatelessWidget {
             ),
             CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage("assets/images/profileimage.jpg"),
+              backgroundImage: AssetImage(Assets.profileimage),
             ),
             Spacer(),
             Text(

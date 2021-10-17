@@ -1,7 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/core/assets/assets.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
+import 'package:web_responsive_ui/models/write.dart';
 
 import '../home_screen.dart';
 import 'package:universal_html/html.dart' as html;
@@ -19,7 +21,7 @@ class HomeBanner extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "assets/images/bg.jpg",
+            Assets.bg,
             fit: BoxFit.cover,
           ),
           Container(color: darkColor.withOpacity(0.66)),
@@ -30,7 +32,7 @@ class HomeBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Hola, soy Gabriel Garcia',
+                  Write.presents,
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headline3!.copyWith(
                             fontWeight: FontWeight.bold,
