@@ -9,3 +9,5 @@ const bgColor = Color(0xFF1E1E28);
 const defaultPadding = 20.0;
 const defaultDuration = Duration(seconds: 3);
 const maxWidth = 1440.0;
+
+const colorIconInfo = Color(0XFF6d4c41);

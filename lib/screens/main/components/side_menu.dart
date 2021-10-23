@@ -76,20 +76,23 @@ class SideMenu extends StatelessWidget {
                                   "https://www.instagram.com/gabrielx2garcia/",
                                   "Instagram");
                             },
-                            icon: SvgPicture.asset(Assets.instagram)),
+                            icon: SvgPicture.asset(Assets.instagram,
+                                color: colorIconInfo)),
                         IconButton(
                             onPressed: () {
                               html.window.open(
                                   "https://github.com/gbrielgarcia", "GitHub");
                             },
-                            icon: SvgPicture.asset(Assets.github)),
+                            icon: SvgPicture.asset(Assets.github,
+                                color: colorIconInfo)),
                         IconButton(
                             onPressed: () {
                               html.window.open(
                                   "https://twitter.com/Gabrielx2Garcia",
                                   "Twitter");
                             },
-                            icon: SvgPicture.asset(Assets.twitter)),
+                            icon: SvgPicture.asset(Assets.twitter,
+                                color: colorIconInfo)),
                         Spacer(),
                       ],
                     ),
