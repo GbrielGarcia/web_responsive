@@ -321,7 +321,7 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///home/gbrielgarcia/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.2.9",
+      "rootUri": "file:///home/gbrielgarcia/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.2.10",
       "packageUri": "lib/",
       "languageVersion": "2.13"
     },
@@ -344,7 +344,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-23T16:05:44.495789Z",
+  "generated": "2021-10-23T17:12:24.459580Z",
   "generator": "pub",
   "generatorVersion": "2.13.1"
 }

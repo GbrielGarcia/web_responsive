@@ -78,10 +78,12 @@ class SideMenu extends StatelessWidget {
                                 "Instagram",
                               );
                             },
-                            icon: SvgPicture.asset(
-                              Assets.instagram,
-                              color: colorIconInfo,
+                            icon: Image(
+                              image: AssetImage(
+                                'assets/png/instagram.png',
+                              ),
                               width: Const.widthIcon,
+                              color: colorIconInfo,
                             )),
                         IconButton(
                             onPressed: () {

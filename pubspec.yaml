@@ -30,6 +30,7 @@ flutter:
     - assets/fonts/
     - assets/images/
     - assets/svg/
+    - assets/png/
 
   fonts:
     - family: Agustina
