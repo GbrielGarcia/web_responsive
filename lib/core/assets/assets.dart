@@ -6,7 +6,6 @@ class Assets {
   static const String dribble = 'assets/svg/dribble.svg';
   static const String flutter = 'assets/svg/flutter.svg';
   static const String github = 'assets/svg/github.svg';
-  static const String github_blue = 'assets/svg/github_blue.svg';
   static const String html = 'assets/svg/html.svg';
   static const String instagram = 'assets/svg/instagram.svg';
   static const String javascript = 'assets/svg/javascript.svg';

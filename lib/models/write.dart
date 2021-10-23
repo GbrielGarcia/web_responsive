@@ -9,7 +9,7 @@ class Write {
   static const String cityText = 'Santo Domingo';
   static const String age = 'Edad';
   static const int ageNumber = 22;
-  static const String curriculum = '^_^';
+  static const String curriculum = 'En proceso';
   static const String skill = 'Habilidades';
   static const String flutter = 'Flutter';
   static const String python = 'Python';

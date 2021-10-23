@@ -21,13 +21,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter_native_splash:
-  color: "#B3BFD7"
-  image: "assets/splash.jpeg"
-  color_dark: "#3A3A3A"
-  image_dark: "assets/splash.jpeg"
-  android: true
-  ios: true
 
 flutter:
   uses-material-design: true

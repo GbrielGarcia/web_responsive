@@ -1,4 +1,4 @@
 class Const {
-  static const double widthIcon = 15;
+  static const double widthIcon = 30;
   static const double heightIcon = 15;
 }

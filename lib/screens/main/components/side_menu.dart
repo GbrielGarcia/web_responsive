@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/assets/assets.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
+import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/main/components/skills.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -45,7 +46,7 @@ class SideMenu extends StatelessWidget {
                   SizedBox(height: defaultPadding / 2),
                   TextButton(
                       onPressed: () {
-                        html.window.open("", "CV ");
+                        // html.window.open("", "CV ");
                       },
                       child: FittedBox(
                         child: Row(
@@ -53,11 +54,11 @@ class SideMenu extends StatelessWidget {
                             Text(
                               Write.curriculum,
                               style: TextStyle(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color,
-                              ),
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color,
+                                  decoration: TextDecoration.lineThrough),
                             ),
                             SizedBox(height: defaultPadding / 2),
                             // SvgPicture.asset(Assets.download)
@@ -73,26 +74,36 @@ class SideMenu extends StatelessWidget {
                         IconButton(
                             onPressed: () {
                               html.window.open(
-                                  "https://www.instagram.com/gabrielx2garcia/",
-                                  "Instagram");
+                                "https://www.instagram.com/gabrielx2garcia/",
+                                "Instagram",
+                              );
                             },
-                            icon: SvgPicture.asset(Assets.instagram,
-                                color: colorIconInfo)),
+                            icon: SvgPicture.asset(
+                              Assets.instagram,
+                              color: colorIconInfo,
+                              width: Const.widthIcon,
+                            )),
                         IconButton(
                             onPressed: () {
                               html.window.open(
                                   "https://github.com/gbrielgarcia", "GitHub");
                             },
-                            icon: SvgPicture.asset(Assets.github,
-                                color: colorIconInfo)),
+                            icon: SvgPicture.asset(
+                              Assets.github,
+                              color: colorIconInfo,
+                              width: Const.widthIcon,
+                            )),
                         IconButton(
                             onPressed: () {
                               html.window.open(
                                   "https://twitter.com/Gabrielx2Garcia",
                                   "Twitter");
                             },
-                            icon: SvgPicture.asset(Assets.twitter,
-                                color: colorIconInfo)),
+                            icon: SvgPicture.asset(
+                              Assets.twitter,
+                              color: colorIconInfo,
+                              width: Const.widthIcon,
+                            )),
                         Spacer(),
                       ],
                     ),
