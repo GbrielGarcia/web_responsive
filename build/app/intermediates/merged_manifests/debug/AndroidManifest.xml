@@ -16,8 +16,8 @@
     <application
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="web_responsive_ui" >
+        android:icon="@mipmap/launcher_icon"
+        android:label="G.Codigo" >
         <activity
             android:name="com.example.web_responsive_ui.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

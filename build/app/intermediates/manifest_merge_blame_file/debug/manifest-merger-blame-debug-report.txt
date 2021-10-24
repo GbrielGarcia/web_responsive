@@ -20,10 +20,10 @@
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 17-->[androidx.core:core:1.1.0] /home/gbrielgarcia/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/AndroidManifest.xml:24:18-86
 18        android:debuggable="true"
-19        android:icon="@mipmap/ic_launcher"
-19-->/home/gbrielgarcia/Desktop/web_responsive/android/app/src/main/AndroidManifest.xml:5:9-43
-20        android:label="web_responsive_ui" >
-20-->/home/gbrielgarcia/Desktop/web_responsive/android/app/src/main/AndroidManifest.xml:4:9-42
+19        android:icon="@mipmap/launcher_icon"
+19-->/home/gbrielgarcia/Desktop/web_responsive/android/app/src/main/AndroidManifest.xml:5:9-45
+20        android:label="G.Codigo" >
+20-->/home/gbrielgarcia/Desktop/web_responsive/android/app/src/main/AndroidManifest.xml:4:9-33
 21        <activity
 21-->/home/gbrielgarcia/Desktop/web_responsive/android/app/src/main/AndroidManifest.xml:6:9-34:20
 22            android:name="com.example.web_responsive_ui.MainActivity"
