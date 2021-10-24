@@ -3,9 +3,9 @@
     "short_name": "web_responsive",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#1E1E28",
+    "theme_color": "#1E1E28",
+    "description": "A new Flutter si si.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
