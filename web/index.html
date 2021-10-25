@@ -15,7 +15,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="">
+  <base href="/">
   <!-- $FLUTTER_BASE_HREF -->
 
   <meta charset="UTF-8">
@@ -35,68 +35,11 @@
   <title>Gabriel Codigo</title>
   <link rel="manifest" href="manifest.json">
 
+  <link rel="stylesheet" href="style.css">n
 
-  <style>
-    body {
-      background-color: #1E1E28;
-    }
 
-    .loading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-
-    .loader {
-      border: 16px solid #FFC107;
-      border-radius: 50%;
-      border: 50px solid;
-      border-top: 50px solid #FFC507;
-      border-right: 50px solid #e93d12;
-      border-bottom: 50px solid #FFC507;
-      border-left: 50px solid #e93d12;
-      width: 30px;
-      height: 30px;
-      -webkit-animation: spin 2s linear infinite;
-      animation: spin 2s linear infinite;
-    }
-
-    .iconLoading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      position: absolute;
-      height: 94%;
-      border-radius: 50%;
-    }
-
-    @-webkit-keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-      }
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  </style>
+  <!-- <style>
+  </style> -->
 
 </head>
 
@@ -105,11 +48,12 @@
     <div class="loader"></div>
     <img class="iconLoading" src="icons/Icon-192.png" alt="icon" srcset="">
   </div>
+
+  <h1>
+    <span>H</span><span>O</span><span>L</span><span>A</span>
+  </h1>
+
   <script src="main.dart.js" type="application/javascript"></script>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-  </script>
 
  <script>
     var serviceWorkerVersion = null;
