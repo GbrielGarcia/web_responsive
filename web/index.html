@@ -24,14 +24,16 @@
   <meta name="apple-mobile-web-app-title" content="web_responsive">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-con">
+    <!-- end Favicon -->
+
   <title>Gabriel Codigo</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-con">
-  <!-- end Favicon -->
+
 </head>
 
 <body>
@@ -46,6 +48,37 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+
+       <script>
+         window.onload = (e) => {
+    // Declare init HTML elements
+    const buttonAdd = document.querySelector('#buttonAdd');
+
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+    });
+
+    // Add event click function for Add button
+    buttonAdd.addEventListener('click', (e) => {
+        // Show the prompt
+        deferredPrompt.prompt();
+        // Wait for the user to respond to the prompt
+        deferredPrompt.userChoice
+            .then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the A2HS prompt');
+                } else {
+                    console.log('User dismissed the A2HS prompt');
+                }
+                deferredPrompt = null;
+            });
+    });
+}
+       </script>
   <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;
