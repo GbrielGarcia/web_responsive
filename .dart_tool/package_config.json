@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "animated_background",
+      "rootUri": "file:///home/gbrielgarcia/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/animated_background-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "animated_text_kit",
       "rootUri": "file:///home/gbrielgarcia/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/animated_text_kit-4.2.1",
       "packageUri": "lib/",
@@ -374,7 +380,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-26T03:30:40.160627Z",
+  "generated": "2021-11-07T03:42:15.038981Z",
   "generator": "pub",
   "generatorVersion": "2.13.1"
 }
