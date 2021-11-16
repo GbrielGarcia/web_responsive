@@ -31,4 +31,6 @@ class Write {
   static const String app = 'App';
   static const String myProjects = 'Mis Trabajos';
   static const String recommendations = 'Recomendaciones';
+  static const String privacys = 'Política de Privacidad';
+  static const String headline = 'GbrielCodigo';
 }

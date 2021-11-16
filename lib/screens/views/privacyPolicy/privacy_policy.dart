@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_responsive_ui/screens/views/privacyPolicy/widgets/privacys.dart';
 
 class PrivacyPolicy extends StatelessWidget {
   const PrivacyPolicy({Key? key}) : super(key: key);
@@ -7,9 +8,17 @@ class PrivacyPolicy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-            'La aplicacion no toma los datos de los usuarios de ninguna manera'),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Container(
+            child: Column(
+              children: [
+                Privacys(),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
