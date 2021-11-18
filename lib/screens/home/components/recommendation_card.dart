@@ -14,6 +14,7 @@ class RecommendationCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 400,
+      height: 200,
       padding: EdgeInsets.all(defaultPadding),
       color: secondaryColor,
       child: Column(
@@ -29,7 +30,7 @@ class RecommendationCard extends StatelessWidget {
           ),
           Text(
             recommendation.text!,
-            maxLines: 4,
+            maxLines: 6,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(height: 1.5),
           )
