@@ -1,4 +1,4 @@
 io/flutter/plugins/GeneratedPluginRegistrant.java
  io.flutter.plugins.GeneratedPluginRegistrant
-com/example/web_responsive_ui/BuildConfig.java
- com.example.web_responsive_ui.BuildConfig
+com/gabrielcodigo/com/web_responsive_ui/BuildConfig.java
+ com.gabrielcodigo.com.web_responsive_ui.BuildConfig

@@ -64,4 +64,14 @@ List<Project> projects = [
     iconImage1: Assets.jimdo,
     iconImage2: Assets.javascript,
   ),
+  Project(
+    title: 'Linterna',
+    description:
+        'Aplicacion para Ios y Android realizada con flutter, se trata de una herramienta de linterna con algunas funcionalidades, efecto de parpadeo y temporizador. ',
+    link:
+        'https://play.google.com/store/apps/details?id=com.gabrielcodigo.com.app_linterna',
+    iconImage: Assets.dart,
+    iconImage1: Assets.flutter,
+    iconImage2: Assets.vscode,
+  ),
 ];

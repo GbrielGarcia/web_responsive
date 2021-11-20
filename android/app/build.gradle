@@ -34,7 +34,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.web_responsive_ui"
+        applicationId "com.gabrielcodigo.com.web_responsive_ui"
         minSdkVersion 22
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()

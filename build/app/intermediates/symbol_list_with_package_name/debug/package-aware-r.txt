@@ -1,4 +1,4 @@
-com.example.web_responsive_ui
+com.gabrielcodigo.com.web_responsive_ui
 attr alpha
 attr font
 attr fontProviderAuthority
