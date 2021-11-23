@@ -23,8 +23,8 @@ class Knowledges extends StatelessWidget {
           ),
         ),
         KnowledgeText(text: Write.flutterDart),
-        KnowledgeText(text: Write.HtmlCssJavaScript),
-        KnowledgeText(text: Write.WordPresEcommerce),
+        KnowledgeText(text: Write.htmlCssJavaScript),
+        KnowledgeText(text: Write.wordPresEcommerce),
         KnowledgeText(text: Write.linux),
       ],
     );

@@ -22,8 +22,8 @@ class Write {
   static const String cPlusPlus = 'C++';
   static const String knowledge = 'Conocimiento';
   static const String flutterDart = 'Flutter y Dart';
-  static const String HtmlCssJavaScript = 'Html, Css y JavaScript';
-  static const String WordPresEcommerce = 'WordPress en Comercio';
+  static const String htmlCssJavaScript = 'Html, Css y JavaScript';
+  static const String wordPresEcommerce = 'WordPress en Comercio';
   static const String linux = 'Linux en Consola';
   static const String designs = 'Diseños  ';
   static const String customers = 'Clientes  ';
