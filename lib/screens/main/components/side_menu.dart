@@ -102,7 +102,7 @@ class SideMenu extends StatelessWidget {
                                   "https://gitlab.com/GbrielGarcia", "GitLab");
                             },
                             icon: SvgPicture.asset(
-                              Assets.github,
+                              Assets.gitlab,
                               color: colorIconInfo,
                               width: Const.widthIcon,
                             )),
