@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
               bodyText2: TextStyle(color: bodyTextColor),
             ),
       ),
-      initialRoute: CoursesView.route,
+      initialRoute: HomeScreen.route,
       routes: getAplicationRouter(),
     );
   }

@@ -16,11 +16,14 @@ class CoursesView extends StatefulWidget {
 }
 
 class _CoursesViewState extends State<CoursesView> {
+  final ScrollController controller = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
           body: SingleChildScrollView(
+        controller: controller,
         physics: BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
