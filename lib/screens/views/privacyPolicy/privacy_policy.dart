@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_responsive_ui/screens/views/privacyPolicy/widgets/privacys.dart';
+import 'package:web_responsive_ui/screens/views/privacyPolicy/components/privacys.dart';
 
 class PrivacyPolicy extends StatelessWidget {
   const PrivacyPolicy({Key? key}) : super(key: key);

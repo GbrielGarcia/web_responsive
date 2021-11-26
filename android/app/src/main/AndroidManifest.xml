@@ -2,7 +2,8 @@
     package="com.gabrielcodigo.com.web_responsive_ui">
    <application
         android:label="G.Codigo"
-        android:icon="@mipmap/launcher_icon">
+        android:icon="@mipmap/launcher_icon"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
