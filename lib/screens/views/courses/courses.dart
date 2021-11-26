@@ -9,7 +9,7 @@ import 'package:web_responsive_ui/models/write.dart';
 
 class CoursesView extends StatefulWidget {
   const CoursesView({Key? key}) : super(key: key);
-  static const String route = '/courses/';
+  static const String route = '/cursos/';
 
   @override
   State<CoursesView> createState() => _CoursesViewState();
