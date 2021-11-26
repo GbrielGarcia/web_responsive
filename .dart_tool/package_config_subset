@@ -162,10 +162,6 @@ plugin_platform_interface
 2.12
 file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.2/
 file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.2/lib/
-pointer_interceptor
-2.12
-file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/pointer_interceptor-0.9.0+1/
-file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/pointer_interceptor-0.9.0+1/lib/
 process
 2.14
 file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4/
@@ -230,10 +226,6 @@ url_launcher_windows
 2.12
 file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_windows-2.0.2/
 file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_windows-2.0.2/lib/
-uuid
-2.12
-file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-3.0.5/
-file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-3.0.5/lib/
 vector_math
 2.12
 file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0/
@@ -254,10 +246,6 @@ webview_flutter_wkwebview
 2.14
 file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter_wkwebview-2.4.0/
 file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter_wkwebview-2.4.0/lib/
-webviewx
-2.12
-file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/webviewx-0.2.1/
-file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/webviewx-0.2.1/lib/
 win32
 2.14
 file:///home/gabrielg/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.3.1/

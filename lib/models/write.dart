@@ -33,4 +33,5 @@ class Write {
   static const String recommendations = 'Recomendaciones';
   static const String privacys = 'Política de Privacidad';
   static const String headline = 'GbrielCodigo';
+  static const String myCourses = 'Dart';
 }
