@@ -16,14 +16,25 @@ class CoursesView extends StatefulWidget {
 }
 
 class _CoursesViewState extends State<CoursesView> {
-  final ScrollController controller = ScrollController();
+  late ScrollController _controller;
+  @override
+  void initState() {
+    super.initState();
+    _controller = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
           body: SingleChildScrollView(
-        controller: controller,
+        controller: _controller,
         physics: BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,15 +50,18 @@ class _CoursesViewState extends State<CoursesView> {
             Responsive(
                 mobile: ProjectsGridView(
                   crossAxisCount: 1,
-                  childAspectRatio: 1.3,
                 ),
                 mobileLarge: ProjectsGridView(
-                  crossAxisCount: 2,
+                  crossAxisCount: 1,
+                  childAspectRatio: 2,
                 ),
                 tablet: ProjectsGridView(
-                  childAspectRatio: 1.3,
+                  crossAxisCount: 2,
+                  childAspectRatio: 1.8,
                 ),
-                desktop: ProjectsGridView())
+                desktop: ProjectsGridView(
+                  childAspectRatio: 1.5,
+                ))
           ],
         ),
       )),
@@ -62,7 +76,7 @@ class MyWidgetFactory extends WidgetFactory with WebViewFactory {
 class ProjectsGridView extends StatelessWidget {
   const ProjectsGridView({
     Key? key,
-    this.crossAxisCount = 2,
+    this.crossAxisCount = 3,
     this.childAspectRatio = 1.3,
   }) : super(key: key);
 
