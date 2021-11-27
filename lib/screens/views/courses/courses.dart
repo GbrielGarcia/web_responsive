@@ -33,36 +33,40 @@ class _CoursesViewState extends State<CoursesView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          body: SingleChildScrollView(
+          body: Scrollbar(
         controller: _controller,
-        physics: BouncingScrollPhysics(),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              Write.myCourses,
-              style: Theme.of(context).textTheme.headline6,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(
-              height: defaultPadding,
-            ),
-            Responsive(
-                mobile: ProjectsGridView(
-                  crossAxisCount: 1,
-                ),
-                mobileLarge: ProjectsGridView(
-                  crossAxisCount: 1,
-                  childAspectRatio: 2,
-                ),
-                tablet: ProjectsGridView(
-                  crossAxisCount: 2,
-                  childAspectRatio: 1.8,
-                ),
-                desktop: ProjectsGridView(
-                  childAspectRatio: 1.5,
-                ))
-          ],
+        isAlwaysShown: true,
+        child: SingleChildScrollView(
+          controller: _controller,
+          physics: BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                Write.myCourses,
+                style: Theme.of(context).textTheme.headline6,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                height: defaultPadding,
+              ),
+              Responsive(
+                  mobile: ProjectsGridView(
+                    crossAxisCount: 1,
+                  ),
+                  mobileLarge: ProjectsGridView(
+                    crossAxisCount: 1,
+                    childAspectRatio: 2,
+                  ),
+                  tablet: ProjectsGridView(
+                    crossAxisCount: 2,
+                    childAspectRatio: 1.8,
+                  ),
+                  desktop: ProjectsGridView(
+                    childAspectRatio: 1.5,
+                  ))
+            ],
+          ),
         ),
       )),
     );
