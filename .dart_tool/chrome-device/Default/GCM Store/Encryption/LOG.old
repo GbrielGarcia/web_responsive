@@ -1,3 +1,2 @@
-2021/11/27-09:36:30.948 681e Reusing MANIFEST /tmp/flutter_tools.DDALYS/flutter_tools_chrome_device.EEKEYY/Default/GCM Store/Encryption/MANIFEST-000001
-2021/11/27-09:36:30.948 681e Recovering log #3
-2021/11/27-09:36:30.949 681e Reusing old log /tmp/flutter_tools.DDALYS/flutter_tools_chrome_device.EEKEYY/Default/GCM Store/Encryption/000003.log 
+2022/01/04-13:42:40.730 17a7 Creating DB /tmp/flutter_tools.FDJYPX/flutter_tools_chrome_device.DYKWRE/Default/GCM Store/Encryption since it was missing.
+2022/01/04-13:42:41.517 17a7 Reusing MANIFEST /tmp/flutter_tools.FDJYPX/flutter_tools_chrome_device.DYKWRE/Default/GCM Store/Encryption/MANIFEST-000001

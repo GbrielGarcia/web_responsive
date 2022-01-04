@@ -110,8 +110,7 @@ class AnimatedText extends StatelessWidget {
         TyperAnimatedText('paginas web', speed: Duration(milliseconds: 60)),
         TyperAnimatedText('aplicaciones moviles',
             speed: Duration(milliseconds: 60)),
-        TyperAnimatedText('wordpress ecommerce',
-            speed: Duration(milliseconds: 60))
+        TyperAnimatedText(' ecommerce', speed: Duration(milliseconds: 60))
       ],
     );
   }

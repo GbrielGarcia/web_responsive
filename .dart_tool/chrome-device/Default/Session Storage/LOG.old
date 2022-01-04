@@ -1,4 +1,2 @@
-2021/11/27-09:36:14.919 3 Reusing MANIFEST /tmp/flutter_tools.DDALYS/flutter_tools_chrome_device.EEKEYY/Default/Session Storage/MANIFEST-000001
-2021/11/27-09:36:14.920 3 Recovering log #4
-2021/11/27-09:36:14.921 3 Reusing old log /tmp/flutter_tools.DDALYS/flutter_tools_chrome_device.EEKEYY/Default/Session Storage/000004.log 
-2021/11/27-09:36:14.921 3 Delete type=0 #3
+2022/01/04-13:42:32.945 5 Creating DB /tmp/flutter_tools.FDJYPX/flutter_tools_chrome_device.DYKWRE/Default/Session Storage since it was missing.
+2022/01/04-13:42:34.975 5 Reusing MANIFEST /tmp/flutter_tools.FDJYPX/flutter_tools_chrome_device.DYKWRE/Default/Session Storage/MANIFEST-000001
