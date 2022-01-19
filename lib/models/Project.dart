@@ -28,15 +28,15 @@ List<Project> projects = [
     iconImage1: Assets.css,
     iconImage2: Assets.javascript,
   ),
-  Project(
-    title: 'Noticias Red',
-    description:
-        'Aplicacion para Ios y Android realizada con flutter, se trata de una aplicacion de noticias del continente Americano. ( proyecto estudiantil.) ',
-    link: 'https://github.com/GbrielGarcia/noticias',
-    iconImage: Assets.dart,
-    iconImage1: Assets.flutter,
-    iconImage2: Assets.vscode,
-  ),
+  // Project(
+  //   title: 'Noticias Red',
+  //   description:
+  //       'Aplicacion para Ios y Android realizada con flutter, se trata de una aplicacion de noticias del continente Americano. ( proyecto estudiantil.) ',
+  //   link: 'https://github.com/GbrielGarcia/noticias',
+  //   iconImage: Assets.dart,
+  //   iconImage1: Assets.flutter,
+  //   iconImage2: Assets.vscode,
+  // ),
   Project(
     title: 'Super Huertas Tecnology',
     description:
@@ -46,15 +46,15 @@ List<Project> projects = [
     iconImage1: Assets.css,
     iconImage2: Assets.javascript,
   ),
-  Project(
-    title: 'Movie Info',
-    description:
-        'Aplicacion para Ios y Android realizada con flutter, en esta aplicacion se puede observa la informacion de las peliculas y en el link para verlas.',
-    link: 'https://github.com/GbrielGarcia/noticias',
-    iconImage: Assets.dart,
-    iconImage1: Assets.flutter,
-    iconImage2: Assets.vscode,
-  ),
+  // Project(
+  //   title: 'Movie Info',
+  //   description:
+  //       'Aplicacion para Ios y Android realizada con flutter, en esta aplicacion se puede observa la informacion de las peliculas y en el link para verlas.',
+  //   link: 'https://github.com/GbrielGarcia/noticias',
+  //   iconImage: Assets.dart,
+  //   iconImage1: Assets.flutter,
+  //   iconImage2: Assets.vscode,
+  // ),
   Project(
     title: 'Inox Hierro',
     description:
