@@ -50,8 +50,7 @@ class HomeBanner extends StatelessWidget {
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
                     onPressed: () {
-                      html.window
-                          .open("https://github.com/gbrielgarcia", "Github");
+                      html.window.open("https://walink.co/c1cf86", "Github");
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.symmetric(
@@ -59,7 +58,8 @@ class HomeBanner extends StatelessWidget {
                           vertical: defaultPadding),
                       backgroundColor: primaryColor,
                     ),
-                    child: Text("VER MAS ", style: TextStyle(color: darkColor)),
+                    child:
+                        Text("CONTÁCTAME ", style: TextStyle(color: darkColor)),
                   )
               ],
             ),
