@@ -81,7 +81,7 @@ class SideMenu extends StatelessWidget {
                             },
                             icon: Image(
                               image: AssetImage(
-                                'assets/png/instagram.png',
+                                Assets.instagram,
                               ),
                               width: Const.widthIcon,
                               color: colorIconInfo,
