@@ -99,16 +99,6 @@ class SideMenu extends StatelessWidget {
                         IconButton(
                             onPressed: () {
                               html.window.open(
-                                  "https://gitlab.com/GbrielGarcia", "GitLab");
-                            },
-                            icon: SvgPicture.asset(
-                              Assets.gitlab,
-                              color: colorIconInfo,
-                              width: Const.widthIcon,
-                            )),
-                        IconButton(
-                            onPressed: () {
-                              html.window.open(
                                   "https://twitter.com/Gabrielx2Garcia",
                                   "Twitter");
                             },

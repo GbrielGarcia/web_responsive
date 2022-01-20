@@ -47,7 +47,8 @@ class HomeBanner extends StatelessWidget {
                   const SizedBox(height: defaultPadding / 2),
                 MyBuildAnimatedText(),
                 SizedBox(height: defaultPadding),
-                if (!Responsive.isMobileLarge(context))
+                if (!Responsive.isMobileLarge(context) ||
+                    Responsive.isTablet(context))
                   ElevatedButton(
                     onPressed: () {
                       html.window.open("https://walink.co/c1cf86", "Github");
@@ -60,7 +61,7 @@ class HomeBanner extends StatelessWidget {
                     ),
                     child:
                         Text("CONTÁCTAME ", style: TextStyle(color: darkColor)),
-                  )
+                  ),
               ],
             ),
           )
