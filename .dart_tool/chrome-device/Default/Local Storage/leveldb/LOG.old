@@ -1,5 +1,4 @@
-2022/01/25-10:34:03.133 136c Reusing MANIFEST C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.c8da36d6\flutter_tools_chrome_device.aacd71b4\Default\Local Storage\leveldb/MANIFEST-000001
-2022/01/25-10:34:03.139 136c Recovering log #4
-2022/01/25-10:34:03.140 136c Level-0 table #7: started
-2022/01/25-10:34:03.145 136c Level-0 table #7: 11058 bytes OK
-2022/01/25-10:34:03.150 136c Delete type=0 #4
+2022/01/25-14:03:21.217 2458 Reusing MANIFEST C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.ce0b79ed\flutter_tools_chrome_device.4586d2dc\Default\Local Storage\leveldb/MANIFEST-000001
+2022/01/25-14:03:21.219 2458 Recovering log #8
+2022/01/25-14:03:21.220 2458 Reusing old log C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.ce0b79ed\flutter_tools_chrome_device.4586d2dc\Default\Local Storage\leveldb/000008.log 
+2022/01/25-14:03:21.221 2458 Delete type=0 #4

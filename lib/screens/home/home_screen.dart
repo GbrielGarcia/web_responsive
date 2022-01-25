@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
+import 'package:web_responsive_ui/screens/home/components/banner_desktop.dart';
 import 'package:web_responsive_ui/screens/main/main_screen.dart';
+import 'package:web_responsive_ui/screens/views/stream/home/home_screen_stream.dart';
 
 import 'components/high_lights_info.dart';
 import 'components/home_banner.dart';
@@ -16,6 +18,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MainScreen(
       children: [
+        BannerDesktop(),
         HomeBanner(),
         HighLightsInfo(),
         MyProjects(
