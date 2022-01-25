@@ -6,17 +6,15 @@ import 'package:web_responsive_ui/core/responsi/responsive.dart';
 import 'package:web_responsive_ui/screens/home/components/project_card.dart';
 
 class MyProjects extends StatelessWidget {
-  const MyProjects({
-    Key? key,
-  }) : super(key: key);
-
+  const MyProjects({Key? key, required this.myProjectsTitle}) : super(key: key);
+  final myProjectsTitle;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          Write.myProjects,
+          myProjectsTitle,
           style: Theme.of(context).textTheme.headline6,
         ),
         const SizedBox(
@@ -52,17 +50,18 @@ class ProjectsGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
-        itemCount: projects.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: crossAxisCount,
-          childAspectRatio: childAspectRatio,
-          crossAxisSpacing: defaultPadding,
-          mainAxisSpacing: defaultPadding,
-        ),
-        itemBuilder: (context, index) => ProjectCard(
-              project: projects[index],
-            ));
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      itemCount: projects.length,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
+        childAspectRatio: childAspectRatio,
+        crossAxisSpacing: defaultPadding,
+        mainAxisSpacing: defaultPadding,
+      ),
+      itemBuilder: (context, index) => ProjectCard(
+        project: projects[index],
+      ),
+    );
   }
 }

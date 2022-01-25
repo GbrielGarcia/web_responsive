@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
+import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/main/main_screen.dart';
 
 import 'components/high_lights_info.dart';
@@ -17,7 +18,9 @@ class HomeScreen extends StatelessWidget {
       children: [
         HomeBanner(),
         HighLightsInfo(),
-        MyProjects(),
+        MyProjects(
+          myProjectsTitle: Write.myProjects,
+        ),
         Recommendations(),
       ],
     );

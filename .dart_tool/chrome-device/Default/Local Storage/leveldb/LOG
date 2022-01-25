@@ -1,2 +1,5 @@
-2022/01/20-12:25:20.223 2448 Creating DB C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.d3ae5f79\flutter_tools_chrome_device.e8d1f921\Default\Local Storage\leveldb since it was missing.
-2022/01/20-12:25:20.238 2448 Reusing MANIFEST C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.d3ae5f79\flutter_tools_chrome_device.e8d1f921\Default\Local Storage\leveldb/MANIFEST-000001
+2022/01/24-22:40:38.772 2e4 Creating DB C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.835f5e15\flutter_tools_chrome_device.d320b495\Default\Local Storage\leveldb since it was missing.
+2022/01/24-22:40:38.783 2e4 Reusing MANIFEST C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.835f5e15\flutter_tools_chrome_device.d320b495\Default\Local Storage\leveldb/MANIFEST-000001
+2022/01/24-23:08:03.257 ebc Level-0 table #5: started
+2022/01/24-23:08:03.262 ebc Level-0 table #5: 15205 bytes OK
+2022/01/24-23:08:03.265 ebc Delete type=0 #3

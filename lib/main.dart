@@ -4,6 +4,7 @@ import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/screens/home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
+import 'package:web_responsive_ui/screens/views/stream/home/home_screen_stream.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: '.Gabriel Garcia.',
+      title: 'Gabriel Garcia',
       theme: ThemeData.dark().copyWith(
         primaryColor: primaryColor,
         scaffoldBackgroundColor: bgColor,

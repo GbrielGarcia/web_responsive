@@ -27,8 +27,8 @@
 
 </head>
 
-<body>
-  <div class="loading">
+<body style="overflow: hidden">
+  <div class="loading" id="loading_indicator">
     <div class="loader"></div>
     <img class="iconLoading" src="icons/Icon-192.png" alt="icon" srcset="">
   </div>
@@ -39,7 +39,7 @@
 
   <script src="main.dart.js" type="application/javascript"></script>
 
- <script>
+  <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;
     function loadMainDartJs() {
@@ -100,6 +100,17 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+  </script>
+
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        var loadingIndicator = document.getElementById("loading_indicator");
+        if (loadingIndicator) {
+          loadingIndicator.remove();
+        }
+      }, 10000);
+    };
   </script>
 
 

@@ -333,7 +333,7 @@
     },
     {
       "name": "url_launcher",
-      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.0.17",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.0.18",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -440,7 +440,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-01-20T17:23:16.709713Z",
+  "generated": "2022-01-25T03:38:46.664765Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }
