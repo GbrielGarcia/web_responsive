@@ -7,7 +7,7 @@ import 'package:web_responsive_ui/screens/views/stream/home/components/store_car
 
 class HomeScrennStream extends StatelessWidget {
   const HomeScrennStream({Key? key}) : super(key: key);
-  static const String route = '/storelive.ec';
+  static const String route = '/storelive.ec/';
 
   @override
   Widget build(BuildContext context) {
