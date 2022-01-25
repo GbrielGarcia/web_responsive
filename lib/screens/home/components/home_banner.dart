@@ -15,6 +15,8 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int number = 593992889078;
+
     return AspectRatio(
       aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
       child: Stack(
@@ -51,12 +53,14 @@ class HomeBanner extends StatelessWidget {
                     Responsive.isTablet(context))
                   ElevatedButton(
                     onPressed: () {
-                      html.window.open("https://walink.co/c1cf86", "Github");
+                      html.window.open(
+                          "https://api.whatsapp.com/send/?phone=${number}&text=Saludos me interesa tus servicios de: ",
+                          "WhatsApp");
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.symmetric(
-                          horizontal: defaultPadding * 2,
-                          vertical: defaultPadding),
+                          horizontal: defaultPadding * 1.5,
+                          vertical: defaultPadding - 5),
                       backgroundColor: primaryColor,
                     ),
                     child:

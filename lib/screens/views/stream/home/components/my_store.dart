@@ -15,10 +15,6 @@ class MyStore extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          myProjectsTitle.toUpperCase(),
-          style: Theme.of(context).textTheme.headline6,
-        ),
         const SizedBox(
           height: defaultPadding,
         ),

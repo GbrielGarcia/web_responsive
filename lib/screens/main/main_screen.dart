@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
+import 'package:web_responsive_ui/models/write.dart';
+import 'package:web_responsive_ui/screens/views/stream/home/home_screen_stream.dart';
 
 import 'components/side_menu.dart';
 
@@ -15,6 +17,22 @@ class MainScreen extends StatelessWidget {
       appBar: Responsive.isDesktop(context)
           ? null
           : AppBar(
+              toolbarHeight: 50, // default is 56
+              actions: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: primaryColor, width: 2),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, HomeScrennStream.route);
+                    },
+                    child: Text(
+                      Write.myStoreLive.toUpperCase(),
+                    ),
+                  ),
+                ),
+              ],
               backgroundColor: bgColor,
               leading: Builder(
                 builder: (context) => IconButton(

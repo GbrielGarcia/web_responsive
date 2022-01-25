@@ -43,7 +43,6 @@ class StoreCard extends StatelessWidget {
             children: [
               Responsive(
                 mobile: GestureDetector(
-                  // When the child is tapped, show a snackbar.
                   onTap: () {
                     showDialog(
                         context: context,
