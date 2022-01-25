@@ -18,6 +18,8 @@ class BannerDesktop extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
+              width: 125,
+              height: 46,
               decoration: BoxDecoration(
                 border: Border.all(color: primaryColor, width: 2),
               ),
