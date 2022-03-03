@@ -15,6 +15,6 @@ por la navegación o contratación de servicios a través de las aplicaciones re
   Privacy(
     name: "Obtención de datos personales",
     text:
-        "Para utilizar nuestras aplicacion y paginas web no es necesario que facilites ningún dato personal.",
+        "Para utilizar nuestras aplicacion y paginas web no es necesario que facilites ningún dato personal..",
   ),
 ];

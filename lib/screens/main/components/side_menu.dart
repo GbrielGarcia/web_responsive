@@ -65,6 +65,7 @@ class SideMenu extends StatelessWidget {
                             // SvgPicture.asset(Assets.download)
                           ],
                         ),
+                        //
                       )),
                   Container(
                     color: Color(0xFF2424E),
