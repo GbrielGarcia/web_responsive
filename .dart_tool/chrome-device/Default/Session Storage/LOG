@@ -1,3 +1,2 @@
-2022/01/25-16:31:41.407 1630 Reusing MANIFEST C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.a9e03f05\flutter_tools_chrome_device.3cdf041a\Default\Session Storage/MANIFEST-000001
-2022/01/25-16:31:41.409 1630 Recovering log #3
-2022/01/25-16:31:41.411 1630 Reusing old log C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.a9e03f05\flutter_tools_chrome_device.3cdf041a\Default\Session Storage/000003.log 
+2022/03/02-22:41:46.343 3 Creating DB /tmp/flutter_tools.FUGIZT/flutter_tools_chrome_device.NAQPTE/Default/Session Storage since it was missing.
+2022/03/02-22:41:47.318 3 Reusing MANIFEST /tmp/flutter_tools.FUGIZT/flutter_tools_chrome_device.NAQPTE/Default/Session Storage/MANIFEST-000001

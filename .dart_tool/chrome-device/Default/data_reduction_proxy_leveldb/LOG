@@ -1,17 +1,2 @@
-2022/01/25-16:31:56.515 30cc Recovering log #17
-2022/01/25-16:31:56.550 30cc Delete type=0 #3
-2022/01/25-16:31:56.550 30cc Delete type=0 #5
-2022/01/25-16:31:56.550 30cc Delete type=0 #7
-2022/01/25-16:31:56.551 30cc Delete type=0 #9
-2022/01/25-16:31:56.551 30cc Delete type=0 #11
-2022/01/25-16:31:56.551 30cc Delete type=0 #13
-2022/01/25-16:31:56.551 30cc Delete type=0 #15
-2022/01/25-16:31:56.551 30cc Delete type=0 #17
-2022/01/25-16:31:56.551 30cc Delete type=3 #2
-2022/01/25-16:31:56.551 30cc Delete type=3 #4
-2022/01/25-16:31:56.551 30cc Delete type=3 #6
-2022/01/25-16:31:56.551 30cc Delete type=3 #8
-2022/01/25-16:31:56.551 30cc Delete type=3 #10
-2022/01/25-16:31:56.551 30cc Delete type=3 #12
-2022/01/25-16:31:56.551 30cc Delete type=3 #14
-2022/01/25-16:31:56.553 30cc Delete type=3 #16
+2022/03/02-22:41:52.914 926c Creating DB /tmp/flutter_tools.FUGIZT/flutter_tools_chrome_device.NAQPTE/Default/data_reduction_proxy_leveldb since it was missing.
+2022/03/02-22:41:59.229 926c Delete type=3 #1

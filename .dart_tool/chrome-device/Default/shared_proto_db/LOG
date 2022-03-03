@@ -1,3 +1,2 @@
-2022/01/25-16:31:42.029 2fe8 Reusing MANIFEST C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.a9e03f05\flutter_tools_chrome_device.3cdf041a\Default\shared_proto_db/MANIFEST-000001
-2022/01/25-16:31:42.030 2fe8 Recovering log #3
-2022/01/25-16:31:42.031 2fe8 Reusing old log C:\Users\CHUWI\AppData\Local\Temp\flutter_tools.a9e03f05\flutter_tools_chrome_device.3cdf041a\Default\shared_proto_db/000003.log 
+2022/03/02-22:41:51.544 9288 Creating DB /tmp/flutter_tools.FUGIZT/flutter_tools_chrome_device.NAQPTE/Default/shared_proto_db since it was missing.
+2022/03/02-22:41:52.953 9288 Reusing MANIFEST /tmp/flutter_tools.FUGIZT/flutter_tools_chrome_device.NAQPTE/Default/shared_proto_db/MANIFEST-000001
