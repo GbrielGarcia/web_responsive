@@ -15,10 +15,10 @@ dependencies:
     sdk: flutter
   flutter_svg: ^1.0.0
   flutter_widget_from_html_core: any
-  fwfh_webview: ^0.6.2  
+  fwfh_webview: ^0.6.2
   google_fonts: ^2.1.0
   universal_html: ^2.0.8
-  url_launcher: ^6.0.9
+  url_launcher: ^6.0.18
 
 dev_dependencies:
   flutter_launcher_icons: ^0.9.2
@@ -40,7 +40,9 @@ flutter:
     - assets/svg/
     - assets/png/
     - assets/icon/
+    - assets/png/store/
 
+    
   fonts:
     - family: Agustina
       fonts:

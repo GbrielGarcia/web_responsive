@@ -82,7 +82,7 @@ class SideMenu extends StatelessWidget {
                             },
                             icon: Image(
                               image: AssetImage(
-                                'assets/png/instagram.png',
+                                Assets.instagram,
                               ),
                               width: Const.widthIcon,
                               color: colorIconInfo,
@@ -94,16 +94,6 @@ class SideMenu extends StatelessWidget {
                             },
                             icon: SvgPicture.asset(
                               Assets.github,
-                              color: colorIconInfo,
-                              width: Const.widthIcon,
-                            )),
-                        IconButton(
-                            onPressed: () {
-                              html.window.open(
-                                  "https://gitlab.com/GbrielGarcia", "GitLab");
-                            },
-                            icon: SvgPicture.asset(
-                              Assets.gitlab,
                               color: colorIconInfo,
                               width: Const.widthIcon,
                             )),

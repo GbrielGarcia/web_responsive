@@ -35,4 +35,5 @@ class Write {
   static const String headline = 'GbrielCodigo';
   static const String myCourses = 'Dart';
   static const String courses = 'Cursos';
+  static const String myStoreLive = 'Store Live EC';
 }

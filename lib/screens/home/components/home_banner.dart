@@ -15,6 +15,8 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int number = 593992889078;
+
     return AspectRatio(
       aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
       child: Stack(
@@ -47,20 +49,23 @@ class HomeBanner extends StatelessWidget {
                   const SizedBox(height: defaultPadding / 2),
                 MyBuildAnimatedText(),
                 SizedBox(height: defaultPadding),
-                if (!Responsive.isMobileLarge(context))
+                if (!Responsive.isMobileLarge(context) ||
+                    Responsive.isTablet(context))
                   ElevatedButton(
                     onPressed: () {
-                      html.window
-                          .open("https://github.com/gbrielgarcia", "Github");
+                      html.window.open(
+                          "https://api.whatsapp.com/send/?phone=${number}&text=Saludos me interesa tus servicios de: ",
+                          "WhatsApp");
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.symmetric(
-                          horizontal: defaultPadding * 2,
-                          vertical: defaultPadding),
+                          horizontal: defaultPadding * 1.5,
+                          vertical: defaultPadding - 5),
                       backgroundColor: primaryColor,
                     ),
-                    child: Text("VER MAS ", style: TextStyle(color: darkColor)),
-                  )
+                    child:
+                        Text("CONTÁCTAME ", style: TextStyle(color: darkColor)),
+                  ),
               ],
             ),
           )
@@ -110,8 +115,7 @@ class AnimatedText extends StatelessWidget {
         TyperAnimatedText('paginas web', speed: Duration(milliseconds: 60)),
         TyperAnimatedText('aplicaciones moviles',
             speed: Duration(milliseconds: 60)),
-        TyperAnimatedText('wordpress ecommerce',
-            speed: Duration(milliseconds: 60))
+        TyperAnimatedText(' ecommerce', speed: Duration(milliseconds: 60))
       ],
     );
   }
