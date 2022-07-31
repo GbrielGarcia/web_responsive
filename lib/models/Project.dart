@@ -29,10 +29,10 @@ List<Project> projects = [
     iconImage2: Assets.javascript,
   ),
   Project(
-    title: 'Super Huertas Tecnology',
+    title: 'Projection',
     description:
-        'Pagina web realizada ha cliente, para mostar informacion de sus productos y los servicios que ofrece en Manabi el carmen.',
-    link: 'https://superhuertastecnology.com/#',
+        'Tienda online, con pasarela de pago.. la tienda ofrece productos tecnologicos de EEUU',
+    link: 'https://projectionec.com/',
     iconImage: Assets.html,
     iconImage1: Assets.css,
     iconImage2: Assets.javascript,
