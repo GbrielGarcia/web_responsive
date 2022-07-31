@@ -41,7 +41,7 @@ List<Project> projects = [
     title: 'Inox Hierro',
     description:
         'Pagina web realizada ha cliente, con diseño elegante y con una posicion global lo buscas y lo encuentras "trabajos en acero" "pasamanos en acero", el resultado es el primero.',
-    link: 'https://inoxhierro.com',
+    link: 'https://inoxhierroec.com/',
     iconImage: Assets.html,
     iconImage1: Assets.jimdo,
     iconImage2: Assets.javascript,
