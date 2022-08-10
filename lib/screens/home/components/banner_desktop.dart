@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/views/stream/home/home_screen_stream.dart';
+import 'package:universal_html/html.dart' as html;
 
 class BannerDesktop extends StatelessWidget {
   const BannerDesktop({Key? key}) : super(key: key);
@@ -24,11 +25,31 @@ class BannerDesktop extends StatelessWidget {
                 border: Border.all(color: primaryColor, width: 2),
               ),
               child: MaterialButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, HomeScrennStream.route);
+                onPressed: () async {
+                  html.window.open("https://www.instagram.com/gabrielx2garcia/",
+                      "Instagram");
                 },
                 child: Text(
-                  Write.myStoreLive.toUpperCase(),
+                  Write.instagram.toUpperCase(),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Container(
+              width: 125,
+              height: 46,
+              decoration: BoxDecoration(
+                border: Border.all(color: primaryColor, width: 2),
+              ),
+              child: MaterialButton(
+                onPressed: () async {
+                  html.window.open(
+                      "https://www.linkedin.com/in/albertoguaman", "LikedIn");
+                },
+                child: Text(
+                  Write.linkedin.toUpperCase(),
                 ),
               ),
             ),

@@ -36,4 +36,6 @@ class Write {
   static const String myCourses = 'Dart';
   static const String courses = 'Cursos';
   static const String myStoreLive = 'Store Live EC';
+  static const String instagram = 'instagram';
+  static const String linkedin = 'linkedin';
 }
