@@ -47,7 +47,9 @@ class SideMenu extends StatelessWidget {
                   SizedBox(height: defaultPadding / 2),
                   TextButton(
                       onPressed: () {
-                        // html.window.open("", "CV ");
+                        html.window.open(
+                            "https://drive.google.com/file/d/1KBv2DJwoCH_3IrSDx2MsxYdz5ZaD7PmA/view?usp=sharing",
+                            "CV ");
                       },
                       child: FittedBox(
                         child: Row(
@@ -55,14 +57,14 @@ class SideMenu extends StatelessWidget {
                             Text(
                               Write.curriculum,
                               style: TextStyle(
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .color,
-                                  decoration: TextDecoration.lineThrough),
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
                             ),
                             SizedBox(height: defaultPadding / 2),
-                            // SvgPicture.asset(Assets.download)
+                            SvgPicture.asset(Assets.download)
                           ],
                         ),
                         //

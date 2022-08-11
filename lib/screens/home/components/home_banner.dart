@@ -64,7 +64,7 @@ class HomeBanner extends StatelessWidget {
                       backgroundColor: primaryColor,
                     ),
                     child:
-                        Text("CONTÁCTAME ", style: TextStyle(color: darkColor)),
+                        Text("COTIZA YA", style: TextStyle(color: darkColor)),
                   ),
               ],
             ),
