@@ -92,6 +92,24 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "firebase_core",
+      "rootUri": "file:///home/alberto-guaman/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.21.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core_platform_interface",
+      "rootUri": "file:///home/alberto-guaman/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-4.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core_web",
+      "rootUri": "file:///home/alberto-guaman/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.7.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///home/alberto-guaman/snap/flutter/common/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -446,7 +464,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-08-04T00:44:13.795982Z",
+  "generated": "2022-08-19T05:26:37.846293Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }
