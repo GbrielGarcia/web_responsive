@@ -26,11 +26,11 @@ class BannerDesktop extends StatelessWidget {
               ),
               child: MaterialButton(
                 onPressed: () async {
-                  html.window.open("https://www.instagram.com/gabrielx2garcia/",
-                      "Instagram");
+                  html.window.open(
+                      "https://www.linkedin.com/in/albertoguaman", "LikedIn");
                 },
                 child: Text(
-                  Write.instagram.toUpperCase(),
+                  Write.linkedin.toUpperCase(),
                 ),
               ),
             ),
@@ -45,11 +45,11 @@ class BannerDesktop extends StatelessWidget {
               ),
               child: MaterialButton(
                 onPressed: () async {
-                  html.window.open(
-                      "https://www.linkedin.com/in/albertoguaman", "LikedIn");
+                  html.window.open("https://www.instagram.com/gabrielx2garcia/",
+                      "Instagram");
                 },
                 child: Text(
-                  Write.linkedin.toUpperCase(),
+                  Write.instagram.toUpperCase(),
                 ),
               ),
             ),

@@ -21,25 +21,26 @@ class Coding extends StatelessWidget {
           ),
         ),
         AnimatedLinearProgressIndicator(
-          percentage: 0.8,
-          label: Write.dart,
-        ),
-        AnimatedLinearProgressIndicator(
-          percentage: 0.5,
-          label: Write.css,
+          percentage: 0.95,
+          label: Write.wordPres,
         ),
         AnimatedLinearProgressIndicator(
           percentage: 0.9,
           label: Write.html,
         ),
         AnimatedLinearProgressIndicator(
-          percentage: 0.60,
-          label: Write.cPlusPlus,
+          percentage: 0.75,
+          label: Write.flutter,
         ),
         AnimatedLinearProgressIndicator(
-          percentage: 0.4,
-          label: Write.go,
-        )
+          percentage: 0.7,
+          label: Write.dart,
+        ),
+        AnimatedLinearProgressIndicator(
+          percentage: 0.5,
+          label: Write.css,
+        ),
+
       ],
     );
   }

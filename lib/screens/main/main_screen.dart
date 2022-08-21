@@ -20,20 +20,52 @@ class MainScreen extends StatelessWidget {
           : AppBar(
               toolbarHeight: 50, // default is 56
               actions: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: primaryColor, width: 2),
-                  ),
-                  child: MaterialButton(
-                    onPressed: () async {
-                      html.window.open(
-                          "https://www.linkedin.com/in/albertoguaman",
-                          "LikedIn");
-                    },
-                    child: Text(
-                      Write.linkedin.toUpperCase(),
+                Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: primaryColor, width: 2),
+                      ),
+                      child: Row(
+                        children: [
+                          MaterialButton(
+                            onPressed: () async {
+                              html.window.open(
+                                  "https://www.linkedin.com/in/albertoguaman",
+                                  "LikedIn");
+                            },
+                            child: Text(
+                              Write.linkedin.toUpperCase(),
+                            ),
+                          ),
+
+                        ],
+                      ),
                     ),
-                  ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: primaryColor, width: 2),
+                      ),
+                      child: Row(
+                        children: [
+                          MaterialButton(
+                            onPressed: () async {
+                              html.window.open(
+                                  "https://www.instagram.com/gabrielx2garcia/",
+                                  "Instagram");
+                            },
+                            child: Text(
+                              Write.instagram.toUpperCase(),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
               backgroundColor: bgColor,

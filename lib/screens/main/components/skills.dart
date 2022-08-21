@@ -29,11 +29,11 @@ class Skills extends StatelessWidget {
             SizedBox(width: defaultPadding / 2),
             Expanded(
                 child: AnimatedCircularProgressIndicator(
-                    percentage: 0.65, label: Write.python)),
+                    percentage: 0.70, label: Write.python)),
             SizedBox(width: defaultPadding / 2),
             Expanded(
                 child: AnimatedCircularProgressIndicator(
-                    percentage: 0.85, label: Write.wordPres))
+                    percentage: 0.95, label: Write.wordPres))
           ],
         )
       ],

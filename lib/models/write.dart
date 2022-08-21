@@ -1,14 +1,14 @@
 class Write {
-  static const String presents = 'Hola, soy Gabriel Garcia';
+  static const String presents = 'Hola, soy Alberto Guaman';
 
-  static const String name = 'Gabriel Garcia';
-  static const String specialty = 'Frontend y Flutter ';
+  static const String name = 'Alberto Guaman';
+  static const String specialty = 'Frontend, Flutter, E-commerce';
   static const String country = 'Pais';
   static const String countryText = 'Ecuador';
   static const String city = 'Ciudad';
   static const String cityText = 'Santo Domingo';
   static const String age = 'Edad';
-  static const int ageNumber = 23;
+  static const int ageNumber = 24;
   static const String curriculum = 'CV ';
   static const String skill = 'Habilidades';
   static const String flutter = 'Flutter';
