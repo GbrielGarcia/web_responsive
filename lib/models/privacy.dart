@@ -6,15 +6,23 @@ class Privacy {
 
 final List<Privacy> privacys = [
   Privacy(
-    name: "Política de Privacidad",
+    name: "Política",
     text: '''
-BatCode te informa sobre su Política de Privacidad respecto al tratamiento y protección
-de los datos de carácter personal de los usuarios y clientes que no son recabados
-por la navegación o contratación de servicios a través de las aplicaciones realizadas por BatCode..''',
+Gabriel Código te informa sobre sus políticas, al momento de 
+contratar los servicios de Gabriel Código  está aceptando de manera voluntaria las políticas de el mismo.
+Una vez dado un bono o pago total para cualquier servicio que 
+ofrezca Gabriel Código, será verificado y aprobado para el inicio del servicio. Caso contrario que el 
+cliente desista de manera voluntaria sólo será entregado el 10% del dinero dado por parte del cliente.
+....''',
+  ),
+  Privacy(
+    name: "Suspensión de servicios",
+    text:
+    "Los servicios se dan de baja por la inclusión por parte del cliente en los pagos acordados, cada renovación de servicio se tendrá que realizar una semana antes de la fecha de vencimiento. ",
   ),
   Privacy(
     name: "Obtención de datos personales",
     text:
-        "Para utilizar nuestras aplicacion y paginas web no es necesario que facilites ningún dato personal..",
+    "Para utilizar nuestras aplicaciones y páginas web no es necesario que facilites ningún dato personal..",
   ),
 ];
