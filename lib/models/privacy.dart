@@ -18,11 +18,12 @@ cliente desista de manera voluntaria sólo será entregado el 10% del dinero dad
   Privacy(
     name: "Suspensión de servicios",
     text:
-    "Los servicios se dan de baja por la inclusión por parte del cliente en los pagos acordados, cada renovación de servicio se tendrá que realizar una semana antes de la fecha de vencimiento. ",
+    "Los servicios se dan de baja por incumplimiento por parte del cliente en los pagos acordados, cada "
+        "renovación de servicio se tendrá que realizar una semana antes de la fecha de vencimiento. ",
   ),
   Privacy(
     name: "Obtención de datos personales",
     text:
-    "Para utilizar nuestras aplicaciones y páginas web no es necesario que facilites ningún dato personal..",
+    "Para utilizar nuestras aplicaciones y páginas web, no es necesario facilitar ningún dato personal.",
   ),
 ];
