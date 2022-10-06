@@ -9,11 +9,12 @@ final List<Privacy> privacys = [
     name: "Política",
     text: '''
 Gabriel Código te informa sobre sus políticas, al momento de 
-contratar los servicios de Gabriel Código  está aceptando de manera voluntaria las políticas de el mismo.
-Una vez dado un bono o pago total para cualquier servicio que 
-ofrezca Gabriel Código, será verificado y aprobado para el inicio del servicio. Caso contrario que el 
-cliente desista de manera voluntaria sólo será entregado el 10% del dinero dado por parte del cliente.
-....''',
+contratar los servicios de Gabriel Código  está aceptando de manera voluntaria las políticas de el mismo.''',
+  ),
+  Privacy(
+    name: "Reembolso",
+    text:
+   '''Si el cliente desiste de continuar con el servicio de manera voluntaria solo será entregado el 10% del dinero transferido o depositado a las cuentas de Alberto Gabriel Guaman Garcia''',
   ),
   Privacy(
     name: "Suspensión de servicios",
