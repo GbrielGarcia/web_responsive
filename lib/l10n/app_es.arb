@@ -1,0 +1,21 @@
+{
+  "@@locale": "es",
+  "hello": "Hola",
+  "country": "País",
+  "city": "Ciudad",
+  "age": "Edad",
+  "skills": "Habilidades",
+  "coding": "Lenguajes",
+  "knowledge": "Conocimiento",
+  "presents": "Hola, soy Alberto Guaman.",
+  "customers": "Clientes  ",
+  "designs": "Diseños  ",
+  "myProjects": "Mis Trabajos",
+  "recommendations": "Recomendaciones",
+  "privacys": "Política de Privacidad",
+  "wordPresEcommerce": "WordPress en Comercio",
+  "quoteNow": "cotiza ya",
+  "linux": "Linux en Consola",
+  "performed": "Realizó ",
+  "projectStreaming": "Pagina web realizada a cliente, realizada con la finalidad de mostrar los multiples servicios que ofrece de streaming."
+}

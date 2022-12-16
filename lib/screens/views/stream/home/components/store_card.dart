@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/models/storelive.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
 import 'package:universal_html/html.dart' as html;
-import 'package:web_responsive_ui/models/storelive.dart';
 
 class StoreCard extends StatelessWidget {
   const StoreCard({

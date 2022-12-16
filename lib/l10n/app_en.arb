@@ -1,0 +1,21 @@
+{
+  "@@locale": "en",
+  "hello": "Hello",
+  "country": "Country",
+  "city": "City",
+  "age": "Age",
+  "skills": "Skills",
+  "coding": "Languages",
+  "knowledge": "Knowledge",
+  "presents": "Hi, I'm Alberto Guaman.",
+  "customers": "Client  ",
+  "designs": "Designs  ",
+  "myProjects": "My jobs",
+  "recommendations": "Recommendations",
+  "privacys": "Privacy Policy",
+  "wordPresEcommerce": "WordPress in Commerce",
+  "quoteNow": "quote now",
+  "linux": "Linux on Console",
+  "performed": "Performed ",
+  "projectStreaming": "Web page made for a client, made with the purpose of showing the multiple streaming services offered."
+}

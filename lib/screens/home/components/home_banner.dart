@@ -4,7 +4,7 @@ import 'package:web_responsive_ui/core/assets/assets.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../home_screen.dart';
 import 'package:universal_html/html.dart' as html;
 
@@ -15,6 +15,7 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final al = AppLocalizations.of(context);
     int number = 593992889078;
 
     return AspectRatio(
@@ -34,7 +35,7 @@ class HomeBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  Write.presents,
+                  al!.presents,
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headline3!.copyWith(
                             fontWeight: FontWeight.bold,
@@ -64,7 +65,7 @@ class HomeBanner extends StatelessWidget {
                       backgroundColor: primaryColor,
                     ),
                     child:
-                        Text("COTIZA YA", style: TextStyle(color: darkColor)),
+                        Text(al!.quoteNow.toUpperCase(), style: TextStyle(color: darkColor, fontWeight: FontWeight.bold)),
                   ),
               ],
             ),
@@ -82,6 +83,8 @@ class MyBuildAnimatedText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final al = AppLocalizations.of(context);
+
     return DefaultTextStyle(
       maxLines: 1,
       style: Theme.of(context).textTheme.subtitle1!,
@@ -90,7 +93,7 @@ class MyBuildAnimatedText extends StatelessWidget {
           if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
-          Text("Realizo "),
+          Text(al!.performed),
           Responsive.isMobile(context)
               ? Expanded(child: AnimatedText())
               : AnimatedText(),

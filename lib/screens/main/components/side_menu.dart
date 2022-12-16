@@ -5,7 +5,7 @@ import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/main/components/skills.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'area_info_text.dart';
 import 'coding.dart';
 import 'knowledges.dart';
@@ -19,6 +19,8 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final al = AppLocalizations.of(context);
+
     return Drawer(
       child: SafeArea(
         child: Column(
@@ -30,13 +32,13 @@ class SideMenu extends StatelessWidget {
               padding: EdgeInsets.all(defaultPadding),
               child: Column(
                 children: [
-                  AreaInfoText(title: Write.country, text: Write.countryText),
+                  AreaInfoText(title: al!.country, text: Write.countryText),
                   AreaInfoText(
-                    title: Write.city,
+                    title: al.city,
                     text: Write.cityText,
                   ),
                   AreaInfoText(
-                    title: Write.age,
+                    title: al.age,
                     text: Write.ageNumber.toString(),
                   ),
                   Skills(),

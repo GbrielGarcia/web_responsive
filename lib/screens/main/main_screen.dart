@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
 import 'package:web_responsive_ui/models/write.dart';
-import 'package:web_responsive_ui/screens/views/stream/home/home_screen_stream.dart';
 import 'package:universal_html/html.dart' as html;
 
+import '../widget/cupertino_switch.dart';
 import 'components/side_menu.dart';
 
 class MainScreen extends StatelessWidget {
@@ -22,6 +22,13 @@ class MainScreen extends StatelessWidget {
               actions: <Widget>[
                 Row(
                   children: [
+                    CupertinoSwitchW(
+                      width: null,
+                      height: 32,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       decoration: BoxDecoration(
                         border: Border.all(color: primaryColor, width: 2),
@@ -38,7 +45,6 @@ class MainScreen extends StatelessWidget {
                               Write.linkedin.toUpperCase(),
                             ),
                           ),
-
                         ],
                       ),
                     ),
@@ -61,7 +67,6 @@ class MainScreen extends StatelessWidget {
                               Write.instagram.toUpperCase(),
                             ),
                           ),
-
                         ],
                       ),
                     ),

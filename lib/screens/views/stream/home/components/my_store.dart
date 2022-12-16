@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
-import 'package:web_responsive_ui/models/Project.dart';
 import 'package:web_responsive_ui/models/storelive.dart';
-import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
-import 'package:web_responsive_ui/screens/home/components/project_card.dart';
 import 'package:web_responsive_ui/screens/views/stream/home/components/store_card.dart';
 
 class MyStore extends StatelessWidget {

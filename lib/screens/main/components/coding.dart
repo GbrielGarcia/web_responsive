@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Coding extends StatelessWidget {
   const Coding({
@@ -9,6 +10,8 @@ class Coding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final al = AppLocalizations.of(context);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -16,7 +19,7 @@ class Coding extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            Write.coding,
+            al!.coding,
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),

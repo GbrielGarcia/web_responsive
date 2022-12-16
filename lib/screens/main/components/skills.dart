@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/components/animated_progress_indicator.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
 
@@ -10,6 +11,7 @@ class Skills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final al = AppLocalizations.of(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -17,7 +19,7 @@ class Skills extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            Write.skill,
+            al!.skills,
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
