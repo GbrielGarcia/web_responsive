@@ -5,14 +5,16 @@ import '../../../core/components/locale.dart';
 import '../../core/style/color.dart';
 
 class CupertinoSwitchW extends StatelessWidget {
-
   final width;
   final height;
-  const CupertinoSwitchW({Key? key, this.width, this.height,}) : super(key: key);
+  const CupertinoSwitchW({
+    Key? key,
+    this.width,
+    this.height,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     var language = Provider.of<UtilAppLocale>(context);
 
     return Container(
@@ -25,9 +27,14 @@ class CupertinoSwitchW extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text('  EN', style: TextStyle(color: Colors.white)),
+          Text(
+            '  EN',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           CupertinoSwitch(
-
             onChanged: (bool value) {
               value == true
                   ? language.changeLocale(Locale('es'))
@@ -35,7 +42,13 @@ class CupertinoSwitchW extends StatelessWidget {
             },
             value: language.locale == Locale('en') ? false : true,
           ),
-          Text('ES  ', style: TextStyle(color: Colors.white)),
+          Text(
+            'ES  ',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ],
       ),
     );

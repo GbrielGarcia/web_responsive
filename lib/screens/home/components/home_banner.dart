@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/assets/assets.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
-import 'package:web_responsive_ui/models/write.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../home_screen.dart';
 import 'package:universal_html/html.dart' as html;
@@ -64,8 +63,13 @@ class HomeBanner extends StatelessWidget {
                           vertical: defaultPadding - 5),
                       backgroundColor: primaryColor,
                     ),
-                    child:
-                        Text(al!.quoteNow.toUpperCase(), style: TextStyle(color: darkColor, fontWeight: FontWeight.bold)),
+                    child: Text(
+                      al.quoteNow.toUpperCase(),
+                      style: TextStyle(
+                        color: darkColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
               ],
             ),

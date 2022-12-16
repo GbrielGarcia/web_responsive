@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/privacy.dart';
-import 'package:web_responsive_ui/models/write.dart';
 import 'package:web_responsive_ui/screens/views/privacy_policy/components/privacy_card.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 

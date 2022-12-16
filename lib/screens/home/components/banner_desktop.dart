@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/models/write.dart';
@@ -8,9 +7,8 @@ import '../../widget/cupertino_switch.dart';
 class BannerDesktop extends StatelessWidget {
   const BannerDesktop({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
       child: Container(

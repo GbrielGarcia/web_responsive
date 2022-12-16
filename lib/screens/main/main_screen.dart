@@ -3,7 +3,6 @@ import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
 import 'package:web_responsive_ui/models/write.dart';
 import 'package:universal_html/html.dart' as html;
-
 import '../widget/cupertino_switch.dart';
 import 'components/side_menu.dart';
 
@@ -22,10 +21,12 @@ class MainScreen extends StatelessWidget {
               actions: <Widget>[
                 Row(
                   children: [
-                    CupertinoSwitchW(
-                      width: null,
-                      height: 32,
-                    ),
+                    Responsive.isMobile(context)
+                        ? Container()
+                        : CupertinoSwitchW(
+                            width: null,
+                            height: 32,
+                          ),
                     SizedBox(
                       width: 10,
                     ),
@@ -108,6 +109,11 @@ class MainScreen extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: Responsive.isMobile(context)
+          ? CupertinoSwitchW(
+              width: 113,
+            )
+          : Container(),
     );
   }
 }

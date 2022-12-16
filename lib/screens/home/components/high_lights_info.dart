@@ -13,7 +13,6 @@ class HighLightsInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final al = AppLocalizations.of(context);
 
     return Padding(
@@ -51,11 +50,12 @@ class HighLightsInfo extends StatelessWidget {
                         ),
                         label: Write.web),
                     HeighLight(
-                        counter: AnimatedCounter(
-                          value: 11,
-                          text: "+",
-                        ),
-                        label: al!.designs),
+                      counter: AnimatedCounter(
+                        value: 11,
+                        text: "+",
+                      ),
+                      label: al.designs,
+                    ),
                   ],
                 )
               ],
@@ -86,7 +86,7 @@ class HighLightsInfo extends StatelessWidget {
                       value: 11,
                       text: "+",
                     ),
-                    label: al!.designs),
+                    label: al.designs),
               ],
             ),
     );

@@ -1,6 +1,4 @@
 import 'package:web_responsive_ui/core/assets/assets.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 
 class Project {
   final String? title;
@@ -18,12 +16,10 @@ class Project {
     this.iconImage1,
     this.iconImage2,
   });
-
 }
 
 List<Project> projects = [
-
-Project(
+  Project(
     title: 'Streaming Ec',
     description:
         'Pagina web realizada ha cliente, realizada con la finalidad de mostrar los multiples servicios que ofrece de streaming.',
