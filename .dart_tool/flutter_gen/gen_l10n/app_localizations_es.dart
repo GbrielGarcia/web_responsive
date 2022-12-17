@@ -56,5 +56,29 @@ class AppLocalizationsEs extends AppLocalizations {
   String get performed => 'Realizó ';
 
   @override
-  String get projectStreaming => 'Pagina web realizada a cliente, realizada con la finalidad de mostrar los multiples servicios que ofrece de streaming.';
+  String get seeMore => 'Ver mas >>';
+
+  @override
+  String get madeWith => 'Hecho con';
+
+  @override
+  String get recommendationAdrian => 'Exelente servicio, una experiencia increible al momento de la navegación por su increible diseño moderno y que se adapta al usuario y a cualquier dispositivo estoy totalmente satisfecho y la experiencia y la rapidez de carga es fantastica, reconmedable al 100%';
+
+  @override
+  String get recommendationAnthony => 'Me gustó el trabajo realizado ya que si cumplió con las especificaciones.';
+
+  @override
+  String get recommendationDario => 'La aplicacion de consola bien realizada, lo recomiendo.';
+
+  @override
+  String get projectStoreEc => 'Pagina web realizada a cliente, realizada con la finalidad de mostrar los multiples servicios que ofrece de streaming.';
+
+  @override
+  String get projectProjection => 'Tienda online, con pasarela de pago.. la tienda ofrece productos tecnologicos de EEUU.';
+
+  @override
+  String get projectInoxHierro => 'Pagina web realizada a cliente, con diseño elegante y con una posicion global lo buscas y lo encuentras, trabajos en acero, pasamanos en acero, el resultado es el primero.';
+
+  @override
+  String get projectLinterna => 'Aplicacion para Ios y Android realizada con flutter, se trata de una herramienta de linterna con algunas funcionalidades, efecto de parpadeo y temporizador.';
 }

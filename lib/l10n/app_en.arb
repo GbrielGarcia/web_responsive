@@ -17,5 +17,13 @@
   "quoteNow": "quote now",
   "linux": "Linux on Console",
   "performed": "Performed ",
-  "projectStreaming": "Web page made for a client, made with the purpose of showing the multiple streaming services offered."
+  "seeMore": "See more >>",
+  "madeWith": "Made with",
+  "recommendationAdrian": "Excellent service, an incredible experience when browsing due to its incredible modern design that adapts to the user and any device, I am totally satisfied and the experience and loading speed is fantastic, 100% commendable",
+  "recommendationAnthony": "I liked the work done because it met the specifications.",
+  "recommendationDario": "The console application is well done, I recommend it.",
+  "projectStoreEc": "Web page made for a client, made with the purpose of showing the multiple streaming services offered.",
+  "projectProjection": "Online store, with payment gateway... the store offers technological products from the USA.",
+  "projectInoxHierro": "Web page made for a client, with an elegant design and with a global position, you look for it and you find it, works in steel, steel handrails, the result is the first.",
+  "projectLinterna": "Application for Ios and Android made with flutter, it is a flashlight tool with some features, blinking effect and timer."
 }

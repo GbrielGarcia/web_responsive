@@ -1,12 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:web_responsive_ui/core/assets/assets.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Project {
-  final String? title;
-  final String? link;
-  final String? description;
-  final String? iconImage;
-  final String? iconImage1;
-  final String? iconImage2;
+  final String? title,
+      link,
+      description,
+      iconImage,
+      iconImage1,
+      iconImage2;
 
   Project({
     this.title,
@@ -18,11 +20,11 @@ class Project {
   });
 }
 
-List<Project> projects = [
+
+List<Project> projects(BuildContext context) => [
   Project(
     title: 'Streaming Ec',
-    description:
-        'Pagina web realizada ha cliente, realizada con la finalidad de mostrar los multiples servicios que ofrece de streaming.',
+    description: AppLocalizations.of(context)!.projectStoreEc,
     link: 'https://streamingecu.com/',
     iconImage: Assets.html,
     iconImage1: Assets.css,
@@ -30,8 +32,7 @@ List<Project> projects = [
   ),
   Project(
     title: 'Projection',
-    description:
-        'Tienda online, con pasarela de pago.. la tienda ofrece productos tecnologicos de EEUU',
+    description: AppLocalizations.of(context)!.projectProjection,
     link: 'https://projectionec.com/',
     iconImage: Assets.html,
     iconImage1: Assets.css,
@@ -39,8 +40,7 @@ List<Project> projects = [
   ),
   Project(
     title: 'Inox Hierro',
-    description:
-        'Pagina web realizada ha cliente, con diseño elegante y con una posicion global lo buscas y lo encuentras "trabajos en acero" "pasamanos en acero", el resultado es el primero.',
+    description: AppLocalizations.of(context)!.projectInoxHierro,
     link: 'https://inoxhierroec.com/',
     iconImage: Assets.html,
     iconImage1: Assets.jimdo,
@@ -48,8 +48,7 @@ List<Project> projects = [
   ),
   Project(
     title: 'Linterna',
-    description:
-        'Aplicacion para Ios y Android realizada con flutter, se trata de una herramienta de linterna con algunas funcionalidades, efecto de parpadeo y temporizador. ',
+    description: AppLocalizations.of(context)!.projectLinterna,
     link:
         'https://play.google.com/store/apps/details?id=com.gabrielcodigo.com.app_linterna',
     iconImage: Assets.dart,

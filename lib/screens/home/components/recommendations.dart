@@ -54,11 +54,11 @@ class _RecommendationsState extends State<Recommendations> {
               controller: _controller,
               child: Row(
                 children: List.generate(
-                    recommendations.length,
+                    recommendations(context).length,
                     (index) => Padding(
                           padding: const EdgeInsets.only(right: defaultPadding),
                           child: RecommendationCard(
-                            recommendation: recommendations[index],
+                            recommendation: recommendations(context)[index],
                           ),
                         )),
               ),

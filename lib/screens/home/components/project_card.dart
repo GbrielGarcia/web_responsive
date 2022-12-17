@@ -4,6 +4,8 @@ import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/core/style/constants.dart';
 import 'package:web_responsive_ui/models/Project.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'package:universal_html/html.dart' as html;
 
 class ProjectCard extends StatelessWidget {
@@ -16,6 +18,8 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final al = AppLocalizations.of(context);
+
     return Container(
       padding: EdgeInsets.all(defaultPadding),
       color: secondaryColor,
@@ -44,13 +48,13 @@ class ProjectCard extends StatelessWidget {
                       project!.link!.toString(), project!.link.toString());
                 },
                 child: Text(
-                  "Ver mas >>",
+                  al!.seeMore,
                   style: TextStyle(color: primaryColor),
                 ),
               ),
               Expanded(child: Container()),
               Text(
-                "Hecho con",
+                al.madeWith,
                 style: TextStyle(color: primaryColor),
               ),
             ],

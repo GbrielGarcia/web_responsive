@@ -56,5 +56,29 @@ class AppLocalizationsEn extends AppLocalizations {
   String get performed => 'Performed ';
 
   @override
-  String get projectStreaming => 'Web page made for a client, made with the purpose of showing the multiple streaming services offered.';
+  String get seeMore => 'See more >>';
+
+  @override
+  String get madeWith => 'Made with';
+
+  @override
+  String get recommendationAdrian => 'Excellent service, an incredible experience when browsing due to its incredible modern design that adapts to the user and any device, I am totally satisfied and the experience and loading speed is fantastic, 100% commendable';
+
+  @override
+  String get recommendationAnthony => 'I liked the work done because it met the specifications.';
+
+  @override
+  String get recommendationDario => 'The console application is well done, I recommend it.';
+
+  @override
+  String get projectStoreEc => 'Web page made for a client, made with the purpose of showing the multiple streaming services offered.';
+
+  @override
+  String get projectProjection => 'Online store, with payment gateway... the store offers technological products from the USA.';
+
+  @override
+  String get projectInoxHierro => 'Web page made for a client, with an elegant design and with a global position, you look for it and you find it, works in steel, steel handrails, the result is the first.';
+
+  @override
+  String get projectLinterna => 'Application for Ios and Android made with flutter, it is a flashlight tool with some features, blinking effect and timer.';
 }

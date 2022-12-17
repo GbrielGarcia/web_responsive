@@ -195,11 +195,59 @@ abstract class AppLocalizations {
   /// **'Performed '**
   String get performed;
 
-  /// No description provided for @projectStreaming.
+  /// No description provided for @seeMore.
+  ///
+  /// In en, this message translates to:
+  /// **'See more >>'**
+  String get seeMore;
+
+  /// No description provided for @madeWith.
+  ///
+  /// In en, this message translates to:
+  /// **'Made with'**
+  String get madeWith;
+
+  /// No description provided for @recommendationAdrian.
+  ///
+  /// In en, this message translates to:
+  /// **'Excellent service, an incredible experience when browsing due to its incredible modern design that adapts to the user and any device, I am totally satisfied and the experience and loading speed is fantastic, 100% commendable'**
+  String get recommendationAdrian;
+
+  /// No description provided for @recommendationAnthony.
+  ///
+  /// In en, this message translates to:
+  /// **'I liked the work done because it met the specifications.'**
+  String get recommendationAnthony;
+
+  /// No description provided for @recommendationDario.
+  ///
+  /// In en, this message translates to:
+  /// **'The console application is well done, I recommend it.'**
+  String get recommendationDario;
+
+  /// No description provided for @projectStoreEc.
   ///
   /// In en, this message translates to:
   /// **'Web page made for a client, made with the purpose of showing the multiple streaming services offered.'**
-  String get projectStreaming;
+  String get projectStoreEc;
+
+  /// No description provided for @projectProjection.
+  ///
+  /// In en, this message translates to:
+  /// **'Online store, with payment gateway... the store offers technological products from the USA.'**
+  String get projectProjection;
+
+  /// No description provided for @projectInoxHierro.
+  ///
+  /// In en, this message translates to:
+  /// **'Web page made for a client, with an elegant design and with a global position, you look for it and you find it, works in steel, steel handrails, the result is the first.'**
+  String get projectInoxHierro;
+
+  /// No description provided for @projectLinterna.
+  ///
+  /// In en, this message translates to:
+  /// **'Application for Ios and Android made with flutter, it is a flashlight tool with some features, blinking effect and timer.'**
+  String get projectLinterna;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
