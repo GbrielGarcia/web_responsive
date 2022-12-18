@@ -65,10 +65,19 @@ class AppLocalizationsEs extends AppLocalizations {
   String get recommendationAdrian => 'Exelente servicio, una experiencia increible al momento de la navegación por su increible diseño moderno y que se adapta al usuario y a cualquier dispositivo estoy totalmente satisfecho y la experiencia y la rapidez de carga es fantastica, reconmedable al 100%';
 
   @override
+  String get recommendationAdrianSource => 'Cliente de Streaming Ec.';
+
+  @override
   String get recommendationAnthony => 'Me gustó el trabajo realizado ya que si cumplió con las especificaciones.';
 
   @override
+  String get recommendationAnthonySource => 'Cliente de Noticias Red (Ui/Ux)';
+
+  @override
   String get recommendationDario => 'La aplicacion de consola bien realizada, lo recomiendo.';
+
+  @override
+  String get recommendationDarioSource => 'Cliente de factura de consola realizado con C++.';
 
   @override
   String get projectStoreEc => 'Pagina web realizada a cliente, realizada con la finalidad de mostrar los multiples servicios que ofrece de streaming.';

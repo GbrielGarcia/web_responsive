@@ -213,17 +213,35 @@ abstract class AppLocalizations {
   /// **'Excellent service, an incredible experience when browsing due to its incredible modern design that adapts to the user and any device, I am totally satisfied and the experience and loading speed is fantastic, 100% commendable'**
   String get recommendationAdrian;
 
+  /// No description provided for @recommendationAdrianSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Streaming Ec client.'**
+  String get recommendationAdrianSource;
+
   /// No description provided for @recommendationAnthony.
   ///
   /// In en, this message translates to:
   /// **'I liked the work done because it met the specifications.'**
   String get recommendationAnthony;
 
+  /// No description provided for @recommendationAnthonySource.
+  ///
+  /// In en, this message translates to:
+  /// **'Network News Client (Ui/Ux)'**
+  String get recommendationAnthonySource;
+
   /// No description provided for @recommendationDario.
   ///
   /// In en, this message translates to:
   /// **'The console application is well done, I recommend it.'**
   String get recommendationDario;
+
+  /// No description provided for @recommendationDarioSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Console invoice client made with C++.'**
+  String get recommendationDarioSource;
 
   /// No description provided for @projectStoreEc.
   ///

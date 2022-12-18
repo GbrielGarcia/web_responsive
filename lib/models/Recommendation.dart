@@ -14,14 +14,14 @@ class Recommendation {
 List<Recommendation> recommendations(BuildContext context) => [
       Recommendation(
           name: "Adrian Villena",
-          source: "Cliente de Streaming Ec.",
+          source: AppLocalizations.of(context)!.recommendationAdrianSource,
           text: AppLocalizations.of(context)!.recommendationAdrian),
       Recommendation(
           name: "Anthony Delgado",
-          source: "Cliente de Noticas Red (Ui/Ux)",
+          source:AppLocalizations.of(context)!.recommendationAnthonySource,
           text: AppLocalizations.of(context)!.recommendationAnthony),
       Recommendation(
           name: "Dario Mendoza",
-          source: "Cliente de factura de consola realizado con C++.",
+          source: AppLocalizations.of(context)!.recommendationDarioSource,
           text: AppLocalizations.of(context)!.recommendationDario),
     ];

@@ -65,10 +65,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get recommendationAdrian => 'Excellent service, an incredible experience when browsing due to its incredible modern design that adapts to the user and any device, I am totally satisfied and the experience and loading speed is fantastic, 100% commendable';
 
   @override
+  String get recommendationAdrianSource => 'Streaming Ec client.';
+
+  @override
   String get recommendationAnthony => 'I liked the work done because it met the specifications.';
 
   @override
+  String get recommendationAnthonySource => 'Network News Client (Ui/Ux)';
+
+  @override
   String get recommendationDario => 'The console application is well done, I recommend it.';
+
+  @override
+  String get recommendationDarioSource => 'Console invoice client made with C++.';
 
   @override
   String get projectStoreEc => 'Web page made for a client, made with the purpose of showing the multiple streaming services offered.';
