@@ -31,5 +31,9 @@
   "projectLinterna": "Aplicacion para Ios y Android realizada con flutter, se trata de una herramienta de linterna con algunas funcionalidades, efecto de parpadeo y temporizador.",
   "footerText": " Haz de cada día tu obra maestra, el mañana es incierto. ",
   "webSites": "páginas web",
-  "movileApp": "aplicaciones móviles"
+  "movileApp": "aplicaciones móviles",
+  "flutterDart" : "Flutter y Dart",
+  "htmlCssJavaScript": "Html, Css y JavaScript"
+
+
 }

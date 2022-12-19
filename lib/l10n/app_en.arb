@@ -31,5 +31,7 @@
   "projectLinterna": "Application for Ios and Android made with flutter, it is a flashlight tool with some features, blinking effect and timer.",
   "footerText": " Make each day your masterpiece, tomorrow is uncertain. ",
   "webSites": "websites",
-  "movileApp": "mobile apps"
+  "movileApp": "mobile apps",
+  "flutterDart" : "Flutter & Dart",
+  "htmlCssJavaScript": "Html, Css & JavaScript"
 }

@@ -284,6 +284,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'mobile apps'**
   String get movileApp;
+
+  /// No description provided for @flutterDart.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter & Dart'**
+  String get flutterDart;
+
+  /// No description provided for @htmlCssJavaScript.
+  ///
+  /// In en, this message translates to:
+  /// **'Html, Css & JavaScript'**
+  String get htmlCssJavaScript;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

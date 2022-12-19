@@ -99,4 +99,10 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get movileApp => 'aplicaciones móviles';
+
+  @override
+  String get flutterDart => 'Flutter y Dart';
+
+  @override
+  String get htmlCssJavaScript => 'Html, Css y JavaScript';
 }
