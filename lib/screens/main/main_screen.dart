@@ -110,9 +110,12 @@ class MainScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: Responsive.isMobile(context)
-          ? CupertinoSwitchW(
-              width: 113,
-            )
+          ? Padding(
+        padding: const EdgeInsets.symmetric(vertical: 50.0),
+            child: CupertinoSwitchW(
+                width: 113,
+              ),
+          )
           : Container(),
     );
   }

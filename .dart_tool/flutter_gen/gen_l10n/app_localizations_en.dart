@@ -90,4 +90,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get projectLinterna => 'Application for Ios and Android made with flutter, it is a flashlight tool with some features, blinking effect and timer.';
+
+  @override
+  String get footerText => ' Make each day your masterpiece, tomorrow is uncertain. ';
+
+  @override
+  String get webSites => 'websites';
+
+  @override
+  String get movileApp => 'mobile apps';
 }

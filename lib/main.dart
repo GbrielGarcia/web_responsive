@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
             supportedLocales: AppLocalizations.supportedLocales,
             debugShowCheckedModeBanner: false,
             locale: locale.locale,
-            title: 'Gabriel Garcia',
+            title: 'Gabriel Codigo',
             theme: ThemeData.dark().copyWith(
               primaryColor: primaryColor,
               scaffoldBackgroundColor: bgColor,

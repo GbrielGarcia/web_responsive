@@ -266,6 +266,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Application for Ios and Android made with flutter, it is a flashlight tool with some features, blinking effect and timer.'**
   String get projectLinterna;
+
+  /// No description provided for @footerText.
+  ///
+  /// In en, this message translates to:
+  /// **' Make each day your masterpiece, tomorrow is uncertain. '**
+  String get footerText;
+
+  /// No description provided for @webSites.
+  ///
+  /// In en, this message translates to:
+  /// **'websites'**
+  String get webSites;
+
+  /// No description provided for @movileApp.
+  ///
+  /// In en, this message translates to:
+  /// **'mobile apps'**
+  String get movileApp;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -64,27 +64,39 @@ class ProjectCard extends StatelessWidget {
               Expanded(
                 child: Container(),
               ),
-              SvgPicture.asset(
-                project!.iconImage!,
-                width: Const.widthIcon,
-                height: Const.heightIcon,
+              TooltipWidget(
+                  project!.name1!,
+                  project!.iconImage!
               ),
               Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
-              SvgPicture.asset(
-                project!.iconImage1!,
-                width: Const.widthIcon,
-                height: Const.heightIcon,
+              TooltipWidget(
+                  project!.name2!,
+                  project!.iconImage1!
               ),
               Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
-              SvgPicture.asset(
-                project!.iconImage2!,
-                width: Const.widthIcon,
-                height: Const.heightIcon,
-              )
+              TooltipWidget(
+                  project!.name3!,
+                  project!.iconImage2!
+              ),
             ],
           )
         ],
       ),
     );
   }
+}
+
+Widget TooltipWidget(   name, icon) {
+  return Tooltip(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      color: Colors.black,
+    ),
+    message: name.toUpperCase(),
+    child: SvgPicture.asset(
+      icon,
+      width: Const.widthIcon,
+      height: Const.heightIcon,
+    ),
+  );
 }

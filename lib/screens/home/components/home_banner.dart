@@ -18,7 +18,7 @@ class HomeBanner extends StatelessWidget {
     int number = 593992889078;
 
     return AspectRatio(
-      aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
+      aspectRatio: Responsive.isMobile(context) ? 2.0 : 3,
       child: Stack(
         fit: StackFit.expand,
         children: [
@@ -117,12 +117,14 @@ class AnimatedText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final al = AppLocalizations.of(context);
+
     return AnimatedTextKit(
       animatedTexts: [
-        TyperAnimatedText('paginas web', speed: Duration(milliseconds: 60)),
-        TyperAnimatedText('aplicaciones moviles',
-            speed: Duration(milliseconds: 60)),
-        TyperAnimatedText(' ecommerce', speed: Duration(milliseconds: 60))
+        TyperAnimatedText(al!.webSites, speed: Duration(milliseconds: 60,)),
+        TyperAnimatedText(al!.movileApp,
+            speed: Duration(milliseconds: 60,)),
+        TyperAnimatedText(' ecommerce', speed: Duration(milliseconds: 60,))
       ],
     );
   }

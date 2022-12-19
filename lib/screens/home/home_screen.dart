@@ -3,6 +3,7 @@ import 'package:web_responsive_ui/core/responsi/responsive.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:web_responsive_ui/screens/home/components/banner_desktop.dart';
 import 'package:web_responsive_ui/screens/main/main_screen.dart';
+import 'components/footer.dart';
 import 'components/high_lights_info.dart';
 import 'components/home_banner.dart';
 import 'components/my_projects.dart';
@@ -30,6 +31,7 @@ class HomeScreen extends StatelessWidget {
           myProjectsTitle: al!.myProjects,
         ),
         Recommendations(),
+        Footer()
       ],
     );
   }

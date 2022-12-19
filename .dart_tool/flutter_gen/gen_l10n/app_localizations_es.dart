@@ -90,4 +90,13 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get projectLinterna => 'Aplicacion para Ios y Android realizada con flutter, se trata de una herramienta de linterna con algunas funcionalidades, efecto de parpadeo y temporizador.';
+
+  @override
+  String get footerText => ' Haz de cada día tu obra maestra, el mañana es incierto. ';
+
+  @override
+  String get webSites => 'páginas web';
+
+  @override
+  String get movileApp => 'aplicaciones móviles';
 }

@@ -20,4 +20,12 @@ class Assets {
   static const String pngPrimeVideo = 'assets/png/store/primevideo.png';
   static const String pngspotify = 'assets/png/store/spotify.png';
   static const String pngStarPlus = 'assets/png/store/starplus.png';
+  // NAME LANGUAGE PROGRAMMER
+  static const String htmlName = 'Html';
+  static const String flutterName = 'Flutter';
+  static const String javascriptName = 'Javascript';
+  static const String vscodeName = 'VsCode';
+  static const String cssName = 'Css';
+  static const String dartName = 'Dart';
+  static const String jimdoName = 'Jimdo';
 }
