@@ -5,6 +5,8 @@ import 'package:web_responsive_ui/models/storelive.dart';
 import 'package:web_responsive_ui/core/responsi/responsive.dart';
 import 'package:universal_html/html.dart' as html;
 
+import '../../../../widget/tootil.dart';
+
 class StoreCard extends StatelessWidget {
   const StoreCard({
     Key? key,
@@ -98,11 +100,13 @@ class StoreCard extends StatelessWidget {
                 ),
               ),
               Expanded(child: Container()),
-              Image.asset(
+              TooltipPngWidget(
+                storelive!.title!.toUpperCase(),
                 storelive!.iconImage!,
-                width: Const.widthIconStore,
-                height: Const.heightIconStore,
+                Const.widthIconStore,
+                Const.heightIconStore,
               ),
+
             ],
           ),
         ],

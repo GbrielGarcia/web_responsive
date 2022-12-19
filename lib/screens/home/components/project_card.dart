@@ -8,6 +8,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:universal_html/html.dart' as html;
 
+import '../../widget/tootil.dart';
+
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
     Key? key,
@@ -64,19 +66,25 @@ class ProjectCard extends StatelessWidget {
               Expanded(
                 child: Container(),
               ),
-              TooltipWidget(
-                  project!.name1!,
-                  project!.iconImage!
+              TooltipSvgWidget(
+                project!.name1!,
+                project!.iconImage!,
+                Const.widthIcon,
+                Const.heightIcon,
               ),
               Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
-              TooltipWidget(
-                  project!.name2!,
-                  project!.iconImage1!
+              TooltipSvgWidget(
+                project!.name2!,
+                project!.iconImage1!,
+                Const.widthIcon,
+                Const.heightIcon,
               ),
               Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
-              TooltipWidget(
-                  project!.name3!,
-                  project!.iconImage2!
+              TooltipSvgWidget(
+                project!.name3!,
+                project!.iconImage2!,
+                Const.widthIcon,
+                Const.heightIcon,
               ),
             ],
           )
@@ -84,19 +92,4 @@ class ProjectCard extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget TooltipWidget(   name, icon) {
-  return Tooltip(
-    textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
-    ),
-    message: name.toUpperCase(),
-    child: SvgPicture.asset(
-      icon,
-      width: Const.widthIcon,
-      height: Const.heightIcon,
-    ),
-  );
 }

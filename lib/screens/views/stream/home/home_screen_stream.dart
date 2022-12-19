@@ -34,7 +34,7 @@ class HomeScrennStream extends StatelessWidget {
               ),
               child: MaterialButton(
                 onPressed: () async {
-                  html.window.open("https://www.instagram.com/gabrielx2garcia/",
+                  html.window.open("https://www.instagram.com/storelive.ec/",
                       "Instagram");
                 },
                 child: Text(

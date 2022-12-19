@@ -7,6 +7,7 @@ class Assets {
   static const String github = 'assets/svg/github.svg';
   static const String html = 'assets/svg/html.svg';
   static const String instagram = 'assets/png/instagram.png';
+  static const String tiktok = 'assets/svg/tiktok.svg';
   static const String javascript = 'assets/svg/javascript.svg';
   static const String jimdo = 'assets/svg/jimdo.svg';
   static const String twitter = 'assets/svg/twitter.svg';

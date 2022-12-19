@@ -1,2 +1,3 @@
-2022/08/10-14:26:14.529 13e8 Creating DB /tmp/flutter_tools.PMAVFA/flutter_tools_chrome_device.MNACOR/Default/IndexedDB/https_www.instagram.com_0.indexeddb.leveldb since it was missing.
-2022/08/10-14:26:14.530 13e8 Reusing MANIFEST /tmp/flutter_tools.PMAVFA/flutter_tools_chrome_device.MNACOR/Default/IndexedDB/https_www.instagram.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/12/19-13:33:23.248 40bf Reusing MANIFEST /tmp/flutter_tools.CZSNRN/flutter_tools_chrome_device.MTVUCG/Default/IndexedDB/https_www.instagram.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/12/19-13:33:23.248 40bf Recovering log #3
+2022/12/19-13:33:23.249 40bf Reusing old log /tmp/flutter_tools.CZSNRN/flutter_tools_chrome_device.MTVUCG/Default/IndexedDB/https_www.instagram.com_0.indexeddb.leveldb/000003.log 

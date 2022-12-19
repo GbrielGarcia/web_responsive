@@ -77,41 +77,80 @@ class SideMenu extends StatelessWidget {
                     child: Row(
                       children: [
                         Spacer(),
-                        IconButton(
-                            onPressed: () {
-                              html.window.open(
-                                "https://www.instagram.com/gabrielx2garcia/",
-                                "Instagram",
-                              );
-                            },
-                            icon: Image(
-                              image: AssetImage(
-                                Assets.instagram,
-                              ),
-                              width: Const.widthIcon,
-                              color: colorIconInfo,
-                            )),
-                        IconButton(
-                            onPressed: () {
-                              html.window.open(
-                                  "https://github.com/gbrielgarcia", "GitHub");
-                            },
-                            icon: SvgPicture.asset(
-                              Assets.github,
-                              color: colorIconInfo,
-                              width: Const.widthIcon,
-                            )),
-                        IconButton(
-                            onPressed: () {
-                              html.window.open(
-                                  "https://twitter.com/Gabrielx2Garcia",
-                                  "Twitter");
-                            },
-                            icon: SvgPicture.asset(
-                              Assets.twitter,
-                              color: colorIconInfo,
-                              width: Const.widthIcon,
-                            )),
+                        Tooltip(
+                          message: 'Instagram'.toUpperCase(),
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                          child: IconButton(
+                              onPressed: () {
+                                html.window.open(
+                                  "https://www.instagram.com/gabrielx2garcia/",
+                                  "Instagram",
+                                );
+                              },
+                              icon: Image(
+                                image: AssetImage(
+                                  Assets.instagram,
+                                ),
+                                width: Const.widthIcon,
+                                color: colorIconInfo,
+                              )),
+                        ),
+                        Tooltip(
+                          message: 'GitHub'.toUpperCase(),
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                          child: IconButton(
+                              onPressed: () {
+                                html.window.open(
+                                    "https://github.com/gbrielgarcia", "GitHub",);
+                              },
+                              icon: SvgPicture.asset(
+                                Assets.github,
+                                color: colorIconInfo,
+                                width: Const.widthIcon,
+                              )),
+                        ),
+                        Tooltip(
+                          message: 'Twitter'.toUpperCase(),
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                          child: IconButton(
+                              onPressed: () {
+                                html.window.open(
+                                    "https://twitter.com/Gabrielx2Garcia",
+                                    "Twitter");
+                              },
+                              icon: SvgPicture.asset(
+                                Assets.twitter,
+                                color: colorIconInfo,
+                                width: Const.widthIcon,
+                              )),
+                        ),
+                        Tooltip(
+                          message: 'TikTok'.toUpperCase(),
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                          child: IconButton(
+                              onPressed: () {
+                                html.window.open(
+                                    "https://www.tiktok.com/@gabrielcodigo.com",
+                                    "TikTok");
+                              },
+                              icon: SvgPicture.asset(
+                                Assets.tiktok,
+                                color: colorIconInfo,
+                                width: Const.widthIcon,
+                              )),
+                        ),
                         Spacer(),
                       ],
                     ),
