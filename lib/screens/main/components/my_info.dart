@@ -25,7 +25,7 @@ class MyInfo extends StatelessWidget {
             Spacer(),
             Text(
               Write.name,
-              style: Theme.of(context).textTheme.subtitle2,
+              style: Theme.of(context).textTheme.titleSmall,
             ),
             Text(
               Write.specialty,

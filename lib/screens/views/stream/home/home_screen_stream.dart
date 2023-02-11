@@ -25,7 +25,7 @@ class HomeScrennStream extends StatelessWidget {
           ),
           title: Text(
             Write.myStoreLive.toUpperCase(),
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           actions: <Widget>[
             Container(
@@ -34,8 +34,8 @@ class HomeScrennStream extends StatelessWidget {
               ),
               child: MaterialButton(
                 onPressed: () async {
-                  html.window.open("https://www.instagram.com/storelive.ec/",
-                      "Instagram");
+                  html.window.open(
+                      "https://www.instagram.com/storelive.ec/", "Instagram");
                 },
                 child: Text(
                   'instagram'.toUpperCase(),

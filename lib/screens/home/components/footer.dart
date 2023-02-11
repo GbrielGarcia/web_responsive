@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
-import 'package:web_responsive_ui/models/write.dart';
-import 'package:universal_html/html.dart' as html;
-import '../../widget/cupertino_switch.dart';
+
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Footer extends StatelessWidget {
@@ -26,7 +24,6 @@ class Footer extends StatelessWidget {
               color: Colors.white,
             ),
             textAlign: TextAlign.center,
-
           ),
         ),
       ),

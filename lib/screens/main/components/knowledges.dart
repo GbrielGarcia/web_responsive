@@ -4,8 +4,6 @@ import 'package:web_responsive_ui/core/assets/assets.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:web_responsive_ui/models/write.dart';
-
 class Knowledges extends StatelessWidget {
   const Knowledges({
     Key? key,
@@ -22,7 +20,7 @@ class Knowledges extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             al!.knowledge,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
         KnowledgeText(text: al.flutterDart),

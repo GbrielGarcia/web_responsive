@@ -18,7 +18,7 @@ class PrivacyCard extends StatelessWidget {
         children: [
           Text(
             privacy.name!,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           const SizedBox(
             height: defaultPadding,

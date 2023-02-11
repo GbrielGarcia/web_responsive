@@ -36,11 +36,11 @@ class HomeBanner extends StatelessWidget {
                 Text(
                   al!.presents,
                   style: Responsive.isDesktop(context)
-                      ? Theme.of(context).textTheme.headline3!.copyWith(
+                      ? Theme.of(context).textTheme.displaySmall!.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           )
-                      : Theme.of(context).textTheme.headline5!.copyWith(
+                      : Theme.of(context).textTheme.headlineSmall!.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
@@ -91,7 +91,7 @@ class MyBuildAnimatedText extends StatelessWidget {
 
     return DefaultTextStyle(
       maxLines: 1,
-      style: Theme.of(context).textTheme.subtitle1!,
+      style: Theme.of(context).textTheme.titleMedium!,
       child: Row(
         children: [
           if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
@@ -121,10 +121,18 @@ class AnimatedText extends StatelessWidget {
 
     return AnimatedTextKit(
       animatedTexts: [
-        TyperAnimatedText(al!.webSites, speed: Duration(milliseconds: 60,)),
-        TyperAnimatedText(al!.movileApp,
-            speed: Duration(milliseconds: 60,)),
-        TyperAnimatedText(' ecommerce', speed: Duration(milliseconds: 60,))
+        TyperAnimatedText(al!.webSites,
+            speed: Duration(
+              milliseconds: 60,
+            )),
+        TyperAnimatedText(al.movileApp,
+            speed: Duration(
+              milliseconds: 60,
+            )),
+        TyperAnimatedText(' ecommerce',
+            speed: Duration(
+              milliseconds: 60,
+            ))
       ],
     );
   }

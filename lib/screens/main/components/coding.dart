@@ -20,7 +20,7 @@ class Coding extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             al!.coding,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
         AnimatedLinearProgressIndicator(
@@ -43,7 +43,6 @@ class Coding extends StatelessWidget {
           percentage: 0.5,
           label: Write.css,
         ),
-
       ],
     );
   }

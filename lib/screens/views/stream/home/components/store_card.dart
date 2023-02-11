@@ -29,7 +29,7 @@ class StoreCard extends StatelessWidget {
             storelive!.title!.toUpperCase(),
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           Spacer(),
           Text(
@@ -106,7 +106,6 @@ class StoreCard extends StatelessWidget {
                 Const.widthIconStore,
                 Const.heightIconStore,
               ),
-
             ],
           ),
         ],

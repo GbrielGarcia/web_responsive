@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HeighLight extends StatelessWidget {
   const HeighLight({
@@ -22,7 +21,7 @@ class HeighLight extends StatelessWidget {
         ),
         Text(
           label!,
-          style: Theme.of(context).textTheme.subtitle2,
+          style: Theme.of(context).textTheme.titleSmall,
         )
       ],
     );

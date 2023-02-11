@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../core/style/constants.dart';
-
 Widget TooltipSvgWidget(name, icon, width, height) {
   return Tooltip(
     textStyle: TextStyle(
@@ -17,7 +15,6 @@ Widget TooltipSvgWidget(name, icon, width, height) {
     ),
   );
 }
-
 
 Widget TooltipPngWidget(name, icon, width, height) {
   return Tooltip(

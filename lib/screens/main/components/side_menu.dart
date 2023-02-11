@@ -61,7 +61,7 @@ class SideMenu extends StatelessWidget {
                               style: TextStyle(
                                 color: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyLarge!
                                     .color,
                               ),
                             ),
@@ -72,7 +72,7 @@ class SideMenu extends StatelessWidget {
                         //
                       )),
                   Container(
-                    color: Color(0xFF2424E),
+                    color: secondaryColor,
                     margin: EdgeInsets.only(top: defaultPadding),
                     child: Row(
                       children: [
@@ -86,7 +86,7 @@ class SideMenu extends StatelessWidget {
                           child: IconButton(
                               onPressed: () {
                                 html.window.open(
-                                  "https://www.instagram.com/gabrielx2garcia/",
+                                  "https://www.instagram.com/gabrielcodigo_/",
                                   "Instagram",
                                 );
                               },
@@ -95,7 +95,7 @@ class SideMenu extends StatelessWidget {
                                   Assets.instagram,
                                 ),
                                 width: Const.widthIcon,
-                                color: colorIconInfo,
+                                color: Colors.white,
                               )),
                         ),
                         Tooltip(
@@ -107,11 +107,13 @@ class SideMenu extends StatelessWidget {
                           child: IconButton(
                               onPressed: () {
                                 html.window.open(
-                                    "https://github.com/gbrielgarcia", "GitHub",);
+                                  "https://github.com/gbrielgarcia",
+                                  "GitHub",
+                                );
                               },
                               icon: SvgPicture.asset(
                                 Assets.github,
-                                color: colorIconInfo,
+                                color: Colors.white,
                                 width: Const.widthIcon,
                               )),
                         ),
@@ -129,7 +131,7 @@ class SideMenu extends StatelessWidget {
                               },
                               icon: SvgPicture.asset(
                                 Assets.twitter,
-                                color: colorIconInfo,
+                                color: Colors.white,
                                 width: Const.widthIcon,
                               )),
                         ),
@@ -147,7 +149,7 @@ class SideMenu extends StatelessWidget {
                               },
                               icon: SvgPicture.asset(
                                 Assets.tiktok,
-                                color: colorIconInfo,
+                                color: Colors.white,
                                 width: Const.widthIcon,
                               )),
                         ),

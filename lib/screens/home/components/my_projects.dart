@@ -14,7 +14,7 @@ class MyProjects extends StatelessWidget {
       children: [
         Text(
           myProjectsTitle,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         const SizedBox(
           height: defaultPadding,

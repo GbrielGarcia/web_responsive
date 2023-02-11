@@ -1,7 +1,2 @@
-2022/12/19-13:43:02.255 4402 Reusing MANIFEST /tmp/flutter_tools.CZSNRN/flutter_tools_chrome_device.MTVUCG/Default/IndexedDB/https_www.instagram.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/12/19-13:43:02.255 4402 Recovering log #3
-2022/12/19-13:43:02.257 4402 Reusing old log /tmp/flutter_tools.CZSNRN/flutter_tools_chrome_device.MTVUCG/Default/IndexedDB/https_www.instagram.com_0.indexeddb.leveldb/000003.log 
-2022/12/19-13:43:06.411 432e Level-0 table #5: started
-2022/12/19-13:43:06.414 432e Level-0 table #5: 13455 bytes OK
-2022/12/19-13:43:06.415 432e Delete type=0 #3
-2022/12/19-13:43:06.416 432e Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2023/02/10-20:04:37.712 a9c Creating DB C:\Users\gabri\AppData\Local\Temp\flutter_tools.cf1db700\flutter_tools_chrome_device.a78d1343\Default\IndexedDB\https_www.instagram.com_0.indexeddb.leveldb since it was missing.
+2023/02/10-20:04:37.727 a9c Reusing MANIFEST C:\Users\gabri\AppData\Local\Temp\flutter_tools.cf1db700\flutter_tools_chrome_device.a78d1343\Default\IndexedDB\https_www.instagram.com_0.indexeddb.leveldb/MANIFEST-000001
