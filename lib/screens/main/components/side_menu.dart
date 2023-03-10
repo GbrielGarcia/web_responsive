@@ -25,11 +25,11 @@ class SideMenu extends StatelessWidget {
       child: SafeArea(
         child: Column(
           children: [
-            MyInfo(),
+            const MyInfo(),
             Expanded(
                 child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
-              padding: EdgeInsets.all(defaultPadding),
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.all(defaultPadding),
               child: Column(
                 children: [
                   AreaInfoText(title: al!.country, text: Write.countryText),
@@ -41,12 +41,12 @@ class SideMenu extends StatelessWidget {
                     title: al.age,
                     text: Write.ageNumber.toString(),
                   ),
-                  Skills(),
-                  SizedBox(height: defaultPadding),
-                  Coding(),
-                  Knowledges(),
-                  Divider(),
-                  SizedBox(height: defaultPadding / 2),
+                  const Skills(),
+                  const SizedBox(height: defaultPadding),
+                  const Coding(),
+                  const Knowledges(),
+                  const Divider(),
+                  const SizedBox(height: defaultPadding / 2),
                   TextButton(
                       onPressed: () {
                         html.window.open(
@@ -65,7 +65,7 @@ class SideMenu extends StatelessWidget {
                                     .color,
                               ),
                             ),
-                            SizedBox(height: defaultPadding / 2),
+                            const SizedBox(height: defaultPadding / 2),
                             SvgPicture.asset(Assets.download)
                           ],
                         ),
@@ -73,13 +73,13 @@ class SideMenu extends StatelessWidget {
                       )),
                   Container(
                     color: secondaryColor,
-                    margin: EdgeInsets.only(top: defaultPadding),
+                    margin: const EdgeInsets.only(top: defaultPadding),
                     child: Row(
                       children: [
-                        Spacer(),
+                        const Spacer(),
                         Tooltip(
                           message: 'Instagram'.toUpperCase(),
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
@@ -90,7 +90,7 @@ class SideMenu extends StatelessWidget {
                                   "Instagram",
                                 );
                               },
-                              icon: Image(
+                              icon: const Image(
                                 image: AssetImage(
                                   Assets.instagram,
                                 ),
@@ -100,7 +100,7 @@ class SideMenu extends StatelessWidget {
                         ),
                         Tooltip(
                           message: 'GitHub'.toUpperCase(),
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
@@ -119,7 +119,7 @@ class SideMenu extends StatelessWidget {
                         ),
                         Tooltip(
                           message: 'Twitter'.toUpperCase(),
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
@@ -137,7 +137,7 @@ class SideMenu extends StatelessWidget {
                         ),
                         Tooltip(
                           message: 'TikTok'.toUpperCase(),
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
@@ -153,7 +153,7 @@ class SideMenu extends StatelessWidget {
                                 width: Const.widthIcon,
                               )),
                         ),
-                        Spacer(),
+                        const Spacer(),
                       ],
                     ),
                   )

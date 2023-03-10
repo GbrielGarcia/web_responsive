@@ -12,22 +12,22 @@ class MyInfo extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.50,
       child: Container(
-        color: Color(0xFF242430),
+        color: const Color(0xFF242430),
         child: Column(
           children: [
-            Spacer(
+            const Spacer(
               flex: 2,
             ),
-            CircleAvatar(
+            const CircleAvatar(
               radius: 50,
               backgroundImage: AssetImage(Assets.profileimage),
             ),
-            Spacer(),
+            const Spacer(),
             Text(
               Write.name,
               style: Theme.of(context).textTheme.titleSmall,
             ),
-            Text(
+            const Text(
               Write.specialty,
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -35,7 +35,7 @@ class MyInfo extends StatelessWidget {
                 height: 1.5,
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 2,
             )
           ],

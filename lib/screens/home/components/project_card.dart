@@ -22,7 +22,7 @@ class ProjectCard extends StatelessWidget {
     final al = AppLocalizations.of(context);
 
     return Container(
-      padding: EdgeInsets.all(defaultPadding),
+      padding: const EdgeInsets.all(defaultPadding),
       color: secondaryColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,14 +33,14 @@ class ProjectCard extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: Theme.of(context).textTheme.titleSmall,
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             project!.description!,
             maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(height: 1.5),
+            style: const TextStyle(height: 1.5),
           ),
-          Spacer(),
+          const Spacer(),
           Row(
             children: [
               TextButton(
@@ -50,13 +50,13 @@ class ProjectCard extends StatelessWidget {
                 },
                 child: Text(
                   al!.seeMore,
-                  style: TextStyle(color: primaryColor),
+                  style: const TextStyle(color: primaryColor),
                 ),
               ),
               Expanded(child: Container()),
               Text(
                 al.madeWith,
-                style: TextStyle(color: primaryColor),
+                style: const TextStyle(color: primaryColor),
               ),
             ],
           ),
@@ -71,14 +71,14 @@ class ProjectCard extends StatelessWidget {
                 Const.widthIcon,
                 Const.heightIcon,
               ),
-              Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
+              const Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
               TooltipSvgWidget(
                 project!.name2!,
                 project!.iconImage1!,
                 Const.widthIcon,
                 Const.heightIcon,
               ),
-              Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
+              const Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
               TooltipSvgWidget(
                 project!.name3!,
                 project!.iconImage2!,

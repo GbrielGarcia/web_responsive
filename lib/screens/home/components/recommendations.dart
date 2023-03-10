@@ -49,7 +49,7 @@ class _RecommendationsState extends State<Recommendations> {
             thumbVisibility: true,
             // showTrackOnHover: true,
             child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               controller: _controller,
               child: Row(

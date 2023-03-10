@@ -16,22 +16,21 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final al = AppLocalizations.of(context);
 
     return MainScreen(
       children: [
         Responsive(
           mobile: Container(),
-          desktop: BannerDesktop(),
+          desktop: const BannerDesktop(),
         ),
-        HomeBanner(),
-        HighLightsInfo(),
+        const HomeBanner(),
+        const HighLightsInfo(),
         MyProjects(
           myProjectsTitle: al!.myProjects,
         ),
-        Recommendations(),
-        Footer()
+        const Recommendations(),
+        const Footer()
       ],
     );
   }
@@ -44,7 +43,7 @@ class FlutterCodedText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text.rich(TextSpan(text: "<", children: [
+    return const Text.rich(TextSpan(text: "<", children: [
       TextSpan(
         text: "flutter",
         style: TextStyle(color: primaryColor),

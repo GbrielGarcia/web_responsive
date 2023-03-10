@@ -12,7 +12,7 @@ import 'package:provider/provider.dart';
 import 'core/components/locale.dart';
 
 void main() async {
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: bgColor,
   ));
 
@@ -30,17 +30,22 @@ void main() async {
   } else {
     await Firebase.initializeApp();
   }
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => UtilAppLocale(),
       child: Consumer<UtilAppLocale>(
         builder: (context, locale, child) {
-          return MaterialApp(
+          return MaterialApp.router(
+            routeInformationParser: goRouter.routeInformationParser,
+            routeInformationProvider: goRouter.routeInformationProvider,
+            routerDelegate: goRouter.routerDelegate,
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
             debugShowCheckedModeBanner: false,
@@ -54,12 +59,10 @@ class MyApp extends StatelessWidget {
                   GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
                       .apply(bodyColor: Colors.white)
                       .copyWith(
-                        bodyLarge: TextStyle(color: bodyTextColor),
-                        bodyMedium: TextStyle(color: bodyTextColor),
+                        bodyLarge: const TextStyle(color: bodyTextColor),
+                        bodyMedium: const TextStyle(color: bodyTextColor),
                       ),
             ),
-            initialRoute: HomeScreen.route,
-            routes: getAplicationRouter(),
           );
         },
       ),

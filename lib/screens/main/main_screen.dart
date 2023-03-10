@@ -23,11 +23,11 @@ class MainScreen extends StatelessWidget {
                   children: [
                     Responsive.isMobile(context)
                         ? Container()
-                        : CupertinoSwitchW(
+                        : const CupertinoSwitchW(
                             width: null,
                             height: 32,
                           ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -49,7 +49,7 @@ class MainScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -80,25 +80,25 @@ class MainScreen extends StatelessWidget {
                     onPressed: () {
                       Scaffold.of(context).openDrawer();
                     },
-                    icon: Icon(Icons.menu)),
+                    icon: const Icon(Icons.menu)),
               )),
-      drawer: SideMenu(),
+      drawer: const SideMenu(),
       body: Center(
         child: Container(
-          constraints: BoxConstraints(maxWidth: maxWidth),
+          constraints: const BoxConstraints(maxWidth: maxWidth),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               if (Responsive.isDesktop(context))
-                Expanded(
+                const Expanded(
                   flex: 2,
                   child: SideMenu(),
                 ),
-              SizedBox(width: defaultPadding),
+              const SizedBox(width: defaultPadding),
               Expanded(
                   flex: 7,
                   child: SingleChildScrollView(
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     child: Column(
                       children: [
                         ...children,
@@ -110,8 +110,8 @@ class MainScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: Responsive.isMobile(context)
-          ? Padding(
-        padding: const EdgeInsets.symmetric(vertical: 50.0),
+          ? const Padding(
+        padding: EdgeInsets.symmetric(vertical: 50.0),
             child: CupertinoSwitchW(
                 width: 113,
               ),

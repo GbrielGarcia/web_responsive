@@ -10,10 +10,10 @@ class PrivacyPolicy extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Container(
             child: Column(
-              children: [
+              children: const [
                 Privacys(),
               ],
             ),

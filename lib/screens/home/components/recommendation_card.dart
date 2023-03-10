@@ -32,7 +32,7 @@ class RecommendationCard extends StatelessWidget {
             recommendation.text!,
             maxLines: 6,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(height: 1.5),
+            style: const TextStyle(height: 1.5),
           )
         ],
       ),

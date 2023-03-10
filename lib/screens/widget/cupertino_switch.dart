@@ -27,7 +27,7 @@ class CupertinoSwitchW extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             '  EN',
             style: TextStyle(
               color: Colors.white,
@@ -37,12 +37,12 @@ class CupertinoSwitchW extends StatelessWidget {
           CupertinoSwitch(
             onChanged: (bool value) {
               value == true
-                  ? language.changeLocale(Locale('es'))
-                  : language.changeLocale(Locale('en'));
+                  ? language.changeLocale(const Locale('es'))
+                  : language.changeLocale(const Locale('en'));
             },
-            value: language.locale == Locale('en') ? false : true,
+            value: language.locale == const Locale('en') ? false : true,
           ),
-          Text(
+          const Text(
             'ES  ',
             style: TextStyle(
               color: Colors.white,

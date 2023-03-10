@@ -11,7 +11,7 @@ class Footer extends StatelessWidget {
     final al = AppLocalizations.of(context);
 
     return Padding(
-      padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
+      padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
       child: Container(
         width: MediaQuery.of(context).size.width,
         color: secondaryColor,
@@ -19,7 +19,7 @@ class Footer extends StatelessWidget {
         child: Center(
           child: Text(
             '"${al!.footerText}'.toUpperCase(),
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),

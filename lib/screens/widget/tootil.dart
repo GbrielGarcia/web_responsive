@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 Widget TooltipSvgWidget(name, icon, width, height) {
   return Tooltip(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       fontWeight: FontWeight.bold,
       color: Colors.black,
     ),
@@ -18,7 +18,7 @@ Widget TooltipSvgWidget(name, icon, width, height) {
 
 Widget TooltipPngWidget(name, icon, width, height) {
   return Tooltip(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       fontWeight: FontWeight.bold,
       color: Colors.black,
     ),

@@ -29,14 +29,14 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
                       ),
                       Center(
                         child: Text(
-                          (value * 100).toInt().toString() + "%",
+                          "${(value * 100).toInt()}%",
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                       )
                     ],
                   )),
         ),
-        SizedBox(height: defaultPadding / 2),
+        const SizedBox(height: defaultPadding / 2),
         Text(
           label,
           maxLines: 1,

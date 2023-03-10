@@ -47,25 +47,25 @@ class HomeBanner extends StatelessWidget {
                 ),
                 if (!Responsive.isMobileLarge(context))
                   const SizedBox(height: defaultPadding / 2),
-                MyBuildAnimatedText(),
-                SizedBox(height: defaultPadding),
+                const MyBuildAnimatedText(),
+                const SizedBox(height: defaultPadding),
                 if (!Responsive.isMobileLarge(context) ||
                     Responsive.isTablet(context))
                   ElevatedButton(
                     onPressed: () {
                       html.window.open(
-                          "https://api.whatsapp.com/send/?phone=${number}&text=Saludos me interesa tus servicios de: ",
+                          "https://api.whatsapp.com/send/?phone=$number&text=Saludos me interesa tus servicios de: ",
                           "WhatsApp");
                     },
                     style: TextButton.styleFrom(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                           horizontal: defaultPadding * 1.5,
                           vertical: defaultPadding - 5),
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
                       al.quoteNow.toUpperCase(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: darkColor,
                         fontWeight: FontWeight.bold,
                       ),
@@ -94,16 +94,16 @@ class MyBuildAnimatedText extends StatelessWidget {
       style: Theme.of(context).textTheme.titleMedium!,
       child: Row(
         children: [
-          if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
+          if (!Responsive.isMobileLarge(context)) const FlutterCodedText(),
           if (!Responsive.isMobileLarge(context))
-            SizedBox(width: defaultPadding / 2),
+            const SizedBox(width: defaultPadding / 2),
           Text(al!.performed),
           Responsive.isMobile(context)
-              ? Expanded(child: AnimatedText())
-              : AnimatedText(),
+              ? const Expanded(child: AnimatedText())
+              : const AnimatedText(),
           if (!Responsive.isMobileLarge(context))
-            SizedBox(width: defaultPadding / 2),
-          if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
+            const SizedBox(width: defaultPadding / 2),
+          if (!Responsive.isMobileLarge(context)) const FlutterCodedText(),
         ],
       ),
     );
@@ -122,15 +122,15 @@ class AnimatedText extends StatelessWidget {
     return AnimatedTextKit(
       animatedTexts: [
         TyperAnimatedText(al!.webSites,
-            speed: Duration(
+            speed: const Duration(
               milliseconds: 60,
             )),
         TyperAnimatedText(al.movileApp,
-            speed: Duration(
+            speed: const Duration(
               milliseconds: 60,
             )),
         TyperAnimatedText(' ecommerce',
-            speed: Duration(
+            speed: const Duration(
               milliseconds: 60,
             ))
       ],

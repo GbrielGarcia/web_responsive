@@ -15,7 +15,7 @@ class Coding extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Divider(),
+        const Divider(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
@@ -23,23 +23,23 @@ class Coding extends StatelessWidget {
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        AnimatedLinearProgressIndicator(
+        const AnimatedLinearProgressIndicator(
           percentage: 0.95,
           label: Write.wordPres,
         ),
-        AnimatedLinearProgressIndicator(
+        const AnimatedLinearProgressIndicator(
           percentage: 0.9,
           label: Write.html,
         ),
-        AnimatedLinearProgressIndicator(
+        const AnimatedLinearProgressIndicator(
           percentage: 0.75,
           label: Write.flutter,
         ),
-        AnimatedLinearProgressIndicator(
+        const AnimatedLinearProgressIndicator(
           percentage: 0.7,
           label: Write.dart,
         ),
-        AnimatedLinearProgressIndicator(
+        const AnimatedLinearProgressIndicator(
           percentage: 0.5,
           label: Write.css,
         ),
@@ -70,12 +70,12 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
               children: [
                 Text(
                   label,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 ),
-                Text((value * 100).toInt().toString() + "%")
+                Text("${(value * 100).toInt()}%")
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: defaultPadding / 2,
             ),
             LinearProgressIndicator(

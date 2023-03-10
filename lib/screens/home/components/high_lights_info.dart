@@ -23,14 +23,14 @@ class HighLightsInfo extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    HeighLight(
+                    const HeighLight(
                         counter: AnimatedCounter(
                           value: 2,
                           text: "+",
                         ),
                         label: Write.app),
                     HeighLight(
-                        counter: AnimatedCounter(
+                        counter: const AnimatedCounter(
                           value: 8,
                           text: "+",
                         ),
@@ -43,14 +43,14 @@ class HighLightsInfo extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    HeighLight(
+                    const HeighLight(
                         counter: AnimatedCounter(
                           value: 4,
                           text: "+",
                         ),
                         label: Write.web),
                     HeighLight(
-                      counter: AnimatedCounter(
+                      counter: const AnimatedCounter(
                         value: 11,
                         text: "+",
                       ),
@@ -63,26 +63,26 @@ class HighLightsInfo extends StatelessWidget {
           : Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                HeighLight(
+                const HeighLight(
                     counter: AnimatedCounter(
                       value: 2,
                       text: "+",
                     ),
                     label: Write.app),
                 HeighLight(
-                    counter: AnimatedCounter(
+                    counter: const AnimatedCounter(
                       value: 8,
                       text: "+",
                     ),
                     label: al!.customers),
-                HeighLight(
+                const HeighLight(
                     counter: AnimatedCounter(
                       value: 4,
                       text: "+",
                     ),
                     label: Write.web),
                 HeighLight(
-                    counter: AnimatedCounter(
+                    counter: const AnimatedCounter(
                       value: 11,
                       text: "+",
                     ),

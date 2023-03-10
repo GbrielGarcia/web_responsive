@@ -10,7 +10,7 @@ class BannerDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
+      padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
       child: Container(
         width: MediaQuery.of(context).size.width,
         color: secondaryColor,
@@ -18,11 +18,11 @@ class BannerDesktop extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            CupertinoSwitchW(
+            const CupertinoSwitchW(
               width: 125,
               height: 46,
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Container(
@@ -41,7 +41,7 @@ class BannerDesktop extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Container(

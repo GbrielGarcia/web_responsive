@@ -11,7 +11,7 @@ class PrivacyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 400,
-      padding: EdgeInsets.all(defaultPadding),
+      padding: const EdgeInsets.all(defaultPadding),
       color: secondaryColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +27,7 @@ class PrivacyCard extends StatelessWidget {
             privacy.text!,
             maxLines: 6,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(height: 1.5),
+            style: const TextStyle(height: 1.5),
           )
         ],
       ),
