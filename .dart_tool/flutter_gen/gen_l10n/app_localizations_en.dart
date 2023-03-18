@@ -89,6 +89,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get projectInoxHierro => 'Web page made for a client, with an elegant design and with a global position, you look for it and you find it, works in steel, steel handrails, the result is the first.';
 
   @override
+  String get projectAllCleanWays => 'All Clean Ways, it is a company that offers home and office cleaning services in California. Its website provides detailed information about its services and features testimonials from satisfied customers. The company focuses on providing a reliable and high-quality cleaning service.';
+
+  @override
   String get projectLinterna => 'Application for Ios and Android made with flutter, it is a flashlight tool with some features, blinking effect and timer.';
 
   @override

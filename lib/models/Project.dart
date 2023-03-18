@@ -61,6 +61,17 @@ List<Project> projects(BuildContext context) => [
         name3: Assets.javascriptName,
       ),
       Project(
+        title: 'All Clean Ways',
+        description: AppLocalizations.of(context)!.projectAllCleanWays,
+        link: 'https://allcleanways.com/',
+        iconImage: Assets.html,
+        iconImage1: Assets.wordpress,
+        iconImage2: Assets.javascript,
+        name1: Assets.htmlName,
+        name2: Assets.wordpressName,
+        name3: Assets.javascriptName,
+      ),
+      Project(
         title: 'Linterna',
         description: AppLocalizations.of(context)!.projectLinterna,
         link:

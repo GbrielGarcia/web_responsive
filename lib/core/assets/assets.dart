@@ -12,8 +12,10 @@ class Assets {
   static const String jimdo = 'assets/svg/jimdo.svg';
   static const String twitter = 'assets/svg/twitter.svg';
   static const String vscode = 'assets/svg/vscode.svg';
+  static const String wordpress = 'assets/svg/wordpress.svg';
   static const String bg = 'assets/images/bg.jpg';
   static const String profileimage = 'assets/images/profileimage.jpg';
+
   // STORE LIVE EC
   static const String pngDisney = 'assets/png/store/disneyplus.png';
   static const String pngHboMax = 'assets/png/store/hbomax.png';
@@ -29,4 +31,5 @@ class Assets {
   static const String cssName = 'Css';
   static const String dartName = 'Dart';
   static const String jimdoName = 'Jimdo';
+  static const String wordpressName = 'Wordpress';
 }

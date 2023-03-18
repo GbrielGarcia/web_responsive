@@ -3,7 +3,7 @@ import 'package:web_responsive_ui/screens/views/privacy_policy/components/privac
 
 class PrivacyPolicy extends StatelessWidget {
   const PrivacyPolicy({Key? key}) : super(key: key);
-  static const String route = '/politicas/';
+  static const String route = '/politicas';
 
   @override
   Widget build(BuildContext context) {

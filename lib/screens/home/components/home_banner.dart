@@ -15,7 +15,7 @@ class HomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final al = AppLocalizations.of(context);
-    int number = 593992889078;
+    int number = 593997592331;
 
     return AspectRatio(
       aspectRatio: Responsive.isMobile(context) ? 2.0 : 3,
@@ -54,7 +54,7 @@ class HomeBanner extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       html.window.open(
-                          "https://api.whatsapp.com/send/?phone=$number&text=Saludos me interesa tus servicios de: ",
+                          "https://api.whatsapp.com/send/?phone=$number&text=Saludos me interesa tus servicios de:  1)web 2)movil 3)tienda online 4)otros",
                           "WhatsApp");
                     },
                     style: TextButton.styleFrom(

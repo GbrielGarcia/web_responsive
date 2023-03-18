@@ -261,6 +261,12 @@ abstract class AppLocalizations {
   /// **'Web page made for a client, with an elegant design and with a global position, you look for it and you find it, works in steel, steel handrails, the result is the first.'**
   String get projectInoxHierro;
 
+  /// No description provided for @projectAllCleanWays.
+  ///
+  /// In en, this message translates to:
+  /// **'All Clean Ways, it is a company that offers home and office cleaning services in California. Its website provides detailed information about its services and features testimonials from satisfied customers. The company focuses on providing a reliable and high-quality cleaning service.'**
+  String get projectAllCleanWays;
+
   /// No description provided for @projectLinterna.
   ///
   /// In en, this message translates to:

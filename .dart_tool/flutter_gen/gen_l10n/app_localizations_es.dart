@@ -89,6 +89,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get projectInoxHierro => 'Pagina web realizada a cliente, con diseño elegante y con una posicion global lo buscas y lo encuentras, trabajos en acero, pasamanos en acero, el resultado es el primero.';
 
   @override
+  String get projectAllCleanWays => 'All Clean Ways es una empresa que ofrece servicios de limpieza de hogares y oficinas en California. Su sitio web proporciona información detallada sobre sus servicios y cuenta con testimonios de clientes satisfechos. La empresa se enfoca en brindar un servicio de limpieza confiable y de alta calidad.';
+
+  @override
   String get projectLinterna => 'Aplicacion para Ios y Android realizada con flutter, se trata de una herramienta de linterna con algunas funcionalidades, efecto de parpadeo y temporizador.';
 
   @override

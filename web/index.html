@@ -44,7 +44,7 @@
   <script src="main.dart.js" type="application/javascript"></script>
 
   <script>
-    var serviceWorkerVersion = null;
+    // var serviceWorkerVersion = null;
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -56,51 +56,52 @@
       scriptTag.type = 'application/javascript';
       document.body.append(scriptTag);
     }
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
+    loadMainDartJs();
+//     if ('serviceWorker' in navigator) {
+//       window.addEventListener('load', function () {
 
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-waitForActivation(reg.installing || reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+//         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+//         navigator.serviceWorker.register(serviceWorkerUrl)
+//           .then((reg) => {
+//             function waitForActivation(serviceWorker) {
+//               serviceWorker.addEventListener('statechange', () => {
+//                 if (serviceWorker.state == 'activated') {
+//                   console.log('Installed new service worker.');
+//                   loadMainDartJs();
+//                 }
+//               });
+//             }
+//             if (!reg.active && (reg.installing || reg.waiting)) {
+// waitForActivation(reg.installing || reg.waiting);
+//             } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
 
-              console.log('New service worker available.');
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
+//               console.log('New service worker available.');
+//               reg.update();
+//               waitForActivation(reg.installing);
+//             } else {
+//               console.log('Loading app from service worker.');
+//               loadMainDartJs();
+//             }
+//           });
 
-        setTimeout(() => {
-          if (!scriptLoaded) {
-            console.warn(
-              'Failed to load app from service worker. Falling back to plain <script> tag.',
-            );
-            loadMainDartJs();
-          }
-        }, 4000);
-      });
-    } else {
-      loadMainDartJs();
-    }
+//         setTimeout(() => {
+//           if (!scriptLoaded) {
+//             console.warn(
+//               'Failed to load app from service worker. Falling back to plain <script> tag.',
+//             );
+//             loadMainDartJs();
+//           }
+//         }, 4000);
+//       });
+//     } else {
+//       loadMainDartJs();
+//     }
   </script>
 
   <script>
     window.onload = function () {
       setTimeout(function () {
-        var loadingIndicator = document.getElementById("loading_indicator");
+        var loadingIndicator = document.getElementById("a");
         if (loadingIndicator) {
           loadingIndicator.remove();
         }

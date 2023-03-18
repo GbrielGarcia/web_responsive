@@ -12,7 +12,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
-  static const String route = '/dashboard/';
+  static const String route = '/dashboard';
 
   @override
   Widget build(BuildContext context) {
