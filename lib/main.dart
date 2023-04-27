@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:web_responsive_ui/core/routes/router.dart';
 import 'package:web_responsive_ui/core/style/color.dart';
-import 'package:web_responsive_ui/screens/home/home_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
+import 'package:meta_seo/meta_seo.dart';
 
 import 'core/components/locale.dart';
 
@@ -27,6 +27,7 @@ void main() async {
           appId: "1:140312917531:web:031549c75433a057c7aabe",
           measurementId: "G-2E1NL7TRBG"),
     );
+    MetaSEO().config();
   } else {
     await Firebase.initializeApp();
   }

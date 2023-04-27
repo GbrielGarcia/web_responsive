@@ -117,24 +117,24 @@ class SideMenu extends StatelessWidget {
                                 width: Const.widthIcon,
                               )),
                         ),
-                        Tooltip(
-                          message: 'Twitter'.toUpperCase(),
-                          textStyle: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                          child: IconButton(
-                              onPressed: () {
-                                html.window.open(
-                                    "https://twitter.com/Gabrielx2Garcia",
-                                    "Twitter");
-                              },
-                              icon: SvgPicture.asset(
-                                Assets.twitter,
-                                color: Colors.white,
-                                width: Const.widthIcon,
-                              )),
-                        ),
+                        // Tooltip(
+                        //   message: 'Twitter'.toUpperCase(),
+                        //   textStyle: const TextStyle(
+                        //     fontWeight: FontWeight.bold,
+                        //     color: Colors.black,
+                        //   ),
+                        //   child: IconButton(
+                        //       onPressed: () {
+                        //         html.window.open(
+                        //             "https://twitter.com/Gabrielx2Garcia",
+                        //             "Twitter");
+                        //       },
+                        //       icon: SvgPicture.asset(
+                        //         Assets.twitter,
+                        //         color: Colors.white,
+                        //         width: Const.widthIcon,
+                        //       )),
+                        // ),
                         Tooltip(
                           message: 'TikTok'.toUpperCase(),
                           textStyle: const TextStyle(

@@ -14,14 +14,15 @@ dependencies:
   firebase_core: ^2.5.0
   flutter:
     sdk: flutter
-  flutter_localizations: # Add this line
-    sdk: flutter         # Add this line
+  flutter_localizations:
+    sdk: flutter
   flutter_svg: ^2.0.0+1
   flutter_widget_from_html_core: any
   fwfh_webview: ^0.7.0+1
   go_router: ^6.2.0
   google_fonts: ^4.0.3
   intl: ^0.17.0
+  meta_seo: ^3.0.5
   provider: ^6.0.5
   universal_html: ^2.0.8
   url_launcher: ^6.0.18
@@ -49,7 +50,6 @@ flutter:
     - assets/png/
     - assets/icon/
 
-    
   fonts:
     - family: Agustina
       fonts:
