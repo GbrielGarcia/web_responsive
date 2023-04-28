@@ -53,7 +53,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get linux => 'Linux en Consola';
 
   @override
-  String get performed => 'Realizó ';
+  String get performed => 'Realizo ';
 
   @override
   String get seeMore => 'Ver mas >>';

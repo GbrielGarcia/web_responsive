@@ -25,13 +25,13 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     const HeighLight(
                         counter: AnimatedCounter(
-                          value: 2,
+                          value: 3,
                           text: "+",
                         ),
                         label: Write.app),
                     HeighLight(
                         counter: const AnimatedCounter(
-                          value: 8,
+                          value: 12,
                           text: "+",
                         ),
                         label: al!.customers),
@@ -45,7 +45,7 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     const HeighLight(
                         counter: AnimatedCounter(
-                          value: 4,
+                          value: 8,
                           text: "+",
                         ),
                         label: Write.web),
@@ -65,19 +65,19 @@ class HighLightsInfo extends StatelessWidget {
               children: [
                 const HeighLight(
                     counter: AnimatedCounter(
-                      value: 2,
+                      value: 3,
                       text: "+",
                     ),
                     label: Write.app),
                 HeighLight(
                     counter: const AnimatedCounter(
-                      value: 8,
+                      value: 12,
                       text: "+",
                     ),
                     label: al!.customers),
                 const HeighLight(
                     counter: AnimatedCounter(
-                      value: 4,
+                      value: 8,
                       text: "+",
                     ),
                     label: Write.web),

@@ -13,7 +13,7 @@ class Assets {
   static const String twitter = 'assets/svg/twitter.svg';
   static const String vscode = 'assets/svg/vscode.svg';
   static const String wordpress = 'assets/svg/wordpress.svg';
-  static const String bg = 'assets/images/bg.jpg';
+  static const String bg = 'assets/images/bg.png';
   static const String profileimage = 'assets/images/profileimage.jpg';
 
   // STORE LIVE EC

@@ -120,6 +120,8 @@ class AnimatedText extends StatelessWidget {
     final al = AppLocalizations.of(context);
 
     return AnimatedTextKit(
+      repeatForever: true,
+
       animatedTexts: [
         TyperAnimatedText(al!.webSites,
             speed: const Duration(

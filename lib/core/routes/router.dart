@@ -37,9 +37,8 @@ final goRouter = GoRouter(
             meta.author(author: 'Gabriel Codigo');
             meta.description(
                 description:
-                    'Consultoría y desarrollo de aplicaciones móviles, web, tiendas online, portales educativos y proyectos.');
-            meta.keywords(
-                keywords: 'Gabriel Codigo, Flutter, Dart, SEO, Meta, Web');
+                    'Aquí podrás ver nuestras políticas y devoluciones');
+            meta.keywords(keywords: 'Gabriel Codigo, Politicas, Devoluciones');
           }
         });
 
