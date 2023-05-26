@@ -61,7 +61,7 @@ class MainScreen extends StatelessWidget {
                           MaterialButton(
                             onPressed: () async {
                               html.window.open(
-                                  "https://www.instagram.com/gabrielx2garcia/",
+                                  "https://www.instagram.com/tinguar_technology",
                                   "Instagram");
                             },
                             child: Text(
@@ -111,11 +111,11 @@ class MainScreen extends StatelessWidget {
       ),
       floatingActionButton: Responsive.isMobile(context)
           ? const Padding(
-        padding: EdgeInsets.symmetric(vertical: 50.0),
-            child: CupertinoSwitchW(
+              padding: EdgeInsets.symmetric(vertical: 50.0),
+              child: CupertinoSwitchW(
                 width: 113,
               ),
-          )
+            )
           : Container(),
     );
   }

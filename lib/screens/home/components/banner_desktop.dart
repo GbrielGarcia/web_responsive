@@ -52,7 +52,7 @@ class BannerDesktop extends StatelessWidget {
               ),
               child: MaterialButton(
                 onPressed: () async {
-                  html.window.open("https://www.instagram.com/gabrielx2garcia/",
+                  html.window.open("https://www.instagram.com/tinguar_technology",
                       "Instagram");
                 },
                 child: Text(

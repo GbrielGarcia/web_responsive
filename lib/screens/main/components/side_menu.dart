@@ -86,7 +86,7 @@ class SideMenu extends StatelessWidget {
                           child: IconButton(
                               onPressed: () {
                                 html.window.open(
-                                  "https://www.instagram.com/gabrielcodigo_/",
+                                  "https://www.instagram.com/tinguar_technology/",
                                   "Instagram",
                                 );
                               },
@@ -144,7 +144,7 @@ class SideMenu extends StatelessWidget {
                           child: IconButton(
                               onPressed: () {
                                 html.window.open(
-                                    "https://www.tiktok.com/@gabrielcodigo.com",
+                                    "https://www.tiktok.com/@tinguar.com",
                                     "TikTok");
                               },
                               icon: SvgPicture.asset(
