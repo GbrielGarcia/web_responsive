@@ -98,6 +98,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get footerText => ' Haz de cada día tu obra maestra, el mañana es incierto. ';
 
   @override
+  String get footerText1 => ' Este sitio está destinado a que la comunidad pueda visualizar el código. \nSi deseas contactarme, puedes hacerlo directamente a través de mis redes sociales o por WhatsApp.';
+
+  @override
   String get webSites => 'páginas web';
 
   @override

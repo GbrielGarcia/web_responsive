@@ -4,7 +4,8 @@ import 'package:web_responsive_ui/core/style/color.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Footer extends StatelessWidget {
-  const Footer({Key? key}) : super(key: key);
+  String text;
+   Footer({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class Footer extends StatelessWidget {
         height: 50,
         child: Center(
           child: Text(
-            '"${al!.footerText}'.toUpperCase(),
+            text,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,

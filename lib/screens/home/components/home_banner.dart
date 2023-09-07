@@ -15,7 +15,7 @@ class HomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final al = AppLocalizations.of(context);
-    int number = 593997592331;
+    int number = 593998602204;
 
     return AspectRatio(
       aspectRatio: Responsive.isMobile(context) ? 2.0 : 3,

@@ -98,6 +98,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get footerText => ' Make each day your masterpiece, tomorrow is uncertain. ';
 
   @override
+  String get footerText1 => ' This site is intended for the community to view the code. \nIf you wish to contact me, you can do it directly through my social networks or by WhatsApp.';
+
+  @override
   String get webSites => 'websites';
 
   @override

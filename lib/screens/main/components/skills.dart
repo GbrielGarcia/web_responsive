@@ -23,8 +23,8 @@ class Skills extends StatelessWidget {
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        Row(
-          children: const [
+        const Row(
+          children: [
             Expanded(
                 child: AnimatedCircularProgressIndicator(
                     percentage: 0.75, label: Write.flutter)),

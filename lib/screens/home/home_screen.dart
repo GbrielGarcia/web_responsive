@@ -26,11 +26,13 @@ class HomeScreen extends StatelessWidget {
         ),
         const HomeBanner(),
         const HighLightsInfo(),
+         Footer(text: '"${al!.footerText1}"'.toUpperCase(),),
+
         MyProjects(
           myProjectsTitle: al!.myProjects,
         ),
         const Recommendations(),
-        const Footer()
+         Footer(text: '"${al!.footerText}"'.toUpperCase(),)
       ],
     );
   }

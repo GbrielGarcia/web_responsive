@@ -19,13 +19,13 @@ void main() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
-          apiKey: "AIzaSyBhFhiZmULuLIuaIZQhp9IWF89LJz1vurQ",
-          authDomain: "projectoporfolio.firebaseapp.com",
-          projectId: "projectoporfolio",
-          storageBucket: "projectoporfolio.appspot.com",
-          messagingSenderId: "140312917531",
-          appId: "1:140312917531:web:031549c75433a057c7aabe",
-          measurementId: "G-2E1NL7TRBG"),
+        apiKey: "",
+        authDomain: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: "",
+      ),
     );
     MetaSEO().config();
   } else {

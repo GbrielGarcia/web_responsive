@@ -279,6 +279,12 @@ abstract class AppLocalizations {
   /// **' Make each day your masterpiece, tomorrow is uncertain. '**
   String get footerText;
 
+  /// No description provided for @footerText1.
+  ///
+  /// In en, this message translates to:
+  /// **' This site is intended for the community to view the code. \nIf you wish to contact me, you can do it directly through my social networks or by WhatsApp.'**
+  String get footerText1;
+
   /// No description provided for @webSites.
   ///
   /// In en, this message translates to:
